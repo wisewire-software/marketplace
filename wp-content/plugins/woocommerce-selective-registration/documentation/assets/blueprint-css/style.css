@@ -1,0 +1,20 @@
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.section-header {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.center img {
+	max-width: 100%;
+}

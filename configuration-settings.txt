@@ -1,0 +1,108 @@
+1). Activate WooCommerce Product Vendors
+
+2). Configure Vendor Settings
+
+WooCommerce > Products > Vendors
+This will have to updated with wise wire PayPal information for production
+
+Payout Schedule: Manual
+
+PayPal Mass
+Payments Evironment: Sandbox
+
+(Sandbox) PayPal Mass
+Payments API Client ID: paypal_api1.helloari.com
+
+(Sandbox) PayPal Mass
+Payments API Client Secret: 3LGUFSLF3EMJWPG6
+
+Default Commission: 50
+	Commission Type: Percentage
+
+
+3).  Add Sell With Us Page
+
+	- Assign Page Sell With Us Template
+	- Change slug to “sellwithus”
+
+4). Add Contact Form
+Name : Vendor Registration
+
+
+<div class="form-row">
+<div class="name">
+<div class="field">
+[text* name-first default:user_first_name placeholder "First" ]
+</div> 
+<div class="field">[text* name-last default:user_last_name placeholder "Last" ]</div>
+</div>
+<div class="field">
+[email* account-email default:user_email placeholder "Account Email"]
+</div>
+<div class="textlink">
+Don't have an account?<br/>
+<a href="/user-login/">Sign Up.</a>
+</div>
+
+<div style="clear:both;"></div>
+</div>
+
+<div class="form-row">
+
+<div class="field">
+    [text vendor-name placeholder "Vendor Name"] 
+</div>
+
+<div class="field">
+    [text vendor-paypal placeholder "Paypal Email"] 
+</div>
+
+<div class="field">
+    [text vendor-country placeholder "Country"] 
+</div>
+
+<div style="clear:both;"></div>
+
+</div>
+
+<div class="form-row three">
+
+<div class="field">
+    [text vendor-city placeholder "City"] 
+</div>
+
+<div class="field">
+    [text vendor-state placeholder "State"] 
+</div>
+
+<div class="field">
+    [text vendor-postal placeholder "Zip Code"] 
+</div>
+
+<div class="field">
+    [text vendor-phone placeholder "Phone"] 
+</div>
+<div style="clear:both;"></div>
+</div>
+
+<div class="form-row">
+
+    [textarea vendor-message placeholder "Tell us about your company."]
+
+</div>
+<div>
+<div class="field">
+[submit class:btn "SUBMIT"]
+</div>
+</div>
+
+5). Make sure form Mail setting originates from a @wisewire.com email address.
+
+6). Update /parts/modals-all.php line 454 with correct form ID of newly created Vendor Registration Form.
+
+7). Update functions.php line 1207 with correct form ID of newly created Vendor Registration Form.
+
+8). Deactivate Personalize Login Plugin
+
+9). Disable “Hide Backend Login” within Security > Settings
+
