@@ -33,7 +33,7 @@
             
             <?php if ($modal_feedback_title) { ?>
             <div class="modal-title">
-              <h1><?php echo $modal_feedback_title; ?></h1>
+              <h3><?php echo $modal_feedback_title; ?></h3>
             </div>
             <?php } ?>
             
@@ -113,7 +113,7 @@
             
             <?php if ($modal_customize_title) { ?>
             <div class="modal-title">
-              <h1><?php echo $modal_customize_title; ?></h1>
+              <h3><?php echo $modal_customize_title; ?></h3>
             </div>
             <?php } ?>
             
@@ -144,7 +144,7 @@
             
             <?php if ($modal_contact_title) { ?>
             <div class="modal-title">
-              <h1><?php echo $modal_contact_title; ?></h1>
+              <h3><?php echo $modal_contact_title; ?></h3>
             </div>
             <?php } ?>
             
@@ -244,7 +244,7 @@
             
             <?php if ($modal_help_title) { ?>
             <div class="modal-title">
-              <h1><?php echo $modal_help_title; ?></h1>
+              <h3><?php echo $modal_help_title; ?></h3>
             </div>
             <?php } ?>
             
@@ -253,9 +253,9 @@
               <div class="lo-container">
                 
                 <?php if ($modal_help_description) { ?>
-                	<h2 class="headline-title">
+                	<h3 class="headline-title">
                   	<?php echo $modal_help_description; ?>
-                	</h2>
+                	</h3>
                 <?php } ?>
                 
                 <div class="hidden-xs">
@@ -290,9 +290,9 @@
                           </div>
                           <div class="content">
                             <div class="details">
-                              <h2 class="sub-discipline">
+                              <h3 class="sub-discipline">
                                 <?php echo $WWItems->get_subdiscipline( $item->ID ) ?>
-                              </h2>
+                              </h3>
                               <p class="content-type">
                                 <?php echo $item_content_type_icon ?>
                               </p>
@@ -301,7 +301,7 @@
                               </p>
                             </div>
                             <div class="content-title">
-                              <h1><?php echo $item->post_title ?></h1>
+                              <h3><?php echo $item->post_title ?></h3>
                               <div class="content-type-icon">
                                 <svg class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
 									<use xlink:href="#<?php echo $WWItems->get_icon($item_content_type_icon) ?>"></use>
@@ -354,9 +354,9 @@
                     <article class="lo-item <?php echo $WWItems->get_color( $item_content_type_icon ) ?>" onclick="location.href='<?php echo get_permalink($item) ?>';">
                       <div class="content">
                         <div class="details">
-                          <h2 class="sub-discipline">
+                          <h3 class="sub-discipline">
                             <?php echo $WWItems->get_subdiscipline( $item->ID ) ?>
-                          </h2>
+                          </h3>
                           <p class="content-type">
                             <?php echo $item_content_type_icon ?>
                           </p>
@@ -366,7 +366,7 @@
                         </div>
                         <div class="more-info">
                           <div class="content-title">
-                            <h1><?php echo $item->post_title ?></h1>
+                            <h3><?php echo $item->post_title ?></h3>
                             <div class="content-type-icon">
                               <svg class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
 								<use xlink:href="#<?php echo $WWItems->get_icon($item_content_type_icon) ?>"></use>
@@ -438,7 +438,7 @@
             
             <?php if ($modal_customize_title) { ?>
             <div class="modal-title">
-              <h1>Become A Seller</h1>
+              <h3>Become A Seller</h3>
             </div>
             <?php } ?>
             
@@ -451,7 +451,7 @@ Complete the form below to apply to be a seller with us.</p>
             
             <div class="container-fluid container-form">
                             
-              <?php echo do_shortcode('[contact-form-7 id="56136" title="Vendor Registration"]'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="56762" title="Vendor Registration"]'); ?>
               
             </div>
             

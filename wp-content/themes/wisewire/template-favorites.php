@@ -132,7 +132,7 @@ endforeach; endif;
                                     <div class="content">
                                                                 <?php if ($item->type == 'item'): ?>
                                                                     <div class="details">
-                                                                        <h2 class="sub-discipline">
+                                                                        <h3 class="sub-discipline">
                                                                             <?php echo !empty($item->subdiscipline) ? $item->subdiscipline : '&nbsp;' ?>
                                                                             <?php if (substr($item->preview, 0, 1) === 'Y'): ?>
                                                                                 <div
@@ -141,14 +141,14 @@ endforeach; endif;
                                                                                     Preview
                                                                                 </div>
                                                                             <?php endif; ?>
-                                                                        </h2>
+                                                                        </h3>
                                                                         <p class="content-type">
                                                                             <?php echo $item->content_type_icon ?>
                                                                         </p>
                                                                     </div>
                                                                 <?php else: ?>
                                                                     <div class="details">
-                                                                        <h2 class="sub-discipline">
+                                                                        <h3 class="sub-discipline">
                                                                             <?php echo $level1_label ?>
                                                                             <?php if (substr($item->preview, 0, 1) === 'Y'): ?>
                                                                                 <div
@@ -157,7 +157,7 @@ endforeach; endif;
                                                                                     Preview
                                                                                 </div>
                                                                             <?php endif; ?>
-                                                                        </h2>
+                                                                        </h3>
                                                                         <p class="content-type">
                                                                             <?php if ($item->source != 2) {
                                                                                 echo $level2_label;
@@ -183,7 +183,7 @@ endforeach; endif;
                                                                 <?php endif ?>
                                                                
                                                                 <div class="content-title">
-                                                                    <h1><?php echo $code_label ?></h1>
+                                                                    <h3><?php echo $code_label ?></h3>
                                                                     <div class="content-type-icon">
                                                                         <svg
                                                                             class="svg-<?php echo $WWItems->get_icon($item->content_type_icon) ?>-dims">
@@ -240,9 +240,9 @@ endforeach; endif;
         <div class="container">
         
         <div class="section-title">
-          <h1>
+          <h3>
             Recommended for you
-          </h1>              
+          </h3>
         </div>
                   
         <div class="carousel">
@@ -273,15 +273,15 @@ endforeach; endif;
               </div>
               <div class="content">
                 <div class="details">
-                  <h2 class="sub-discipline">
+                  <h3 class="sub-discipline">
                     <?php echo $WWItems->get_subdiscipline( $item->ID ) ?>
-                  </h2>
+                  </h3>
                   <p class="content-type">
                     <?php echo $item_content_type_icon ?>
                   </p>
                 </div>
                 <div class="content-title">
-                  <h1><?php echo $item->post_title ?></h1>
+                  <h3><?php echo $item->post_title ?></h3>
                   <div class="content-type-icon">
                     <svg class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
 						<use xlink:href="#<?php echo $WWItems->get_icon($item_content_type_icon) ?>"></use>
@@ -396,7 +396,7 @@ endforeach; endif;
                 <div class="content">
                   <div class="details">
                     <?php if ($item->type == 'item'): ?>
-                        <h2 class="sub-discipline">
+                        <h3 class="sub-discipline">
                           <?php echo !empty($item->subdiscipline) ? $item->subdiscipline : '&nbsp;' ?>
                             <?php if (substr($item->preview, 0, 1) === 'Y'): ?>
                                 <div
@@ -405,7 +405,7 @@ endforeach; endif;
                                     Preview
                                 </div>
                             <?php endif; ?>
-                        </h2>
+                        </h3>
                         <p class="content-type">
                           <?php echo $item->content_type_icon ?>
                         </p>
@@ -418,9 +418,9 @@ endforeach; endif;
                             <?php echo $description_label; ?>
                         </p>
                     <?php else: ?>
-                        <h2 class="sub-discipline">
+                        <h3 class="sub-discipline">
                           <?php echo $level1_label ?>
-                        </h2>
+                        </h3>
                         <p class="content-type">
                           <?php if ($item->source != 2) {
                                 echo $level2_label;
@@ -444,7 +444,7 @@ endforeach; endif;
                   </div>
                   <div class="more-info">
                     <div class="content-title">
-                      <h1><?php echo $item->title ?></h1>
+                      <h3><?php echo $item->title ?></h3>
                       <div class="content-type-icon">
                        <svg class="svg-<?php echo $WWItems->get_icon($item->content_type_icon) ?>-dims">
 						 <use xlink:href="#<?php echo $WWItems->get_icon($item->content_type_icon) ?>"></use>
@@ -503,9 +503,9 @@ endforeach; endif;
               <article class="lo-item <?php echo $WWItems->get_color( $item_content_type_icon ) ?>" onclick="location.href='<?php echo get_permalink($item) ?>';">
                 <div class="content">
                   <div class="details">
-                    <h2 class="sub-discipline">
+                    <h3 class="sub-discipline">
                       <?php echo $WWItems->get_subdiscipline( $item->ID ) ?>
-                    </h2>
+                    </h3>
                     <p class="content-type">
                       <?php echo $item_content_type_icon ?>
                     </p>
@@ -515,7 +515,7 @@ endforeach; endif;
                   </div>
                   <div class="more-info">
                     <div class="content-title">
-                      <h1><?php echo $item->post_title ?></h1>
+                      <h3><?php echo $item->post_title ?></h3>
 						<div class="content-type-icon">
 						  <svg class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
 							  <use xlink:href="#<?php echo $WWItems->get_icon($item_content_type_icon) ?>"></use>
