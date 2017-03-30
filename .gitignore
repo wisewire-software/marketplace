@@ -10,7 +10,6 @@ wp-config.php
 wp-content/uploads/
 wp-content/upgrade/
 wp-content/advanced-cache.php
-wp-content/cache/*
-wp-content/cache/supercache/*
-*.log
 wp-content/cache/
+wp-content/backupwordpress-*
+*.log
