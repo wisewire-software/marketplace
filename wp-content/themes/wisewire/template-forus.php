@@ -7,18 +7,19 @@
 
 <?php get_header(); ?>
 
-<section class="container-forus">
+<section class="container-forus forus-custom-color-1">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>Create Computer-Based Assessments</h3>
                 <div class="forus-description">
-                    Our technology -enhanced item templates enable you to easily create, clone and differentiate your
+                    Our technology-enhanced item templates enable you to easily create, clone and differentiate your
                     formative assessments. Build your own items, assemble then into assessments, assign to your student
                     groups, and track your students progress on our platform - <span>Free</span>
                 </div>
                 <div class="forus-actions">
-                    <a class="btn">Sign UP</a> <a class="btn">Log In</a>
+                    <a href="<?php echo get_site_url(); ?>/user-login/" class="btn">Sign UP</a>
+                    <a href="<?php echo get_site_url(); ?>/user-login/" class="btn">Log In</a>
                 </div>
             </div>
         </div>
@@ -50,13 +51,23 @@
             <div class="col-md-8 col-md-offset-2">
                 <h3>Create</h3>
                 <div class="forus-description">
-                    Create-your-own assessment using any of your 30+ technology enhanced templates designed to help you
-                    prepare your studens for the rigors of computer-based testing.
+                    Create-your-own assessments using any of your 30+ technology enhanced templates designed to help you
+                    prepare your students for the rigors of computer-based testing.
+
+                    <ul>
+                        <li><span class="icon-forus forus-clone"></span><span class="forus-text">Clone existing questions to take advantage of pre-populated templates and save valuable time</span>
+                        </li>
+                        <li><span class="icon-forus forus-sample"></span><span class="forus-text">We've even given you 12 sample questions to start</span></li>
+                    </ul>
                 </div>
                 <div class="forus-images">
-                    <div class="row center-block">
-                        <div class="col-md-6 text-center"><img src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-create-1.jpg" alt=""></div>
-                        <div class="col-md-6 text-center"><img src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-create-2.jpg" alt=""></div>
+                    <div class="row">
+                        <div class="col-md-6 text-center"><img
+                                    src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-create-1.png" alt="">
+                        </div>
+                        <div class="col-md-6 text-center"><img
+                                    src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-create-2.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,9 +94,11 @@
                 <h3>Track</h3>
                 <div class="forus-description">Track your students progress on your dashboard</div>
                 <div class="forus-images">
-                    <div class="row center-block">
-                        <div class="col-md-6 text-center"><img src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-track-1.jpg" alt=""></div>
-                        <div class="col-md-6 text-center"><img src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-track-2.jpg" alt=""></div>
+                    <div class="row">
+                        <div class="col-md-6 text-center"><img
+                                    src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-track-1.png" alt=""></div>
+                        <div class="col-md-6 text-center"><img
+                                    src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-track-2.png" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -104,7 +117,7 @@
                     tech-enhanced items, and deploy assignments straight to your students
                 </div>
                 <div class="forus-actions">
-                    <a class="btn">Become an author</a>
+                    <a href="<?php echo get_site_url(); ?>/create" class="btn">Become an author</a>
                 </div>
             </div>
         </div>

@@ -412,6 +412,9 @@ a.lo-item{display: block}
 	color: #f26921;
 	font-weight: 700;
 }
+.container-forus.forus-custom-color-1{
+	padding-top: 0;
+}
 
 .container-forus.forus-custom-color-2 {
 	background-color: #4bccac;
@@ -431,9 +434,41 @@ a.lo-item{display: block}
 }
 
 .container-forus .forus-description{
+	padding-top: 5px;
 	padding-bottom: 15px;
+}
+
+.container-forus.forus-custom-color-1 .forus-description span{
+	font-weight: bold;
 }
 
 .container-forus .forus-actions{
 	padding: 10px 0;
+}
+
+.container-forus ul {
+	list-style: none;
+	padding: 10px 0 0 10px;
+}
+
+.container-forus .icon-forus{
+	background: url(../img/svg/icon-for-us.svg) no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+}
+
+.container-forus .icon-forus.forus-clone{
+	background-position: 0 50%;
+}
+
+.container-forus .icon-forus.forus-sample{
+	background-position: -40px 50%;
+}
+
+.container-forus .forus-text{
+	display: inline-block;
+	width: calc(100% - 32px);
+	vertical-align: middle;
 }
