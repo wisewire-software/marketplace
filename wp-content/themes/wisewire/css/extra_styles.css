@@ -401,3 +401,39 @@ a.lo-item{display: block}
 	vertical-align: top;
 	padding-top: 10px;
 }
+
+.container-forus{
+	padding: 50px 0;
+}
+.container-forus p{
+	margin-top: 10px;
+}
+.container-forus h3{
+	color: #f26921;
+	font-weight: 700;
+}
+
+.container-forus.forus-custom-color-2 {
+	background-color: #4bccac;
+}
+
+.container-forus.forus-custom-color-4 {
+	background-color: #32c1d2;
+	color: #ffffff;
+}
+
+.container-forus.forus-custom-color-4 h3{
+	color: #ffffff;
+}
+
+.container-forus.forus-custom-color-3 h3{
+	text-transform: uppercase;
+}
+
+.container-forus .forus-description{
+	padding-bottom: 15px;
+}
+
+.container-forus .forus-actions{
+	padding: 10px 0;
+}
