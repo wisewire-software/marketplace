@@ -14,7 +14,7 @@
                 <h3>Create Computer-Based Assessments</h3>
                 <div class="forus-description">
                     Our technology-enhanced item templates enable you to easily create, clone and differentiate your
-                    formative assessments. Build your own items, assemble then into assessments, assign to your student
+                    formative assessments. Build your own items, assemble them into assessments, assign to your student
                     groups, and track your students progress on our platform - <span>Free</span>
                 </div>
                 <div class="forus-actions">
@@ -84,7 +84,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <h3>Assign</h3>
                 <div class="forus-description">
-                    create student group with our Manage Group feature using your students emails. Or generate a group
+                    create a student group with our Manage Groups feature using your students emails. Or generate a group
                     code for students to join and already created group.
                 </div>
             </div>
@@ -113,8 +113,8 @@
                 <h3>Share your brilliance with others</h3>
                 <div class="forus-description">
                     We make it simple to create content and publish it directly into the hands of other instructors,
-                    students, and publishers. Our item templates enable yout to easily create assessments, including
-                    tech-enhanced items, and deploy assignments straight to your students
+                    students, and publishers. Our item templates enable you to easily create formative assessments, including
+                    tech-enhanced items, and deploy assignments straight to your students.
                 </div>
                 <div class="forus-actions">
                     <a href="<?php echo get_site_url(); ?>/create" class="btn">Become an author</a>
