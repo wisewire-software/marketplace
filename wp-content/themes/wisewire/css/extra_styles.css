@@ -458,6 +458,7 @@ a.lo-item{display: block}
 
 .container-forus .forus-images img{
 	border: 2px solid #aaa;
+	width: 340px;
 }
 
 .container-forus ul {

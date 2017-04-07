@@ -62,7 +62,7 @@
                 </div>
                 <div class="forus-images">
                     <div class="row">
-                        <div class="col-md-5 text-center"><img
+                        <div class="col-md-6"><img
                                     src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-create-1.png" alt="">
                         </div>
                         <div class="col-md-6 text-center"><img
@@ -95,7 +95,7 @@
                 <div class="forus-description">Track your students' progress on your dashboard period.</div>
                 <div class="forus-images">
                     <div class="row">
-                        <div class="col-md-5 text-center"><img
+                        <div class="col-md-6"><img
                                     src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-track-1.png" alt=""></div>
                         <div class="col-md-6 text-center"><img
                                     src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-track-2.png" alt=""></div>
