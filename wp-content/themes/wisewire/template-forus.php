@@ -13,9 +13,9 @@
             <div class="col-md-10 col-md-offset-1">
                 <h3>Create Computer-Based Assessments</h3>
                 <div class="forus-description">
-                    Our technology-enhanced item templates enable you to easily create, clone and differentiate your
+                    Our technology-enhanced item templates enable you to easily create, clone, and differentiate your
                     formative assessments. Build your own items, assemble them into assessments, assign to your student
-                    groups, and track your students progress on our platform - <span>Free</span>.
+                    groups, and track your students' progress on our platform - <span>Free</span>.
                 </div>
                 <div class="forus-actions">
                     <a href="<?php echo get_site_url(); ?>/user-login/" class="btn">Sign UP</a>
@@ -98,7 +98,7 @@
                         <div class="col-md-6"><img
                                     src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-track-1.png" alt=""></div>
                         <div class="col-md-6 text-center"><img
-                                    src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-track-2.png" alt=""></div>
+                                    src="<?php bloginfo('template_url'); ?>/img/for-us/for-us-track-2.jpg" alt=""></div>
                     </div>
                 </div>
             </div>
