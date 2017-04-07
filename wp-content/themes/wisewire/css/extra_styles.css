@@ -403,14 +403,14 @@ a.lo-item{display: block}
 }
 
 .container-forus{
-	padding: 50px 0;
+	padding: 25px 0;
 }
-.container-forus p{
-	margin-top: 10px;
-}
+
 .container-forus h3{
 	color: #f26921;
+	font-size: 22px;
 	font-weight: 700;
+	margin-bottom: 7px;
 }
 .container-forus.forus-custom-color-1{
 	padding-top: 0;
@@ -433,9 +433,19 @@ a.lo-item{display: block}
 	text-transform: uppercase;
 }
 
+.container-forus.forus-custom-color-3, .container-forus.forus-custom-color-4{
+	padding-bottom: 35px;
+}
+
 .container-forus .forus-description{
-	padding-top: 5px;
+	padding-top: 0;
 	padding-bottom: 15px;
+	font-weight: 500;
+}
+
+.container-forus.forus-custom-color-2 .forus-description{
+	font-style: italic;
+	padding-top: 5px;
 }
 
 .container-forus.forus-custom-color-1 .forus-description span{
