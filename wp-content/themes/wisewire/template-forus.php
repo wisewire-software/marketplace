@@ -149,7 +149,7 @@
 
 
 
-    $("#publishVideoIframe").html('<embed id="player" name="player" ' +
+    $("#publishVideoIframe2").html('<embed id="player" name="player" ' +
         'src="https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8" ' +
         'width="100%" height="100%" scale="ToFit" bgcolor="#000000" ' +
         'enablejavascript="true" type="video/quicktime" ' +

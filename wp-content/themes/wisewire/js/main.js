@@ -864,7 +864,7 @@ $('#homeVideoModal').on('hidden.bs.modal', function () {
     $('#homevideoIframe').player('pause');
 })
 
-if ($('#publishVideoIframe2').length) {
+if ($('#teiVideoIframe').length) {
 
     var swfURL = 'http://storage.uplynk.com/client/latest_upLynkPlayer.swf';
     var expressInstall = 'expressInstall.swf';
@@ -873,7 +873,7 @@ if ($('#publishVideoIframe2').length) {
         'wmode': 'opaque'
     };
     var attrs = {};
-    $('#publishVideoIframe2').player({
+    $('#teiVideoIframe').player({
         swfURL: swfURL,
         exressInstall: expressInstall,
         params: params,
@@ -883,5 +883,26 @@ if ($('#publishVideoIframe2').length) {
     });
 
     //$('#teiVideoIframe').player('load', 'https://content.uplynk.com/3481cd8a05704e7b8ecd52693380856a.m3u8');
+}
+
+
+function iOS() {
+
+    var iDevices = [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+    ];
+
+    if (!!navigator.platform) {
+        while (iDevices.length) {
+            if (navigator.platform === iDevices.pop()){ return true; }
+        }
+    }
+
+    return false;
 }
 
