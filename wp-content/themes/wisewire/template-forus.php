@@ -127,23 +127,34 @@
 
 <script type="text/javascript">
 
-    if ($(window).width() > 768) {
-        $('#publishVideoIframe2').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
+//    if ($(window).width() > 768) {
+//        $('#publishVideoIframe2').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
+//
+//        $('#publishVideoIframe2').bind(uplynk.events.PLAYER_ERROR, function (e, arg) {
+//            console.log(e, arg);
+//        });
+//    } else {
+//        $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
+//    }
+//
+//
+//    $(window).resize(function () {
+//        if ($(window).width() > 768) {
+//            $('#publishVideoIframe2').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
+//
+//        } else {
+//            $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
+//        }
+//    });
 
-        $('#publishVideoIframe2').bind(uplynk.events.PLAYER_ERROR, function (e, arg) {
-            console.log(e, arg);
-        });
-    } else {
-        $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
-    }
 
 
-    $(window).resize(function () {
-        if ($(window).width() > 768) {
-            $('#publishVideoIframe2').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
+    $("#publishVideoIframe").html('<embed id="player" name="player" ' +
+        'src="https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8" ' +
+        'width="100%" height="100%" scale="ToFit" bgcolor="#000000" ' +
+        'enablejavascript="true" type="video/quicktime" ' +
+        'pluginspage="http://www.apple.com/quicktime/download/">' +
+        '</embed>');
 
-        } else {
-            $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
-        }
-    });
+
 </script>
