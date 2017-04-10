@@ -50,7 +50,7 @@ function array_sort($array, $on, $order = SORT_ASC)
                     <div class="modal-body">
 
                         <div class="modal-title <?php if (!$item_demo_subhead) echo "modal-title-no-subhead"; ?>">
-                            <h1><?php echo $title ?></h1>
+                            <h3><?php echo $title ?></h3>
                             <?php if ($item_demo_subhead) { ?>
                                 <h2><?php echo $item_demo_subhead; ?></h2>
                             <?php } ?>

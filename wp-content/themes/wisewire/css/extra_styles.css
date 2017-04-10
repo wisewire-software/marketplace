@@ -152,15 +152,15 @@ a.lo-item{display: block}
 .article-icon .article-icon-2{ border-color: #92967b }
 .article-icon .article-icon-3{ border-color: #32c1d1 }
 
-.publish .article-title-1 h1{color: #f26921!important}
-.publish .article-title-2 h1{color: #92967b!important}
-.publish .article-title-3 h1{color: #32c1d1!important}
+.publish .article-title-1 h3{color: #f26921!important}
+.publish .article-title-2 h3{color: #92967b!important}
+.publish .article-title-3 h3{color: #32c1d1!important}
 .publish .learning-more .btn{color: #FFF!important;}
 .publish .learning-more .btn.btn_contact{background-color:#32c1d2!important}
 .publish .learning-more .btn.btn_request, .publish .row_2 .learning-more .btn.btn_publish{background-color:#92967b!important}
 .publish .learning-more .btn.btn_publish{background-color:#f26921!important}
 
-.main-search .subheads h2 a{color:#32806c}
+.main-search .subheads h3 a{color:#32806c}
 
 .custom-item .col-right img{
 		width: 100%
@@ -265,7 +265,7 @@ a.lo-item{display: block}
 	}
 	.publish .article-title{text-align: center; margin: 13px 30px 0; }
 
-	.publish .article-title h1 {
+	.publish .article-title h3 {
 	    margin: 0 0 10px 0;
 	    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial;
 	    text-transform: none;
@@ -361,7 +361,7 @@ a.lo-item{display: block}
 	    left: 20px!important;
 	}
 }
-.items .col-headline h1.custome_h1{
+.items .col-headline h3.custome_h1{
 	font-size: 27px;
 }
 

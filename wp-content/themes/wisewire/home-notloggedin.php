@@ -135,26 +135,26 @@ $banner_2_link_url = get_field('banner_2_link_url');
                 <div class="row">
                     <div class="col-1 col-sm-4">
                         <?php if ($search_headline_1) { ?>
-                            <h2>
+                            <h3>
                                 <a href="/filtered/?filter=object_type&filter_value=tei&nogrades=1"
                                    title=""><?php echo $search_headline_1; ?></a>
-                            </h2>
+                            </h3>
                         <?php } ?>
                     </div>
                     <div class="col-2 col-sm-4">
                         <?php if ($search_headline_2) { ?>
-                            <h2>
+                            <h3>
                                 <a href="/explore/search/playlist/?sepllcheck=1"
                                    title=""><?php echo $search_headline_2; ?></a>
-                            </h2>
+                            </h3>
                         <?php } ?>
                     </div>
                     <div class="col-3 col-sm-4">
                         <?php if ($search_headline_3) { ?>
-                            <h2>
+                            <h3>
                                 <a href="/filtered/?filter=content_type&filter_value=student resource&nogrades=1"
                                    title=""><?php echo $search_headline_3; ?></a>
-                            </h2>
+                            </h3>
                         <?php } ?>
                     </div>
                 </div>
@@ -171,7 +171,7 @@ $banner_2_link_url = get_field('banner_2_link_url');
 <section class="section-headline">
     <div class="container">
         <?php if ($carousel_headline) { ?>
-            <h2><?php echo $carousel_headline; ?></h2>
+            <h3><?php echo $carousel_headline; ?></h3>
         <?php } ?>
         <?php if (($carousel_secondary_headline) && ($carousel_secondary_headline_link)) { ?>
             <p>
@@ -191,24 +191,25 @@ if ($posts): ?>
                 <div class="carousel">
                     <?php foreach ($posts as $post): ?>
                         <?php
-                            $is_merlot = $post->source === 'MERLOT' ? true : false;
-                            $item_main_image_attributes = wp_get_attachment_image_src($post->image_id, 'home-carousel');
+                        $is_merlot = $post->source === 'MERLOT' ? true : false;
+                        $item_main_image_attributes = wp_get_attachment_image_src($post->image_id, 'home-carousel');
                         ?>
 
                         <a class="lo-item <?php echo $WWItems->get_color($post->content_type_icon) ?>"
                            href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/">
                             <div class="img">
                                 <?php if ($item_main_image_attributes): ?>
-                                    <img src="<?php echo $item_main_image_attributes[0]; ?>" alt="" class="img-responsive">
+                                    <img src="<?php echo $item_main_image_attributes[0]; ?>" alt=""
+                                         class="img-responsive">
                                 <?php else: ?>
                                     <?php echo $WWItems->get_thumbnail($post->content_type_icon, 'home-carousel') ?>
                                 <?php endif ?>
                             </div>
                             <div class="content">
                                 <div class="details">
-                                    <h2 class="sub-discipline">
+                                    <h3 class="sub-discipline">
                                         <?php echo $post->subdiscipline; ?>
-                                    </h2>
+                                    </h3>
                                     <p class="content-type">
                                         <?php echo $post->content_type_icon; ?>
                                     </p>
@@ -217,7 +218,7 @@ if ($posts): ?>
                                     </p>
                                 </div>
                                 <div class="content-title">
-                                    <h1><?php echo $post->title; ?></h1>
+                                    <h3><?php echo $post->title; ?></h3>
                                     <div class="content-type-icon">
                                         <svg
                                             class="svg-<?php echo $WWItems->get_icon($post->content_type_icon) ?>-dims">
@@ -234,81 +235,6 @@ if ($posts): ?>
         </div><!-- /container-fluid-->
     </section><!-- /lo-carousel-home -->
 <?php endif; ?>
-
-
-<?php
-
-/* We show items on the home page carousel using "Home Page Feature" column from the batch upload */
-
-// CPT Items
-/*
-$args = array(
-  'post_type' => 'item',
-  'posts_per_page' => -1,
-  'meta_key' => 'item_home_page_feature',
-  'meta_value' => 'Y'
-);
-
-$item_query = new WP_Query( $args );
-
-?>
-
-<?php if ( $item_query->have_posts() ) : ?>
-
-<section class="lo-carousel-home">
-
-  <div class="container-fluid">
-
-    <div class="row">
-
-      <div class="carousel">
-
-          <?php while ( $item_query->have_posts() ) : $item_query->the_post(); ?>
-
-        <article class="lo-item <?php echo $WWItems->get_color( get_field('item_content_type_icon') ) ?>" onclick="location.href='<?php echo get_permalink() ?>';">
-          <div class="img">
-            <?php if (has_post_thumbnail( get_the_ID() )): ?>
-                      <?php echo get_the_post_thumbnail( get_the_ID(), 'home' ) ?>
-                    <?php else: ?>
-                      <?php echo $WWItems->get_thumbnail( get_field('item_content_type_icon'), 'home' ) ?>
-                    <?php endif ?>
-          </div>
-          <div class="content">
-            <div class="details">
-              <h2 class="sub-discipline">
-                <?php echo $WWItems->get_subdiscipline( get_the_ID() ) ?>
-              </h2>
-              <p class="content-type">
-                <?php echo get_field('item_content_type_icon') ?>
-              </p>
-              <p class="grade-level">
-                <?php echo $WWItems->get_grades( get_the_ID() ) ?>
-              </p>
-            </div>
-            <div class="content-title">
-              <h1><?php echo get_the_title(); ?></h1>
-              <div class="content-type-icon">
-                <svg class="svg-<?php echo $WWItems->get_icon( get_field('item_content_type_icon') ) ?>-dims">
-                              <use xlink:href="#<?php echo $WWItems->get_icon( get_field('item_content_type_icon') ) ?>"></use>
-                          </svg>
-              </div>
-            </div>
-          </div>
-        </article>
-
-      <?php endwhile; ?>
-
-      </div><!-- /carousel -->
-
-    </div><!-- /row -->
-
-  </div><!-- /container-fluid-->
-
-</section><!-- /lo-carousel-home -->
-
-<?php endif; wp_reset_query(); wp_reset_postdata(); ?>
-*/ ?>
-
 
 <section class="banner banner-responsive">
 

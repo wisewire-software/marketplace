@@ -48,23 +48,12 @@ $url_link = $control->get_permalink();
                     <div class="btn-back">
                         <a href="<?php echo get_site_url() ?>/explore/<?php echo $control->grade ?>/">&lt; Back</a>
                     </div>
-                    <!-- SEO improvements -->
-                    <div class="row container-seo">
-                        <div class="col-md-12">
-                            <h1 class="title-page">
-                                <?php echo nl2br($control->title); ?>
-                            </h1>
-                            <div class="meta-description-page">
-                                <?php echo nl2br($control->meta_description) ?>
-                            </div>
-                        </div>
-                    </div>
                 <?php endif; ?>
                 <div class="row row-head">
                     <div class="col-sm-7 col-headline<?php if ($control->search === false) echo ' col-uppercase'; ?>">
                         
                         <?php if ($control->search !== false): ?>
-                            <h1>Search results: <span><?php echo $control->search ?></span></h1>
+                            <h3>Search results: <span><?php echo $control->search ?></span></h3>
                         <?php endif; ?>
                         
                         <p>
@@ -147,7 +136,7 @@ $url_link = $control->get_permalink();
                     <div class="filters-overlay" id="filters-overlay">
                         <div class="col-sm-3 col-nav">
                             <div class="col-headline<?php if ($control->search === false) echo ' col-uppercase'; ?>">
-                                <h1>
+                                <h3>
                                     <?php if ($control->search): ?>
                                         Search results: <span><?php echo $control->search ?></span>
                                         <script type="text/javascript">
@@ -164,7 +153,7 @@ $url_link = $control->get_permalink();
                                     <?php else: ?>
                                         <?php echo $control->discipline_object->level1_label ?>
                                     <?php endif; ?>
-                                </h1>
+                                </h3>
                                 <p>
                                     <?php echo $control->posts_count ?>
                                     items <?php echo $control->search ? 'found' : 'in this category' ?>
@@ -187,13 +176,13 @@ $url_link = $control->get_permalink();
                                 <?php if ($control->filter_grades)://&& $control->search !== false): ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="filters-heading-0">
-                                            <h1 class="panel-title">
+                                            <h3 class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion-filters"
                                                    href="#filterPanel0" aria-expanded="true"
                                                    aria-controls="filterPanel0" class="collapsed">
                                                     Grade Level
                                                 </a>
-                                            </h1>
+                                            </h3>
                                         </div>
                                         <div id="filterPanel0"
                                              class="panel-collapse collapse <?php echo $control->filter_requested('gradelevel') ? 'in' : '' ?>"
@@ -234,13 +223,13 @@ $url_link = $control->get_permalink();
                                 <?php if ($control->subdisciplines): ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="filters-heading-1">
-                                            <h1 class="panel-title">
+                                            <h3 class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion-filters"
                                                    href="#filterPanel1" aria-expanded="true"
                                                    aria-controls="filterPanel1" class="collapsed">
                                                     SUB-DISCIPLINE
                                                 </a>
-                                            </h1>
+                                            </h3>
                                         </div>
                                         <div id="filterPanel1"
                                              class="panel-collapse collapse <?php echo $control->filter_requested('subdiscipline') ? 'in' : '' ?>"
@@ -263,13 +252,13 @@ $url_link = $control->get_permalink();
                                 <?php if ($control->filter_content_types): ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="filters-heading-2">
-                                            <h1 class="panel-title">
+                                            <h3 class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion-filters"
                                                    href="#filterPanel2" aria-expanded="true"
                                                    aria-controls="filterPanel2" class="collapsed">
                                                     CONTENT TYPE
                                                 </a>
-                                            </h1>
+                                            </h3>
                                         </div>
                                         <div id="filterPanel2"
                                              class="panel-collapse collapse <?php echo $control->filter_requested('content_type') ? 'in' : '' ?>"
@@ -292,13 +281,13 @@ $url_link = $control->get_permalink();
                                 <?php if ($control->filter_object_types): ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="filters-heading-3">
-                                            <h1 class="panel-title">
+                                            <h3 class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion-filters"
                                                    href="#filterPanel3" aria-expanded="true"
                                                    aria-controls="filterPanel3" class="collapsed">
                                                     OBJECT TYPE
                                                 </a>
-                                            </h1>
+                                            </h3>
                                         </div>
                                         <div id="filterPanel3"
                                              class="panel-collapse collapse <?php echo $control->filter_requested('object_type') ? 'in' : '' ?>"
@@ -321,13 +310,13 @@ $url_link = $control->get_permalink();
                                 <?php if ($control->filter_standards): ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="filters-heading-4">
-                                            <h1 class="panel-title">
+                                            <h3 class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion-filters"
                                                    href="#filterPanel4" aria-expanded="true"
                                                    aria-controls="filterPanel4" class="collapsed">
                                                     Standards
                                                 </a>
-                                            </h1>
+                                            </h3>
                                         </div>
                                         <div id="filterPanel4"
                                              class="panel-collapse collapse <?php echo $control->filter_requested('standard') ? 'in' : '' ?>"
@@ -350,13 +339,13 @@ $url_link = $control->get_permalink();
                                 <?php if ($control->filter_contributors): ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="filters-heading-5">
-                                            <h1 class="panel-title">
+                                            <h3 class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion-filters"
                                                    href="#filterPanel5" aria-expanded="true"
                                                    aria-controls="filterPanel5" class="collapsed">
                                                     Contributors
                                                 </a>
-                                            </h1>
+                                            </h3>
                                         </div>
                                         <div id="filterPanel5"
                                              class="panel-collapse collapse <?php echo $control->filter_requested('contributor') ? 'in' : '' ?>"
@@ -379,13 +368,13 @@ $url_link = $control->get_permalink();
                                 <?php if ($control->filter_dok): ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="filters-heading-6">
-                                            <h1 class="panel-title">
+                                            <h3 class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion-filters"
                                                    href="#filterPanel6" aria-expanded="true"
                                                    aria-controls="filterPanel6" class="collapsed">
                                                     Dok
                                                 </a>
-                                            </h1>
+                                            </h3>
                                         </div>
                                         <div id="filterPanel6"
                                              class="panel-collapse collapse <?php echo $control->filter_requested('dok') ? 'in' : '' ?>"
@@ -406,13 +395,13 @@ $url_link = $control->get_permalink();
                                 <?php if ($control->filter_ranking): ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="filters-heading-7">
-                                            <h1 class="panel-title">
+                                            <h3 class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion-filters"
                                                    href="#filterPanel7" aria-expanded="true"
                                                    aria-controls="filterPanel7" class="collapsed">
                                                     RATING
                                                 </a>
-                                            </h1>
+                                            </h3>
                                         </div>
                                         <div id="filterPanel7"
                                              class="panel-collapse collapse <?php echo $control->filter_requested('ranking') ? 'in' : '' ?>"
@@ -434,13 +423,13 @@ $url_link = $control->get_permalink();
                                 <?php if ($control->filter_license_type): ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="filters-heading-8">
-                                            <h1 class="panel-title">
+                                            <h3 class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion-filters"
                                                    href="#filterPanel8" aria-expanded="true"
                                                    aria-controls="filterPanel8" class="collapsed">
                                                     LICENSE TYPE
                                                 </a>
-                                            </h1>
+                                            </h3>
                                         </div>
                                         <div id="filterPanel8"
                                              class="panel-collapse collapse <?php echo $control->filter_requested('license_type') ? 'in' : '' ?>"
@@ -534,7 +523,7 @@ $url_link = $control->get_permalink();
                                                             <div class="content">
                                                                 <?php if ($item->type == 'item'): ?>
                                                                     <div class="details">
-                                                                        <h2 class="sub-discipline">
+                                                                        <h3 class="sub-discipline">
                                                                             <?php echo !empty($item->subdiscipline) ? $item->subdiscipline : '&nbsp;' ?>
                                                                             <?php if (substr($item->preview, 0, 1) === 'Y'): ?>
                                                                                 <div
@@ -543,14 +532,14 @@ $url_link = $control->get_permalink();
                                                                                     Preview
                                                                                 </div>
                                                                             <?php endif; ?>
-                                                                        </h2>
+                                                                        </h3>
                                                                         <p class="content-type">
                                                                             <?php echo $item->content_type_icon ?>
                                                                         </p>
                                                                     </div>
                                                                 <?php else: ?>
                                                                     <div class="details">
-                                                                        <h2 class="sub-discipline">
+                                                                        <h3 class="sub-discipline">
                                                                             <?php echo $level1_label ?>
                                                                             <?php if (substr($item->preview, 0, 1) === 'Y'): ?>
                                                                                 <div
@@ -559,7 +548,7 @@ $url_link = $control->get_permalink();
                                                                                     Preview
                                                                                 </div>
                                                                             <?php endif; ?>
-                                                                        </h2>
+                                                                        </h3>
                                                                         <p class="content-type">
                                                                             <?php if ($item->source != 2) {
                                                                                 echo $level2_label;
@@ -585,7 +574,7 @@ $url_link = $control->get_permalink();
                                                                 <?php endif ?>
                                                                 <div class="more-info">
                                                                     <div class="content-title">
-                                                                        <h1><?php echo $code_label ?></h1>
+                                                                        <h3><?php echo $code_label ?></h3>
                                                                         <div class="content-type-icon">
                                                                             <svg
                                                                                 class="svg-<?php echo $WWItems->get_icon($item->content_type_icon) ?>-dims">
@@ -693,7 +682,22 @@ $url_link = $control->get_permalink();
                     </div><!-- /row -->
                 </div><!-- /items -->
             </div><!-- /container -->
+            <!-- SEO improvements -->
+            <?php if ($control->search === false): ?>
+                <div class="row container-seo">
+                    <div class="col-md-9">
+                        <h1 class="title-page">
+                            <?php echo nl2br($control->title); ?>
+                        </h1>
+                        <div class="meta-description-page">
+                            <?php echo nl2br($control->meta_description) ?>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            <?php endif ?>
         </div><!-- /hidden-xs -->
+
 
         <div class="back-to-top" id="back-to-top">
             <a href="#header" class="scroll">Back to top</a>
