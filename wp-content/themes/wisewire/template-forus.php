@@ -92,7 +92,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <h3>Track</h3>
-                <div class="forus-description">Track your students' progress on your dashboard period.</div>
+                <div class="forus-description">Track your students' progress on your dashboard.</div>
                 <div class="forus-images">
                     <div class="row">
                         <div class="col-md-6"><img
