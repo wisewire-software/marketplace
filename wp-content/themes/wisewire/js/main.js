@@ -885,24 +885,3 @@ if ($('#teiVideoIframe').length) {
     //$('#teiVideoIframe').player('load', 'https://content.uplynk.com/3481cd8a05704e7b8ecd52693380856a.m3u8');
 }
 
-
-function iOS() {
-
-    var iDevices = [
-        'iPad Simulator',
-        'iPhone Simulator',
-        'iPod Simulator',
-        'iPad',
-        'iPhone',
-        'iPod'
-    ];
-
-    if (!!navigator.platform) {
-        while (iDevices.length) {
-            if (navigator.platform === iDevices.pop()){ return true; }
-        }
-    }
-
-    return false;
-}
-
