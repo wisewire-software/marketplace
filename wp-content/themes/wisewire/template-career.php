@@ -64,7 +64,7 @@
 	$(document).ready(function(){
 		$('[id*="subjectTitle"]').each(function(){
 			var subject = $(this).text();
-			$(this).parent().find('#subject').val(subject).attr('disabled', true);
+			$(this).parent().find('#subject').val(subject).prop('readonly', true);
 		});
 	})
 </script>
