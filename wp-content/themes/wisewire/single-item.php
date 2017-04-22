@@ -678,7 +678,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
             <div class="accordion-style">
 
-                <h2 class="title">Related Items</h2>
+                <h3 class="title">Related Items</h3>
 
                 <?php foreach ($item_cms_related_items as $post):
                     setup_postdata($post); // variable must be called $post (IMPORTANT)
@@ -688,13 +688,13 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                              onclick="location.href='<?php echo get_permalink($post) ?>';">
                         <div class="content">
                             <div class="details">
-                                <h2 class="sub-discipline">
+                                <h3 class="sub-discipline">
                                     <?php echo $WWItems->get_subdiscipline($post->ID) ?>
-                                </h2>
+                                </h3>
 
                             </div>
                             <div class="content-title">
-                                <h1><?php echo $post->post_title ?></h1>
+                                <h3><?php echo $post->post_title ?></h3>
                                 <div class="content-type-icon">
                                     <svg
                                         class="svg-<?php echo $WWItems->get_icon($post->item_content_type_icon) ?>-dims">
@@ -713,20 +713,20 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
         <?php } else if ($item_related) { ?>
             <div class="accordion-style">
 
-                <h2 class="title">Related Items</h2>
+                <h3 class="title">Related Items</h3>
 
                 <?php foreach ($item_related as $item): ?>
                     <article class="lo-item <?php echo $WWItems->get_color($item->item_content_type_icon) ?>"
                              onclick="location.href='<?php echo get_permalink($item) ?>';">
                         <div class="content">
                             <div class="details">
-                                <h2 class="sub-discipline">
+                                <h3 class="sub-discipline">
                                     <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                </h2>
+                                </h3>
 
                             </div>
                             <div class="content-title">
-                                <h1><?php echo $item->post_title ?></h1>
+                                <h3><?php echo $item->post_title ?></h3>
                                 <div class="content-type-icon">
                                     <svg
                                         class="svg-<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>-dims">
@@ -1147,9 +1147,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
             <div class="modal-body">
 
                 <div class="modal-title">
-                    <h1>
+                    <h3>
                         Rate this item
-                    </h1>
+                    </h3>
                 </div>
 
                 <div class="clearfix">
@@ -1171,9 +1171,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                             </div>
                             <div class="content">
                                 <div class="details">
-                                    <h2 class="sub-discipline">
+                                    <h3 class="sub-discipline">
                                         <?php echo $WWItems->get_subdiscipline(get_the_ID()) ?>
-                                    </h2>
+                                    </h3>
                                     <p class="content-type">
                                         <?php echo $WWItems->get_type($item_content_type_icon) ?>
                                     </p>
@@ -1182,8 +1182,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                     </p>
                                 </div>
                                 <div class="content-title">
-                                    <h1><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><?php echo $title ?></span>
-                                    </h1>
+                                    <h3><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><?php echo $title ?></span>
+                                    </h3>
                                     <div class="content-type-icon">
                                         <svg class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
                                             <use
@@ -1259,9 +1259,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                 <div class="modal-body">
 
                     <div class="modal-title modal-title-border">
-                        <h1>
+                        <h3>
                             Contributor Details
-                        </h1>
+                        </h3>
                     </div>
 
                     <div class="clearfix">
@@ -1306,9 +1306,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                 <div class="modal-body">
 
                     <div class="modal-title">
-                        <h1>
+                        <h3>
                             Contact Contributor
-                        </h1>
+                        </h3>
                     </div>
 
                     <?php if ($item_contributor_description) { ?>
@@ -1342,9 +1342,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
             <div class="container">
 
                 <div class="section-title">
-                    <h1>
+                    <h3>
                         RELATED ITEMS
-                    </h1>
+                    </h3>
                 </div>
 
                 <div class="row row-no-margin">
@@ -1376,12 +1376,12 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                 </div>
                                 <div class="content">
                                     <div class="details">
-                                        <h2 class="sub-discipline">
+                                        <h3 class="sub-discipline">
                                             <?php echo $WWItems->get_subdiscipline($post->ID) ?>
-                                        </h2>
+                                        </h3>
                                     </div>
                                     <div class="content-title">
-                                        <h1><?php echo $post->post_title ?></h1>
+                                        <h3><?php echo $post->post_title ?></h3>
                                         <div class="content-type-icon">
                                             <svg
                                                 class="svg-<?php echo $WWItems->get_icon($post->item_content_type_icon) ?>-dims">
@@ -1415,9 +1415,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
             <div class="container">
 
                 <div class="section-title">
-                    <h1>
+                    <h3>
                         RELATED ITEMS
-                    </h1>
+                    </h3>
                 </div>
 
                 <div class="row row-no-margin">
@@ -1444,12 +1444,12 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                 </div>
                                 <div class="content">
                                     <div class="details">
-                                        <h2 class="sub-discipline">
+                                        <h3 class="sub-discipline">
                                             <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                        </h2>
+                                        </h3>
                                     </div>
                                     <div class="content-title">
-                                        <h1><?php echo $item->post_title ?></h1>
+                                        <h3><?php echo $item->post_title ?></h3>
                                         <div class="content-type-icon">
                                             <svg
                                                 class="svg-<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>-dims">

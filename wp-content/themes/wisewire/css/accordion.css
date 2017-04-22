@@ -64,7 +64,7 @@
   margin-bottom: 10px;
 }
 
-.loggedin-accordion .col-2-next .lo-item .content-title h1 {
+.loggedin-accordion .col-2-next .lo-item .content-title h3 {
   width: 75%;
   float: left;
   display: block;
@@ -193,7 +193,7 @@
     float: left;
     width: 55%;
   }
-  .loggedin-accordion .lo-item .content-title h1 {
+  .loggedin-accordion .lo-item .content-title h3 {
     width: auto;
     float: none;
     display: inline;
@@ -238,11 +238,11 @@
     padding: 10px 20px;
     color: #d42a62;
   }
-  .loggedin-accordion h1,
+  .loggedin-accordion h3,
   .loggedin-accordion .collapse,
   .loggedin-accordion  .lo-items .row .img,
   .loggedin-accordion  .lo-items .row > div .lo-info-outside,
-  .loggedin-accordion  .section-title h1,
+  .loggedin-accordion  .section-title h3,
   .loggedin-accordion .lo-item.lo-list-view .ribbon,
   .loggedin-accordion .col-1-item .lo-item .lo-info .rate,
   .loggedin-accordion .col-sm-6.viewall,
@@ -266,7 +266,7 @@
     display: inline-block;
   }
 
-  .loggedin-accordion .col-2-next .lo-item .content-title h1 {
+  .loggedin-accordion .col-2-next .lo-item .content-title h3 {
     width: auto;
     float: none;
     display: inline;
@@ -304,7 +304,7 @@
     height: auto;
   }
 
-  .loggedin-accordion .lo-items .col-2-vertical .lo-item .more-info .content-title h1 {
+  .loggedin-accordion .lo-items .col-2-vertical .lo-item .more-info .content-title h3 {
     width: auto;
     float: none;
     display: inline;

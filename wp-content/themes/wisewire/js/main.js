@@ -879,7 +879,7 @@ if ($('#teiVideoIframe').length) {
         params: params,
         attributes: attrs
     }, function () {
-        $(this).player('load', 'https://content.uplynk.com/3481cd8a05704e7b8ecd52693380856a.m3u8');
+        $(this).player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
     });
 
     //$('#teiVideoIframe').player('load', 'https://content.uplynk.com/3481cd8a05704e7b8ecd52693380856a.m3u8');

@@ -68,7 +68,7 @@ $featured_item = false ?>
                                             class="img-responsive">
                                     </div>
                                     <div class="content">
-                                        <h1><?php echo $author ?></h1>
+                                        <h3><?php echo $author ?></h3>
                                         <p><?php echo $shortBio ?></p>
                                     </div>
                                     <div class="user_avatar">
@@ -128,8 +128,8 @@ $item_carousel_images = array();
                  style="<?php echo (count($control->featured_authors) > 0) ? 'display:none' : ''; ?> ">
 
             <div class="container">
-                <h1 style="width:940px; color:#fff;font-size: 20px; line-height: 1.1; margin:0 auto 20px">FEATURED
-                    ITEM</h1>
+                <h3 style="width:940px; color:#fff;font-size: 20px; line-height: 1.1; margin:0 auto 20px">FEATURED
+                    ITEM</h3>
                 <article
                     class="lo-item lo-item-featured <?php echo $WWItems->get_color($post->content_type_icon) ?>">
                     <div class="img">
@@ -159,12 +159,12 @@ $item_carousel_images = array();
                     <div class="content">
                         <a href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/">
                             <div class="details">
-                                <h2 class="sub-discipline">
+                                <h3 class="sub-discipline">
                                     <?php $discipline = $WWItems->get_discipline($post->id) ?>
                                     <?php if ($discipline):
                                         echo $discipline['name'];
                                     endif; ?>
-                                </h2>
+                                </h3>
                                 <p class="content-type">
                                     <?php echo $post->content_type_icon; ?>
                                 </p>
@@ -173,7 +173,7 @@ $item_carousel_images = array();
                                 </p>
                             </div>
                             <div class="content-title">
-                                <h1><?php echo $post->title; ?></h1>
+                                <h3><?php echo $post->title; ?></h3>
                                 <div class="content-type-icon">
                                     <svg
                                         class="svg-<?php echo $WWItems->get_icon($post->content_type_icon) ?>-dims">
@@ -227,7 +227,7 @@ $item_carousel_images = array();
                                 <div
                                     class="modal-title <?php if (!$item_demo_subhead) echo "modal-title-no-subhead"; ?>">
 
-                                    <h1><?php echo $title ?></h1>
+                                    <h3><?php echo $title ?></h3>
                                     <?php if ($item_demo_subhead) { ?>
                                         <h2><?php echo $item_demo_subhead; ?></h2>
                                     <?php } ?>
@@ -307,9 +307,9 @@ $item_carousel_images = array();
                         <div class="container">
 
                             <div class="section-title">
-                                <h1>
+                                <h3>
                                     Recommended for you
-                                </h1>
+                                </h3>
                             </div>
 
                             <div class="row row-no-margin col-1-item-2-vertical">
@@ -351,9 +351,9 @@ $item_carousel_images = array();
 
                                             <div class="content">
                                                 <div class="details">
-                                                    <h2 class="sub-discipline">
+                                                    <h3 class="sub-discipline">
                                                         <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                                    </h2>
+                                                    </h3>
                                                     <p class="content-type">
                                                         <?php echo $item_content_type_icon ?>
                                                     </p>
@@ -363,7 +363,7 @@ $item_carousel_images = array();
                                                 </div>
                                                 <div class="more-info">
                                                     <div class="content-title">
-                                                        <h1><?php echo $item->post_title ?></h1>
+                                                        <h3><?php echo $item->post_title ?></h3>
                                                         <div class="content-type-icon">
                                                             <svg
                                                                 class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
@@ -412,10 +412,10 @@ $item_carousel_images = array();
                                            href='<?php echo get_permalink($item) ?>'>
                                             <div class="content">
                                                 <div class="details">
-                                                    <h2 class="sub-discipline">
+                                                    <h3 class="sub-discipline">
                                                         <?php echo $WWItems->get_subdiscipline($item->ID) ?>
                                                         <div class="ribbon"><span class="icon"></span> Preview</div>
-                                                    </h2>
+                                                    </h3>
                                                     <p class="content-type">
                                                         <?php echo $item_content_type_icon ?>
                                                     </p>
@@ -425,7 +425,7 @@ $item_carousel_images = array();
                                                 </div>
                                                 <div class="more-info">
                                                     <div class="content-title">
-                                                        <h1><?php echo $item->post_title ?></h1>
+                                                        <h3><?php echo $item->post_title ?></h3>
                                                         <div class="content-type-icon">
                                                             <svg
                                                                 class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
@@ -499,9 +499,9 @@ $item_carousel_images = array();
                         <div class="container">
 
                             <div class="section-title">
-                                <h1>
+                                <h3>
                                     Recently viewed by you
-                                </h1>
+                                </h3>
                             </div>
 
                             <div class="row row-no-margin">
@@ -525,12 +525,12 @@ $item_carousel_images = array();
                                            href="<?php echo get_permalink($item) ?>">
                                             <div class="content">
                                                 <div class="details">
-                                                    <h2 class="sub-discipline">
+                                                    <h3 class="sub-discipline">
                                                         <?php echo $WWItems->get_subdiscipline($item->ID) ?>
                                                         <?php if (substr($item_preview, 0, 1) === 'Y'): ?>
                                                             <div class="ribbon"><span class="icon"></span> Preview</div>
                                                         <?php endif; ?>
-                                                    </h2>
+                                                    </h3>
                                                     <p class="content-type">
                                                         <?php echo $item_content_type_icon ?>
                                                     </p>
@@ -540,7 +540,7 @@ $item_carousel_images = array();
                                                 </div>
                                                 <div class="more-info">
                                                     <div class="content-title">
-                                                        <h1><?php echo $item->post_title ?></h1>
+                                                        <h3><?php echo $item->post_title ?></h3>
                                                         <div class="content-type-icon">
                                                             <svg
                                                                 class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
@@ -596,9 +596,9 @@ $item_carousel_images = array();
                                             </div>
                                             <div class="content">
                                                 <div class="details">
-                                                    <h2 class="sub-discipline">
+                                                    <h3 class="sub-discipline">
                                                         <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                                    </h2>
+                                                    </h3>
                                                     <p class="content-type">
                                                         <?php echo $item_content_type_icon ?>
                                                     </p>
@@ -608,7 +608,7 @@ $item_carousel_images = array();
                                                 </div>
                                                 <div class="more-info">
                                                     <div class="content-title">
-                                                        <h1><?php echo $item->post_title ?></h1>
+                                                        <h3><?php echo $item->post_title ?></h3>
                                                         <div class="content-type-icon">
                                                             <svg
                                                                 class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
@@ -705,9 +705,9 @@ $item_carousel_images = array();
 
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <h1>
+                                        <h3>
                                             What people are viewing
-                                        </h1>
+                                        </h3>
                                     </div>
                                     <div class="col-sm-6 viewall">
                                         <a href="<?php echo esc_url(home_url('/')); ?>most-viewed">View all</a>
@@ -746,9 +746,9 @@ $item_carousel_images = array();
                                             </div>
                                             <div class="content">
                                                 <div class="details">
-                                                    <h2 class="sub-discipline">
+                                                    <h3 class="sub-discipline">
                                                         <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                                    </h2>
+                                                    </h3>
                                                     <p class="content-type">
                                                         <?php echo $item_content_type_icon ?>
                                                     </p>
@@ -758,7 +758,7 @@ $item_carousel_images = array();
                                                 </div>
                                                 <div class="more-info">
                                                     <div class="content-title">
-                                                        <h1><?php echo $item->post_title ?></h1>
+                                                        <h3><?php echo $item->post_title ?></h3>
                                                         <div class="content-type-icon">
                                                             <svg
                                                                 class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">

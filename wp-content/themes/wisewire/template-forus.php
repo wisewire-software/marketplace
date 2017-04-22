@@ -146,4 +146,7 @@
             $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
         }
     });
+
+
+
 </script>

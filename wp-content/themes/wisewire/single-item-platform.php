@@ -460,16 +460,16 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
             <?php if ($item_related): ?>
                 <div class="accordion-style">
 
-                    <h2 class="title">Related Items</h2>
+                    <h3 class="title">Related Items</h3>
 
                     <?php foreach ($item_related as $item): ?>
                         <article class="lo-item <?php echo $WWItems->get_color($item->item_content_type_icon) ?>"
                                  onclick="location.href='<?php echo get_permalink($item) ?>';">
                             <div class="content">
                                 <div class="details">
-                                    <h2 class="sub-discipline">
+                                    <h3 class="sub-discipline">
                                         <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                    </h2>
+                                    </h3>
                                 </div>
                                 <div class="content-title">
                                     <h1><?php echo $item->post_title ?></h1>
@@ -770,9 +770,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                 </div>
                                 <div class="content">
                                     <div class="details">
-                                        <h2 class="sub-discipline">
+                                        <h3 class="sub-discipline">
                                             <?php echo $WWItems->get_subdiscipline($item_id) ?>
-                                        </h2>
+                                        </h3>
                                         <p class="content-type">
                                             <?php echo $WWItems->get_type($item_content_type_icon) ?>
                                         </p>
@@ -958,9 +958,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                     </div>
                                     <div class="content">
                                         <div class="details">
-                                            <h2 class="sub-discipline">
+                                            <h3 class="sub-discipline">
                                                 <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                            </h2>
+                                            </h3>
                                         </div>
                                         <div class="content-title">
                                             <h1><?php echo $item->post_title ?></h1>
@@ -1434,7 +1434,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
 
                 <div class="accordion-style">
 
-                    <h2 class="title">Related Items</h2>
+                    <h3 class="title">Related Items</h3>
 
                     <?php foreach ($item_cms_related_items as $post):
                         setup_postdata($post); // variable must be called $post (IMPORTANT)
@@ -1444,9 +1444,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                  onclick="location.href='<?php echo get_permalink($post) ?>';">
                             <div class="content">
                                 <div class="details">
-                                    <h2 class="sub-discipline">
+                                    <h3 class="sub-discipline">
                                         <?php echo $WWItems->get_subdiscipline($post->ID) ?>
-                                    </h2>
+                                    </h3>
 
                                 </div>
                                 <div class="content-title">
@@ -1469,16 +1469,16 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
             <?php } else if ($item_related) { ?>
                 <div class="accordion-style">
 
-                    <h2 class="title">Related Items</h2>
+                    <h3 class="title">Related Items</h3>
 
                     <?php foreach ($item_related as $item): ?>
                         <article class="lo-item <?php echo $WWItems->get_color($item->item_content_type_icon) ?>"
                                  onclick="location.href='<?php echo get_permalink($item) ?>';">
                             <div class="content">
                                 <div class="details">
-                                    <h2 class="sub-discipline">
+                                    <h3 class="sub-discipline">
                                         <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                    </h2>
+                                    </h3>
 
                                 </div>
                                 <div class="content-title">
@@ -1869,9 +1869,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                 </div>
                                 <div class="content">
                                     <div class="details">
-                                        <h2 class="sub-discipline">
+                                        <h3 class="sub-discipline">
                                             <?php echo $WWItems->get_subdiscipline(get_the_ID()) ?>
-                                        </h2>
+                                        </h3>
                                         <p class="content-type">
                                             <?php echo $WWItems->get_type($item_content_type_icon) ?>
                                         </p>
@@ -2068,9 +2068,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                     </div>
                                     <div class="content">
                                         <div class="details">
-                                            <h2 class="sub-discipline">
+                                            <h3 class="sub-discipline">
                                                 <?php echo $WWItems->get_subdiscipline($post->ID) ?>
-                                            </h2>
+                                            </h3>
                                         </div>
                                         <div class="content-title">
                                             <h1><?php echo $post->post_title ?></h1>
@@ -2136,9 +2136,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                     </div>
                                     <div class="content">
                                         <div class="details">
-                                            <h2 class="sub-discipline">
+                                            <h3 class="sub-discipline">
                                                 <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                            </h2>
+                                            </h3>
                                         </div>
                                         <div class="content-title">
                                             <h1><?php echo $item->post_title ?></h1>
@@ -2184,7 +2184,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
 
                                 <h1><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><?php echo $title ?></span></h1>
                                 <?php if ($item_demo_subhead) { ?>
-                                    <h2><?php echo $item_demo_subhead; ?></h2>
+                                    <h3><?php echo $item_demo_subhead; ?></h3>
                                 <?php } ?>
 
                             </div>

@@ -144,14 +144,8 @@
 
           $user_id = get_current_user_id();
           $user_info = get_userdata($user_id);
-          $is_oauth = (get_user_meta( $user_id, 'wpoa_identity', true ) ? true :  false);
+          $email = $user_info->user_email;
 
-          if ($is_oauth) {
-            $email = get_user_meta($user_id, 'email', true);
-          }else{
-            $email = $user_info->user_email;
-          }
-          
           ?>
 
           <script>

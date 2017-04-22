@@ -392,6 +392,20 @@ Class WPOA {
 		$user = get_user_by('id', $query_result);
 		return $user;
 	}
+
+	function wpoa_is_user_provider($oauth_identity){
+		$user = get_user_by( 'email', $oauth_identity['email'] );
+
+		if($user){
+			$user_meta_identity = get_user_meta($user->ID, 'wpoa_identity', true);
+
+			if(!$user_meta_identity || empty($user_meta_identity)){
+				return null;
+			}
+		}
+
+		return $user;
+	}
 	
 	// login (or register and login) a wordpress user based on their oauth identity:
 	function wpoa_login_user($oauth_identity) {
@@ -407,18 +421,27 @@ Class WPOA {
 		}
 
 		// try to find a matching wordpress user for the now-authenticated user's oauth identity:
+		$is_user_provider = false;
 		$matched_user = $this->wpoa_match_wordpress_user($oauth_identity);
 		// handle the matched user if there is one:
-		if ( $matched_user ) {
-			// there was a matching wordpress user account, log it in now:
+		if ( !$matched_user ) {
+			$matched_user = $this->wpoa_is_user_provider($oauth_identity);
+			$is_user_provider = true;
+		}
+
+		if($matched_user){
 			$user_id = $matched_user->ID;
 			$user_login = $matched_user->user_login;
 			wp_set_current_user( $user_id, $user_login );
 			wp_set_auth_cookie( $user_id );
 			do_action( 'wp_login', $user_login, $matched_user );
+			if($is_user_provider){
+				$this->wpoa_link_account($user_id);
+			}
 			// after login, redirect to the user's last location
-			$this->wpoa_end_login("Logged in successfully!");
+			$this->wpoa_end_login("Logged in successfully user!");
 		}
+
 		// handle the already logged in user if there is one:
 		if ( is_user_logged_in() ) {
 			// there was a wordpress user logged in, but it is not associated with the now-authenticated user's email address, so associate it now:
@@ -430,7 +453,7 @@ Class WPOA {
 			$this->wpoa_end_login("Your account was linked successfully with your third party authentication provider.");
 		}
 		// handle the logged out user or no matching user (register the user):
-		if ( !is_user_logged_in() && !$matched_user ) {
+		if ( !is_user_logged_in() && !$matched_user) {
 			// this person is not logged into a wordpress account and has no third party authentications registered, so proceed to register the wordpress user:
 			include 'register.php';
 		}
@@ -525,7 +548,16 @@ Class WPOA {
 	// links a third-party account to an existing wordpress user account:
 	function wpoa_link_account($user_id) {
 		if ($_SESSION['WPOA']['USER_ID'] != '') {
-			add_user_meta( $user_id, 'wpoa_identity', $_SESSION['WPOA']['PROVIDER'] . '|' . $_SESSION['WPOA']['USER_ID'] . '|' . time());
+			$data_identity = get_user_meta($user_id, 'wpoa_identity', true);
+			$identity = $_SESSION['WPOA']['PROVIDER'] . '|' . $_SESSION['WPOA']['USER_ID'] . '|' . time();
+
+			if(!empty($data_identity)){
+				$data_identity = explode(',', $data_identity);
+				array_push($data_identity, $identity);
+				update_user_meta( $user_id, 'wpoa_identity',  implode(",", $data_identity));
+			}else{
+				add_user_meta( $user_id, 'wpoa_identity', $identity);
+			}
 		}
 	}
 
