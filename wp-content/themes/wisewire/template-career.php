@@ -7,7 +7,7 @@
 
 <?php get_header(); ?>
 
-<section class="career-banner" style="background: url(<?php bloginfo('template_directory'); ?>/img/career-banner.jpg);">
+<section class="career-banner" style="background: url(<?php bloginfo('template_directory'); ?>/img/careers/career-banner.jpg);">
 	<div class="container">
 		<div class="banner-text">
 			<span class="circle">Join</span>
@@ -23,7 +23,7 @@
                         if($jobList):
 		?>
 		<?php $counter=1; foreach ($jobList as $jobListData): ?>
-		<div class="row">
+		<div class="row item-career">
 			<div class="col-lg-3 col-md-3 col-sm-1">
 				<h3><?php echo $jobListData['job_title'];?></h3>
 			</div>
