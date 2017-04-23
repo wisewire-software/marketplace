@@ -25,7 +25,7 @@
                 <li><a href="/create">Create</a></li>
                 <li><a href="/custom-content">Adapt</a></li>
                 <li><a target="_blank" href="https://blog.wisewire.com/">Blog</a></li>
-                <li><a href="/careers">Adapt</a></li>
+                <li><a href="/careers">Careers</a></li>
               </ul>
               
                <ul>
