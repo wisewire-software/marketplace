@@ -41,15 +41,8 @@ class Controller_BecomeAuthor {
 			/*First Call - To get a new Access Code*/
 			$user_id = get_current_user_id();
 			$user_info = get_userdata($user_id);
-			$is_oauth = (get_user_meta( $user_id, 'wpoa_identity', true ) ? true :  false);
-
-			if ($is_oauth){
-				$email = get_user_meta( $user_id, 'email', true );
-				$username = $email;
-			}else{
-				$email = $user_info->user_email;
-				$username = $user_info->user_login;
-			}
+			$email = $user_info->user_email;
+			$username = $user_info->user_login;
 
 			$data = array(
 				'username' => $username,

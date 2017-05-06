@@ -35,9 +35,9 @@ if (sizeof($favorites)){
 							?>	
 							<div class="item" onclick="location.href = '/item/<?php echo $url_item ?>/';">
 								<div class="content">
-									<h2 class="sub-discipline">
+									<h3 class="sub-discipline">
 										<?php echo $item->title ?>
-									</h2>							
+									</h3>
 									<p class="content-type">
 										<?php echo $item->content_type_icon ?>
 									</p>							
