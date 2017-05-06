@@ -280,18 +280,33 @@ public function wisewire_vendor_by_email($vendor_email){
 	$is_user = get_user_by('email',$vendor_email);
 	
 	if($is_user){
-		$vendor_id_pre = $wpdb->get_results( "SELECT term_id FROM wp_termmeta WHERE meta_key = 'vendor_data' AND meta_value LIKE '%".$vendor_email."%'",OBJECT );
-		$vendor_id = $vendor_id_pre[0]->term_id;
-		$vendor_data_pre = $wpdb->get_results( "SELECT meta_value FROM wp_termmeta WHERE term_id = ".$vendor_id,OBJECT );
-		$vendor_data = unserialize($vendor_data_pre[0]->meta_value);
-		$vendor_admins = $vendor_data['admins'];	
-		
-		$user = get_user_by('id',$vendor_admins);
-		$vendor = array();
-		$vendor['user'] = $user;
-		$vendor['id'] = $vendor_id;
-		$vendor['data'] = $vendor_data;
-		$vendor['admin'] = $vendor_admins;
+        $vendor_id_pre = $wpdb->get_results( "SELECT term_id FROM wp_termmeta WHERE meta_key = 'vendor_data' AND meta_value LIKE '%".$is_user->ID."%'",OBJECT );
+        $vendor_id = $vendor_id_pre[0]->term_id;
+        $vendor_data_pre = $wpdb->get_results( "SELECT meta_value FROM wp_termmeta WHERE term_id = ".$vendor_id,OBJECT );
+        $vendor_data = unserialize($vendor_data_pre[0]->meta_value);
+
+        $vendor_admins = explode(',',$vendor_data['admins']);
+
+        if (($key = array_search($is_user->ID, $vendor_admins)) === false) {
+            unset($vendor_admins[$key]);
+        }
+
+        $vendor_admins = array_values(array_filter($vendor_admins));
+        $vendor_admin = $vendor_admins[0];
+
+        if($vendor_admin){
+            $vid = $vendor_id;
+        } else{
+            $vid = '';
+        }
+
+        $user = $is_user;
+
+        $vendor = array();
+        $vendor['user'] = $user;
+        $vendor['id'] = $vid;
+        $vendor['data'] = $vendor_data;
+        $vendor['admin'] = $vendor_admin;
 	} else{
 		unset($vendor);	
 	
