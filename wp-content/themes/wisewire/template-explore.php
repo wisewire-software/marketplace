@@ -128,12 +128,12 @@ $featured_item = false ?>
                     </div>
                     <div class="content" style="cursor:hand; cursor:pointer"
                          onclick="location.href = '/item/<?php echo($post->type == 'item' ? $post->name : $post->id); ?>'">
-                        <h1>
+                        <h3>
                             <?php $discipline = $WWItems->get_discipline($post->id) ?>
                             <?php if ($discipline):
                                 echo $discipline['name'];
                             endif; ?>
-                        </h1>
+                        </h3>
                         <p>
                             <?php echo $title ?>
                         </p>
@@ -158,20 +158,6 @@ $featured_item = false ?>
     <?php endforeach; ?>
 <?php endif; ?>
 
-<!-- SEO improvements -->
-<div class="container">
-  <div class="row container-seo">
-    <div class="col-md-12">
-      <h1 class="title-page">
-        <?php echo nl2br($control->title); ?>
-      </h1>
-      <div class="meta-description-page">
-        <?php echo nl2br($control->meta_description) ?>
-      </div>
-    </div>
-  </div>
-</div>
-
 <?php if (have_rows('grade_repeater')): ?>
     <div class="hidden-xs">
         <?php while (have_rows('grade_repeater')): the_row(); ?>
@@ -191,9 +177,9 @@ $featured_item = false ?>
                                 <div class="section-title">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <h1>
+                                            <h3>
                                                 <?php echo $category_name->name; ?>
-                                            </h1>
+                                            </h3>
                                         </div>
                                         <div class="col-sm-6 viewall">
                                             <a href="/explore/<?php echo $grade; ?>/<?php echo $category_name->slug; ?>"
@@ -236,15 +222,15 @@ $featured_item = false ?>
 
                                                     <div class="content">
                                                         <div class="details">
-                                                            <h2 class="sub-discipline">
+                                                            <h3 class="sub-discipline">
                                                                 <?php echo $post->subdiscipline; ?>
-                                                            </h2>
+                                                            </h3>
                                                             <p class="content-type">
                                                                 <?php echo $post->content_type_icon; ?>
                                                             </p>
                                                         </div>
                                                         <div class="content-title">
-                                                            <h1><?php echo $title; ?></h1>
+                                                            <h3><?php echo $title; ?></h3>
                                                             <div class="content-type-icon">
                                                                 <svg
                                                                     class="svg-<?php echo $WWItems->get_icon($post->content_type_icon); ?>-dims">
@@ -351,16 +337,16 @@ $featured_item = false ?>
                                                     onclick="location.href='/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/';">
                                                     <div class="content">
                                                         <div class="details">
-                                                            <h2 class="sub-discipline">
+                                                            <h3 class="sub-discipline">
                                                                 <?php echo $post->subdiscipline; ?>
-                                                            </h2>
+                                                            </h3>
                                                             <p class="content-type">
                                                                 <?php echo $post->content_type_icon; ?>
                                                             </p>
                                                         </div>
                                                         <div class="more-info">
                                                             <div class="content-title">
-                                                                <h1><?php echo $title; ?></h1>
+                                                                <h3><?php echo $title; ?></h3>
                                                                 <div class="content-type-icon">
                                                                     <svg
                                                                         class="svg-<?php echo $WWItems->get_icon($post->content_type_icon) ?>-dims">
@@ -422,10 +408,24 @@ $featured_item = false ?>
 
 <?php endif; ?>
 
-
-    <div class="back-to-top" id="back-to-top">
-        <a href="#header" class="scroll">Back to top</a>
+<!-- SEO improvements -->
+<div class="container">
+    <div class="row container-seo">
+        <div class="col-md-9">
+            <h1 class="title-page">
+                <?php echo nl2br($control->title); ?>
+            </h1>
+            <div class="meta-description-page">
+                <?php echo nl2br($control->meta_description) ?>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
     </div>
+</div>
+
+<div class="back-to-top" id="back-to-top">
+    <a href="#header" class="scroll">Back to top</a>
+</div>
 
 
     <script>

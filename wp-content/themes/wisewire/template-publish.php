@@ -104,9 +104,9 @@
                     
                   <?php if ($headline_1) { ?>
                   <div class="article-title <?php echo "article-title-".$i ?>">
-                    <h1>
+                    <h3>
                       <?php echo $headline_1; ?>
-                    </h1>
+                    </h3>
                   </div>
                   <?php } ?>
                   
@@ -226,9 +226,9 @@
                     
                     <?php if ($headline_1) { ?>
                     <div class="article-title <?php echo "article-title-".$i ?>">
-                      <h1>
+                      <h3>
                         <?php echo $headline_1; ?>
-                      </h1>
+                      </h3>
                     </div>
                     <?php } ?>
                   </div>

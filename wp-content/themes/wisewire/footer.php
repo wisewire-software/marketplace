@@ -25,6 +25,7 @@
                 <li><a href="/create">Create</a></li>
                 <li><a href="/custom-content">Adapt</a></li>
                 <li><a target="_blank" href="https://blog.wisewire.com/">Blog</a></li>
+                <li><a href="/careers">Careers</a></li>
               </ul>
               
                <ul>
@@ -144,14 +145,8 @@
 
           $user_id = get_current_user_id();
           $user_info = get_userdata($user_id);
-          $is_oauth = (get_user_meta( $user_id, 'wpoa_identity', true ) ? true :  false);
+          $email = $user_info->user_email;
 
-          if ($is_oauth) {
-            $email = get_user_meta($user_id, 'email', true);
-          }else{
-            $email = $user_info->user_email;
-          }
-          
           ?>
 
           <script>

@@ -18,8 +18,14 @@ class Controller_Explore {
 		$this->wpdb = $wpdb;
 		$this->wp_query = $wp_query;
 		
-		// get query variables 
-		$this->grade = isset($this->wp_query->query['grade']) ? $this->wp_query->query['grade'] : 'middle';
+		// get query variables
+        $params_grade = $this->wp_query->query['grade'];
+
+        if(!$params_grade){
+            wp_redirect(get_site_url() . '/explore/middle/', 301);
+        }
+
+		$this->grade = isset($params_grade) ? $params_grade : 'middle';
 		
 		if ($this->grade) {
 			$this->grades_ids = Controller_WiseWireItems::GetGradeIdByName($this->grade);
