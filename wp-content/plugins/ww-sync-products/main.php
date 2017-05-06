@@ -430,7 +430,7 @@ function hide_coupon_field( $enabled ) {
 	
 	return $enabled;
 }
-add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field' );
+//add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field' );
 
 
 // remove Order Notes from checkout field in Woocommerce
