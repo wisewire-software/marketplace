@@ -139,17 +139,6 @@ $url_link = $control->get_permalink();
                                 <h3>
                                     <?php if ($control->search): ?>
                                         Search results: <span><?php echo $control->search ?></span>
-                                        <script type="text/javascript">
-                                            $(document).ready(function(){
-                                                ga(
-                                                   'send',
-                                                   'event',
-                                                   'SearchPerformed',
-                                                   'Search',
-                                                   '<?=$control->search?>'
-                                                );
-                                            });
-                                        </script>
                                     <?php else: ?>
                                         <?php echo $control->discipline_object->level1_label ?>
                                     <?php endif; ?>

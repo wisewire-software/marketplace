@@ -1200,18 +1200,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                 </select>
                             </div>
 
-                            <button class="btn"
-                                    type="submit"
-                                    onmousedown="ga(
-                                        'send',
-                                        'event',
-                                        'ItemRated',
-                                        'Click',
-                                        '<?= get_post_field('post_name') ?>',
-                                        $('.rating-write').val()
-                                        );"
-                            >Submit
-                            </button>
+                            <button class="btn" type="submit">Submit</button>
                         </form>
                     </div>
 
