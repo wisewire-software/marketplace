@@ -147,17 +147,11 @@
                         <?php if ( is_user_logged_in() ) { ?>
                           <a href="/platform-<?php echo $button_type ?>"
                              class="btn btn_<?php echo $button_type ?>"
-                             target="_blank"
-                             <?= $button_type=='request'?'onmousedown="ga(\'send\', \'event\', \'BecomeAuthor\', \'Click\');" ':''?>
-                             <?= $button_type=='publish'?'onmousedown="ga(\'send\', \'event\', \'CreateContent\', \'Click\');" ':''?>
-                          >
+                             target="_blank">
                             <?php echo $cta_button_text; ?>
                           </a>
                         <?php } else {?>
-                          <a href="#" 
-                            <?= $button_type=='request'?'onmousedown="ga(\'send\', \'event\', \'BecomeAuthor\', \'Click\');" ':''?>
-                            <?= $button_type=='publish'?'onmousedown="ga(\'send\', \'event\', \'CreateContent\', \'Click\');" ':''?>
-                             class="btn btn-publish-not-loggedin btn_<?php echo $button_type ?>"
+                          <a href="#" class="btn btn-publish-not-loggedin btn_<?php echo $button_type ?>"
                              data-toggle="popover" 
                              data-content='<p class="info">You must be logged in to create</p><p class="clearfix"><a href="/user-login/?publish" class="btn btn-login">Log in</a><a href="/user-login/?action=create-account&publish" class="btn">Create account</a></p>'><?php echo $cta_button_text; ?></a>
                         <?php } ?>  
@@ -286,14 +280,12 @@
                       <?php } else {?>
                         <?php if ( is_user_logged_in() ) { ?>
                           <a href="/platform-<?php echo $button_type ?>"
-                             <?= $button_type=='request'?'onmousedown="ga(\'send\', \'event\', \'BecomeAuthor\', \'Click\');" ':''?>
                              class="btn btn_<?php echo $button_type ?>"
                              target="_blank" >
                                 <?php echo $cta_button_text; ?>
                           </a>
                         <?php } else{?>                        
-                          <a href="#" 
-                             <?= $button_type=='request'?'onmousedown="ga(\'send\', \'event\', \'BecomeAuthor\', \'Click\');" ':''?>
+                          <a href="#"
                              class="btn btn-publish-not-loggedin btn_<?php echo $button_type ?>"
                              data-toggle="popover" 
                              data-content='<p class="info">You must be logged in to create</p><p class="clearfix"><a href="/user-login/?publish" class="btn btn-login">Log in</a><a href="/user-login/?action=create-account&publish" class="btn">Create account</a></p>'
