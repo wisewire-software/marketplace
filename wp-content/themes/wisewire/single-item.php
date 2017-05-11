@@ -180,19 +180,6 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
 <!-- Visible on <768px -->
 
-<script type="text/javascript">
-
-    // $title = get_the_title();
-    //  $item_id = get_the_ID();
-
-    //      console.log('<?=$title?>');
-    //      console.log('<?=$item_id?>');
-
-    $(document).ready(function () {
-        ga('send', 'event', 'ItemDetailPage', 'Open', '<?=get_post_field('post_name')?>');
-    });
-</script>
-
 <section class="nav-grades-mobile visible-xs-block">
     <div class="container">
         <p>
@@ -221,8 +208,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
             <h1>
                 <?php echo $item_discipline['name'] ?>
             </h1>
-            <a href="/explore/<?php echo $grade ?>/<?php echo $item_discipline['slug'] ?>/"
-               onmousedown="ga('send', 'event', 'ViewAll', 'Click', '<?= $category_name->slug ?>');">
+            <a href="/explore/<?php echo $grade ?>/<?php echo $item_discipline['slug'] ?>/">
                 VIEW ALL <?php echo $item_discipline['name'] ?>
             </a>
 
@@ -366,13 +352,6 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
                         <?php do_action('ww_add_to_cart'); ?>
                         <!-- BalkanOutsource Google Analytics Event -->
-                        <script type="text/javascript">
-                            $(function () {
-                                $('.add_to_cart_button').on('mousedown', function () {
-                                    ga('send', 'event', 'AddToCart', 'Click', '<?=get_post_field('post_name')?>');
-                                });
-                            });
-                        </script>
                     <?php } else{
 
                     if ($item_for_sale == 'N' && $item_price > 0){ ?>
@@ -995,11 +974,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                 data-item_id="<?php echo $item_object_id ?>"
                                 class="btn btn-alt btn-add-favorite"
                                 data-toggle="popover"
-                                data-content='
-                     <p class="info info-added">Item added to favorites</p>
-                     '
-                                onmousedown="ga('send', 'event', 'AddToFavourites', 'Click', '<?= get_post_field('post_name') ?>');"
-                            >ADD TO FAVORITES</a>
+                                data-content='<p class="info info-added">Item added to favorites</p>'>ADD TO FAVORITES</a>
                         </p>
 
                         <?php  if( current_user_can('administrator')): ?>
@@ -1476,12 +1451,6 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
 <script>
     $(function () {
-        $('.preview_detail').on('click', function () {
-            ga('send', 'event', 'Item Detail', 'Preview', "<?php echo $title; ?>", {
-                'dimension3': '<?php echo $title; ?>',
-                'metric3': '1'
-            });
-        });
 
         $('a[data-name="action_hide_items"]').on('click', function (e) {
             e.preventDefault();

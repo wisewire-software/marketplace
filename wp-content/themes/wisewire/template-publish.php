@@ -242,8 +242,7 @@
                         <?php if ( is_user_logged_in() ) { ?>
                           <a href="/platform-<?php echo $button_type ?>"
                              class="btn btn_<?php echo $button_type ?>"
-                             target="_blank"
-                             onmousedown="ga('send','event','CreateContent','Click')">
+                             target="_blank">
                                 <?php echo $cta_button_text; ?>
                           </a>
                         <?php } else {?>

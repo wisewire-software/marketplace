@@ -182,8 +182,7 @@ $featured_item = false ?>
                                             </h3>
                                         </div>
                                         <div class="col-sm-6 viewall">
-                                            <a href="/explore/<?php echo $grade; ?>/<?php echo $category_name->slug; ?>"
-                                               onmousedown="ga('send', 'event', 'ViewAll', 'Click', '<?= $category_name->slug ?>');">
+                                            <a href="/explore/<?php echo $grade; ?>/<?php echo $category_name->slug; ?>">
                                                 View all
                                             </a>
                                         </div>
@@ -426,18 +425,4 @@ $featured_item = false ?>
 <div class="back-to-top" id="back-to-top">
     <a href="#header" class="scroll">Back to top</a>
 </div>
-
-
-    <script>
-        $(function () {
-            $('.lo-item').on('click', function () {
-                var title = $(this).data('itemtitle');
-                ga('send', 'event', 'Item Detail', 'Page', title, {
-                    'dimension3': title,
-                    'dimension5': 'explore',
-                    'metric4': '1'
-                });
-            });
-        });
-    </script>
 <?php get_footer(); ?>

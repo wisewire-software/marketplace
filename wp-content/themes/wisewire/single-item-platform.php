@@ -2229,13 +2229,6 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
 
 <script>
     $(function () {
-        $('.preview_detail').on('click', function () {
-            ga('send', 'event', 'Item Detail', 'Preview', "<?php echo $title; ?>", {
-                'dimension3': '<?php echo $title; ?>',
-                'metric3': '1'
-            });
-        });
-
         $('a[data-name="action_hide_items"]').on('click', function (e) {
             e.preventDefault();
             var $this = $(this);

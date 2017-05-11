@@ -704,41 +704,6 @@ $url_link = $control->get_permalink();
         </div>
 
     </div>
-    <?php function add_script_ga_footer(){ ?>
-        <?php
-            global $control;
-            global $items;
-        ?>
-
-        <script>
-            $(function () {
-                $('.lo-item').on('click', function () {
-                    var title = $(this).data('itemtitle');
-                    ga('send', 'event', 'Item Detail', 'Page', title, {
-                        'dimension3': title,
-                        'dimension5': 'search',
-                        'metric4': '1'
-                    });
-                });
-            });
-
-
-            <?php if($control->search): ?>
-            <?php if($items): ?>
-            ga('send', 'event', 'Search', 'Submit:Results', "<?php echo $control->search; ?>", {
-                'dimension1': "<?php echo $control->search; ?>",
-                'metric1': '1'
-            });
-            <?php else: ?>
-            ga('send', 'event', 'Search', 'Submit:Results Null', "<?php echo $control->search; ?>", {
-                'dimension1': "<?php echo $control->search; ?>",
-                'metric2': '1'
-            });
-            <?php endif; ?>
-            <?php endif; ?>
-        </script>
-
-    <?php } ?>
     <?php add_action('wp_footer', 'add_script_ga_footer'); ?>
     <?php get_footer(); ?>
 
