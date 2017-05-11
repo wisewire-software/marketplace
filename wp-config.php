@@ -20,14 +20,14 @@ define('WP_CACHE', true); // Added by W3 Total Cache
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wisewire_qa');
+define('DB_NAME', 'wordpress');
 
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'wordpressuser');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', '?WandN?');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -85,15 +85,15 @@ if (!defined('ABSPATH'))
     define('ABSPATH', dirname(__FILE__) . '/');
 
 // iThemes Security Config Details: 2
-define('FORCE_SSL_LOGIN', false); // Force SSL for Dashboard - Security > Settings > Secure Socket Layers (SSL) > SSL for Dashboard
-define('FORCE_SSL_ADMIN', false); // Force SSL for Dashboard - Security > Settings > Secure Socket Layers (SSL) > SSL for Dashboard
-define('FORCE_SSL_CONTENT', false);
+define('FORCE_SSL_LOGIN', true); // Force SSL for Dashboard - Security > Settings > Secure Socket Layers (SSL) > SSL for Dashboard
+define('FORCE_SSL_ADMIN', true); // Force SSL for Dashboard - Security > Settings > Secure Socket Layers (SSL) > SSL for Dashboard
+define('FORCE_SSL_CONTENT', true);
 
 define('DISABLE_WP_CRON', true);
-define('WAN_TEST_ENVIRONMENT', true);
+define('WAN_TEST_ENVIRONMENT', false);
 
-define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
-define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST']);
+define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST']);
 
 define('URL_API_SEARCH_SOLR', 'http://localhost:8983/solr/summarizeditemmetadata/');
 /** Sets up WordPress vars and included files. */
