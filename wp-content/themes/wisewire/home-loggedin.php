@@ -133,7 +133,7 @@ $item_carousel_images = array();
                 <article
                     class="lo-item lo-item-featured <?php echo $WWItems->get_color($post->content_type_icon) ?>">
                     <div class="img">
-                        <a href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/">
+                        <a href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/"  <?php echo add_rel_nofollow_to_item($post->id) ?>>
                             <?php
                             if ($item_main_image_attributes):?>
                                 <img alt="" src="<?php echo $item_main_image_attributes[0]; ?>" class="img-responsive"/>
@@ -157,7 +157,7 @@ $item_carousel_images = array();
                         <?php } ?>
                     </div>
                     <div class="content">
-                        <a href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/">
+                        <a href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/" <?php echo add_rel_nofollow_to_item($post->id) ?> >
                             <div class="details">
                                 <h3 class="sub-discipline">
                                     <?php $discipline = $WWItems->get_discipline($post->id) ?>
@@ -331,7 +331,7 @@ $item_carousel_images = array();
 
                                     <?php if ($k == 0): ?>
                                         <a class="lo-item <?php echo $WWItems->get_color($item_content_type_icon) ?> lo-item-col-2"
-                                           href="<?php echo get_permalink($item) ?>">
+                                           href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?>>
 
                                             <div class="img">
                                                 <?php
@@ -409,7 +409,7 @@ $item_carousel_images = array();
                                         </a>
                                     <?php else: ?>
                                         <a class="lo-item lo-list-view <?php echo $WWItems->get_color($item_content_type_icon) ?>"
-                                           href='<?php echo get_permalink($item) ?>'>
+                                           href='<?php echo get_permalink($item) ?>' <?php echo add_rel_nofollow_to_item($item->ID) ?>>
                                             <div class="content">
                                                 <div class="details">
                                                     <h3 class="sub-discipline">
@@ -522,7 +522,7 @@ $item_carousel_images = array();
 
                                     <?php if ($k < 2): ?>
                                         <a class="lo-item lo-list-view <?php echo $WWItems->get_color($item_content_type_icon) ?>"
-                                           href="<?php echo get_permalink($item) ?>">
+                                           href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?> >
                                             <div class="content">
                                                 <div class="details">
                                                     <h3 class="sub-discipline">
@@ -578,7 +578,7 @@ $item_carousel_images = array();
                                     <?php else: ?>
 
                                         <a class="lo-item lo-item-col <?php echo $WWItems->get_color($item_content_type_icon) ?>"
-                                           href="<?php echo get_permalink($item) ?>">
+                                           href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?>>
                                             <div class="img">
                                                 <?php
                                                 $item_main_image = get_field('item_main_image', $item->ID);
@@ -728,7 +728,7 @@ $item_carousel_images = array();
                                     <div class="col-sm-3 col-no-space col-2-next">
 
                                         <a class="lo-item lo-item-col <?php echo $WWItems->get_color($item_content_type_icon) ?>"
-                                           href="<?php echo get_permalink($item) ?>">
+                                           href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?> >
                                             <div class="img">
                                                 <?php
                                                 $item_main_image = get_field('item_main_image', $item->ID);

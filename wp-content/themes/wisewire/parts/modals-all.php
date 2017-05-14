@@ -274,8 +274,9 @@
 					  <?php  $item_main_image = get_post_field('item_main_image', $item->ID); ?>
                       <div class="col-sm-6 col-md-4 col-no-space col-2-next col-wrapper">
                         
-                        <article class="lo-item lo-item-col <?php echo $WWItems->get_color( $item_content_type_icon ) ?>" onclick="location.href='<?php echo get_permalink($item) ?>';">
-                          <div class="img">
+                        <article class="lo-item lo-item-col <?php echo $WWItems->get_color( $item_content_type_icon ) ?>" >
+                            <a href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?> >
+                            <div class="img">
               <?php
               $item_main_image = get_field('item_main_image', $item->ID);
               if ($item_main_image):
@@ -309,6 +310,7 @@
                               </div>
                             </div>
                           </div>
+                            </a>
                         </article>
                         
                         <div class="lo-info lo-info-outside">
@@ -351,8 +353,9 @@
 					<?php $item_preview = get_post_field('item_preview', $item->ID); ?>
 					<?php $item_publish_date = get_post_field('item_publish_date', $item->ID); ?>
 					<?php $item_ratings = get_post_field('item_ratings', $item->ID); ?>	
-                    <article class="lo-item <?php echo $WWItems->get_color( $item_content_type_icon ) ?>" onclick="location.href='<?php echo get_permalink($item) ?>';">
-                      <div class="content">
+                    <article class="lo-item <?php echo $WWItems->get_color( $item_content_type_icon ) ?>" >
+                      <a href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?>>
+                        <div class="content">
                         <div class="details">
                           <h3 class="sub-discipline">
                             <?php echo $WWItems->get_subdiscipline( $item->ID ) ?>
@@ -396,6 +399,7 @@
                         <div class="ribbon"><span class="icon"></span> Preview</div>                 
 						<?php endif; ?>
                       </div>
+                      </a>
                     </article>
                     <?php endforeach; ?>
                                                                                   
