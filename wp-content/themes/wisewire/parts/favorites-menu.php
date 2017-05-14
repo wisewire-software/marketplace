@@ -33,15 +33,17 @@ if (sizeof($favorites)){
 								$url_item   = ($item->type!='item')? $item->id:$item->name;
 								$url_remove = ($item->type!='item')? $item->id."&amp;item_type=question": $item->item_object_id;
 							?>	
-							<div class="item" onclick="location.href = '/item/<?php echo $url_item ?>/';">
-								<div class="content">
-									<h3 class="sub-discipline">
-										<?php echo $item->title ?>
-									</h3>
-									<p class="content-type">
-										<?php echo $item->content_type_icon ?>
-									</p>							
-								</div>
+							<div class="item" >
+                                <a href="/item/<?php echo $url_item ?>/" <?php echo add_rel_nofollow_to_item($item->id) ?>>
+                                    <div class="content">
+                                        <h3 class="sub-discipline">
+                                            <?php echo $item->title ?>
+                                        </h3>
+                                        <p class="content-type">
+                                            <?php echo $item->content_type_icon ?>
+                                        </p>
+                                    </div>
+                                </a>
 							</div>
 							<div class="content-remove-favorite">
 								<a href="?my_action=Favorites|action_remove&amp;item_id=<?php echo $url_remove ?>" title="Are you sure that you want to remove this from favorites?" class="remove btn-confirm"></a>
