@@ -10915,6 +10915,10 @@ a.nav-grades .lo-nav .btn.disabled, fieldset[disabled] a.nav-grades .lo-nav .btn
     position: relative
 }
 
+.feature-banner .wrapper a{
+    color: #FFFFFF;
+}
+
 @media (max-width: 767px) {
     .feature-banner .container {
         padding-left: 0;
