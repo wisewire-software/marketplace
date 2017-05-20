@@ -260,7 +260,7 @@ endforeach; endif;
                                     <?php $item_ratings = get_post_field('item_ratings', $item->ID); ?>
 
                                     <a class="lo-item lo-item-col <?php echo $WWItems->get_color($item_content_type_icon) ?> <?php echo (substr($item_preview, 0, 1) === 'Y') ? 'has-preview' : '' ?>"
-                                       href="<?php echo get_permalink($item) ?>">
+                                       href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?> >
                                         <div class="img">
                                             <?php
                                             $item_main_image = get_field('item_main_image', $item->ID);
@@ -381,7 +381,8 @@ endforeach; endif;
                     <div id="loItem2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="loItemHeading2">
                         <div class="panel-body">
                             <?php if ($favorites): foreach ($favorites as $item): ?>
-                                <article class="lo-item <?php echo $WWItems->get_color($item->content_type_icon) ?> <?php echo($item->type == 'item' ? '' : 'item-search') ?>" >
+                                <article
+                                        class="lo-item <?php echo $WWItems->get_color($item->content_type_icon) ?> <?php echo($item->type == 'item' ? '' : 'item-search') ?>">
                                     <a href="?my_action=Favorites|action_remove&amp;item_id=<?php echo $item->item_object_id ?>&amp;item_type=question"
                                        title="Are you sure that you want to remove this from favorites?"
                                        class="btn-close btn-confirm"></a>
@@ -515,54 +516,55 @@ endforeach; endif;
                                     <?php $item_preview = get_post_field('item_preview', $item->ID); ?>
                                     <?php $item_publish_date = get_post_field('item_publish_date', $item->ID); ?>
                                     <?php $item_ratings = get_post_field('item_ratings', $item->ID); ?>
-                                    <article class="lo-item <?php echo $WWItems->get_color($item_content_type_icon) ?>"
-                                             onclick="location.href='<?php echo get_permalink($item) ?>';">
-                                        <div class="content">
-                                            <div class="details">
-                                                <h3 class="sub-discipline">
-                                                    <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                                </h3>
-                                                <p class="content-type">
-                                                    <?php echo $item_content_type_icon ?>
-                                                </p>
-                                                <p class="grade-level">
-                                                    <?php echo $WWItems->get_grades($item->ID) ?>
-                                                </p>
-                                            </div>
-                                            <div class="more-info">
-                                                <div class="content-title">
-                                                    <h3><?php echo $item->post_title ?></h3>
-                                                    <div class="content-type-icon">
-                                                        <svg class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
-                                                            <use xlink:href="#<?php echo $WWItems->get_icon($item_content_type_icon) ?>"></use>
-                                                        </svg>
+                                    <article class="lo-item <?php echo $WWItems->get_color($item_content_type_icon) ?>">
+                                        <a href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?> >
+                                            <div class="content">
+                                                <div class="details">
+                                                    <h3 class="sub-discipline">
+                                                        <?php echo $WWItems->get_subdiscipline($item->ID) ?>
+                                                    </h3>
+                                                    <p class="content-type">
+                                                        <?php echo $item_content_type_icon ?>
+                                                    </p>
+                                                    <p class="grade-level">
+                                                        <?php echo $WWItems->get_grades($item->ID) ?>
+                                                    </p>
+                                                </div>
+                                                <div class="more-info">
+                                                    <div class="content-title">
+                                                        <h3><?php echo $item->post_title ?></h3>
+                                                        <div class="content-type-icon">
+                                                            <svg class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
+                                                                <use xlink:href="#<?php echo $WWItems->get_icon($item_content_type_icon) ?>"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rate">
+                                                        <?php rating_display_stars($item_ratings, '') ?>
+                                                        <p class="number">
+                                                            <?php echo $item_ratings ? $item_ratings : '' ?>
+                                                        </p>
+                                                        <?php do_action('product_tile_price', $item); ?>
                                                     </div>
                                                 </div>
-                                                <div class="rate">
-                                                    <?php rating_display_stars($item_ratings, '') ?>
-                                                    <p class="number">
-                                                        <?php echo $item_ratings ? $item_ratings : '' ?>
-                                                    </p>
-                                                    <?php do_action('product_tile_price', $item); ?>
-                                                </div>
-                                            </div>
-                                            <div class="lo-info">
-                                                <div class="date-rate">
-                                                    <p class="date">
-                                                        <?php if ($item_publish_date): ?>
-                                                            <?php echo date_i18n('m-d-Y', strtotime($item_publish_date)); ?>
-                                                        <?php endif; ?>
-                                                    </p>
-                                                    <p class="object-type">
-                                                        <?php echo implode(', ', wp_get_post_terms($item->ID, 'ObjectType', array("fields" => "names"))) ?>
-                                                    </p>
+                                                <div class="lo-info">
+                                                    <div class="date-rate">
+                                                        <p class="date">
+                                                            <?php if ($item_publish_date): ?>
+                                                                <?php echo date_i18n('m-d-Y', strtotime($item_publish_date)); ?>
+                                                            <?php endif; ?>
+                                                        </p>
+                                                        <p class="object-type">
+                                                            <?php echo implode(', ', wp_get_post_terms($item->ID, 'ObjectType', array("fields" => "names"))) ?>
+                                                        </p>
 
+                                                    </div>
                                                 </div>
+                                                <?php if (substr($item_preview, 0, 1) === 'Y'): ?>
+                                                    <div class="ribbon"><span class="icon"></span> Preview</div>
+                                                <?php endif; ?>
                                             </div>
-                                            <?php if (substr($item_preview, 0, 1) === 'Y'): ?>
-                                                <div class="ribbon"><span class="icon"></span> Preview</div>
-                                            <?php endif; ?>
-                                        </div>
+                                        </a>
                                     </article>
                                 <?php endforeach; ?>
 

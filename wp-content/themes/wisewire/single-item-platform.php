@@ -268,27 +268,29 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <p class="btn-favorites">
 
                                 <a <?php echo $is_favorite ? '' : 'style="display: none;"' ?>
-                                    href="?my_action=Favorites|action_remove&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question"
-                                    data-item_type="question" data-item_id="<?php echo $item_object_id ?>"
-                                    class="btn btn-alt btn-remove-favorite"
-                                    data-toggle="popover"
-                                    data-content='
+                                        href="?my_action=Favorites|action_remove&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question"
+                                        data-item_type="question" data-item_id="<?php echo $item_object_id ?>"
+                                        class="btn btn-alt btn-remove-favorite"
+                                        data-toggle="popover"
+                                        data-content='
                      <p class="info info-added">Item removed from favorites</p>
                      '>REMOVE FAVORITE</a>
 
                                 <a <?php echo !$is_favorite ? '' : 'style="display: none;"' ?>
-                                    href="?my_action=Favorites|action_add&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question"
-                                    data-item_type="question" data-item_id="<?php echo $item_object_id ?>"
-                                    class="btn btn-alt btn-add-favorite"
-                                    data-toggle="popover"
-                                    data-content='
+                                        href="?my_action=Favorites|action_add&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question"
+                                        data-item_type="question" data-item_id="<?php echo $item_object_id ?>"
+                                        class="btn btn-alt btn-add-favorite"
+                                        data-toggle="popover"
+                                        data-content='
                    <p class="info info-added">Item added to favorites</p>
                    '>ADD TO FAVORITES</a>
 
                             </p>
-                            <?php  if( current_user_can('administrator')): ?>
+                            <?php if (current_user_can('administrator')): ?>
                                 <p class="btn-favorites">
-                                    <a data-name="action_hide_items"  data-item-id="<?php echo $item_id ?>" data-status="<?php echo $is_hide_item; ?>" href="#" class="btn btn-alt"><?php echo $is_hide_item == 1 ? 'SHOW': 'HIDE'; ?> ITEM</a>
+                                    <a data-name="action_hide_items" data-item-id="<?php echo $item_id ?>"
+                                       data-status="<?php echo $is_hide_item; ?>" href="#"
+                                       class="btn btn-alt"><?php echo $is_hide_item == 1 ? 'SHOW' : 'HIDE'; ?> ITEM</a>
                                 </p>
                             <?php endif ?>
 
@@ -320,9 +322,11 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                 <a href="#" data-toggle="modal" data-target="#rateModal">RATE THIS &gt;</a>
                             </p>
 
-                            <?php  if( current_user_can('administrator')): ?>
+                            <?php if (current_user_can('administrator')): ?>
                                 <p class="rateit">
-                                    <a data-my_action="Ratings|action_remove" data-id="<?php echo $item_id ?>"  data-item-type="question" data-item-id="<?php echo $item_object_id ?>" href="#" class="remove-rating">Remove Rating</a>
+                                    <a data-my_action="Ratings|action_remove" data-id="<?php echo $item_id ?>"
+                                       data-item-type="question" data-item-id="<?php echo $item_object_id ?>" href="#"
+                                       class="remove-rating">Remove Rating</a>
                                 </p>
                             <?php endif; ?>
 
@@ -346,7 +350,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                         <div class="contributor">
                             <p>
                                 <strong>Contributor</strong>
-                <span>
+                                <span>
                 <?php if ($item_contributor_description != '') { ?>
                     <a href="#" data-toggle="modal"
                        data-target="#contributorDetailsModal"><?php echo $item_contributor ?></a>
@@ -412,8 +416,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                             <?php if ($item_license_type_link !== '') { ?>
                                                 <a rel="license" href="<?php echo $item_license_type_link; ?>"
                                                    target="_blank">
-                                                    <?php if($item_license_icon): ?>
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/cc-license/<?php echo $item_license_icon ?>.png" />
+                                                    <?php if ($item_license_icon): ?>
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/cc-license/<?php echo $item_license_icon ?>.png"/>
                                                     <?php else: ?>
                                                         <?php echo $item_license_type; ?>
                                                     <?php endif ?>
@@ -440,7 +444,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                     <?php if ($item_prev): ?>
                         <li class="previous">
                             <a href="<?php echo get_permalink($item_prev[0]) ?>" data-toggle="tooltip"
-                               data-placement="right" title="<?php echo esc_html($item_prev[0]->post_title) ?>">&lt;
+                               data-placement="right"
+                               title="<?php echo esc_html($item_prev[0]->post_title) ?>" <?php echo add_rel_nofollow_to_item($item_prev[0]->ID) ?>>
+                                &lt;
                                 previous IN THIS SERIES</a>
                         </li>
                     <?php endif; ?>
@@ -448,7 +454,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                     <?php if ($item_next): ?>
                         <li class="next">
                             <a href="<?php echo get_permalink($item_next[0]) ?>" data-toggle="tooltip"
-                               data-placement="left" title="<?php echo esc_html($item_next[0]->post_title) ?>">next IN
+                               data-placement="left"
+                               title="<?php echo esc_html($item_next[0]->post_title) ?>" <?php echo add_rel_nofollow_to_item($item_next[0]->ID) ?>>next
+                                IN
                                 THIS SERIES &gt;</a>
                         </li>
                     <?php endif; ?>
@@ -463,8 +471,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                     <h3 class="title">Related Items</h3>
 
                     <?php foreach ($item_related as $item): ?>
-                        <article class="lo-item <?php echo $WWItems->get_color($item->item_content_type_icon) ?>"
-                                 onclick="location.href='<?php echo get_permalink($item) ?>';">
+                        <a class="lo-item <?php echo $WWItems->get_color($item->item_content_type_icon) ?>"
+                           href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?> >
                             <div class="content">
                                 <div class="details">
                                     <h3 class="sub-discipline">
@@ -475,14 +483,14 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                     <h1><?php echo $item->post_title ?></h1>
                                     <div class="content-type-icon">
                                         <svg
-                                            class="svg-<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>-dims">
+                                                class="svg-<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>-dims">
                                             <use
-                                                xlink:href="#<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>"></use>
+                                                    xlink:href="#<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>"></use>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
-                        </article>
+                        </a>
                     <?php endforeach; ?>
                 </div><!-- accordion-style -->
             <?php endif ?>
@@ -566,27 +574,29 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                         <p class="col <?php echo $margin_class ?>">
 
                             <a <?php echo $is_favorite ? '' : 'style="display: none;"' ?>
-                                href="?my_action=Favorites|action_remove&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question"
-                                data-item_type="question" data-item_id="<?php echo $item_object_id ?>"
-                                class="btn btn-alt btn-remove-favorite"
-                                data-toggle="popover"
-                                data-content='
+                                    href="?my_action=Favorites|action_remove&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question"
+                                    data-item_type="question" data-item_id="<?php echo $item_object_id ?>"
+                                    class="btn btn-alt btn-remove-favorite"
+                                    data-toggle="popover"
+                                    data-content='
                    <p class="info info-added">Item removed from favorites</p>
                    '>REMOVE FAVORITE</a>
 
                             <a <?php echo !$is_favorite ? '' : 'style="display: none;"' ?>
-                                href="?my_action=Favorites|action_add&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question"
-                                data-item_type="question" data-item_id="<?php echo $item_object_id ?>"
-                                class="btn btn-alt btn-add-favorite"
-                                data-toggle="popover"
-                                data-content='
+                                    href="?my_action=Favorites|action_add&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question"
+                                    data-item_type="question" data-item_id="<?php echo $item_object_id ?>"
+                                    class="btn btn-alt btn-add-favorite"
+                                    data-toggle="popover"
+                                    data-content='
                      <p class="info info-added">Item added to favorites</p>
                      '>ADD TO FAVORITES</a>
 
                         </p>
-                        <?php  if( current_user_can('administrator')): ?>
+                        <?php if (current_user_can('administrator')): ?>
                             <p class="col <?php echo $margin_class ?>">
-                                <a data-name="action_hide_items" data-item-id="<?php echo $item_id ?>" data-status="<?php echo $is_hide_item; ?>" href="#" class="btn btn-alt"><?php echo $is_hide_item == 1 ? 'SHOW': 'HIDE'; ?> ITEM</a>
+                                <a data-name="action_hide_items" data-item-id="<?php echo $item_id ?>"
+                                   data-status="<?php echo $is_hide_item; ?>" href="#"
+                                   class="btn btn-alt"><?php echo $is_hide_item == 1 ? 'SHOW' : 'HIDE'; ?> ITEM</a>
                             </p>
                         <?php endif ?>
 
@@ -616,9 +626,11 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                 <a href="#" data-toggle="modal" data-target="#rateModal">RATE THIS &gt;</a>
                             </p>
 
-                            <?php  if( current_user_can('administrator')): ?>
+                            <?php if (current_user_can('administrator')): ?>
                                 <p class="rateit">
-                                    <a data-my_action="Ratings|action_remove" data-id="<?php echo $item_id ?>"  data-item-type="question" data-item-id="<?php echo $item_object_id ?>" href="#" class="remove-rating">Remove Rating</a>
+                                    <a data-my_action="Ratings|action_remove" data-id="<?php echo $item_id ?>"
+                                       data-item-type="question" data-item-id="<?php echo $item_object_id ?>" href="#"
+                                       class="remove-rating">Remove Rating</a>
                                 </p>
                             <?php endif; ?>
 
@@ -695,8 +707,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                             <?php if ($item_license_type_link !== '') { ?>
                                                 <a rel="license" href="<?php echo $item_license_type_link; ?>"
                                                    target="_blank">
-                                                    <?php if($item_license_icon): ?>
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/cc-license/<?php echo $item_license_icon ?>.png" />
+                                                    <?php if ($item_license_icon): ?>
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/cc-license/<?php echo $item_license_icon ?>.png"/>
                                                     <?php else: ?>
                                                         <?php echo $item_license_type; ?>
                                                     <?php endif ?>
@@ -717,12 +729,15 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                         <div class="col contributor">
                             <p>
                                 <strong>Contributor</strong>
-      					<span>
+                                <span>
                             <?php if ($item_contributor_description != '') { ?>
-                                <a xmlns:cc="https://creativecommons.org/ns#" property="cc:attributionName" rel="cc:attributionURL"
-                                   href="#" data-toggle="modal" data-target="#contributorDetailsModal"><?php echo $item_contributor ?></a>
+                                <a xmlns:cc="https://creativecommons.org/ns#" property="cc:attributionName"
+                                   rel="cc:attributionURL"
+                                   href="#" data-toggle="modal"
+                                   data-target="#contributorDetailsModal"><?php echo $item_contributor ?></a>
                             <?php } else { ?>
-                                <span xmlns:cc="https://creativecommons.org/ns#" property="cc:attributionName"><?php echo $item_contributor ?></span>
+                                <span xmlns:cc="https://creativecommons.org/ns#"
+                                      property="cc:attributionName"><?php echo $item_contributor ?></span>
                             <?php } ?>
       					</span>
                             </p>
@@ -759,7 +774,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
 
                         <div class="col-left">
                             <article
-                                class="lo-item lo-item-col <?php echo $WWItems->get_color($item_content_type_icon) ?>">
+                                    class="lo-item lo-item-col <?php echo $WWItems->get_color($item_content_type_icon) ?>">
                                 <div class="img">
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php $image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'detail')[0]; ?>
@@ -781,12 +796,13 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                         </p>
                                     </div>
                                     <div class="content-title">
-                                        <h1><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><?php echo $title ?></span></h1>
+                                        <h1><span xmlns:dct="http://purl.org/dc/terms/"
+                                                  property="dct:title"><?php echo $title ?></span></h1>
                                         <div class="content-type-icon">
                                             <svg
-                                                class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
+                                                    class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
                                                 <use
-                                                    xlink:href="#<?php echo $WWItems->get_icon($item_content_type_icon) ?>"></use>
+                                                        xlink:href="#<?php echo $WWItems->get_icon($item_content_type_icon) ?>"></use>
                                             </svg>
                                         </div>
                                     </div>
@@ -944,9 +960,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                         <?php foreach ($item_related as $item): ?>
                             <div class="col-sm-3 col-no-space col-2-next">
 
-                                <article
-                                    class="lo-item lo-item-col <?php echo $WWItems->get_color($item->item_content_type_icon) ?>"
-                                    onclick="location.href='<?php echo get_permalink($item) ?>';">
+                                <a class="lo-item lo-item-col <?php echo $WWItems->get_color($item->item_content_type_icon) ?>"
+                                   href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?> >
                                     <div class="img">
                                         <?php if (has_post_thumbnail($item->ID)): ?>
                                             <?php
@@ -966,14 +981,14 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                             <h1><?php echo $item->post_title ?></h1>
                                             <div class="content-type-icon">
                                                 <svg
-                                                    class="svg-<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>-dims">
+                                                        class="svg-<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>-dims">
                                                     <use
-                                                        xlink:href="#<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>"></use>
+                                                            xlink:href="#<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>"></use>
                                                 </svg>
                                             </div>
                                         </div>
                                     </div>
-                                </article>
+                                </a>
 
                             </div>
                         <?php endforeach; ?>
@@ -1079,12 +1094,12 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                                                                                          class="img-responsive"/></a>
                         <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                             <a href="<?php echo $item_preview_pdf; ?>" class="" target="_blank"><span
-                                    class="icon"></span><img alt="" src="<?php echo $image[0]; ?>"
-                                                             class="img-responsive"/></a>
+                                        class="icon"></span><img alt="" src="<?php echo $image[0]; ?>"
+                                                                 class="img-responsive"/></a>
                         <?php } else if (($item_demo_viewer_template == "Carousel") && ($item_carousel_images)) { ?>
                             <a href="#" class="" data-toggle="modal" data-target="#previewModalMerlot"><span
-                                    class="icon"></span><img alt="" src="<?php echo $image[0]; ?>"
-                                                             class="img-responsive"/></a>
+                                        class="icon"></span><img alt="" src="<?php echo $image[0]; ?>"
+                                                                 class="img-responsive"/></a>
                         <?php } ?>
                     <?php } else { ?>
                         <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
@@ -1096,15 +1111,15 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url)) { ?>
                                 <a href="#" class="btn-iframe" data-toggle="modal" data-target="#previewModalMerlot"
                                    data-src="<?php echo $item_object_url; ?>"><span
-                                        class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
                                 </a>
                             <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                                 <a href="<?php echo $item_preview_pdf; ?>" class="" target="_blank"><span
-                                        class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
                                 </a>
                             <?php } else if (($item_demo_viewer_template == "Carousel") && ($item_carousel_images)) { ?>
                                 <a href="#" class="" data-toggle="modal" data-target="#previewModalMerlot"><span
-                                        class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
                                 </a>
                             <?php } ?>
                         <?php } else { ?>
@@ -1120,7 +1135,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                         <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url)) { ?>
                             <a href="#" class="ribbon ribbon-xl btn-iframe preview_detail" data-toggle="modal"
                                data-target="#previewModalMerlot" data-src="<?php echo $item_object_url; ?>"><span
-                                    class="icon"></span> Preview</a>
+                                        class="icon"></span> Preview</a>
                         <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                             <a href="<?php echo $item_preview_pdf; ?>" class="ribbon ribbon-xl preview_detail"
                                target="_blank"><span class="icon"></span> Preview</a>
@@ -1173,27 +1188,31 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <p class="btn-favorites">
 
                                 <a <?php echo $is_favorite ? '' : 'style="display: none;"' ?>
-                                    href="?my_action=Favorites|action_remove&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question&item_source=merlot"
-                                    data-item_source="merlot" data-item_type="question"
-                                    data-item_id="<?php echo $item_object_id ?>" class="btn btn-alt btn-remove-favorite"
-                                    data-toggle="popover"
-                                    data-content='
+                                        href="?my_action=Favorites|action_remove&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question&item_source=merlot"
+                                        data-item_source="merlot" data-item_type="question"
+                                        data-item_id="<?php echo $item_object_id ?>"
+                                        class="btn btn-alt btn-remove-favorite"
+                                        data-toggle="popover"
+                                        data-content='
                      <p class="info info-added">Item removed from favorites</p>
                      '>REMOVE FAVORITE</a>
 
                                 <a <?php echo !$is_favorite ? '' : 'style="display: none;"' ?>
-                                    href="?my_action=Favorites|action_add&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question&item_source=merlot"
-                                    data-item_source="merlot" data-item_type="question"
-                                    data-item_id="<?php echo $item_object_id ?>" class="btn btn-alt btn-add-favorite"
-                                    data-toggle="popover"
-                                    data-content='
+                                        href="?my_action=Favorites|action_add&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question&item_source=merlot"
+                                        data-item_source="merlot" data-item_type="question"
+                                        data-item_id="<?php echo $item_object_id ?>"
+                                        class="btn btn-alt btn-add-favorite"
+                                        data-toggle="popover"
+                                        data-content='
                      <p class="info info-added">Item added to favorites</p>
                      '>ADD TO FAVORITES</a>
 
                             </p>
-                            <?php  if( current_user_can('administrator')): ?>
+                            <?php if (current_user_can('administrator')): ?>
                                 <p class="btn-favorites">
-                                    <a data-name="action_hide_items"  data-item-id="<?php echo $item_id ?>" data-status="<?php echo $is_hide_item; ?>" href="#" class="btn btn-alt"><?php echo $is_hide_item == 1 ? 'SHOW': 'HIDE'; ?> ITEM</a>
+                                    <a data-name="action_hide_items" data-item-id="<?php echo $item_id ?>"
+                                       data-status="<?php echo $is_hide_item; ?>" href="#"
+                                       class="btn btn-alt"><?php echo $is_hide_item == 1 ? 'SHOW' : 'HIDE'; ?> ITEM</a>
                                 </p>
                             <?php endif ?>
                         <?php } else { ?>
@@ -1224,9 +1243,12 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                 <a href="#" data-toggle="modal" data-target="#rateModal">RATE THIS &gt;</a>
                             </p>
 
-                            <?php  if( current_user_can('administrator')): ?>
+                            <?php if (current_user_can('administrator')): ?>
                                 <p class="rateit">
-                                    <a data-my_action="Ratings|action_remove" data-id="<?php echo $item_id ?>"  data-item-source="merlot" data-item-type="question" data-item-id="<?php echo $item_object_id ?>" href="#" class="remove-rating">Remove Rating</a>
+                                    <a data-my_action="Ratings|action_remove" data-id="<?php echo $item_id ?>"
+                                       data-item-source="merlot" data-item-type="question"
+                                       data-item-id="<?php echo $item_object_id ?>" href="#" class="remove-rating">Remove
+                                        Rating</a>
                                 </p>
                             <?php endif; ?>
 
@@ -1250,7 +1272,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                         <div class="contributor">
                             <p>
                                 <strong>Contributor</strong>
-                <span>
+                                <span>
                 <?php if ($item_contributor_description != '') { ?>
                     <a href="#" data-toggle="modal"
                        data-target="#contributorDetailsModal"><?php echo $item_contributor ?></a>
@@ -1316,8 +1338,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                             <?php if ($item_license_type_link !== '') { ?>
                                                 <a rel="license" href="<?php echo $item_license_type_link; ?>"
                                                    target="_blank">
-                                                    <?php if($item_license_icon): ?>
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/cc-license/<?php echo $item_license_icon ?>.png" />
+                                                    <?php if ($item_license_icon): ?>
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/img/cc-license/<?php echo $item_license_icon ?>.png"/>
                                                     <?php else: ?>
                                                         <?php echo $item_license_type; ?>
                                                     <?php endif ?>
@@ -1399,7 +1421,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                     <?php } else if ($item_prev) { ?>
                         <li class="previous">
                             <a href="<?php echo get_permalink($item_prev[0]) ?>" data-toggle="tooltip"
-                               data-placement="right" title="<?php echo esc_html($item_prev[0]->post_title) ?>">&lt;
+                               data-placement="right"
+                               title="<?php echo esc_html($item_prev[0]->post_title) ?>" <?php echo add_rel_nofollow_to_item($item_prev[0]->ID) ?> >
+                                &lt;
                                 previous IN THIS SERIES</a>
                         </li>
                     <?php } ?>
@@ -1421,7 +1445,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                     <?php } else if ($item_next) { ?>
                         <li class="next">
                             <a href="<?php echo get_permalink($item_next[0]) ?>" data-toggle="tooltip"
-                               data-placement="left" title="<?php echo esc_html($item_next[0]->post_title) ?>">next IN
+                               data-placement="left"
+                               title="<?php echo esc_html($item_next[0]->post_title) ?>" <?php echo add_rel_nofollow_to_item($item_next[0]->ID) ?>>next
+                                IN
                                 THIS SERIES &gt;</a>
                         </li>
                     <?php } ?>
@@ -1440,8 +1466,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                         setup_postdata($post); // variable must be called $post (IMPORTANT)
                         ?>
 
-                        <article class="lo-item <?php echo $WWItems->get_color($post->item_content_type_icon) ?>"
-                                 onclick="location.href='<?php echo get_permalink($post) ?>';">
+                        <a class="lo-item <?php echo $WWItems->get_color($post->item_content_type_icon) ?>"
+                           href="<?php echo get_permalink($post) ?>" <?php echo add_rel_nofollow_to_item($post->ID) ?>>
                             <div class="content">
                                 <div class="details">
                                     <h3 class="sub-discipline">
@@ -1453,14 +1479,14 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                     <h1><?php echo $post->post_title ?></h1>
                                     <div class="content-type-icon">
                                         <svg
-                                            class="svg-<?php echo $WWItems->get_icon($post->item_content_type_icon) ?>-dims">
+                                                class="svg-<?php echo $WWItems->get_icon($post->item_content_type_icon) ?>-dims">
                                             <use
-                                                xlink:href="#<?php echo $WWItems->get_icon($post->item_content_type_icon) ?>"></use>
+                                                    xlink:href="#<?php echo $WWItems->get_icon($post->item_content_type_icon) ?>"></use>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
-                        </article>
+                        </a>
 
                     <?php endforeach;
                     wp_reset_postdata(); ?>
@@ -1472,26 +1498,27 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                     <h3 class="title">Related Items</h3>
 
                     <?php foreach ($item_related as $item): ?>
-                        <article class="lo-item <?php echo $WWItems->get_color($item->item_content_type_icon) ?>"
-                                 onclick="location.href='<?php echo get_permalink($item) ?>';">
-                            <div class="content">
-                                <div class="details">
-                                    <h3 class="sub-discipline">
-                                        <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                    </h3>
+                        <article class="lo-item <?php echo $WWItems->get_color($item->item_content_type_icon) ?>">
+                            <a href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?>>
+                                <div class="content">
+                                    <div class="details">
+                                        <h3 class="sub-discipline">
+                                            <?php echo $WWItems->get_subdiscipline($item->ID) ?>
+                                        </h3>
 
-                                </div>
-                                <div class="content-title">
-                                    <h1><?php echo $item->post_title ?></h1>
-                                    <div class="content-type-icon">
-                                        <svg
-                                            class="svg-<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>-dims">
-                                            <use
-                                                xlink:href="#<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>"></use>
-                                        </svg>
+                                    </div>
+                                    <div class="content-title">
+                                        <h1><?php echo $item->post_title ?></h1>
+                                        <div class="content-type-icon">
+                                            <svg
+                                                    class="svg-<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>-dims">
+                                                <use
+                                                        xlink:href="#<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>"></use>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </article>
                     <?php endforeach; ?>
                 </div><!-- accordion-style -->
@@ -1523,12 +1550,12 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                                                                                              class="img-responsive"/></a>
                             <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                                 <a href="<?php echo $item_preview_pdf; ?>" class="" target="_blank"><span
-                                        class="icon"></span><img alt="" src="<?php echo $image[0]; ?>"
-                                                                 class="img-responsive"/></a>
+                                            class="icon"></span><img alt="" src="<?php echo $image[0]; ?>"
+                                                                     class="img-responsive"/></a>
                             <?php } else if (($item_demo_viewer_template == "Carousel") && ($item_carousel_images)) { ?>
                                 <a href="#" class="" data-toggle="modal" data-target="#previewModalMerlot"><span
-                                        class="icon"></span><img alt="" src="<?php echo $image[0]; ?>"
-                                                                 class="img-responsive"/></a>
+                                            class="icon"></span><img alt="" src="<?php echo $image[0]; ?>"
+                                                                     class="img-responsive"/></a>
                             <?php } ?>
                         <?php } else { ?>
                             <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
@@ -1541,15 +1568,15 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                 <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url)) { ?>
                                     <a href="#" class="btn-iframe" data-toggle="modal" data-target="#previewModalMerlot"
                                        data-src="<?php echo $item_object_url; ?>"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                                     <a href="<?php echo $item_preview_pdf; ?>" class="" target="_blank"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php } else if (($item_demo_viewer_template == "Carousel") && ($item_carousel_images)) { ?>
                                     <a href="#" class="" data-toggle="modal" data-target="#previewModalMerlot"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php } ?>
                             <?php } else { ?>
@@ -1564,7 +1591,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url)) { ?>
                                 <a href="#" class="ribbon ribbon-xl btn-iframe preview_detail" data-toggle="modal"
                                    data-target="#previewModalMerlot" data-src="<?php echo $item_object_url; ?>"><span
-                                        class="icon"></span> Preview</a>
+                                            class="icon"></span> Preview</a>
                             <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                                 <a href="<?php echo $item_preview_pdf; ?>" class="ribbon ribbon-xl preview_detail"
                                    target="_blank"><span class="icon"></span> Preview</a>
@@ -1591,7 +1618,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <p class="more">
                                 <a role="button" data-toggle="collapse" href="#detailReadMore1" aria-expanded="false"
                                    aria-controls="detailReadMore1"><strong>Read more</strong> <span
-                                        class="caret"></span></a>
+                                            class="caret"></span></a>
                             </p>
                         <?php } ?>
                     </article>
@@ -1614,7 +1641,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                         <?php } else if ($item_prev) { ?>
                             <li class="previous">
                                 <a href="<?php echo get_permalink($item_prev[0]) ?>" data-toggle="tooltip"
-                                   data-placement="right" title="<?php echo esc_html($item_prev[0]->post_title) ?>">&lt;
+                                   data-placement="right"
+                                   title="<?php echo esc_html($item_prev[0]->post_title) ?>" <?php echo add_rel_nofollow_to_item($item_prev[0]->ID) ?> >
+                                    &lt;
                                     previous IN THIS SERIES</a>
                             </li>
                         <?php } ?>
@@ -1636,7 +1665,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                         <?php } else if ($item_next) { ?>
                             <li class="next">
                                 <a href="<?php echo get_permalink($item_next[0]) ?>" data-toggle="tooltip"
-                                   data-placement="left" title="<?php echo esc_html($item_next[0]->post_title) ?>">next
+                                   data-placement="left"
+                                   title="<?php echo esc_html($item_next[0]->post_title) ?>" <?php echo add_rel_nofollow_to_item($item_next[0]->ID) ?> >next
                                     IN THIS SERIES &gt;</a>
                             </li>
                         <?php } ?>
@@ -1681,27 +1711,31 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <p class="btn-favorites">
 
                                 <a <?php echo $is_favorite ? '' : 'style="display: none;"' ?>
-                                    href="?my_action=Favorites|action_remove&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question&item_source=merlot"
-                                    data-item_source="merlot" data-item_type="question"
-                                    data-item_id="<?php echo $item_object_id ?>" class="btn btn-alt btn-remove-favorite"
-                                    data-toggle="popover"
-                                    data-content='
+                                        href="?my_action=Favorites|action_remove&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question&item_source=merlot"
+                                        data-item_source="merlot" data-item_type="question"
+                                        data-item_id="<?php echo $item_object_id ?>"
+                                        class="btn btn-alt btn-remove-favorite"
+                                        data-toggle="popover"
+                                        data-content='
                      <p class="info info-added">Item removed from favorites</p>
                      '>REMOVE FAVORITE</a>
 
                                 <a <?php echo !$is_favorite ? '' : 'style="display: none;"' ?>
-                                    href="?my_action=Favorites|action_add&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question&item_source=merlot"
-                                    data-item_source="merlot" data-item_type="question"
-                                    data-item_id="<?php echo $item_object_id ?>" class="btn btn-alt btn-add-favorite"
-                                    data-toggle="popover"
-                                    data-content='
+                                        href="?my_action=Favorites|action_add&amp;item_id=<?php echo $item_object_id ?>&amp;item_type=question&item_source=merlot"
+                                        data-item_source="merlot" data-item_type="question"
+                                        data-item_id="<?php echo $item_object_id ?>"
+                                        class="btn btn-alt btn-add-favorite"
+                                        data-toggle="popover"
+                                        data-content='
                      <p class="info info-added">Item added to favorites</p>
                      '>ADD TO FAVORITES</a>
 
                             </p>
-                            <?php  if( current_user_can('administrator')): ?>
+                            <?php if (current_user_can('administrator')): ?>
                                 <p class="btn-favorites">
-                                    <a data-name="action_hide_items"  data-item-id="<?php echo $item_id ?>" data-status="<?php echo $is_hide_item; ?>" href="#" class="btn btn-alt"><?php echo $is_hide_item == 1 ? 'SHOW': 'HIDE'; ?> ITEM</a>
+                                    <a data-name="action_hide_items" data-item-id="<?php echo $item_id ?>"
+                                       data-status="<?php echo $is_hide_item; ?>" href="#"
+                                       class="btn btn-alt"><?php echo $is_hide_item == 1 ? 'SHOW' : 'HIDE'; ?> ITEM</a>
                                 </p>
                             <?php endif; ?>
                         <?php } else { ?>
@@ -1732,9 +1766,12 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                 <a href="#" data-toggle="modal" data-target="#rateModal">RATE THIS &gt;</a>
                             </p>
 
-                            <?php  if( current_user_can('administrator')): ?>
+                            <?php if (current_user_can('administrator')): ?>
                                 <p class="rateit">
-                                    <a data-my_action="Ratings|action_remove" data-id="<?php echo $item_id ?>"  data-item-source="merlot" data-item-type="question" data-item-id="<?php echo $item_object_id ?>" href="#" class="remove-rating">Remove Rating</a>
+                                    <a data-my_action="Ratings|action_remove" data-id="<?php echo $item_id ?>"
+                                       data-item-source="merlot" data-item-type="question"
+                                       data-item-id="<?php echo $item_object_id ?>" href="#" class="remove-rating">Remove
+                                        Rating</a>
                                 </p>
                             <?php endif; ?>
 
@@ -1781,8 +1818,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                                 <?php if ($item_license_type_link !== '') { ?>
                                                     <a rel="license" href="<?php echo $item_license_type_link; ?>"
                                                        target="_blank">
-                                                        <?php if($item_license_icon): ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/img/cc-license/<?php echo $item_license_icon ?>.png" />
+                                                        <?php if ($item_license_icon): ?>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/img/cc-license/<?php echo $item_license_icon ?>.png"/>
                                                         <?php else: ?>
                                                             <?php echo $item_license_type; ?>
                                                         <?php endif ?>
@@ -1803,7 +1840,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <div class="contributor">
                                 <p>
                                     <strong>Contributor</strong>
-              <span>
+                                    <span>
                 <?php if ($item_contributor_description != '') { ?>
                     <a href="#" data-toggle="modal"
                        data-target="#contributorDetailsModal"><?php echo $item_contributor ?></a>
@@ -1853,7 +1890,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
 
                         <div class="col-left">
                             <article
-                                class="lo-item lo-item-col <?php echo $WWItems->get_color($item_content_type_icon) ?>">
+                                    class="lo-item lo-item-col <?php echo $WWItems->get_color($item_content_type_icon) ?>">
                                 <div class="img">
                                     <?php
                                     if ($item_main_image):
@@ -1880,12 +1917,13 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                         </p>
                                     </div>
                                     <div class="content-title">
-                                        <h1><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><?php echo $title ?></span></h1>
+                                        <h1><span xmlns:dct="http://purl.org/dc/terms/"
+                                                  property="dct:title"><?php echo $title ?></span></h1>
                                         <div class="content-type-icon">
                                             <svg
-                                                class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
+                                                    class="svg-<?php echo $WWItems->get_icon($item_content_type_icon) ?>-dims">
                                                 <use
-                                                    xlink:href="#<?php echo $WWItems->get_icon($item_content_type_icon) ?>"></use>
+                                                        xlink:href="#<?php echo $WWItems->get_icon($item_content_type_icon) ?>"></use>
                                             </svg>
                                         </div>
                                     </div>
@@ -2050,41 +2088,41 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <div class="col-sm-3 col-no-space col-2-next">
 
                                 <article
-                                    class="lo-item lo-item-col <?php echo $WWItems->get_color($post->item_content_type_icon) ?>"
-                                    onclick="location.href='<?php echo get_permalink($post) ?>';">
-                                    <div class="img">
-                                        <?php
-                                        $item_main_image = get_field('item_main_image', $post->ID);
-                                        if ($item_main_image):
-                                            $size = "detail";
-                                            $image = wp_get_attachment_image_src($item_main_image, $size);
-                                            ?>
-                                            <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
+                                        class="lo-item lo-item-col <?php echo $WWItems->get_color($post->item_content_type_icon) ?>">
+                                    <a href="<?php echo get_permalink($post) ?>" <?php echo add_rel_nofollow_to_item($post->ID) ?>>
+                                        <div class="img">
                                             <?php
-                                        else:
-                                            echo $WWItems->get_thumbnail($post->item_content_type_icon);
-                                        endif;
-                                        ?>
-                                    </div>
-                                    <div class="content">
-                                        <div class="details">
-                                            <h3 class="sub-discipline">
-                                                <?php echo $WWItems->get_subdiscipline($post->ID) ?>
-                                            </h3>
+                                            $item_main_image = get_field('item_main_image', $post->ID);
+                                            if ($item_main_image):
+                                                $size = "detail";
+                                                $image = wp_get_attachment_image_src($item_main_image, $size);
+                                                ?>
+                                                <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
+                                                <?php
+                                            else:
+                                                echo $WWItems->get_thumbnail($post->item_content_type_icon);
+                                            endif;
+                                            ?>
                                         </div>
-                                        <div class="content-title">
-                                            <h1><?php echo $post->post_title ?></h1>
-                                            <div class="content-type-icon">
-                                                <svg
-                                                    class="svg-<?php echo $WWItems->get_icon($post->item_content_type_icon) ?>-dims">
-                                                    <use
-                                                        xlink:href="#<?php echo $WWItems->get_icon($post->item_content_type_icon) ?>"></use>
-                                                </svg>
+                                        <div class="content">
+                                            <div class="details">
+                                                <h3 class="sub-discipline">
+                                                    <?php echo $WWItems->get_subdiscipline($post->ID) ?>
+                                                </h3>
+                                            </div>
+                                            <div class="content-title">
+                                                <h1><?php echo $post->post_title ?></h1>
+                                                <div class="content-type-icon">
+                                                    <svg
+                                                            class="svg-<?php echo $WWItems->get_icon($post->item_content_type_icon) ?>-dims">
+                                                        <use
+                                                                xlink:href="#<?php echo $WWItems->get_icon($post->item_content_type_icon) ?>"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </article>
-
                             </div>
 
                         <?php endforeach;
@@ -2118,39 +2156,40 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <div class="col-sm-3 col-no-space col-2-next">
 
                                 <article
-                                    class="lo-item lo-item-col <?php echo $WWItems->get_color($item->item_content_type_icon) ?>"
-                                    onclick="location.href='<?php echo get_permalink($item) ?>';">
-                                    <div class="img">
-                                        <?php
-                                        $item_main_image = get_field('item_main_image', $item->ID);
-                                        if ($item_main_image):
-                                            $size = "detail";
-                                            $image = wp_get_attachment_image_src($item_main_image, $size);
-                                            ?>
-                                            <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
+                                        class="lo-item lo-item-col <?php echo $WWItems->get_color($item->item_content_type_icon) ?>">
+                                    <a href="<?php echo get_permalink($item) ?>" <?php echo add_rel_nofollow_to_item($item->ID) ?>>
+                                        <div class="img">
                                             <?php
-                                        else:
-                                            echo $WWItems->get_thumbnail($item->item_content_type_icon);
-                                        endif;
-                                        ?>
-                                    </div>
-                                    <div class="content">
-                                        <div class="details">
-                                            <h3 class="sub-discipline">
-                                                <?php echo $WWItems->get_subdiscipline($item->ID) ?>
-                                            </h3>
+                                            $item_main_image = get_field('item_main_image', $item->ID);
+                                            if ($item_main_image):
+                                                $size = "detail";
+                                                $image = wp_get_attachment_image_src($item_main_image, $size);
+                                                ?>
+                                                <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
+                                                <?php
+                                            else:
+                                                echo $WWItems->get_thumbnail($item->item_content_type_icon);
+                                            endif;
+                                            ?>
                                         </div>
-                                        <div class="content-title">
-                                            <h1><?php echo $item->post_title ?></h1>
-                                            <div class="content-type-icon">
-                                                <svg
-                                                    class="svg-<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>-dims">
-                                                    <use
-                                                        xlink:href="#<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>"></use>
-                                                </svg>
+                                        <div class="content">
+                                            <div class="details">
+                                                <h3 class="sub-discipline">
+                                                    <?php echo $WWItems->get_subdiscipline($item->ID) ?>
+                                                </h3>
+                                            </div>
+                                            <div class="content-title">
+                                                <h1><?php echo $item->post_title ?></h1>
+                                                <div class="content-type-icon">
+                                                    <svg
+                                                            class="svg-<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>-dims">
+                                                        <use
+                                                                xlink:href="#<?php echo $WWItems->get_icon($item->item_content_type_icon) ?>"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </article>
 
                             </div>
@@ -2171,8 +2210,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
         <?php if (($item_demo_viewer_template == "Carousel") || ($item_demo_viewer_template == "Iframe")) { ?>
 
             <div
-                class="modal fade modal-preview<?php if ($item_demo_viewer_template == "Iframe") echo ' detail-iframe'; ?>"
-                id="previewModalMerlot" tabindex="-1" role="dialog" aria-labelledby="previewModalMerlot">
+                    class="modal fade modal-preview<?php if ($item_demo_viewer_template == "Iframe") echo ' detail-iframe'; ?>"
+                    id="previewModalMerlot" tabindex="-1" role="dialog" aria-labelledby="previewModalMerlot">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -2182,7 +2221,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
 
                             <div class="modal-title <?php if (!$item_demo_subhead) echo "modal-title-no-subhead"; ?>">
 
-                                <h1><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><?php echo $title ?></span></h1>
+                                <h1><span xmlns:dct="http://purl.org/dc/terms/"
+                                          property="dct:title"><?php echo $title ?></span></h1>
                                 <?php if ($item_demo_subhead) { ?>
                                     <h3><?php echo $item_demo_subhead; ?></h3>
                                 <?php } ?>
@@ -2235,15 +2275,15 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
             var statusItem = $this.data('status') == 1 ? 0 : 1;
 
             $.ajax({
-                    type: "POST",
-                    url: 'https://' + window.location.hostname + '/wp-admin/admin-ajax.php',
-                    data: {
-                        'action': 'post_item_platform_hide_page',
-                        'item_id': $this.data('itemId'),
-                        'status': statusItem
-                    },
-                    dataType: 'json'
-                })
+                type: "POST",
+                url: 'https://' + window.location.hostname + '/wp-admin/admin-ajax.php',
+                data: {
+                    'action': 'post_item_platform_hide_page',
+                    'item_id': $this.data('itemId'),
+                    'status': statusItem
+                },
+                dataType: 'json'
+            })
                 .done(function (response) {
                     if (response.success) {
                         $this.text((statusItem == 1 ? 'SHOW' : 'HIDE') + ' ITEM');
