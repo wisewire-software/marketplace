@@ -236,12 +236,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                     <?php if ($item_demo_viewer_template == "Iframe") { ?>
 
                         <?php if ($item_object_url) : ?>
-                            <a href="#" class="btn-iframe" data-toggle="modal"
-                               style="<?php echo $inIframeAllowed ? '' : 'cursor:default' ?>"
-                               data-target="<?php echo $inIframeAllowed ? '#previewModal' : '' ?>"
-                               data-src="<?php echo $item_object_url; ?>"><span class="icon"></span><img alt=""
-                                                                                                         src="<?php echo $image[0]; ?>"
-                                                                                                         class="img-responsive"/></a>
+                            <a href="<?php echo $item_object_url; ?>" class="btn-iframe" target="_blank" rel="nofollow" >
+                                <span class="icon"></span><img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
+                            </a>
                         <?php else: ?>
                             <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                         <?php endif; ?>
@@ -278,11 +275,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                         <?php if ($item_demo_viewer_template == "Iframe") { ?>
 
                             <?php if ($item_object_url) : ?>
-                                <a href="#" class="btn-iframe" data-toggle="modal"
-                                   style="<?php echo $inIframeAllowed ? '' : 'cursor:default' ?>"
-                                   data-target="<?php echo $inIframeAllowed ? '#previewModal' : '' ?>"
-                                   data-src="<?php echo $item_object_url; ?>"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                <a href="<?php echo $item_object_url; ?>" class="btn-iframe" rel="nofollow" target="_blank" >
+                                    <span class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
                                 </a>
                             <?php else: ?>
                                 <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
@@ -318,9 +312,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
                 <?php if (substr($item_preview, 0, 1) === 'Y') { ?>
                     <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url) && $inIframeAllowed) { ?>
-                        <a href="#" class="ribbon ribbon-xl btn-iframe preview_detail" data-toggle="modal"
-                           data-target="#previewModal" data-src="<?php echo $item_object_url; ?>"><span
-                                    class="icon"></span> Preview</a>
+                        <a href="<?php echo $item_object_url; ?>" class="ribbon ribbon-xl btn-iframe preview_detail" target="_blank" rel="nofollow">
+                            <span class="icon"></span> Preview
+                        </a>
                     <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                         <a href="<?php echo $item_preview_pdf; ?>" class="ribbon ribbon-xl preview_detail"
                            target="_blank"><span class="icon"></span> Preview</a>
@@ -752,12 +746,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                         <?php if ($item_demo_viewer_template == "Iframe") { ?>
 
                             <?php if ($item_object_url): ?>
-                                <a href="#" class="btn-iframe" data-toggle="modal"
-                                   style="<?php echo $inIframeAllowed ? '' : 'cursor:default' ?>"
-                                   data-target="<?php echo $inIframeAllowed ? '#previewModal' : '' ?>"
-                                   data-src="<?php echo $item_object_url; ?>"><span class="icon"></span><img alt=""
-                                                                                                             src="<?php echo $image[0]; ?>"
-                                                                                                             class="img-responsive"/></a>
+                                <a href="<?php echo $item_object_url; ?>" class="btn-iframe" target="_blank" rel="nofollow" >
+                                    <span class="icon"></span><img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
+                                </a>
                             <?php else: ?>
                                 <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                             <?php endif; ?>
@@ -794,10 +785,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                             <?php if ($item_demo_viewer_template == "Iframe") { ?>
 
                                 <?php if ($item_object_url): ?>
-                                    <a href="#" class="btn-iframe" data-toggle="modal"
-                                       style="<?php echo $inIframeAllowed ? '' : 'cursor:default' ?>"
-                                       data-target="<?php echo $inIframeAllowed ? '#previewModal' : '' ?>"
-                                       data-src="<?php echo $item_object_url; ?>"><span
+                                    <a href="<?php echo $item_object_url; ?>" class="btn-iframe" data-toggle="modal"><span
                                                 class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php else: ?>
@@ -835,9 +823,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
                     <?php if (substr($item_preview, 0, 1) === 'Y') { ?>
                         <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url) && $inIframeAllowed) { ?>
-                            <a href="#" class="ribbon ribbon-xl btn-iframe preview_detail" data-toggle="modal"
-                               data-target="#previewModal" data-src="<?php echo $item_object_url; ?>"><span
-                                        class="icon"></span> Preview</a>
+                            <a href="<?php echo $item_object_url; ?>" class="ribbon ribbon-xl btn-iframe preview_detail" target="_blank" rel="nofollow" >
+                                <span class="icon"></span> Preview
+                            </a>
                         <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                             <a href="<?php echo $item_preview_pdf; ?>" class="ribbon ribbon-xl preview_detail"
                                target="_blank"><span class="icon"></span> Preview</a>

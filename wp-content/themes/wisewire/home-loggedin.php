@@ -145,8 +145,7 @@ $item_carousel_images = array();
                         </a>
                         <?php if (substr($item_preview, 0, 1) === 'Y') { ?>
                             <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url)) { ?>
-                                <a href="#" class="ribbon btn-iframe" data-toggle="modal" data-target="#previewModal"
-                                   data-src="<?php echo $item_object_url; ?>"><span class="icon"></span> Preview</a>
+                                <a href="<?php echo $item_object_url; ?>" class="ribbon btn-iframe" target="_blank" rel="nofollow"><span class="icon"></span> Preview</a>
                             <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                                 <a href="<?php echo $item_preview_pdf; ?>" class="ribbon" target="_blank"><span
                                         class="icon"></span> Preview</a>
