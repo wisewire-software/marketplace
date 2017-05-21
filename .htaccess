@@ -283,6 +283,15 @@
 	</IfModule>
 # END iThemes Security - Do not modify or remove this line
 
+# BEGIN Hard www.wisewire.com rewrite rule
+<IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteCond %{HTTP_HOST} !^$
+        RewriteCond %{HTTP_HOST} !^qa\.wisewire\.com$ [NC]
+        RewriteCond %{HTTPS}s ^on(s)|
+        RewriteRule ^ http%1://qa.wisewire.com%{REQUEST_URI} [R=301,L]
+</IfModule>
+
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
@@ -295,3 +304,10 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+#BEGIN Basic Auth Config
+AuthType Basic
+AuthName "Restricted Content"
+AuthUserFile /etc/apache2/.htpasswd
+Require valid-user
+# END Basic Auth Config
