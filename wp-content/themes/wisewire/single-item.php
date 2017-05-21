@@ -785,7 +785,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                             <?php if ($item_demo_viewer_template == "Iframe") { ?>
 
                                 <?php if ($item_object_url): ?>
-                                    <a href="<?php echo $item_object_url; ?>" class="btn-iframe" data-toggle="modal"><span
+                                    <a href="<?php echo $item_object_url; ?>" class="btn-iframe" rel="nofollow" target="_blank"><span
                                                 class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php else: ?>
