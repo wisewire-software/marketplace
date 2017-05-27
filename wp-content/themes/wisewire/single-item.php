@@ -1448,6 +1448,12 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
     </div><!-- /hidden-xs -->
 <?php } ?>
 
+<div itemtype="http://schema.org/Review" itemscope>
+    <meta itemprop="name" content="<?php echo $title; ?>">
+    <div itemtype="http://schema.org/Rating" itemscope itemprop="reviewRating">
+        <meta content="<?php echo $item_ratings ? $item_ratings : 0 ?>" itemprop="ratingValue" />
+    </div>
+</div>
 
 <script>
     $(function () {
