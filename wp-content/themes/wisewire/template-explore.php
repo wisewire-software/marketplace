@@ -228,6 +228,9 @@ $featured_item = false ?>
                                                             <p class="content-type">
                                                                 <?php echo $post->content_type_icon; ?>
                                                             </p>
+                                                            <p class="grade-level">
+                                                                <?php echo $post->grade; ?>
+                                                            </p>
                                                         </div>
                                                         <div class="content-title">
                                                             <h3><?php echo $title; ?></h3>
@@ -342,6 +345,9 @@ $featured_item = false ?>
                                                                 </h3>
                                                                 <p class="content-type">
                                                                     <?php echo $post->content_type_icon; ?>
+                                                                </p>
+                                                                <p class="grade-level">
+                                                                    <?php echo $post->grade; ?>
                                                                 </p>
                                                             </div>
                                                             <div class="more-info">

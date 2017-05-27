@@ -525,6 +525,9 @@ $url_link = $control->get_permalink();
                                                                         <p class="content-type">
                                                                             <?php echo $item->content_type_icon ?>
                                                                         </p>
+                                                                        <p class="grade-level">
+                                                                            <?php echo implode(',', $item->grade); ?>
+                                                                        </p>
                                                                     </div>
                                                                 <?php else: ?>
                                                                     <div class="details">
@@ -552,6 +555,9 @@ $url_link = $control->get_permalink();
                                                                                 } ?>
                                                                             </p>
                                                                         <?php endif ?>
+                                                                        <p class="grade-level">
+                                                                            <?php echo implode(',', $item->grade); ?>
+                                                                        </p>
                                                                         <p class="grade-level">
                                                                             <?php
                                                                             $words_to_find = array("Question", "question");
