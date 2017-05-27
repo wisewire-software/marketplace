@@ -8902,7 +8902,7 @@ a.ribbon.ribbon-xl:focus .icon, a.ribbon.ribbon-xl:hover .icon {
 }
 
 .lo-items .col-2-next .lo-item .details {
-    height: 111px
+    height: 150px
 }
 
 .lo-items .col-2-next .lo-item .details .content-title {
@@ -9559,7 +9559,7 @@ a.ribbon.ribbon-xl:focus .icon, a.ribbon.ribbon-xl:hover .icon {
 }
 
 .lo-carousel.lo-items .col-2-next .lo-item .details {
-    height: 85px
+    height: 120px;
 }
 
 .lo-carousel.lo-items .col-2-next .lo-item .content-title {

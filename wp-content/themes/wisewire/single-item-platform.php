@@ -2265,6 +2265,14 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
 <?php endif; ?>
 
 
+<div itemtype="http://schema.org/Review" itemscope>
+    <meta itemprop="name" content="<?php echo $title; ?>">
+    <div itemtype="http://schema.org/Rating" itemscope itemprop="reviewRating">
+        <meta content="<?php echo $item_ratings ? $item_ratings : 0 ?>" itemprop="ratingValue" />
+    </div>
+</div>
+
+
 <?php get_footer(); ?>
 
 <script>
