@@ -69,7 +69,7 @@
             
             <div class="container-fluid container-form">
                             
-              <a href="#" class="btn go-link" target="_blank">Take me to the platform!</a>
+              <a href="#" class="btn go-link" rel="nofollow" target="_blank">Take me to the platform!</a>
               <a href="#" class="close" data-dismiss="modal" aria-label="Close">No Thanks.</a>
               
             </div>
@@ -92,7 +92,7 @@
             
             <div class="container-fluid container-form">
                             
-              <a href="#" class="btn go-link" target="_blank">Yes, take me to this content!</a>
+              <a href="#" class="btn go-link" rel="nofollow" target="_blank">Yes, take me to this content!</a>
               <a href="#" class="close" data-dismiss="modal" aria-label="Close">No Thanks.</a>
               
             </div>
