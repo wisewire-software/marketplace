@@ -1169,14 +1169,22 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <p class="btn-contact">
                                 <a href="<?php echo $item_cta_button_pdf; ?>" target="_blank" class="btn">Download</a>
                             </p>
-                        <?php } else if (($item_cta_button == 'Visit Website') && ($item->previewURL)) { ?>
+                        <?php } else if (($item_cta_button == 'Visit Website') && ($item->previewURL) && (strpos($item->previewURL, 'wisewire.com') !== false)) { ?>
                             <p class="btn-contact">
                                 <!--<a href="<?php echo $item->previewURL; ?>" target="_blank" class="btn">Visit Website</a>-->
                                 <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
                                    data-target="#accessExternalConfirm" class="btn">Visit Website</a>
 
                             </p>
-                        <?php } else if ($item_cta_button == 'Contact Us') { ?>
+                        <?php } else if (($item_cta_button == 'Visit Website') && ($item->previewURL) && (strpos($item->previewURL, 'wisewire.com') === false)) { ?>
+                            <p class="btn-contact">
+                                <!--<a href="<?php echo $item->previewURL; ?>" target="_blank" class="btn">Visit Website</a>-->
+                                <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
+                                   data-target="#accessExternalConfirm" rel="nofollow" class="btn">Visit Website</a>
+
+                            </p>
+                        <?php }
+                            else if ($item_cta_button == 'Contact Us') { ?>
                             <p class="btn-contact">
                                 <a href="#" data-toggle="modal" data-target="#contactModal" class="btn">Contact us</a>
                             </p>
@@ -1692,13 +1700,24 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <p class="btn-contact">
                                 <a href="<?php echo $item_cta_button_pdf; ?>" target="_blank" class="btn">Download</a>
                             </p>
-                        <?php } else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url)) { ?>
+                        <?php } else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url) && (strpos($item_cta_button_url, 'wisewire.com') !== false)) { ?>
                             <p class="btn-contact">
                                 <!--<a href="<?php echo $item_cta_button_url; ?>" target="_blank" class="btn">Visit Website</a>-->
                                 <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
                                    data-target="#accessExternalConfirm" class="btn">Visit Website</a>
                             </p>
-                        <?php } else if ($item_cta_button == 'Contact Us') { ?>
+                        <?php }
+
+                        else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url) && (strpos($item_cta_button_url, 'wisewire.com') === false)) { ?>
+                            <p class="btn-contact">
+                                <!--<a href="<?php echo $item_cta_button_url; ?>" target="_blank" class="btn">Visit Website</a>-->
+                                <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
+                                   data-target="#accessExternalConfirm" rel="nofollow" class="btn">Visit Website</a>
+                            </p>
+                        <?php }
+
+
+                            else if ($item_cta_button == 'Contact Us') { ?>
                             <p class="btn-contact">
                                 <a href="#" data-toggle="modal" data-target="#contactModal" class="btn">Contact us</a>
                             </p>
