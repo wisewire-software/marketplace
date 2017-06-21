@@ -228,8 +228,8 @@ $featured_item = false ?>
                                                             <p class="content-type">
                                                                 <?php echo $post->content_type_icon; ?>
                                                             </p>
-                                                            <p class="grade-level">
-                                                                <?php echo $post->grade; ?>
+                                                            <p class="grade-level-carousel">
+                                                                <?php echo str_replace(",",", ", $post->grade); ?>
                                                             </p>
                                                         </div>
                                                         <div class="content-title">
@@ -346,8 +346,8 @@ $featured_item = false ?>
                                                                 <p class="content-type">
                                                                     <?php echo $post->content_type_icon; ?>
                                                                 </p>
-                                                                <p class="grade-level">
-                                                                    <?php echo $post->grade; ?>
+                                                                <p class="grade-level-carousel">
+                                                                    <?php echo str_replace(",",", ", $post->grade); ?>
                                                                 </p>
                                                             </div>
                                                             <div class="more-info">
