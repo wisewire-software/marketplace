@@ -1,56 +1,41 @@
 (function ($) {
-    //$('.switch_hide_item').lc_switch('YES', 'NO');
-    //
-    //$(document).on('lcs-statuschange', '.switch_hide_item', function () {
-    //    var status = ($(this).is(':checked')) ? 1 : 0;
-    //    var $this = $(this);
-    //    $this.lcs_destroy();
-    //    $this.prop('disabled', true).lc_switch('YES', 'NO');
-    //
-    //    $.ajax({
-    //            type: "POST",
-    //            url: ajaxurl,
-    //            data: {
-    //                'action': 'post_item_hide_page',
-    //                'item_id': this.value,
-    //                'status': status
-    //            },
-    //            dataType: 'json'
-    //        })
-    //        .done(function (response) {
-    //            if(response.success){
-    //                $this.lcs_destroy();
-    //                $this.prop('disabled', false).lc_switch('YES', 'NO');
-    //            }
-    //        });
-    //});
-
-
     var $switchHideItem = $('.switch_hide_item');
     $switchHideItem.lc_switch('YES', 'NO');
 
-    $(document).on('lcs-statuschange', '.switch_hide_item', function () {
-        var status = ($(this).is(':checked')) ? 1 : 0;
+    var $switchRelNoFollow = $('.switch_is_rel_nofollow');
+    $switchRelNoFollow.lc_switch('YES', 'NO');
 
-        $switchHideItem.lcs_destroy();
-        $switchHideItem.prop('disabled', true).lc_switch('YES', 'NO');
+    $(document).on('lcs-statuschange', '.switch_hide_item, .switch_is_rel_nofollow', function () {
+        var $this = $(this);
+        var status = ($(this).is(':checked')) ? 1 : 0;
+        var $switch;
+        var data = {'item_id': this.value};
+
+
+        if ($this.hasClass('switch_is_rel_nofollow')) {
+            $switch = $switchRelNoFollow;
+            data['action'] = 'post_item_rel_nofollow';
+            data['rel_nofollow'] = status;
+        } else {
+            $switch = $switchHideItem;
+            data['action'] = 'post_item_hide_page';
+            data['status'] = status;
+        }
+
+        $switch.lcs_destroy();
+        $switch.prop('disabled', true).lc_switch('YES', 'NO');
 
         $.ajax({
-                type: "POST",
-                url: ajaxurl,
-                data: {
-                    'action': 'post_item_hide_page',
-                    'item_id': this.value,
-                    'status': status
-                },
-                dataType: 'json'
-            })
-            .done(function (response) {
-                if(response.success){
-                    $switchHideItem.lcs_destroy();
-                    $switchHideItem.prop('disabled', false).lc_switch('YES', 'NO');
-                }
-            });
+            type: "POST",
+            url: ajaxurl,
+            data: data,
+            dataType: 'json'
+        }).done(function (response) {
+            if (response.success) {
+                $switch.lcs_destroy();
+                $switch.prop('disabled', false).lc_switch('YES', 'NO');
+            }
+        });
     });
 
 

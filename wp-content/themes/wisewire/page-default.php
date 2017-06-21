@@ -24,12 +24,6 @@ Template Name: Regular Page
 	<?php endif; ?>  
            
     </div>
-<!-- BalkanOutsource 2016-06-06 - Google Analytics event tracking --> 
-<script type="text/javascript">
-  $('.checkout-button').on('mousedown', function(){
-    ga('send', 'event', 'Checkout', 'Click');
-  });
-</script>
-	   
+<!-- BalkanOutsource 2016-06-06 - Google Analytics event tracking -->
 
 <?php get_footer(); ?>

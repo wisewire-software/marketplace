@@ -43,6 +43,7 @@ class List_Post_Item_Platform extends WP_List_Table
             'object_type' => __('Object Types', 'post_item_platform'),
             'created' => __('Date', 'post_item_platform'),
             'itemId' => __('Hide Item', 'post_item_platform'),
+            'is_rel_nofollow' => __('Rel NoFollow', 'post_item_platform')
         );
         return $columns;
     }
@@ -62,6 +63,20 @@ class List_Post_Item_Platform extends WP_List_Table
 
         return sprintf(
             '<input type="checkbox" class="switch_hide_item" name="hide_item_%s" value="%s" %s />',
+            $item['itemId'], $item['itemId'], $checked ? 'checked="checked"' : ''
+        );
+    }
+
+    function column_is_rel_nofollow($item)
+    {
+        global $wpdb;
+
+        $table_name = $wpdb->prefix . 'item_rel_nofollow';
+        $data_item_meta = $wpdb->get_row($wpdb->prepare("SELECT is_rel_nofollow FROM  $table_name WHERE  item_id= '%s'", $item['itemId']), ARRAY_A);
+        $checked = is_array($data_item_meta) && isset($data_item_meta['is_rel_nofollow']) && $data_item_meta['is_rel_nofollow'] == 1 ? true : false;
+
+        return sprintf(
+            '<input type="checkbox" class="switch_is_rel_nofollow" name="rel_nofollow_%s" value="%s" %s />',
             $item['itemId'], $item['itemId'], $checked ? 'checked="checked"' : ''
         );
     }
@@ -87,7 +102,7 @@ class List_Post_Item_Platform extends WP_List_Table
 
         $query = "SELECT id as cb, title, itemType as object_type, created, (SELECT GROUP_CONCAT(DISTINCT UPPER(tag)) "
             . "FROM  wp_apicache_tags "
-            . "WHERE itemId = wpi.itemId) AS tags, itemId FROM $table_name as wpi $do_search ORDER BY $orderby $order";
+            . "WHERE itemId = wpi.itemId) AS tags, itemId  FROM $table_name as wpi $do_search ORDER BY $orderby $order";
 
         return $wpdb->get_results($query, ARRAY_A);
     }
@@ -169,6 +184,8 @@ if (!class_exists('Post_Item_Platform')) :
             add_action('admin_menu', array($this, 'admin_menu_post_item_platform'));
             add_action('wp_ajax_post_item_platform_hide_page', array($this, 'ajax_hide_item_platform'));
             add_action('wp_ajax_nopriv_post_item_platform_hide_page', array($this, 'ajax_hide_item_platform'));
+            add_action('wp_ajax_post_item_platform_rel_nofollow', array($this, 'ajax_update_item_rel_nofollow'));
+            add_action('wp_ajax_nopriv_post_item_platform_rel_nofollow', array($this, 'ajax_update_item_rel_nofollow'));
             add_action('ww_items_update_summarized', array($this, 'update_batch_summarized_metadata'), 10, 3);
         }
 
@@ -221,7 +238,7 @@ if (!class_exists('Post_Item_Platform')) :
             $data = $_REQUEST;
             $response['success'] = false;
             $response['message'] = 'Failed update Hide Item';
-            if (isset($data['action']) && isset($data['item_id'])) {
+            if (isset($data['action']) && $data['action'] == 'post_item_platform_hide_page' && isset($data['item_id'])) {
                 $is_hide_item = isset($data['status']) && $data['status'] == 1 ? 1 : 0;
                 $table_name = $wpdb->prefix . 'apicache_meta';
 
@@ -233,6 +250,44 @@ if (!class_exists('Post_Item_Platform')) :
                     $this->update_batch_summarized_metadata($data['item_id'], boolval($is_hide_item), 'P');
                 }
             }
+
+            echo json_encode($response);
+            wp_die();
+        }
+
+        function ajax_update_item_rel_nofollow()
+        {
+            global $wpdb;
+            $data = $_REQUEST;
+            $response['success'] = false;
+            $response['message'] = 'Failed update Item Rel NoFollow';
+            if (isset($data['action'])) {
+                if ($data['action'] == 'post_item_platform_rel_nofollow' && isset($data['item_id'])) {
+                    $is_rel_nofollow = isset($data['is_rel_nofollow']) && $data['is_rel_nofollow'] == 1 ? 1 : 0;
+                    $table_name = $wpdb->prefix . 'item_rel_nofollow';
+
+                    $count_rel_nofollow = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $table_name WHERE item_id=%s", $data['item_id']));
+
+                    if($count_rel_nofollow){
+                        $wpdb->update($table_name, array('is_rel_nofollow' => $is_rel_nofollow), array('item_id' => $data['item_id']));
+                    }else{
+                        $wpdb->insert('table',
+                            array(
+                                'item_id' => $data['item_id'],
+                                'is_rel_nofollow' => $is_rel_nofollow
+                            ),
+                            array(
+                                '%s',
+                                '%d'
+                            )
+                        );
+                    }
+
+                    $response['success'] = true;
+                    $response['message'] = 'Successfully updated';
+                }
+            }
+
 
             echo json_encode($response);
             wp_die();

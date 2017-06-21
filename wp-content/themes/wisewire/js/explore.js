@@ -121,23 +121,6 @@
 			var currentUrl  = window.location.href;
 			currentUrl = currentUrl.replace(/\/[0-9]+\//, "/");
 			window.history.pushState({}, "", currentUrl);
-
-			var searchValue = $('#explore-items').data('searchvalue');
-
-			if(searchValue){
-				ga('send', 'event', 'Search', 'Filter By', searchValue, {
-					'dimension1':  searchValue,
-					'dimension2' : filter.data('filter'),
-					'dimension4' : filter.attr('href').substr(1),
-					'metric1':  '1'
-				});
-			}else{
-				ga('send', 'event', 'Search', 'Filter By', filter.data('filter'), {
-					'dimension2' : filter.data('filter'),
-					'dimension4' : filter.attr('href').substr(1),
-					'metric1':  '1'
-				});
-			}
 		});
 		
 		this.body.delegate('.filter-remove','click',function(e){

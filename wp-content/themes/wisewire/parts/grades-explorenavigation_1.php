@@ -12,23 +12,19 @@
         <!-- Nav tabs --> 
         <ul class="lo-nav" role="tablist">
           <li role="presentation" <?php echo ($grade == 'elementary') && !isset($wp_query->query['search']) && $wp_query->query['pagename'] != 'most-viewed' ? 'class="active"' : '' ?>>
-            <a href="<?php echo get_site_url(); ?>/explore/elementary/"
-               onmousedown="ga('send', 'event', 'GradeBandHeader', 'Click', 'Elementary');">Elementary
+            <a href="<?php echo get_site_url(); ?>/explore/elementary/">Elementary
             </a>
           </li>
           <li role="presentation" <?php echo (!$grade || $grade == 'middle') && !isset($wp_query->query['search']) && $wp_query->query['pagename'] != 'most-viewed' ? 'class="active"' : '' ?>>
-            <a href="<?php echo get_site_url(); ?>/explore/middle/"
-               onmousedown="ga('send', 'event', 'GradeBandHeader', 'Click', 'Middle');">Middle
+            <a href="<?php echo get_site_url(); ?>/explore/middle/">Middle
             </a>
           </li>
           <li role="presentation" <?php echo $grade == 'high-school' && !isset($wp_query->query['search']) && $wp_query->query['pagename'] != 'most-viewed' ? 'class="active"' : '' ?>>
-            <a href="<?php echo get_site_url(); ?>/explore/high-school/"
-               onmousedown="ga('send', 'event', 'GradeBandHeader', 'Click', 'HighSchool');">High School
+            <a href="<?php echo get_site_url(); ?>/explore/high-school/">High School
             </a>
           </li>
           <li role="presentation" <?php echo $grade == 'higher-education' && !isset($wp_query->query['search']) && $wp_query->query['pagename'] != 'most-viewed' ? 'class="active"' : '' ?>>
-            <a href="<?php echo get_site_url(); ?>/explore/higher-education/"
-               onmousedown="ga('send', 'event', 'GradeBandHeader', 'Click', 'HigherEducation');">Higher Education</a>
+            <a href="<?php echo get_site_url(); ?>/explore/higher-education/">Higher Education</a>
           </li>
           <!--<li class="btn-customize">
             <a href="#" data-toggle="modal" data-target="#customizeModal" class="btn btn-alt">Customize Content</a>

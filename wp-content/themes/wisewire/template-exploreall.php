@@ -139,17 +139,6 @@ $url_link = $control->get_permalink();
                                 <h3>
                                     <?php if ($control->search): ?>
                                         Search results: <span><?php echo $control->search ?></span>
-                                        <script type="text/javascript">
-                                            $(document).ready(function(){
-                                                ga(
-                                                   'send',
-                                                   'event',
-                                                   'SearchPerformed',
-                                                   'Search',
-                                                   '<?=$control->search?>'
-                                                );
-                                            });
-                                        </script>
                                     <?php else: ?>
                                         <?php echo $control->discipline_object->level1_label ?>
                                     <?php endif; ?>
@@ -477,7 +466,7 @@ $url_link = $control->get_permalink();
                                                     <div class="col-sm-6 col-md-4 col-no-space col-2-next col-wrapper">
                                                         <a data-itemtitle="<?php echo $item->title ?>"
                                                                  class="lo-item lo-item-col <?php echo $WWItems->get_color($item->content_type_icon) ?> <?php echo($item->type == 'item' ? '' : 'item-search') ?>"
-                                                                 href="/item/<?php echo($item->type == 'item' ? $item->name : $item->id) ?>/">
+                                                                 href="/item/<?php echo($item->type == 'item' ? $item->name : $item->id) ?>/" <?php echo add_rel_nofollow_to_item($item->id) ?> >
                                                             <div class="img">
                                                                 <?php
                                                                 $item_main_image = $item->image_id;
@@ -536,6 +525,9 @@ $url_link = $control->get_permalink();
                                                                         <p class="content-type">
                                                                             <?php echo $item->content_type_icon ?>
                                                                         </p>
+                                                                        <div class="grade-level">
+                                                                            <?php echo implode(', ', $item->grade); ?>
+                                                                        </div>
                                                                     </div>
                                                                 <?php else: ?>
                                                                     <div class="details">
@@ -563,6 +555,9 @@ $url_link = $control->get_permalink();
                                                                                 } ?>
                                                                             </p>
                                                                         <?php endif ?>
+                                                                        <div class="grade-level">
+                                                                            <?php echo implode(', ', $item->grade); ?>
+                                                                        </div>
                                                                         <p class="grade-level">
                                                                             <?php
                                                                             $words_to_find = array("Question", "question");
@@ -704,41 +699,6 @@ $url_link = $control->get_permalink();
         </div>
 
     </div>
-    <?php function add_script_ga_footer(){ ?>
-        <?php
-            global $control;
-            global $items;
-        ?>
-
-        <script>
-            $(function () {
-                $('.lo-item').on('click', function () {
-                    var title = $(this).data('itemtitle');
-                    ga('send', 'event', 'Item Detail', 'Page', title, {
-                        'dimension3': title,
-                        'dimension5': 'search',
-                        'metric4': '1'
-                    });
-                });
-            });
-
-
-            <?php if($control->search): ?>
-            <?php if($items): ?>
-            ga('send', 'event', 'Search', 'Submit:Results', "<?php echo $control->search; ?>", {
-                'dimension1': "<?php echo $control->search; ?>",
-                'metric1': '1'
-            });
-            <?php else: ?>
-            ga('send', 'event', 'Search', 'Submit:Results Null', "<?php echo $control->search; ?>", {
-                'dimension1': "<?php echo $control->search; ?>",
-                'metric2': '1'
-            });
-            <?php endif; ?>
-            <?php endif; ?>
-        </script>
-
-    <?php } ?>
     <?php add_action('wp_footer', 'add_script_ga_footer'); ?>
     <?php get_footer(); ?>
 

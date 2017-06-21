@@ -21,13 +21,15 @@ if (!class_exists('WP_List_Item_Custom')) {
                 add_filter('bulk_actions-edit', array(&$this, 'add_bulk_action_post'));
                 add_action('wp_ajax_post_item_hide_page', array(&$this, 'ajax_hide_post_item'));
                 add_action('wp_ajax_nopriv_post_item_hide_page', array(&$this, 'ajax_hide_post_item'));
+                add_action('wp_ajax_post_item_rel_nofollow', array(&$this, 'ajax_item_rel_nofollow'));
+                add_action('wp_ajax_nopriv_post_item_rel_nofollow', array(&$this, 'ajax_item_rel_nofollow'));
             }
         }
 
 
         function add_hide_item_post_columns($columns)
         {
-            return array_merge($columns, array('hide_item_post' => 'Hide Item'));
+            return array_merge($columns, array('hide_item_post' => 'Hide Item', 'is_rel_nofollow' => 'Rel NoFollow'));
         }
 
         function posts_custom_columns($column, $post_id)
@@ -41,6 +43,20 @@ if (!class_exists('WP_List_Item_Custom')) {
                         '<input type="checkbox" class="switch_hide_item" name="hide_item_%s" value="%s" %s />',
                         $post_id, $post_id, $checked ? 'checked="checked"' : ''
                     );
+                    break;
+
+                case 'is_rel_nofollow':
+                    global $wpdb;
+
+                    $table_name = $wpdb->prefix . 'item_rel_nofollow';
+                    $data_item_meta = $wpdb->get_row($wpdb->prepare("SELECT is_rel_nofollow FROM $table_name WHERE  item_id= '%s'", $post_id), ARRAY_A);
+                    $checked = is_array($data_item_meta) && isset($data_item_meta['is_rel_nofollow']) && $data_item_meta['is_rel_nofollow'] == 1 ? true : false;
+
+                    echo sprintf(
+                        '<input type="checkbox" class="switch_is_rel_nofollow" name="rel_nofollow_%s" value="%s" %s />',
+                        $post_id, $post_id, $checked ? 'checked="checked"' : ''
+                    );
+
                     break;
             }
         }
@@ -59,6 +75,44 @@ if (!class_exists('WP_List_Item_Custom')) {
                     $response['message'] = 'Successfully updated';
                 }
             }
+
+            echo json_encode($response);
+            wp_die();
+        }
+
+
+        function ajax_item_rel_nofollow(){
+            global $wpdb;
+            $data = $_REQUEST;
+            $response['success'] = false;
+            $response['message'] = 'Failed update Item Rel NoFollow';
+            if (isset($data['action'])) {
+                if ($data['action'] == 'post_item_rel_nofollow' && isset($data['item_id'])) {
+                    $is_rel_nofollow = isset($data['rel_nofollow']) && $data['rel_nofollow'] == 1 ? 1 : 0;
+                    $table_name = $wpdb->prefix . 'item_rel_nofollow';
+
+                    $count_rel_nofollow = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $table_name WHERE item_id=%s", $data['item_id']));
+
+                    if($count_rel_nofollow){
+                        $wpdb->update($table_name, array('is_rel_nofollow' => $is_rel_nofollow), array('item_id' => $data['item_id']));
+                    }else{
+                        $wpdb->insert('table',
+                            array(
+                                'item_id' => $data['item_id'],
+                                'is_rel_nofollow' => $is_rel_nofollow
+                            ),
+                            array(
+                                '%s',
+                                '%d'
+                            )
+                        );
+                    }
+
+                    $response['success'] = true;
+                    $response['message'] = 'Successfully updated';
+                }
+            }
+
 
             echo json_encode($response);
             wp_die();
