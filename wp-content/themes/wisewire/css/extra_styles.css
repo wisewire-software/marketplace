@@ -19,15 +19,7 @@ a.navbar-brand, a.navbar-brand:hover{
 	font-weight: 300
 }
 
-/*Responsive videos from YouTube*/
-.homevideoIframe{
-	height:1000px;
-	width:100%;
-	max-width:560px; /* ancho máx*/
-	padding-top:56.25%; /* 16/9 --> 56.25% */
-	position:relative;
-}
-.teiVideoIframe,.publishVideoIframe2{
+homevideoIframe, teiVideoIframe, publishVideoIframe2{
 	height:1000px;
 	width:100%;
 	max-width:560px; /* ancho máx*/
