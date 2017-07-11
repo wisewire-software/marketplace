@@ -201,7 +201,7 @@
           </div>
           <div class="modal-body">           
 
-            <div id="homevideoIframe" style="width:100%"></div>            
+            <div id="homevideoIframe" style="width:100%"><iframe width="560" height="315" src="https://www.youtube.com/embed/EAdiFWDYzz8" frameborder="0" allowfullscreen></iframe></div>
             
           </div>
         </div>

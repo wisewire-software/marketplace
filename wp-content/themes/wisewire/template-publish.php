@@ -127,7 +127,7 @@
                         <div class="right_video"></div>
                       </div>              
                     </article>-->
-                    <div id="publishVideoIframe" style="width:100%"></div>
+                    <div id="publishVideoIframe" style="width:100%"><iframe width="560" height="315" src="https://www.youtube.com/embed/dHYVRGysj8g" frameborder="0" allowfullscreen></iframe></div>
                     <!--<iframe id="publishVideoIframe" src="" width="100%"  frameborder="0"></iframe>-->
                   <?php endif?> 
 
@@ -263,7 +263,7 @@
                         <div class="right_video"></div>
                       </div>              
                     </article>-->
-                    <div id="publishVideoIframe2" style="width:100%; height:375px"></div>
+                    <div id="publishVideoIframe2" style="width:100%; height:375px"><iframe width="560" height="315" src="https://www.youtube.com/embed/dHYVRGysj8g" frameborder="0" allowfullscreen></iframe></div>
                   <?php endif?>
 
                   <?php if ($content_2) { ?>
@@ -330,27 +330,27 @@
 <?php get_footer(); ?>
 
 
- <script type="text/javascript">
-        
-        if ( $(window).width() > 768 ){              
+ <!--<script type="text/javascript">
+
+        if ( $(window).width() > 768 ){
               $('#publishVideoIframe2').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
 
               $('#publishVideoIframe2').bind(uplynk.events.PLAYER_ERROR, function(e, arg) {
                   console.log(e, arg);
               });
-        } else {              
-              $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');                            
+        } else {
+              $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
         }
 
 
         $( window ).resize(function() {
-        
+
           if ( $(window).width() > 768){
               $('#publishVideoIframe2').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
-              
+
           } else {
-              $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');                                          
+              $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
           }
-        
+
         });
-    </script>
+    </script>-->
