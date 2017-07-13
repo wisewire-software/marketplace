@@ -32,7 +32,7 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="row">
                     <div class="col-md-10">
-                        <div id="publishVideoIframe2" style="width:100%; height:375px"></div>
+                        <div id="publishVideoIframe2" style="width:100%; height:375px"><iframe width="560" height="315" src="https://www.youtube.com/embed/dHYVRGysj8g" frameborder="0" allowfullscreen></iframe></div>
                         <div class="forus-description">Our item templates enable you to easily create formative
                             assessments, including tech-enhanced
                             items,
@@ -125,7 +125,7 @@
 </section>
 <?php get_footer(); ?>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 
     if ($(window).width() > 768) {
         $('#publishVideoIframe2').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
@@ -149,4 +149,4 @@
 
 
 
-</script>
+</script>-->

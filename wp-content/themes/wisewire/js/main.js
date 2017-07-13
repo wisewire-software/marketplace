@@ -856,7 +856,7 @@ $("#accessExternalConfirm .go-link, #accessPlatformConfirm .go-link").on('click'
 })
 
 
-if ($('#homevideoIframe').length) {
+/*if ($('#homevideoIframe').length) {
     $('#homevideoIframe').player('load', 'https://content.uplynk.com/3ddf769715c94004b998107d9225d8bd.m3u8');
 }
 
@@ -883,5 +883,5 @@ if ($('#teiVideoIframe').length) {
     });
 
     //$('#teiVideoIframe').player('load', 'https://content.uplynk.com/3481cd8a05704e7b8ecd52693380856a.m3u8');
-}
+}*/
 
