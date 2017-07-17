@@ -1007,11 +1007,11 @@ class WPSEO_Frontend {
     {
         global $wpdb;
         $urlpod = $_SERVER["REQUEST_URI"];
-
+        $imgpod = home_url('wp-content/themes/wisewire/img/defaultImg/pod.jpg');
         if(strpos($urlpod, '/item/')!== false) {
             $idpod = explode('/item/', $urlpod);
             $source = $wpdb->get_var($wpdb->prepare("SELECT source FROM  summarized_item_metadata WHERE id = '%s'", $idpod[1]));
-            if ($source == 'PLATFORM') {echo '<meta property="og:image" content="https://dev.marketp.com/wp-content/themes/wisewire/img/defaultImg/pod.jpg" />' . "\n";}else {return;}
+            if ($source == 'PLATFORM') {echo '<meta property="og:image" content="'.$imgpod.'" />' . "\n";}else {return;}
         }else {return;}
     }
 
