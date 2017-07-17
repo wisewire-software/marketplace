@@ -77,6 +77,7 @@ class WPSEO_Frontend {
 		add_action( 'wpseo_head', array( $this, 'robots' ), 10 );
 		add_action( 'wpseo_head', array( $this, 'metakeywords' ), 11 );
 		add_action( 'wpseo_head', array( $this, 'canonical' ), 20 );
+        add_action( 'wpseo_head', array( $this, 'OG_image' ), 20 );
 		add_action( 'wpseo_head', array( $this, 'adjacent_rel_links' ), 21 );
 		add_action( 'wpseo_head', array( $this, 'publisher' ), 22 );
 
@@ -1001,6 +1002,18 @@ class WPSEO_Frontend {
 			$this->canonical = $canonical;
 		}
 	}
+    /*Default Img for items POD*/
+    public function OG_image()
+    {
+        global $wpdb;
+        $urlpod = $_SERVER["REQUEST_URI"];
+
+        if(strpos($urlpod, '/item/')!== false) {
+            $idpod = explode('/item/', $urlpod);
+            $source = $wpdb->get_var($wpdb->prepare("SELECT source FROM  summarized_item_metadata WHERE id = '%s'", $idpod[1]));
+            if ($source == 'PLATFORM') {echo '<meta property="og:image" content="https://dev.marketp.com/wp-content/themes/wisewire/img/defaultImg/pod.jpg" />' . "\n";}else {return;}
+        }else {return;}
+    }
 
 	/**
 	 * Parse the home URL setting to find the base URL for relative URLs.
