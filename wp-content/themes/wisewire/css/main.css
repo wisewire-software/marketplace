@@ -8463,7 +8463,30 @@ a.ribbon.ribbon-xl:focus .icon, a.ribbon.ribbon-xl:hover .icon {
     font-size: 12px;
     color: #5f5f5f;
     font-style: italic;
-    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-height: 1.3;
+    max-height: 64px;
+    word-wrap: break-word
+}
+
+.lo-item .details .grade-level-carousel {
+    font-size: 12px;
+    color: #5f5f5f;
+    font-style: italic;
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1.3;
+    max-height: 48px;
+    word-wrap: break-word
 }
 
 .lo-item .content-title, .lo-item .more-info {
@@ -8902,7 +8925,8 @@ a.ribbon.ribbon-xl:focus .icon, a.ribbon.ribbon-xl:hover .icon {
 }
 
 .lo-items .col-2-next .lo-item .details {
-    height: 111px
+    overflow: hidden;
+    height: 150px
 }
 
 .lo-items .col-2-next .lo-item .details .content-title {
@@ -8969,8 +8993,9 @@ a.ribbon.ribbon-xl:focus .icon, a.ribbon.ribbon-xl:hover .icon {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    line-height: 1.2;
+    line-height: 1.3;
     max-height: 32px;
+    min-height: 32px;
     word-wrap: break-word
 }
 
@@ -9559,7 +9584,8 @@ a.ribbon.ribbon-xl:focus .icon, a.ribbon.ribbon-xl:hover .icon {
 }
 
 .lo-carousel.lo-items .col-2-next .lo-item .details {
-    height: 85px
+    overflow: hidden;
+    height: 120px;
 }
 
 .lo-carousel.lo-items .col-2-next .lo-item .content-title {
@@ -10913,6 +10939,10 @@ a.nav-grades .lo-nav .btn.disabled, fieldset[disabled] a.nav-grades .lo-nav .btn
 
 .feature-banner .wrapper {
     position: relative
+}
+
+.feature-banner .wrapper a{
+    color: #FFFFFF;
 }
 
 @media (max-width: 767px) {

@@ -433,7 +433,7 @@ $url_link = $control->get_permalink();
                                                     <div class="col-sm-6 col-md-4 col-no-space col-2-next col-wrapper">
                                                         <a
                                                             class="lo-item lo-item-col <?php echo $WWItems->get_color($item->content_type_icon) ?> <?php echo($item->type == 'item' ? '' : 'item-search') ?>"
-                                                            href='/item/<?php echo($item->type == 'item' ? $item->name : $item->id) ?>/'>
+                                                            href='/item/<?php echo($item->type == 'item' ? $item->name : $item->id) ?>/' <?php echo add_rel_nofollow_to_item($item->id) ?> >
                                                             <div class="img">
                                                                 <?php
                                                                 $item_main_image = $item->image_id;

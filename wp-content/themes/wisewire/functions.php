@@ -1225,7 +1225,7 @@ add_action("wpcf7_before_send_mail", "wpcf7_do_something_else_with_the_data");
 function wpcf7_do_something_else_with_the_data($contact_form){
 	
 	
-	if ( $contact_form->id == 56762 ){
+	if ( $contact_form->id == 56728 ){
 	$first = $_POST['name-first'];
 	$last = $_POST['name-last'];
 	$email = $_POST['account-email'];
@@ -1381,5 +1381,22 @@ function hide_dialog_favorite($username)
 	}
 }
 add_action('wp_login', 'hide_dialog_favorite');
+
+function add_rel_nofollow_to_item($item_id) {
+    global $wpdb;
+
+    if(!isset($item_id)){
+        return "";
+    }
+
+    $table_name = $wpdb->prefix . 'item_rel_nofollow';
+    $is_rel_nofollow = $wpdb->get_var($wpdb->prepare("SELECT is_rel_nofollow FROM  $table_name WHERE  item_id= '%s'", $item_id));
+
+    if($is_rel_nofollow){
+        return 'rel="nofollow"';
+    }else{
+        return '';
+    }
+}
 
 ?>
