@@ -774,7 +774,10 @@ class WPSEO_OpenGraph_Image {
 	private function get_default_image() {
 		if ( count( $this->images ) == 0 && isset( $this->options['og_default_image'] ) && $this->options['og_default_image'] !== '' ) {
 			$this->add_image( $this->options['og_default_image'] );
-		}
+		}elseif(count( $this->images ) == 0){
+            $image = home_url($this->noImgfound($_SERVER["REQUEST_URI"]));
+            $this->add_image( $image );
+        }
 	}
 
 	/**
@@ -912,5 +915,17 @@ class WPSEO_OpenGraph_Image {
 
 		return $img;
 	}
+
+    public function noImgfound($urlrequest){
+
+        if ($urlrequest === '/'){$urlrequest = "wp-content/themes/wisewire/img/defaultImg/home.jpg"; return $urlrequest;}
+        elseif (strpos($urlrequest, '/create/') !== false){$urlrequest = "wp-content/themes/wisewire/img/defaultImg/create.jpg"; return $urlrequest;}
+        elseif (strpos($urlrequest, '/custom-content/') !== false){$urlrequest = "wp-content/themes/wisewire/img/defaultImg/adapt.jpg"; return $urlrequest;}
+        elseif ($urlrequest == '/explore/middle/' or $urlrequest == '/explore/elementary/' or $urlrequest == '/explore/high-school/' or $urlrequest == '/explore/higher-education/'){$urlrequest = "wp-content/themes/wisewire/img/defaultImg/explore.jpg"; return $urlrequest;}
+        elseif (strpos($urlrequest, '/search/') !== false){$urlrequest = "wp-content/themes/wisewire/img/defaultImg/search.jpg"; return $urlrequest;}
+        elseif (strpos($urlrequest, '/item/') !== false){$urlrequest = "wp-content/themes/wisewire/img/defaultImg/cms.jpg"; return $urlrequest;}
+        else {$urlrequest = "wp-content/themes/wisewire/img/defaultImg/home.jpg"; return $urlrequest;}
+
+    }
 
 }
