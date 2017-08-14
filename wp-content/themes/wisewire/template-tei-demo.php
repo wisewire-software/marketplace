@@ -90,7 +90,7 @@ get_header(); ?>
                   <?php //echo str_replace("wp-video","wp-video embed-responsive-item" ,$video_item)?>
                 <?php //endif?>
                 </div>-->
-                <div id="teiVideoIframe" style="width:100%"><iframe width="560" height="315" src="https://www.youtube.com/embed/pjAcfmHlUiM" frameborder="0" allowfullscreen></iframe></div>
+                <div id="teiVideoIframe" style="width:100%"><iframe width="565" height="310" src="https://www.youtube.com/embed/pjAcfmHlUiM" frameborder="0" allowfullscreen></iframe></div>
               
 
               <div class="">
