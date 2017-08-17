@@ -1382,4 +1382,21 @@ function hide_dialog_favorite($username)
 }
 add_action('wp_login', 'hide_dialog_favorite');
 
+function add_rel_nofollow_to_item($item_id) {
+    global $wpdb;
+
+    if(!isset($item_id)){
+        return "";
+    }
+
+    $table_name = $wpdb->prefix . 'item_rel_nofollow';
+    $is_rel_nofollow = $wpdb->get_var($wpdb->prepare("SELECT is_rel_nofollow FROM  $table_name WHERE  item_id= '%s'", $item_id));
+
+    if($is_rel_nofollow){
+        return 'rel="nofollow"';
+    }else{
+        return '';
+    }
+}
+
 ?>

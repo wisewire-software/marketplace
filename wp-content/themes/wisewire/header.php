@@ -150,20 +150,16 @@
                 <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore <span class="caret"></span></a>
                 <ul class="dropdown-menu dropdown-logout" aria-labelledby="explore">
                   <li <?php echo $WWItems::$grade_name == 'elementary' && !isset($wp_query->query['search']) ? 'class="active"' : '' ?>>
-                    <a href="<?php echo get_site_url(); ?>/explore/elementary/"
-                       onmousedown="ga('send', 'event', 'GradeBandHeader', 'Elementary'); ">Elementary 1</a>
+                    <a href="<?php echo get_site_url(); ?>/explore/elementary/" >Elementary 1</a>
                   </li>
                   <li <?php echo $WWItems::$grade_name == 'middle' && !isset($wp_query->query['search']) ? 'class="active"' : '' ?>>
-                    <a href="<?php echo get_site_url(); ?>/explore/middle/"
-                       onmousedown="ga('send', 'event', 'GradeBandHeader', 'Middle'); ">Middle</a>
+                    <a href="<?php echo get_site_url(); ?>/explore/middle/" >Middle</a>
                   </li>
                   <li <?php echo $WWItems::$grade_name == 'high-school' && !isset($wp_query->query['search']) ? 'class="active"' : '' ?>>
-                    <a href="<?php echo get_site_url(); ?>/explore/high-school/"
-                       onmousedown="ga('send', 'event', 'GradeBandHeader', 'HighSchool'); ">High School</a>
+                    <a href="<?php echo get_site_url(); ?>/explore/high-school/" >High School</a>
                   </li>
                   <li <?php echo $WWItems::$grade_name == 'higher-education' && !isset($wp_query->query['search']) ? 'class="active"' : '' ?>>
-                    <a href="<?php echo get_site_url(); ?>/explore/higher-education/"
-                       onmousedown="ga('send', 'event', 'GradeBandHeader', 'HigherEducation'); ">Higher Education</a>
+                    <a href="<?php echo get_site_url(); ?>/explore/higher-education/">Higher Education</a>
                   </li>
                 </ul>
               </li>           

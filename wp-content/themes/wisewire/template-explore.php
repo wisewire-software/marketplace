@@ -115,7 +115,7 @@ $featured_item = false ?>
             <div class="container">
                 <div class="wrapper">
                     <div class="img">
-                        <a href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/">
+                        <a href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/" <?php echo add_rel_nofollow_to_item($post->id) ?> >
                             <?php
                             if ($item_main_image_attributes):?>
                                 <img alt="" src="<?php echo $item_main_image_attributes[0]; ?>" class="img-responsive"/>
@@ -126,22 +126,23 @@ $featured_item = false ?>
                             ?>
                         </a>
                     </div>
-                    <div class="content" style="cursor:hand; cursor:pointer"
-                         onclick="location.href = '/item/<?php echo($post->type == 'item' ? $post->name : $post->id); ?>'">
-                        <h3>
-                            <?php $discipline = $WWItems->get_discipline($post->id) ?>
-                            <?php if ($discipline):
-                                echo $discipline['name'];
-                            endif; ?>
-                        </h3>
-                        <p>
-                            <?php echo $title ?>
-                        </p>
-
+                    <div class="content">
+                        <a href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id); ?>"  <?php echo add_rel_nofollow_to_item($post->id) ?> >
+                            <h3>
+                                <?php $discipline = $WWItems->get_discipline($post->id) ?>
+                                <?php if ($discipline):
+                                    echo $discipline['name'];
+                                endif; ?>
+                            </h3>
+                            <p>
+                                <?php echo $title ?>
+                            </p>
+                        </a>
                         <?php if (substr($item_preview, 0, 1) === 'Y') { ?>
                             <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url)) { ?>
-                                <a href="#" class="ribbon btn-iframe" data-toggle="modal" data-target="#previewModal"
-                                   data-src="<?php echo $item_object_url; ?>"><span class="icon"></span> Preview</a>
+                                <a href="<?php echo $item_object_url; ?>" class="ribbon btn-iframe" >
+                                    <span class="icon"></span> Preview
+                                </a>
                             <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                                 <a href="<?php echo $item_preview_pdf; ?>" class="ribbon" target="_blank"><span
                                         class="icon"></span> Preview</a>
@@ -182,8 +183,7 @@ $featured_item = false ?>
                                             </h3>
                                         </div>
                                         <div class="col-sm-6 viewall">
-                                            <a href="/explore/<?php echo $grade; ?>/<?php echo $category_name->slug; ?>"
-                                               onmousedown="ga('send', 'event', 'ViewAll', 'Click', '<?= $category_name->slug ?>');">
+                                            <a href="/explore/<?php echo $grade; ?>/<?php echo $category_name->slug; ?>">
                                                 View all
                                             </a>
                                         </div>
@@ -205,7 +205,7 @@ $featured_item = false ?>
                                             <div class="col-2-next">
                                                 <a data-itemtitle="<?php echo $title; ?>"
                                                    class="lo-item lo-item-col <?php echo $WWItems->get_color($post->content_type_icon); ?> has-preview"
-                                                   href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/">
+                                                   href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/" <?php echo add_rel_nofollow_to_item($post->id) ?> >
                                                     <div class="img">
                                                         <?php
                                                         if ($item_main_image_attributes):?>
@@ -227,6 +227,9 @@ $featured_item = false ?>
                                                             </h3>
                                                             <p class="content-type">
                                                                 <?php echo $post->content_type_icon; ?>
+                                                            </p>
+                                                            <p class="grade-level-carousel">
+                                                                <?php echo str_replace(",",", ", $post->grade); ?>
                                                             </p>
                                                         </div>
                                                         <div class="content-title">
@@ -333,53 +336,57 @@ $featured_item = false ?>
 
                                                 <article
                                                     class="lo-item <?php echo $WWItems->get_color($post->content_type_icon); ?>"
-                                                    data-itemtitle="<?php echo $title; ?>"
-                                                    onclick="location.href='/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/';">
-                                                    <div class="content">
-                                                        <div class="details">
-                                                            <h3 class="sub-discipline">
-                                                                <?php echo $post->subdiscipline; ?>
-                                                            </h3>
-                                                            <p class="content-type">
-                                                                <?php echo $post->content_type_icon; ?>
-                                                            </p>
-                                                        </div>
-                                                        <div class="more-info">
-                                                            <div class="content-title">
-                                                                <h3><?php echo $title; ?></h3>
-                                                                <div class="content-type-icon">
-                                                                    <svg
-                                                                        class="svg-<?php echo $WWItems->get_icon($post->content_type_icon) ?>-dims">
-                                                                        <use
-                                                                            xlink:href="#<?php echo $WWItems->get_icon($post->content_type_icon) ?>"></use>
-                                                                    </svg>
+                                                    data-itemtitle="<?php echo $title; ?>">
+                                                    <a href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/" <?php echo add_rel_nofollow_to_item($post->id) ?>>
+                                                        <div class="content">
+                                                            <div class="details">
+                                                                <h3 class="sub-discipline">
+                                                                    <?php echo $post->subdiscipline; ?>
+                                                                </h3>
+                                                                <p class="content-type">
+                                                                    <?php echo $post->content_type_icon; ?>
+                                                                </p>
+                                                                <p class="grade-level-carousel">
+                                                                    <?php echo str_replace(",",", ", $post->grade); ?>
+                                                                </p>
+                                                            </div>
+                                                            <div class="more-info">
+                                                                <div class="content-title">
+                                                                    <h3><?php echo $title; ?></h3>
+                                                                    <div class="content-type-icon">
+                                                                        <svg
+                                                                            class="svg-<?php echo $WWItems->get_icon($post->content_type_icon) ?>-dims">
+                                                                            <use
+                                                                                xlink:href="#<?php echo $WWItems->get_icon($post->content_type_icon) ?>"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="rate">
+                                                                    <?php rating_display_stars($post->ratings, '') ?>
+                                                                    <p class="number">
+                                                                        <?php echo $post->ratings ? $post->ratings : '' ?>
+                                                                    </p>
+                                                                    <?php do_action('product_tile_price', $post); // helloAri  ?>
                                                                 </div>
                                                             </div>
-                                                            <div class="rate">
-                                                                <?php rating_display_stars($post->ratings, '') ?>
-                                                                <p class="number">
-                                                                    <?php echo $post->ratings ? $post->ratings : '' ?>
-                                                                </p>
-                                                                <?php do_action('product_tile_price', $post); // helloAri  ?>
-                                                            </div>
-                                                        </div>
-                                                        <div class="lo-info">
-                                                            <div class="date-rate">
-                                                                <p class="date">
-                                                                    <?php if ($item_publish_date): ?>
-                                                                        <?php echo date_i18n('m-d-Y', strtotime($item_publish_date)); ?>
-                                                                    <?php endif; ?>
-                                                                </p>
-                                                                <p class="object-type">
-                                                                    <?php echo str_replace("tei", "&nbsp;TEI&nbsp;", ucfirst($post->object_type)) ?>
-                                                                </p>
+                                                            <div class="lo-info">
+                                                                <div class="date-rate">
+                                                                    <p class="date">
+                                                                        <?php if ($item_publish_date): ?>
+                                                                            <?php echo date_i18n('m-d-Y', strtotime($item_publish_date)); ?>
+                                                                        <?php endif; ?>
+                                                                    </p>
+                                                                    <p class="object-type">
+                                                                        <?php echo str_replace("tei", "&nbsp;TEI&nbsp;", ucfirst($post->object_type)) ?>
+                                                                    </p>
 
+                                                                </div>
                                                             </div>
+                                                            <?php if ($item_preview == 'Y'): ?>
+                                                                <div class="ribbon"><span class="icon"></span> Preview</div>
+                                                            <?php endif; ?>
                                                         </div>
-                                                        <?php if ($item_preview == 'Y'): ?>
-                                                            <div class="ribbon"><span class="icon"></span> Preview</div>
-                                                        <?php endif; ?>
-                                                    </div>
+                                                    </a>
                                                 </article>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
@@ -426,18 +433,4 @@ $featured_item = false ?>
 <div class="back-to-top" id="back-to-top">
     <a href="#header" class="scroll">Back to top</a>
 </div>
-
-
-    <script>
-        $(function () {
-            $('.lo-item').on('click', function () {
-                var title = $(this).data('itemtitle');
-                ga('send', 'event', 'Item Detail', 'Page', title, {
-                    'dimension3': title,
-                    'dimension5': 'explore',
-                    'metric4': '1'
-                });
-            });
-        });
-    </script>
 <?php get_footer(); ?>

@@ -196,7 +196,7 @@ if ($posts): ?>
                         ?>
 
                         <a class="lo-item <?php echo $WWItems->get_color($post->content_type_icon) ?>"
-                           href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/">
+                           href="/item/<?php echo($post->type == 'item' ? $post->name : $post->id) ?>/" <?php echo add_rel_nofollow_to_item($item->id) ?> >
                             <div class="img">
                                 <?php if ($item_main_image_attributes): ?>
                                     <img src="<?php echo $item_main_image_attributes[0]; ?>" alt=""

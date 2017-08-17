@@ -127,7 +127,7 @@
                         <div class="right_video"></div>
                       </div>              
                     </article>-->
-                    <div id="publishVideoIframe" style="width:100%"></div>
+                    <div id="publishVideoIframe" style="width:100%"><iframe width="560" height="315" src="https://www.youtube.com/embed/dHYVRGysj8g" frameborder="0" allowfullscreen></iframe></div>
                     <!--<iframe id="publishVideoIframe" src="" width="100%"  frameborder="0"></iframe>-->
                   <?php endif?> 
 
@@ -147,17 +147,11 @@
                         <?php if ( is_user_logged_in() ) { ?>
                           <a href="/platform-<?php echo $button_type ?>"
                              class="btn btn_<?php echo $button_type ?>"
-                             target="_blank"
-                             <?= $button_type=='request'?'onmousedown="ga(\'send\', \'event\', \'BecomeAuthor\', \'Click\');" ':''?>
-                             <?= $button_type=='publish'?'onmousedown="ga(\'send\', \'event\', \'CreateContent\', \'Click\');" ':''?>
-                          >
+                             target="_blank">
                             <?php echo $cta_button_text; ?>
                           </a>
                         <?php } else {?>
-                          <a href="#" 
-                            <?= $button_type=='request'?'onmousedown="ga(\'send\', \'event\', \'BecomeAuthor\', \'Click\');" ':''?>
-                            <?= $button_type=='publish'?'onmousedown="ga(\'send\', \'event\', \'CreateContent\', \'Click\');" ':''?>
-                             class="btn btn-publish-not-loggedin btn_<?php echo $button_type ?>"
+                          <a href="#" class="btn btn-publish-not-loggedin btn_<?php echo $button_type ?>"
                              data-toggle="popover" 
                              data-content='<p class="info">You must be logged in to create</p><p class="clearfix"><a href="/user-login/?publish" class="btn btn-login">Log in</a><a href="/user-login/?action=create-account&publish" class="btn">Create account</a></p>'><?php echo $cta_button_text; ?></a>
                         <?php } ?>  
@@ -242,8 +236,7 @@
                         <?php if ( is_user_logged_in() ) { ?>
                           <a href="/platform-<?php echo $button_type ?>"
                              class="btn btn_<?php echo $button_type ?>"
-                             target="_blank"
-                             onmousedown="ga('send','event','CreateContent','Click')">
+                             target="_blank">
                                 <?php echo $cta_button_text; ?>
                           </a>
                         <?php } else {?>
@@ -270,7 +263,7 @@
                         <div class="right_video"></div>
                       </div>              
                     </article>-->
-                    <div id="publishVideoIframe2" style="width:100%; height:375px"></div>
+                    <div id="publishVideoIframe2" style="width:100%; height:375px"><iframe width="560" height="315" src="https://www.youtube.com/embed/dHYVRGysj8g" frameborder="0" allowfullscreen></iframe></div>
                   <?php endif?>
 
                   <?php if ($content_2) { ?>
@@ -287,14 +280,12 @@
                       <?php } else {?>
                         <?php if ( is_user_logged_in() ) { ?>
                           <a href="/platform-<?php echo $button_type ?>"
-                             <?= $button_type=='request'?'onmousedown="ga(\'send\', \'event\', \'BecomeAuthor\', \'Click\');" ':''?>
                              class="btn btn_<?php echo $button_type ?>"
                              target="_blank" >
                                 <?php echo $cta_button_text; ?>
                           </a>
                         <?php } else{?>                        
-                          <a href="#" 
-                             <?= $button_type=='request'?'onmousedown="ga(\'send\', \'event\', \'BecomeAuthor\', \'Click\');" ':''?>
+                          <a href="#"
                              class="btn btn-publish-not-loggedin btn_<?php echo $button_type ?>"
                              data-toggle="popover" 
                              data-content='<p class="info">You must be logged in to create</p><p class="clearfix"><a href="/user-login/?publish" class="btn btn-login">Log in</a><a href="/user-login/?action=create-account&publish" class="btn">Create account</a></p>'
@@ -339,27 +330,27 @@
 <?php get_footer(); ?>
 
 
- <script type="text/javascript">
-        
-        if ( $(window).width() > 768 ){              
+ <!--<script type="text/javascript">
+
+        if ( $(window).width() > 768 ){
               $('#publishVideoIframe2').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
 
               $('#publishVideoIframe2').bind(uplynk.events.PLAYER_ERROR, function(e, arg) {
                   console.log(e, arg);
               });
-        } else {              
-              $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');                            
+        } else {
+              $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
         }
 
 
         $( window ).resize(function() {
-        
+
           if ( $(window).width() > 768){
               $('#publishVideoIframe2').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
-              
+
           } else {
-              $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');                                          
+              $('#publishVideoIframe').player('load', 'https://content.uplynk.com/60fa53f33faf42dda5baebf3c032e73e.m3u8');
           }
-        
+
         });
-    </script>
+    </script>-->
