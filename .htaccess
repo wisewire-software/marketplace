@@ -303,3 +303,10 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+#BEGIN Basic Auth Config
+AuthType Basic
+AuthName "Restricted Content"
+AuthUserFile /etc/apache2/.htpasswd
+Require valid-user
+# END Basic Auth Config
