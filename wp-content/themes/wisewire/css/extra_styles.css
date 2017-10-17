@@ -761,7 +761,7 @@ a.lo-item{display: block}
 	border-radius: 100%;
 	text-align: center;
 	font-size: 23px;
-	padding: 5px 14px;
+	padding: 3px 14px;
 	font-weight: 600;
 }
  .sections_b2b .circle-number.circle-white{
@@ -827,9 +827,10 @@ a.lo-item{display: block}
 	padding-top: 65px;
 	padding-bottom: 55px;
 }
-.sections_b2b .circle-number.circle-orange{
+.sections_b2b .circle-number.circle-white-second{
 	background-color: #ffffff;
 	color: #ff6900;
+	padding: 3px 12px;
 }
 .sections_b2b .quality-header img,
 .sections_b2b .quality-header img + p{

@@ -161,7 +161,7 @@
 <section class="sections_b2b bg-orange">
     <div class="container">
         <div class="col-sm-6">
-            <h2 class="title-white text-left">Case Study <span class="circle-number circle-orange">3</span></h2>
+            <h2 class="title-white text-left">Case Study <span class="circle-number circle-white-second">3</span></h2>
             <h4 class="sub-title-white">Learning Materials that are Uniquely Yours</h4>
             <p class="lead description-lightblue">
                 When your mission requires a very different approach,
