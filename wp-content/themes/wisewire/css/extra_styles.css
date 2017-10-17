@@ -936,6 +936,68 @@ a.lo-item{display: block}
 .sections_b2b .button-last:active{
 	background: #c90f65;
 }
+
+/*style to page of schedule demo*/
+.call-schedule-demo{
+	padding: 10px 0px;
+}
+.call-schedule-demo img,
+.call-schedule-demo .call-schedule{
+	display: inline-block;
+}
+.call-schedule-demo img{
+	vertical-align: top;
+	margin-right: 6px;
+}
+.call-schedule-demo .call-schedule{
+	font-family: "Noto Sans", sans-serif;
+	color: #4a4a4a;
+	font-size: 16px;
+}
+.call-schedule-demo .call-schedule span{
+	color: #00b4cd;
+}
+.banner-schedule-demo{
+	background-image: url("../img/b2b_pages/banner_1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 20px 0px;
+}
+.banner-schedule-demo .title-schedule-demo{
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #3c3c3c;
+	width: 56%;
+}
+.general-section-schedule{
+	padding-top: 50px;
+}
+.general-section-schedule .title-general-section{
+	color: #00b4cd;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 26px;
+	margin-bottom: 25px;
+}
+.general-section-schedule .content-description-schedule{
+	font-family: "Noto Sans", sans-serif;
+	color: #686868;
+	font-size: 15px;
+	margin-bottom: 22px;
+}
+.general-section-schedule .trusted-schedule{
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #00b4cd;
+	font-size: 18px;
+	margin-top: 51px;
+}
+.general-section-schedule .content-icons-schedule{
+	margin-top: 20px;
+	margin-bottom: 110px;
+}
+.general-section-schedule .content-icons-schedule .icon-schedule{
+	display: inline-block;
+	margin: 0px 5px;
+}
+/*query media to pages of b2b, schedule demo and thank you*/
 @media (max-width: 990px) {
 	.section-banner_b2b .buttons-banner {
 		width: auto;

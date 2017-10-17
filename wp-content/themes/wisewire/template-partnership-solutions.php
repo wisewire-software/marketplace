@@ -194,7 +194,7 @@
         <div class="col-sm-6 content-description">
             <div class="sections-quality">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_1.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_1.png">
                     <p>Our Secret</p>
                 </div>
                 <p class="description-b2b">
@@ -207,7 +207,7 @@
             </div>
             <div class="sections-quality">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_2.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_2.png">
                     <p>Learner-Centered Design</p>
                 </div>
                 <p class="description-b2b">
@@ -219,7 +219,7 @@
             </div>
             <div class="sections-quality">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_3.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_3.png">
                     <p>Experts at Play</p>
                 </div>
                 <p class="description-b2b">
@@ -235,7 +235,7 @@
         <div class="col-sm-6 content-description">
             <div class="sections-quality">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_1.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_1.png">
                     <p>Our Secret</p>
                 </div>
                 <p class="description-b2b">
@@ -248,7 +248,7 @@
             </div>
             <div class="sections-quality">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_2.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_2.png">
                     <p>Learner-Centered Design</p>
                 </div>
                 <p class="description-b2b">
@@ -260,7 +260,7 @@
             </div>
             <div class="sections-quality">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_3.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_ICON_3.png">
                     <p>Experts at Play</p>
                 </div>
                 <p class="description-b2b">
@@ -281,7 +281,7 @@
         <div class="col-sm-12 content-description">
             <div class="sections-quality sections-colors">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/8_WYGWU_ICON_1.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/8_WYGWU_ICON_1.png">
                     <div class="sub-content">
                         <p class="sub-t sub-t-lightblue">
                             Access to Our Learning Platform
@@ -296,7 +296,7 @@
             </div>
             <div class="sections-quality sections-colors">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/8_WYGWU_ICON_2.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/8_WYGWU_ICON_2.png">
                     <div class="sub-content">
                         <p class="sub-t sub-t-green">
                             Easy Setup
@@ -313,7 +313,7 @@
             </div>
             <div class="sections-quality sections-colors">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/8_WYGWU_ICON_3.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/8_WYGWU_ICON_3.png">
                     <div class="sub-content">
                         <p class="sub-t sub-t-orange">
                             We Are Your Strategic Partner
@@ -329,7 +329,7 @@
             </div>
             <div class="sections-quality sections-colors">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/8_WYGWU_ICON_4.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/8_WYGWU_ICON_4.png">
                     <div class="sub-content">
                         <p class="sub-t sub-t-pink">
                             We’re Industry Leaders & Trail Blazers
@@ -346,7 +346,7 @@
             </div>
             <div class="sections-quality sections-colors">
                 <div class="quality-header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/8_WYGWU_ICON_5.png">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/8_WYGWU_ICON_5.png">
                     <div class="sub-content">
                         <p class="sub-t sub-t-gray">
                             Our Learning Sciences Experts Are Some of the Best in the World
