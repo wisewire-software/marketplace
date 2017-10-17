@@ -28,7 +28,7 @@
     </div>
     <div class="container">
         <div class="col-sm-8 content-description">
-            <h3 class="title-lightblue">Our Approach</h3>
+            <h3 class="title-lightblue tag-h3-title">Our Approach</h3>
             <p class="description-b2b">
                 <strong>K-12, AP:</strong>
                 We have designed new-generation Learning Materials that provide
@@ -54,7 +54,7 @@
 </section>
 <section class="sections_b2b bg-gray">
     <div class="container">
-        <h2 class="title-orange text-center">Built For Efficient Learning</h2>
+        <h3 class="title-orange text-center">Built For Efficient Learning</h3>
         <p class="lead text-center extra-description">
             We know that providing an engaging experience and getting <strong>reliable evidence</strong> of learning are key. Each
             learning object is designed to be an efficient bridge from the objective to the assessment.
@@ -68,7 +68,7 @@
 <section class="sections_b2b bg-lightblue">
     <div class="container">
         <div class="col-sm-6">
-            <h2 class="title-white text-left">Case Study <span class="circle-number circle-white">1</span></h2>
+            <h3 class="tag-h3-title title-white text-left">Case Study <span class="circle-number circle-white">1</span></h3>
             <h4 class="sub-title-white">Modifying Content To Meet Your Needs</h4>
             <p class="lead description-lightblue">
                 Wisewire Playlists provide content for individual
@@ -106,7 +106,7 @@
             <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/5_CASESTUDY_2.png">
         </div>
         <div class="col-sm-6 space-content">
-            <h2 class="title-white tle-orange text-left">Case Study <span class="circle-number circle-orange">2</span></h2>
+            <h3 class="tag-h3-title title-white tle-orange text-left">Case Study <span class="circle-number circle-orange">2</span></h3>
             <h4 class="sub-title-gray">Sequencing Project-Based Learning Materials</h4>
             <p class="description-b2b">
                 Wisewire PBL Curriculum is a configurable basal offer in all
@@ -131,7 +131,7 @@
     </div>
     <div class="container second-content-gray visible-xs-inline-block">
         <div class="col-sm-6">
-            <h2 class="title-white tle-orange text-left">Case Study <span class="circle-number circle-orange">2</span></h2>
+            <h3 class="tag-h3-title title-white tle-orange text-left">Case Study <span class="circle-number circle-orange">2</span></h3>
             <h4 class="sub-title-gray">Sequencing Project-Based Learning Materials</h4>
             <p class="description-b2b">
                 Wisewire PBL Curriculum is a configurable basal offer in all
@@ -161,7 +161,7 @@
 <section class="sections_b2b bg-orange">
     <div class="container">
         <div class="col-sm-6">
-            <h2 class="title-white text-left">Case Study <span class="circle-number circle-white-second">3</span></h2>
+            <h3 class="tag-h3-title title-white text-left">Case Study <span class="circle-number circle-white-second">3</span></h3>
             <h4 class="sub-title-white">Learning Materials that are Uniquely Yours</h4>
             <p class="lead description-lightblue">
                 When your mission requires a very different approach,

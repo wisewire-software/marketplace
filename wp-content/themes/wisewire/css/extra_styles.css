@@ -717,10 +717,14 @@ a.lo-item{display: block}
 	background-color: #F0F0F0;
 	padding: 25px 0px 50px 0px;
 }
+.sections_b2b .tag-h3-title{
+	font-size: 30px;
+}
 .sections_b2b .title-orange{
 	color: #F1710C;
 	font-weight: 600;
 	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 30px;
 }
 .sections_b2b .title-orange.title-gray-small{
 	color: #4d4d4d;
