@@ -23,22 +23,22 @@
     </div>
     <div class="container content-links-ty text-center">
         <div class="col-links">
-            <a href="#">
+            <a href="https://www.wisewire.com/" target="_blank">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_wisewire.png">
             </a>
-            <a href="#">
+            <a href="https://blog.wisewire.com/" target="_blank">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_blog.png">
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/company/wisewire-education-marketplace" target="_blank">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_linkedin.png">
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/WisewireEd/" target="_blank">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_facebook.png">
             </a>
-            <a href="#">
+            <a href="https://twitter.com/wisewireed" target="_blank">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_twitter.png">
             </a>
-            <a href="#">
+            <a href="https://www.pinterest.com/WisewireEd/" target="_blank">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_pinterest.png">
             </a>
         </div>
