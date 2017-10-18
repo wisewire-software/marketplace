@@ -960,7 +960,6 @@ a.lo-item{display: block}
 .banner-schedule-demo{
 	background-image: url("../img/b2b_pages/banner_1.png");
 	background-repeat: no-repeat;
-	background-size: cover;
 	padding: 20px 0px;
 }
 .banner-schedule-demo .title-schedule-demo{
@@ -991,11 +990,69 @@ a.lo-item{display: block}
 }
 .general-section-schedule .content-icons-schedule{
 	margin-top: 20px;
-	margin-bottom: 110px;
+	margin-bottom: 380px;
 }
 .general-section-schedule .content-icons-schedule .icon-schedule{
 	display: inline-block;
 	margin: 0px 5px;
+}
+.general-section-schedule .description-form-sd{
+	font-family: "Noto Sans", sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.general-section-schedule .content-form-sd{
+	background: #00b4cd;
+	color: #FFFFFF;
+	padding: 27px;
+	position: absolute;
+	z-index: 1;
+	top: -115px;
+}
+.general-section-schedule .content-form-sd .content-fields-form-sd input,
+.general-section-schedule .content-form-sd .content-fields-form-sd textarea{
+	width: 100%;
+	color: #3c3c3c;
+}
+.general-section-schedule .content-form-sd .content-fields-form-sd{
+	margin-top: 25px;
+}
+.general-section-schedule .content-form-sd .content-fields-form-sd{
+	margin-top: 25px;
+}
+.general-section-schedule .content-form-sd .content-fields-form-sd .field-form-sd label{
+	font-family: "Noto Sans", sans-serif;
+	font-size: 14px;
+	margin-bottom: 6px;
+}
+.general-section-schedule .content-form-sd .content-fields-form-sd .field-form-sd input{
+	padding: 8px;
+	border: none;
+}
+.general-section-schedule .content-form-sd .content-fields-form-sd .field-form-sd{
+	margin-bottom: 15px;
+}
+.general-section-schedule .content-form-sd .content-fields-form-sd .field-form-sd textarea{
+	height: 58px;
+	border: none;
+	resize: none;
+}
+.general-section-schedule .content-form-sd .content-fields-form-sd .button-sd-submit{
+	margin-top: 18px;
+	margin-bottom: -10px;
+}
+.general-section-schedule .content-form-sd .content-fields-form-sd .button-sd-submit .sd-submit-btn{
+	padding: 10px;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: #c90e65;
+}
+.general-section-schedule .content-form-sd .footer-form-sd{
+	text-align: center;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 13px;
 }
 /*query media to pages of b2b, schedule demo and thank you*/
 @media (max-width: 990px) {
@@ -1004,6 +1061,11 @@ a.lo-item{display: block}
 	}
 	.sections_b2b .button-last{
 		width: auto;
+	}
+	.banner-schedule-demo{
+		background-image: url("../img/b2b_pages/banner_2.png");
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
 @media (max-width: 770px) {
@@ -1021,6 +1083,25 @@ a.lo-item{display: block}
 	}
 	.sections_b2b .sections-colors .sub-content{
 		width: 75%;
+	}
+	.banner-schedule-demo .title-schedule-demo{
+		width: auto;
+	}
+	.general-section-schedule{
+		padding-top: 0px;
+	}
+	.general-section-schedule .content-form-sd{
+		position: initial;
+	}
+	.general-section-schedule .col-form-sd{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.general-section-schedule .content-icons-schedule{
+		margin-bottom: 50px;
+	}
+	.general-section-schedule .col-show-sd{
+		padding-top: 15px;
 	}
 }
 
@@ -1099,7 +1180,7 @@ a.lo-item{display: block}
 		margin-bottom: 8px;
 	}
 	.sections_b2b .quality-header img{
-		width: 35;
+		width: 35px;
 	}
 	.sections_b2b .quality-header img + p{
 		font-size: 20px;
@@ -1115,5 +1196,25 @@ a.lo-item{display: block}
 	}
 	.sections_b2b .sections-colors .sub-content{
 		width: 67%;
+	}
+	.banner-schedule-demo{
+		background-size: cover;
+	}
+	.banner-schedule-demo .title-schedule-demo{
+		font-size: 31px;
+	}
+}
+@media (max-width: 410px){
+	.banner-schedule-demo{
+		background-position-x: -70px;
+	}
+	.call-schedule-demo .container.text-right{
+		text-align: center !important;
+	}
+	.call-schedule-demo .call-schedule{
+		font-size: 14px;
+	}
+	.general-section-schedule .content-icons-schedule .icon-schedule{
+		margin: 7px 10px;
 	}
 }
