@@ -637,7 +637,9 @@ a.lo-item{display: block}
 }
 .section-banner_b2b .header .navbar .navbar-nav .btn-header-search .icon{
 	background-image: url("../img/b2b_pages/icon_magglass.png");
-	margin-top: -10px;
+}
+.section-banner_b2b .header .navbar .navbar-nav div.wpmenucart-shortcode{
+	margin-top: 0px;
 }
 .section-banner_b2b .jumbotron{
 	padding: 50px 0px 120px 0px;

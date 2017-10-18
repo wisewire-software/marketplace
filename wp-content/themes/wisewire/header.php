@@ -175,7 +175,7 @@
                 <a href="/create">Create</a>
               </li>
               <li class="menu-item-custom">
-                <a href="/custom-content">Adapt</a>
+                <a href="/partnership-solutions">Partner Solutions</a>
               </li>
               <li class="menu-item-testimonials">
                 <a href="/testimonials">Testimonials</a>
@@ -200,14 +200,14 @@
               <li class="menu-item-explore">
                 <a href="/explore">Explore</a>
               </li>
-              <li class="menu-item-publish">
+              <li class="menu-item-publish header-links-space">
                 <a href="/create">Create</a>
               </li>
-              <li class="menu-item-custom">
-                <a href="/custom-content">Adapt</a>
+              <li class="menu-item-custom header-links-space">
+                <a href="/partnership-solutions">Partner Solutions</a>
               </li>
               <?php if ( is_user_logged_in() ) { ?>
-              <li class="menu-item-user">
+              <li class="menu-item-user header-links-space">
                 <a href="#" id="logout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="name">Hi, <?php echo $current_user->user_firstname; ?></span> <span class="caret"></span></a>
                 <ul class="dropdown-menu dropdown-logout" aria-labelledby="logout">
                   <li><a href="/my-account/">My Account</a></li>
