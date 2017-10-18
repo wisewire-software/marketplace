@@ -1267,6 +1267,9 @@ a.lo-item{display: block}
 	.section-thank-you{
 		padding-top: 45px;
 	}
+	.section-thank-you .content-links-ty .col-links a{
+		margin-bottom: 6px;
+	}
 }
 @media (max-width: 410px){
 	.banner-schedule-demo{

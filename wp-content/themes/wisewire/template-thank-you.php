@@ -24,28 +24,22 @@
     <div class="container content-links-ty text-center">
         <div class="col-links">
             <a href="#">
-                <img class="hidden-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_wisewire.png">
-                <img class="visible-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_wisewire_2.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_wisewire.png">
             </a>
             <a href="#">
-                <img class="hidden-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_blog.png">
-                <img class="visible-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_blog_2.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_blog.png">
             </a>
             <a href="#">
-                <img class="hidden-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_linkedin.png">
-                <img class="visible-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_linkedin_2.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_linkedin.png">
             </a>
             <a href="#">
-                <img class="hidden-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_facebook.png">
-                <img class="visible-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_facebook_2.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_facebook.png">
             </a>
             <a href="#">
-                <img class="hidden-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_twitter.png">
-                <img class="visible-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_twitter_2.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_twitter.png">
             </a>
             <a href="#">
-                <img class="hidden-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_pinterest.png">
-                <img class="visible-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_pinterest_2.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/btn_pinterest.png">
             </a>
         </div>
     </div>
