@@ -455,7 +455,7 @@ Complete the form below to apply to be a seller with us.</p>
             
             <div class="container-fluid container-form">
                             
-              <?php echo do_shortcode('[contact-form-7 id="56202" title="Vendor Registration"]'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="56762" title="Vendor Registration"]'); ?>
               
             </div>
             
