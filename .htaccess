@@ -292,6 +292,7 @@
         RewriteRule ^ http%1://www.wisewire.com%{REQUEST_URI} [R=301,L]
 </IfModule>
 
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -303,3 +304,4 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
