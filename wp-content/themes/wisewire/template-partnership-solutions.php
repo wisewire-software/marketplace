@@ -4,9 +4,9 @@
  */
 
 ?>
-<?php get_header(); ?>
-<section class="section-banner_b2b">
 
+<section class="section-banner_b2b">
+    <?php get_header(); ?>
     <div class="container">
         <div class="jumbotron">
             <h1>Improve The Learning Experience <br>With Our Content Ecosystem & <br>Strategic Solutions</h1>
