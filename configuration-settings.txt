@@ -106,3 +106,46 @@ Don't have an account?<br/>
 
 9). Disable “Hide Backend Login” within Security > Settings
 
+10). Create pages to B2B Clients, Schedule Demo and Thank You.
+    B2b Clients:
+        Name.- Partner Solutions
+        Url.- /partnership-solutions
+
+11). Add Contact form:
+    Name: Schedule Demo
+    Additional Settings: on_sent_ok: "location.replace('/thank-you');"
+
+<div id="form-schedule-demo" class="form-schedule-demo">
+   <div class="field-form-sd">
+      <label>First Name *</label>
+      [text* sd-first-name id:id-sd-first-name default:user_first_name]
+   </div>
+   <div class="field-form-sd">
+      <label>Last Name *</label>
+      [text* sd-last-name id:id-sd-last-name default:user_last_name]
+   </div>
+   <div class="field-form-sd">
+      <label>Email *</label>
+      [email* sd-email id:id-sd-email default:user_email]
+   </div>
+   <div class="field-form-sd">
+      <label>Phone *</label>
+      [tel* sd-phone id:id-sd-phone]
+   </div>
+   <div class="field-form-sd">
+      <label>Company *</label>
+      [text* sd-company id:id-sd-company]
+   </div>
+   <div class="field-form-sd">
+      <label>Title *</label>
+      [text* sd-title id:id-sd-title]
+   </div>
+   <div class="field-form-sd">
+      <label>Comments/Requests</label>
+      [textarea sd-comments id:id-sd-comments]
+   </div>
+   <div class="field-form-sd button-sd-submit">
+      [submit id:id-sd-submit class:sd-submit-btn "SCHEDULE YOUR DEMO"]
+   </div>
+</div>
+
