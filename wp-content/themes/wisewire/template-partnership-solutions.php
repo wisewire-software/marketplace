@@ -16,8 +16,8 @@
                 <p class="lead">Learn how we can help meet your learning product goals.</p>
             </div>
             <p class="lead">
-                <a class="btn btn-primary buttons-banner btn-pink" href="#" role="button">LET'S TALK</a>
-                <a class="btn btn-primary buttons-banner btn-lightblue" href="#" role="button">SCHEDULE A DEMO</a>
+                <a class="btn btn-primary buttons-banner btn-pink" href="/schedule-demo" role="button">LET'S TALK</a>
+                <a class="btn btn-primary buttons-banner btn-lightblue" href="/schedule-demo" role="button">SCHEDULE A DEMO</a>
             </p>
         </div>
     </div>
@@ -367,7 +367,7 @@
         <h2 class="title-white-small text-center">Learn More About What We Offer & How We Make An
             Impact On Student Learning</h2>
         <div class="col-sm-12 text-center">
-            <a href="#" class="button-last btn btn-primary">SCHEDULE A DEMO</a>
+            <a href="/schedule-demo" class="button-last btn btn-primary">SCHEDULE A DEMO</a>
         </div>
     </div>
 </section>
