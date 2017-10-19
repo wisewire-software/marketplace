@@ -16,7 +16,7 @@ if (sizeof($favorites)){
 }
 
 ?>
-<li id="header-favorites">
+<li id="header-favorites" class="header-links-space">
 	<a href="#" id="btn-header-favorite">Favorites<?php echo sizeof($favorites) > 0 ? ' ('.sizeof($favorites).')' : '' ?></a>
 
 	<div class="popover popover-favorite fade bottom in" role="tooltip" id="favoritePopover">

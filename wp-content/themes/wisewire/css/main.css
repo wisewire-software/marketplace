@@ -13758,3 +13758,15 @@ span.wpcf7-not-valid-tip {
         right: -90%;
     }
 }
+
+/* pages of b2b, schedule demo and thank you*/
+
+.header-links-space{
+    margin-left: 15px !important;
+}
+
+@media (min-width: 768px) {
+    .footer.footer-b2b {
+        height: 260px
+    }
+}
