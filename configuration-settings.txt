@@ -131,6 +131,7 @@ Don't have an account?<br/>
 11). Add Contact form:
     Name: Schedule Demo
     Additional Settings: on_sent_ok: "location.replace('/thank-you');"
+    Mail: Configure the fields.
 
     <div id="form-schedule-demo" class="form-schedule-demo">
        <div class="field-form-sd">
