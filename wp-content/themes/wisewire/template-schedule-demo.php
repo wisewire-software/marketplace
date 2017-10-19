@@ -50,7 +50,7 @@
             <div class="content-form-sd">
                 <div class="description-form-sd">
                     Take a deeper dive into Wisewire's learning
-                    platform and solutions? Fill out this form to
+                    platform and solutions. Fill out this form to
                     talk to one of our experts.
                 </div>
                 <div class="content-fields-form-sd">
