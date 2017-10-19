@@ -13,3 +13,4 @@ wp-content/advanced-cache.php
 wp-content/cache/
 wp-content/backupwordpress-*
 *.log
+.idea/

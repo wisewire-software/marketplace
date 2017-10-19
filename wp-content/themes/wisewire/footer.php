@@ -35,7 +35,7 @@
                  <li><a href="/testimonials">Testimonials</a></li>
                  <li><a href="/sellwithus">Sell With US</a></li>
                  <li><a href="/testimonials">Client Testimonials</a></li>
-                 <li><a href="http://wisewire.com/technology-enhanced-assessment-bank">Sample Learning Resources</a></li>
+                 <li><a href="/technology-enhanced-assessment-bank">Sample Learning Resources</a></li>
               </ul>
             </div>
             
