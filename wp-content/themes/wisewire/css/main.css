@@ -6533,8 +6533,7 @@ html {
 @media (min-width: 768px) {
     .navbar .navbar-nav {
         margin-top: 30px;
-        list-style-type: none;
-        background-color: red;
+        list-style-type: none
     }
 
     .navbar .navbar-nav > li {
@@ -13757,5 +13756,17 @@ span.wpcf7-not-valid-tip {
     .navbar .navbar-nav .dropdown-menu.dropdown-logout.dropdown-login {
         left: auto;
         right: -90%;
+    }
+}
+
+/* pages of b2b, schedule demo and thank you*/
+
+.header-links-space{
+    margin-left: 15px !important;
+}
+
+@media (min-width: 768px) {
+    .footer.footer-b2b {
+        height: 260px
     }
 }
