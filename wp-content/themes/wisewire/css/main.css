@@ -6533,7 +6533,8 @@ html {
 @media (min-width: 768px) {
     .navbar .navbar-nav {
         margin-top: 30px;
-        list-style-type: none
+        list-style-type: none;
+        background-color: red;
     }
 
     .navbar .navbar-nav > li {
