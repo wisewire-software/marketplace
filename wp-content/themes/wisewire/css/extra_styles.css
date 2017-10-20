@@ -622,25 +622,28 @@ a.lo-item{display: block}
 }
 
 /*Styles for new pages of b2b */
-
+.header.header_b2b_page{
+	background: transparent;
+	position: absolute;
+	width: 100%;
+}
+.header.header_b2b_page .navbar a{
+	color: #ffffff;
+}
+.header.header_b2b_page .navbar a:hover{
+	color:  #686868;
+}
+.header.header_b2b_page .navbar .navbar-nav .btn-header-search .icon{
+	background-image: url("../img/b2b_pages/icon_magglass.png");
+}
 .section-banner_b2b{
 	background-image: url("../img/b2b_pages/1_photo.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #ffffff;
+	padding-top: 100px;
 }
-.section-banner_b2b .header{
-	background: transparent;
-}
-.section-banner_b2b .header .navbar a{
-	color: #ffffff;
-}
-.section-banner_b2b .header .navbar .navbar-nav .btn-header-search .icon{
-	background-image: url("../img/b2b_pages/icon_magglass.png");
-}
-.section-banner_b2b .header .navbar .navbar-nav div.wpmenucart-shortcode{
-	margin-top: 0px;
-}
+
 .section-banner_b2b .jumbotron{
 	padding: 50px 0px 120px 0px;
 }
@@ -1170,9 +1173,10 @@ a.lo-item{display: block}
 	}
 	.section-banner_b2b .jumbotron{
 		padding-top: 10px;
+		padding-bottom: 60px;
 	}
 	.section-banner_b2b .jumbotron h1{
-		font-size: 17px;
+		font-size: 19px;
 		line-height: 26px;
 	}
 	.extra-jumbotron{

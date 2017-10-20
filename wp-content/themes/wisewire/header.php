@@ -80,8 +80,8 @@
   ?>
     <div class="body-overlay"></div>
     
-    <header class="header" id="header">
-      
+    <header class="header <?php if ( is_page( $page = 'Partner Solutions' ) ) { ?> header_b2b_page <?php } ?> " id="header">
+
       <div class="container">
         
         <nav class="navbar visible-xs-block">
