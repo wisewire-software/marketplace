@@ -172,3 +172,8 @@ Don't have an account?<br/>
         source URL: /custom-content
         Target URL: /partnership-solutions
         Group: Redirections
+
+13). Go to General > footer and delete the file of Terms and Usage Rights PDF. Then go to Media page
+     and search the file of Wisewire-Terms-of-Use and delete this file, and and the new file to
+     Terms and Usage (https://www.wisewire.com/wp-content/uploads/Wisewire-Terms-of-Use.pdf?x19464).
+     Finally  go to General > footer and add file added on media (of Terms of use), save changes.
