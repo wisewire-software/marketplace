@@ -234,51 +234,12 @@ class WPCF7_Submission {
 		return wpcf7_blacklist_check( $target );
 	}
 
-	/* Mail */
-	private function send_intercom()
-	{
-		require_once( ABSPATH . 'wp-config.php' );
-		include_once(ABSPATH . WPINC . '/class.wp_intercom.php');
-		$contact_form = $this->contact_form;
-
-		$appid = WAN_TEST_ENVIRONMENT ? "vekhwzrt" : "umjqwdw0";
-		$appkey = WAN_TEST_ENVIRONMENT ? "cfed9b1d47102a26f1084fbe36fa0c510b995663" : "0cf09251b0a355fa787a0348463a7c453111331d";
-		$wp_intercom = new WP_Intercom($appid, $appkey);
-
-		$output = implode("\n", array_map(
-			function ($v, $k) {
-				return sprintf("%s: %s", $k, $v);
-			},
-			$contact_form->prop('mail')['body_message'],
-			array_keys($contact_form->prop('mail')['body_message'])
-		));
-
-		$user_id = null;
-		if (!is_user_logged_in()) {
-			$user_id = $_COOKIE['intercom-user-id'];
-		} else {
-			$user_id = get_current_user_id();
-			$user_info = get_userdata($user_id);
-			$response = $wp_intercom->createUpdateUser($user_info->user_email);
-			$user_id = $response->id;
-		}
-
-		$response = $wp_intercom->createMessage($user_id, $output);
-
-		//var_dump($response);
-		if (!$response) {
-			return false;
-		}
-
-		return true;
-	}
-
 	private function mail() {
 		$contact_form = $this->contact_form;
 
 		do_action( 'wpcf7_before_send_mail', $contact_form );
 
-		$send_intercom = $this->send_intercom();
+		$send_intercom = send_intercom($contact_form->prop('mail')['body_message']);
 
 		if(!$send_intercom){
 			return false;
