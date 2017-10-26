@@ -50,7 +50,7 @@ Don't have an account?<br/>
 <div class="form-row">
 
 <div class="field">
-    [text vendor-name placeholder "Vendor Name"] 
+    [text vendor-name placeholder "Store Name"] 
 </div>
 
 <div class="field">
