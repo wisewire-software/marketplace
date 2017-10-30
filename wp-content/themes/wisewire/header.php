@@ -82,7 +82,7 @@
     
     <header class="header <?php if ( is_page( $page = 'Partner Solutions' ) ) { ?> header_b2b_page <?php } ?> " id="header">
 
-      <div class="container">
+      <div class="container <?php if ( is_page( $page = 'Schedule Demo' ) or is_page( $page = 'Thank you' )) { ?> hidden-nav-s-demo <?php } ?>">
         
         <nav class="navbar visible-xs-block">
        
@@ -189,7 +189,7 @@
           
         </nav>
       
-        <nav class="navbar hidden-xs <?php if ( is_page( $page = 'Schedule Demo' ) ) { ?> hidden-nav-s-demo <?php } ?> ">
+        <nav class="navbar hidden-xs">
                 
           <div class="navbar-header">            
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="logo"></span>education marketplace</a>

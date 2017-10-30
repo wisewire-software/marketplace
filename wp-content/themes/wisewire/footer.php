@@ -11,7 +11,7 @@
     $options_terms_and_usage_rights_pdf = get_field('options_terms_and_usage_rights_pdf', 'option');
   ?>
   
-      <footer class="footer footer-b2b <?php if ( is_page( $page = 'Schedule Demo' ) ) { ?> footer-sdemo <?php } ?>">
+      <footer class="footer footer-b2b <?php if ( is_page( $page = 'Schedule Demo' ) or is_page( $page = 'Thank you' ) ) { ?> footer-sdemo <?php } ?>">
       
       <div class="container">
         
