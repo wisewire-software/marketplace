@@ -189,7 +189,7 @@
           
         </nav>
       
-        <nav class="navbar hidden-xs"> 
+        <nav class="navbar hidden-xs <?php if ( is_page( $page = 'Schedule Demo' ) ) { ?> hidden-nav-s-demo <?php } ?> ">
                 
           <div class="navbar-header">            
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="logo"></span>education marketplace</a>

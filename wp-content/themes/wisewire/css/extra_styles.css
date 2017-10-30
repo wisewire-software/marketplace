@@ -630,6 +630,9 @@ a.lo-item{display: block}
 .header.header_b2b_page .navbar a{
 	color: #ffffff;
 }
+.header.header_b2b_page .navbar .navbar-header .navbar-brand:hover{
+	color: #ffffff;
+}
 .header.header_b2b_page .navbar a:hover{
 	color:  #686868;
 }
@@ -944,7 +947,10 @@ a.lo-item{display: block}
 
 /*style to page of schedule demo*/
 .call-schedule-demo{
-	padding: 10px 0px;
+	padding: 0px 0px 10px 0px;
+}
+.call-schedule-demo .contactus-phone{
+	margin-top: 25px;
 }
 .call-schedule-demo img,
 .call-schedule-demo .call-schedule{
@@ -1053,6 +1059,9 @@ a.lo-item{display: block}
 	font-weight: bold;
 	color: #FFFFFF;
 	background: #c90e65;
+}
+.general-section-schedule .content-form-sd .content-fields-form-sd #form-schedule-demo + .wpcf7-mail-sent-ok{
+	display: none !important;
 }
 .general-section-schedule .content-form-sd .footer-form-sd{
 	text-align: center;
@@ -1289,6 +1298,6 @@ a.lo-item{display: block}
 		font-size: 14px;
 	}
 	.general-section-schedule .content-icons-schedule .icon-schedule{
-		margin: 7px 10px;
+		width: 43px;
 	}
 }

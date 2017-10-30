@@ -11,11 +11,11 @@
     $options_terms_and_usage_rights_pdf = get_field('options_terms_and_usage_rights_pdf', 'option');
   ?>
   
-      <footer class="footer footer-b2b">
+      <footer class="footer footer-b2b <?php if ( is_page( $page = 'Schedule Demo' ) ) { ?> footer-sdemo <?php } ?>">
       
       <div class="container">
         
-        <div class="hidden-xs">
+        <div class="hidden-xs hidden-footer-sdemo">
           
           <div class="row">
             
