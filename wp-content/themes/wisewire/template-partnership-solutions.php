@@ -352,7 +352,7 @@
                         </p>
                         <p class="description-b2b">
                             Our platform contains tens of thousands of common core aligned learning objects at your disposal. Everything from robust
-                            technology enhanced items (TEIs), to quizzes, assessments, lessons, playlists and more!
+                            technology-enhanced items (TEIs), to quizzes, assessments, lessons, playlists and more!
                         </p>
                     </div>
                 </div>
