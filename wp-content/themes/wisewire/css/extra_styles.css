@@ -961,13 +961,17 @@ a.lo-item{display: block}
 	vertical-align: top;
 	margin-right: 6px;
 }
-.call-schedule-demo .call-schedule{
+.call-schedule-demo .call-schedule,
+.call-schedule-demo .call-schedule + .number-phone-sd{
 	font-family: "Noto Sans", sans-serif;
 	color: #4a4a4a;
 	font-size: 16px;
+	display: inline-block;
 }
-.call-schedule-demo .call-schedule span{
+.call-schedule-demo .call-schedule + .number-phone-sd,
+.call-schedule-demo .call-schedule + .number-phone-sd:hover{
 	color: #00b4cd;
+	text-decoration: none;
 }
 .banner-schedule-demo{
 	background-image: url("../img/b2b_pages/banner_1.png");

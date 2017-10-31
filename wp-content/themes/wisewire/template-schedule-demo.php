@@ -16,7 +16,8 @@
         <div class="col-header">
             <div class="contactus-phone">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/icon_phone.png">
-                <p class="call-schedule">Call Us To Schedule A Demo: <span>(410) 467-7835</span></p>
+                <p class="call-schedule">Call Us To Schedule A Demo: </p>
+                <a href="tel:+410-467-7835" class="number-phone-sd">(410) 467-7835</a>
             </div>
         </div>
     </div>
