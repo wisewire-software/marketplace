@@ -800,6 +800,7 @@ a.lo-item{display: block}
 .sections_b2b .description-lightblue .mini-check + p{
 	width: 85%;
 	vertical-align: top;
+	margin-left: 5px;
 }
 .sections_b2b.bg-lightblue .content-description{
 	margin-top: 35px !important;

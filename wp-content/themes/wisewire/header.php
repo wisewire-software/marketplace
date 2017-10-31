@@ -175,7 +175,7 @@
                 <a href="/create">Create</a>
               </li>
               <li class="menu-item-custom">
-                <a href="/partnership-solutions">Partner Solutions</a>
+                <a href="/partnership-solutions">Partner</a>
               </li>
               <li class="menu-item-testimonials">
                 <a href="/testimonials">Testimonials</a>
@@ -204,7 +204,7 @@
                 <a href="/create">Create</a>
               </li>
               <li class="menu-item-custom header-links-space">
-                <a href="/partnership-solutions">Partner Solutions</a>
+                <a href="/partnership-solutions">Partner</a>
               </li>
               <?php if ( is_user_logged_in() ) { ?>
               <li class="menu-item-user header-links-space">
