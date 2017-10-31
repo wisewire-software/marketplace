@@ -287,9 +287,9 @@
 <IfModule mod_rewrite.c>
         RewriteEngine On
         RewriteCond %{HTTP_HOST} !^$
-        RewriteCond %{HTTP_HOST} !^qa\.wisewire\.com$ [NC]
+        RewriteCond %{HTTP_HOST} !^dev\.wisewire\.com$ [NC]
         RewriteCond %{HTTPS}s ^on(s)|
-        RewriteRule ^ http%1://qa.wisewire.com%{REQUEST_URI} [R=301,L]
+        RewriteRule ^ http%1://dev.wisewire.com%{REQUEST_URI} [R=301,L]
 </IfModule>
 
 # BEGIN WordPress
