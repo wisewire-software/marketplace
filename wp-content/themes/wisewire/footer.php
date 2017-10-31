@@ -11,11 +11,11 @@
     $options_terms_and_usage_rights_pdf = get_field('options_terms_and_usage_rights_pdf', 'option');
   ?>
   
-      <footer class="footer footer-b2b">
+      <footer class="footer footer-b2b <?php if ( is_page( $page = 'Schedule Demo' ) or is_page( $page = 'Thank you' ) ) { ?> footer-sdemo <?php } ?>">
       
       <div class="container">
         
-        <div class="hidden-xs">
+        <div class="hidden-xs hidden-footer-sdemo">
           
           <div class="row">
             
@@ -23,20 +23,17 @@
               <ul>
                 <li><a href="/explore">Explore</a></li>
                 <li><a href="/create">Create</a></li>
-                <li><a href="/partnership-solutions">Partner Solutions</a></li>
-                <li><a target="_blank" href="https://blog.wisewire.com/">Blog</a></li>
-                <li><a href="/careers">Careers</a></li>
+                <li><a href="/technology-enhanced-assessment-bank">Sample Resources</a></li>
                 <li><a href="/press">Press</a></li>
+                <li><a href="/careers">Careers</a></li>
               </ul>
-              
-               <ul>
-                <!--<li><a href="http://wordsandnumbers.com/blog/" target="_blank">Blog</a></li>-->
-                <li><a href="#" data-toggle="modal" data-target="#contactModal" >Contact us</a></li>
-                 <li><a href="/testimonials">Testimonials</a></li>
-                 <li><a href="/sellwithus">Sell With US</a></li>
-                 <li><a href="/testimonials">Client Testimonials</a></li>
-                 <li><a href="/technology-enhanced-assessment-bank">Sample Learning Resources</a></li>
-                 <li><a href="/schedule-demo">Schedule Demo</a></li>
+
+                <ul>
+                    <!--<li><a href="http://wordsandnumbers.com/blog/" target="_blank">Blog</a></li>-->
+                    <li><a href="/schedule-demo">Schedule Demo</a></li>
+                    <li><a href="/partnership-solutions">Partner</a></li>
+                    <li><a href="/testimonials">Client Testimonials</a></li>
+                    <li><a target="_blank" href="https://blog.wisewire.com/">Blog</a></li>
               </ul>
             </div>
             

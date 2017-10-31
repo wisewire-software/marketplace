@@ -8,8 +8,18 @@
 <?php get_header(); ?>
 <section class="call-schedule-demo">
     <div class="container text-right">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/icon_phone.png">
-        <p class="call-schedule">Call Us To Schedule A Demo: <span>(410) 467-7835</span></p>
+        <div>
+            <div class="logo-sdemo-thankyou">
+                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="logo"></span>education marketplace</a>
+            </div>
+        </div>
+        <div class="col-header">
+            <div class="contactus-phone">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/icon_phone.png">
+                <p class="call-schedule">Call Us To Schedule A Demo: </p>
+                <a href="tel:+410-575-4310" class="number-phone-sd">(410) 575-4310</a>
+            </div>
+        </div>
     </div>
 </section>
 <section class="banner-schedule-demo">
