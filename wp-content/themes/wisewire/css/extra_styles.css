@@ -1065,7 +1065,8 @@ a.lo-item{display: block}
 	color: #FFFFFF;
 	background: #c90e65;
 }
-.general-section-schedule .content-form-sd .content-fields-form-sd #form-schedule-demo + .wpcf7-mail-sent-ok{
+.general-section-schedule .content-form-sd .content-fields-form-sd #form-schedule-demo + div.wpcf7-mail-sent-ok,
+ .general-section-schedule .content-form-sd .content-fields-form-sd #form-schedule-demo + div.wpcf7-validation-errors{
 	display: none !important;
 }
 .general-section-schedule .content-form-sd .footer-form-sd{
@@ -1271,6 +1272,7 @@ a.lo-item{display: block}
 	}
 	.sections_b2b .quality-header img + p{
 		font-size: 20px;
+		width: 78%;
 	}
 	.sections_b2b.last-section{
 		padding-top: 0px;

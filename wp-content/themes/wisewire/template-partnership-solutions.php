@@ -22,11 +22,11 @@
         </div>
     </div>
 </section>
-<section class="sections_b2b bg-white">
+<section class="sections_b2b bg-gray">
     <div class="container hidden-xs">
         <h2 class="title-orange title-gray-small text-center">Creating Quality Learning Materials at Scale</h2>
         <div class="col-sm-6 content-description image-quality">
-            <img class="img-responsive image-approach" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_1_2.png">
+            <img class="img-responsive image-approach" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_2m.png">
         </div>
         <div class="col-sm-6 content-description">
             <div class="sections-quality">
@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="col-sm-6 content-description image-quality">
-            <img class="img-responsive image-approach" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_1_2.png">
+            <img class="img-responsive image-approach" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/7_CQLMAS_2m.png">
         </div>
     </div>
 </section>
