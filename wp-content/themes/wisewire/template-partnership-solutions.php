@@ -150,8 +150,8 @@
             learning object is designed to be an efficient bridge from the objective to the assessment.
         </p>
         <div class="content-description content-image">
-            <img class="img-responsive hidden-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/3_BFEL.png">
-            <img class="img-responsive visible-xs-inline-block" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/3_BFEL2.png">
+            <img class="img-responsive hidden-xs" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/3_BFEL_m.png">
+            <img class="img-responsive visible-xs-inline-block" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/3_BFEL2_m.png">
         </div>
     </div>
 </section>
@@ -192,7 +192,7 @@
 <section class="sections_b2b bg-gray">
     <div class="container second-content-gray hidden-xs">
         <div class="col-sm-6 content-description">
-            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/5_CASESTUDY_2.png">
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/5_CASESTUDY_2_m.png">
         </div>
         <div class="col-sm-6 space-content">
             <h3 class="tag-h3-title title-white tle-orange text-left">Case Study <span class="circle-number circle-orange">2</span></h3>
@@ -243,7 +243,7 @@
             </p>
         </div>
         <div class="col-sm-6 content-description">
-            <img class="img-responsive image-approach image-case-second" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/5_CASESTUDY_2.png">
+            <img class="img-responsive image-approach image-case-second" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/5_CASESTUDY_2_m.png">
         </div>
     </div>
 </section>

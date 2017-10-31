@@ -1303,6 +1303,9 @@ a.lo-item{display: block}
 	.section-thank-you .content-links-ty .col-links a{
 		margin-bottom: 6px;
 	}
+	.general-section-schedule .content-icons-schedule .icon-schedule{
+		width: 63px;
+	}
 }
 @media (max-width: 410px){
 	.banner-schedule-demo{
@@ -1314,6 +1317,11 @@ a.lo-item{display: block}
 	.call-schedule-demo .call-schedule{
 		font-size: 14px;
 	}
+	.general-section-schedule .content-icons-schedule .icon-schedule{
+		width: 43px;
+	}
+}
+@media (max-width: 380px){
 	.general-section-schedule .content-icons-schedule .icon-schedule{
 		width: 43px;
 	}
