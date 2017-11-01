@@ -46,7 +46,7 @@
 						<h3 id="subjectTitle<?php echo $counter; ?>"><?php echo $jobListData['job_title'];?></h3>
 						<?php echo $jobListData['job_description'];?>
 						<div class="career-form">
-							<?php echo do_shortcode('[contact-form-7 id="68148" title="Careers"]') ?>
+							<?php echo do_shortcode('[contact-form-7 id="68148" title="Careers" html_id="careers-form"]') ?>
 						</div>
 					</div>
 				</div>

@@ -45,7 +45,7 @@
             
             <div class="container-fluid container-form">
               
-              <?php echo do_shortcode('[contact-form-7 id="14415" title="Feedback Form"]'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="14415" title="Feedback Form" html_id="feedback-form"]'); ?>
               
             </div>
 
@@ -156,7 +156,7 @@
             
             <div class="container-fluid container-form">            
 
-              <?php echo do_shortcode('[contact-form-7 id="190" title="Contact"]'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="190" title="Contact" html_id="contact-us-form"]'); ?>
               <?php 
                 if (  is_user_logged_in() ){      
                   $user_id = get_current_user_id();
@@ -455,7 +455,7 @@ Complete the form below to apply to be a seller with us.</p>
             
             <div class="container-fluid container-form">
                             
-              <?php echo do_shortcode('[contact-form-7 id="56202" title="Vendor Registration"]'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="56202" title="Vendor Registration" html_id="vendor-registration-form"]'); ?>
               
             </div>
             
