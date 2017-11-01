@@ -230,7 +230,7 @@
 
         ?>
         <input type="hidden" name="redirect_to" value="<?php if ($redirect_to_item) { echo $redirect_to_item; } else { echo !empty($redirect_to_publish)  ? $redirect_to_publish : home_url(); } ?>">
-        <div class="wrapper_captcha">
+        <div class="wrapper_captcha" style="margin-bottom: 10px; overflow: hidden;">
           <div class="g-recaptcha" data-sitekey="6LfIxjYUAAAAADuR77YyaEq4ZA2C0gYi0kwJZN7p"></div>  
         </div>        
         <button class="btn" type="submit" name="submit">CREATE ACCOUNT</button>
