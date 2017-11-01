@@ -13764,6 +13764,16 @@ span.wpcf7-not-valid-tip {
 .header-links-space{
     margin-left: 15px !important;
 }
+.hidden-nav-s-demo{
+    display: none !important;
+}
+.footer.footer-sdemo{
+    height: auto !important;
+    padding: 19px 0px;
+}
+.footer.footer-sdemo .hidden-footer-sdemo{
+    display: none !important;
+}
 
 @media (min-width: 768px) {
     .footer.footer-b2b {

@@ -83,7 +83,7 @@
     
     <header class="header <?php if ( is_page( $page = 'Partner Solutions' ) ) { ?> header_b2b_page <?php } ?> " id="header">
 
-      <div class="container">
+      <div class="container <?php if ( is_page( $page = 'Schedule Demo' ) or is_page( $page = 'Thank you' )) { ?> hidden-nav-s-demo <?php } ?>">
         
         <nav class="navbar visible-xs-block">
        
@@ -176,7 +176,7 @@
                 <a href="/create">Create</a>
               </li>
               <li class="menu-item-custom">
-                <a href="/partnership-solutions">Partner Solutions</a>
+                <a href="/partnership-solutions">Partner</a>
               </li>
               <li class="menu-item-testimonials">
                 <a href="/testimonials">Testimonials</a>
@@ -190,7 +190,7 @@
           
         </nav>
       
-        <nav class="navbar hidden-xs"> 
+        <nav class="navbar hidden-xs">
                 
           <div class="navbar-header">            
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="logo"></span>education marketplace</a>
@@ -205,7 +205,7 @@
                 <a href="/create">Create</a>
               </li>
               <li class="menu-item-custom header-links-space">
-                <a href="/partnership-solutions">Partner Solutions</a>
+                <a href="/partnership-solutions">Partner</a>
               </li>
               <?php if ( is_user_logged_in() ) { ?>
               <li class="menu-item-user header-links-space">

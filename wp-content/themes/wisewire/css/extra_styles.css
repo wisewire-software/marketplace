@@ -630,6 +630,9 @@ a.lo-item{display: block}
 .header.header_b2b_page .navbar a{
 	color: #ffffff;
 }
+.header.header_b2b_page .navbar .navbar-header .navbar-brand:hover{
+	color: #ffffff;
+}
 .header.header_b2b_page .navbar a:hover{
 	color:  #686868;
 }
@@ -797,6 +800,7 @@ a.lo-item{display: block}
 .sections_b2b .description-lightblue .mini-check + p{
 	width: 85%;
 	vertical-align: top;
+	margin-left: 5px;
 }
 .sections_b2b.bg-lightblue .content-description{
 	margin-top: 35px !important;
@@ -944,7 +948,10 @@ a.lo-item{display: block}
 
 /*style to page of schedule demo*/
 .call-schedule-demo{
-	padding: 10px 0px;
+	padding: 0px 0px 10px 0px;
+}
+.call-schedule-demo .contactus-phone{
+	margin-top: 25px;
 }
 .call-schedule-demo img,
 .call-schedule-demo .call-schedule{
@@ -954,13 +961,17 @@ a.lo-item{display: block}
 	vertical-align: top;
 	margin-right: 6px;
 }
-.call-schedule-demo .call-schedule{
+.call-schedule-demo .call-schedule,
+.call-schedule-demo .call-schedule + .number-phone-sd{
 	font-family: "Noto Sans", sans-serif;
 	color: #4a4a4a;
 	font-size: 16px;
+	display: inline-block;
 }
-.call-schedule-demo .call-schedule span{
+.call-schedule-demo .call-schedule + .number-phone-sd,
+.call-schedule-demo .call-schedule + .number-phone-sd:hover{
 	color: #00b4cd;
+	text-decoration: none;
 }
 .banner-schedule-demo{
 	background-image: url("../img/b2b_pages/banner_1.png");
@@ -995,7 +1006,7 @@ a.lo-item{display: block}
 }
 .general-section-schedule .content-icons-schedule{
 	margin-top: 20px;
-	margin-bottom: 380px;
+	margin-bottom: 180px;
 }
 .general-section-schedule .content-icons-schedule .icon-schedule{
 	display: inline-block;
@@ -1054,6 +1065,10 @@ a.lo-item{display: block}
 	color: #FFFFFF;
 	background: #c90e65;
 }
+.general-section-schedule .content-form-sd .content-fields-form-sd #form-schedule-demo + div.wpcf7-mail-sent-ok,
+ .general-section-schedule .content-form-sd .content-fields-form-sd #form-schedule-demo + div.wpcf7-validation-errors{
+	display: none !important;
+}
 .general-section-schedule .content-form-sd .footer-form-sd{
 	text-align: center;
 	font-family: "Noto Sans", sans-serif;
@@ -1063,6 +1078,7 @@ a.lo-item{display: block}
 .section-thank-you{
 	background: #f5f5f5;
 	padding: 65px 0px 115px 0px;
+	margin-top: 20px;
 }
 .section-thank-you .title-thank-you{
 	margin-top: 14px;
@@ -1094,7 +1110,13 @@ a.lo-item{display: block}
 	display: inline-block;
 	margin-right: 4px;
 }
-
+.logo-sdemo-thankyou .navbar-brand{
+	padding: 8px 17px 1px 17px;
+	background: #00b4cd;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	margin-top: 0px;
+}
 /*query media to pages of b2b, schedule demo and thank you*/
 @media (max-width: 990px) {
 	.section-banner_b2b .buttons-banner {
@@ -1110,6 +1132,10 @@ a.lo-item{display: block}
 	}
 	.section-thank-you .content-links-ty .col-links{
 		margin-bottom: 7px;
+	}
+
+	.general-section-schedule .content-icons-schedule{
+		margin-bottom: 90px;
 	}
 }
 @media (max-width: 770px) {
@@ -1158,6 +1184,11 @@ a.lo-item{display: block}
 	}
 	.section-thank-you .content-links-ty .col-links{
 		display: block;
+	}
+}
+@media (max-width: 600px){
+	.call-schedule-demo .col-header{
+		margin-top: 80px;
 	}
 }
 
@@ -1241,6 +1272,7 @@ a.lo-item{display: block}
 	}
 	.sections_b2b .quality-header img + p{
 		font-size: 20px;
+		width: 78%;
 	}
 	.sections_b2b.last-section{
 		padding-top: 0px;
@@ -1277,6 +1309,9 @@ a.lo-item{display: block}
 	.section-thank-you .content-links-ty .col-links a{
 		margin-bottom: 6px;
 	}
+	.general-section-schedule .content-icons-schedule .icon-schedule{
+		width: 63px;
+	}
 }
 @media (max-width: 410px){
 	.banner-schedule-demo{
@@ -1289,6 +1324,11 @@ a.lo-item{display: block}
 		font-size: 14px;
 	}
 	.general-section-schedule .content-icons-schedule .icon-schedule{
-		margin: 7px 10px;
+		width: 43px;
+	}
+}
+@media (max-width: 380px){
+	.general-section-schedule .content-icons-schedule .icon-schedule{
+		width: 43px;
 	}
 }
