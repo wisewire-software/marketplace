@@ -230,7 +230,7 @@
 
         ?>
         <input type="hidden" name="redirect_to" value="<?php if ($redirect_to_item) { echo $redirect_to_item; } else { echo !empty($redirect_to_publish)  ? $redirect_to_publish : home_url(); } ?>">
-        <div style="margin-bottom: 10px;">
+        <div class="wrapper_captcha">
           <div class="g-recaptcha" data-sitekey="6LfIxjYUAAAAADuR77YyaEq4ZA2C0gYi0kwJZN7p"></div>  
         </div>        
         <button class="btn" type="submit" name="submit">CREATE ACCOUNT</button>
@@ -318,7 +318,7 @@
       
       // validate re-captcha
       if (!is_valid_recaptcha()) {
-        $errors->add('re-captcha', 'Re-captcha test failed.');
+        $errors->add('re-captcha', 'Re-captcha test failed.');        
       }
       
       // If errors were produced, fail
