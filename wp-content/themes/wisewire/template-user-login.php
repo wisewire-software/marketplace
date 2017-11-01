@@ -86,6 +86,29 @@
       // Generate form
       cr_display_form($fields, $errors);
     }
+
+    function is_valid_recaptcha() {
+      $response = $_POST["g-recaptcha-response"];
+      $url = 'https://www.google.com/recaptcha/api/siteverify';
+      $data = array(
+        'secret' => '6LfIxjYUAAAAANyJIjRdhnyydgDuQxYKOwCDajI0',
+        'response' => $_POST["g-recaptcha-response"]
+      );
+      $options = array(
+        'http' => array (
+          'method' => 'POST',
+          'content' => http_build_query($data)
+        )
+      );
+      $context  = stream_context_create($options);
+      $verify = file_get_contents($url, false, $context);
+      $captcha_success=json_decode($verify);
+      if ($captcha_success->success==false) {
+        return false;
+      } else if ($captcha_success->success==true) {
+        return true;
+      }
+    }
     
     function cr_sanitize(&$fields) {
       $fields['user_login']   =  isset($fields['user_email'])  ? sanitize_user($fields['user_email']) : '';
@@ -207,6 +230,9 @@
 
         ?>
         <input type="hidden" name="redirect_to" value="<?php if ($redirect_to_item) { echo $redirect_to_item; } else { echo !empty($redirect_to_publish)  ? $redirect_to_publish : home_url(); } ?>">
+        <div style="margin-bottom: 10px;">
+          <div class="g-recaptcha" data-sitekey="6LfIxjYUAAAAADuR77YyaEq4ZA2C0gYi0kwJZN7p"></div>  
+        </div>        
         <button class="btn" type="submit" name="submit">CREATE ACCOUNT</button>
         
       </form>
@@ -290,6 +316,10 @@
         $errors->add('user_ed_title', 'Title is required');
       }      
       
+      // validate re-captcha
+      if (!is_valid_recaptcha()) {
+        $errors->add('re-captcha', 'Re-captcha test failed.');
+      }
       
       // If errors were produced, fail
       if (count($errors->get_error_messages()) > 0) {
