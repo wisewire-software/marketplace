@@ -64,7 +64,7 @@
                     talk to one of our experts.
                 </div>
                 <div class="content-fields-form-sd">
-                    <?php echo do_shortcode('[contact-form-7 id="68291" title="Schedule Demo"]') ?>
+                    <?php echo do_shortcode('[contact-form-7 id="68291" title="Schedule Demo" html_id="schedule-demo-form"]') ?>
                 </div>
                 <div class="footer-form-sd">
                     100% Privacy Guaranteed
@@ -88,10 +88,10 @@
             </div>
             <h3 class="trusted-schedule">TRUSTED BY THE TOP NAMES IN EDUCATION</h3>
             <div class="content-icons-schedule">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON1_kaplan_2.png">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON2_openstax_2.png">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON3_pearson_2.png">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON4_APU_2.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON1_kaplan.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON2_openstax.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON3_pearson.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON4_APU.png">
             </div>
         </div>
     </div>
