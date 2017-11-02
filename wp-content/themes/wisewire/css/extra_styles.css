@@ -36,6 +36,12 @@ iframe{
 }
 /*Responsive videos end*/
 
+
+.wrapper_captcha {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
 .navbar-brand .logo {    
     margin-bottom: 6px;
 }
