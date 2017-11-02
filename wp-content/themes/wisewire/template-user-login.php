@@ -49,8 +49,7 @@
           cr_sanitize($fields);
           $id = wp_insert_user($fields);
           update_user_meta($id, 'user_ed_role', $fields['user_ed_role']);
-          update_user_meta($id, 'user_ed_title', $fields['user_ed_title']);
-          send_intercom($fields);
+          update_user_meta($id, 'user_ed_title', $fields['user_ed_title']);          
           wp_set_current_user($id);
           wp_set_auth_cookie($id);
           
