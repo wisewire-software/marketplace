@@ -88,10 +88,10 @@
             </div>
             <h3 class="trusted-schedule">TRUSTED BY THE TOP NAMES IN EDUCATION</h3>
             <div class="content-icons-schedule">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON1_kaplan_2.png">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON2_openstax_2.png">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON3_pearson_2.png">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON4_APU_2.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON1_kaplan.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON2_openstax.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON3_pearson.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON4_APU.png">
             </div>
         </div>
     </div>
