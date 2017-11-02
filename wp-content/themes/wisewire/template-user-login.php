@@ -88,29 +88,16 @@
     }
 
     function is_valid_recaptcha() {
-      $response = $_POST["g-recaptcha-response"];
-      $url = 'https://www.google.com/recaptcha/api/siteverify';
-      $data = array(
-        'secret' => '6LfIxjYUAAAAANyJIjRdhnyydgDuQxYKOwCDajI0',
-        'response' => $_POST["g-recaptcha-response"]
-      );
-      $options = array(
-        'http' => array (
-          'method' => 'POST',
-          'content' => http_build_query($data)
-        )
-      );
-      $context  = stream_context_create($options);
-      $verify = file_get_contents($url, false, $context);
-      $captcha_success=json_decode($verify);
-      echo '<script>';
-      echo 'console.log('. $captcha_success .')';
-      echo '</script>';
-      if ($captcha_success->success==false) {        
-        return false;
-      } else if ($captcha_success->success==true) {
-        return true;
+      if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+        $secret = '6LfIxjYUAAAAANyJIjRdhnyydgDuQxYKOwCDajI0';
+        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+        $responseData = json_decode($verifyResponse);
+        if($responseData->success) {
+          return true;
+        }
       }
+      
+      return false;
     }
     
     function cr_sanitize(&$fields) {
@@ -321,7 +308,7 @@
       
       // validate re-captcha
       if (!is_valid_recaptcha()) {
-        $errors->add('re-captcha', 'Re-captcha test failed.');        
+        $errors->add('re-captcha', 'Re-captcha is invalid.');        
       }
       
       // If errors were produced, fail
