@@ -104,6 +104,9 @@
       $verify = file_get_contents($url, false, $context);
       $captcha_success=json_decode($verify);
       if ($captcha_success->success==false) {
+        echo '<script>';
+        echo 'console.log('. $captcha_success .')';
+        echo '</script>';
         return false;
       } else if ($captcha_success->success==true) {
         return true;
