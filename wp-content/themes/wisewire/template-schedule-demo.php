@@ -87,11 +87,17 @@
                 you shortly to schedule a demonstration.
             </div>
             <h3 class="trusted-schedule">TRUSTED BY THE TOP NAMES IN EDUCATION</h3>
-            <div class="content-icons-schedule">
+            <div class="content-icons-schedule icons-smaller-sd">
                 <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON1_kaplan.png">
                 <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON2_openstax.png">
                 <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON3_pearson.png">
                 <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON4_APU.png">
+            </div>
+            <div class="content-icons-schedule icons-bigger-sd">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON1_kaplan_new.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON2_openstax_new.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON3_pearson_new.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON4_APU_new.png">
             </div>
         </div>
     </div>

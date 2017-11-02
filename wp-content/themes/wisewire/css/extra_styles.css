@@ -1008,6 +1008,9 @@ a.lo-item{display: block}
 	margin-top: 20px;
 	margin-bottom: 80px;
 }
+.general-section-schedule .content-icons-schedule.icons-bigger-sd{
+	display: none;
+}
 .general-section-schedule .content-icons-schedule .icon-schedule{
 	display: inline-block;
 	margin: 0px;
@@ -1222,10 +1225,19 @@ a.lo-item{display: block}
 	.banner-schedule-demo .title-schedule-demo{
 		width: 73%;
 	}
+	.general-section-schedule .content-icons-schedule.icons-smaller-sd{
+		display: none;
+	}
+	.general-section-schedule .content-icons-schedule.icons-bigger-sd{
+		display: block !important;
+	}
+	.general-section-schedule .content-icons-schedule .icon-schedule:first-child{
+		margin-top: 50px;
+	}
 	.general-section-schedule .content-icons-schedule .icon-schedule{
 		display: block;
 		margin: auto;
-		margin-bottom: 38px;
+		margin-bottom: 55px;
 	}
 }
 @media (max-width: 600px){
