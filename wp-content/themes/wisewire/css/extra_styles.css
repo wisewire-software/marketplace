@@ -981,7 +981,7 @@ a.lo-item{display: block}
 .banner-schedule-demo .title-schedule-demo{
 	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #3c3c3c;
-	width: 56%;
+	width: 54%;
 }
 .general-section-schedule{
 	padding-top: 50px;
@@ -1123,6 +1123,10 @@ a.lo-item{display: block}
 }
 /*query media to pages of b2b, schedule demo and thank you*/
 @media (max-width: 991px) {
+	.banner-schedule-demo .title-schedule-demo{
+		font-size: 33px;
+		width: 60%;
+	}
 	.general-section-schedule .content-icons-schedule .icon-schedule{
 		margin-right: 18px;
 	}
@@ -1168,9 +1172,6 @@ a.lo-item{display: block}
 	.sections_b2b .sections-colors .sub-content{
 		width: 75%;
 	}
-	.banner-schedule-demo .title-schedule-demo{
-		width: auto;
-	}
 	.general-section-schedule{
 		padding-top: 0px;
 	}
@@ -1202,6 +1203,17 @@ a.lo-item{display: block}
 	}
 	.general-section-schedule + footer.footer-b2b.footer-sdemo{
 		top: -132px;
+	}
+}
+@media (max-width: 765px) {
+	.banner-schedule-demo .title-schedule-demo{
+		width: 63%;
+		font-size: 30px;
+	}
+}
+@media (max-width: 607px) {
+	.banner-schedule-demo .title-schedule-demo{
+		width: 73%;
 	}
 }
 @media (max-width: 600px){
@@ -1310,9 +1322,6 @@ a.lo-item{display: block}
 	.banner-schedule-demo{
 		background-size: cover;
 	}
-	.banner-schedule-demo .title-schedule-demo{
-		font-size: 31px;
-	}
 	.section-thank-you .title-thank-you{
 		font-size: 30px;
 	}
@@ -1337,6 +1346,9 @@ a.lo-item{display: block}
 @media (max-width: 450px){
 	.general-section-schedule .content-icons-schedule .icon-schedule{
 		margin-right: 10px;
+	}
+	.banner-schedule-demo .title-schedule-demo{
+		width: auto;
 	}
 }
 @media (max-width: 420px){
