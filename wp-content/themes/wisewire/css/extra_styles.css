@@ -1340,16 +1340,25 @@ a.lo-item{display: block}
 	}
 }
 @media (max-width: 420px){
+	.general-section-schedule .content-icons-schedule{
+		text-align: center;
+	}
 	.general-section-schedule .content-icons-schedule .icon-schedule{
-		margin-right: 5px;
+		margin-right: 45px;
+		margin-bottom: 20px;
+		vertical-align: top;
+	}
+	.general-section-schedule .content-icons-schedule .icon-schedule:nth-child(3){
+		margin-top: -7px;
 	}
 }
-@media (max-width: 400px){
+
+@media (max-width: 327px){
 	.general-section-schedule .content-icons-schedule .icon-schedule{
-		margin-right: 5px;
-		width: 60px;
+		margin-right: 25px;
 	}
 }
+
 @media (max-width: 410px){
 	.banner-schedule-demo{
 		background-position-x: -70px;
