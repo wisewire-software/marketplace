@@ -67,7 +67,9 @@
     
     <?php wp_head(); ?>
     <script>var $ = jQuery.noConflict();</script>
+    <?php if ( is_page('Log In')) { ?>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <?php } ?>
   </head>
 
 <body <?php body_class(); ?>>
