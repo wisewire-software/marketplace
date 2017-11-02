@@ -103,10 +103,10 @@
       $context  = stream_context_create($options);
       $verify = file_get_contents($url, false, $context);
       $captcha_success=json_decode($verify);
-      if ($captcha_success->success==false) {
-        echo '<script>';
-        echo 'console.log('. $captcha_success .')';
-        echo '</script>';
+      echo '<script>';
+      echo 'console.log('. $captcha_success .')';
+      echo '</script>';
+      if ($captcha_success->success==false) {        
         return false;
       } else if ($captcha_success->success==true) {
         return true;
