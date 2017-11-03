@@ -106,3 +106,75 @@ Don't have an account?<br/>
 
 9). Disable “Hide Backend Login” within Security > Settings
 
+
+10). Create pages to B2B Clients, Schedule Demo and Thank You.
+    B2b Clients:
+        Name.- Partner Solutions
+        Url.- https://www.wisewire.com/partnership-solutions
+        Meta Title.- “Learn How We Can Meet Your Learning Product Goals | Wisewire”
+        Meta Description.- “Wisewire develops and designs smart and easy to use standards aligned content and technology
+            solutions customized for publishers, schools, and districts.”
+
+    Schedule Demo:
+        Name.- Schedule Demo
+        Url.- https://www.wisewire.com/schedule-demo
+        Meta Title.- “Schedule a Demo With Our Learning Experts | Wisewire”
+        Meta Description.- “Ready to take a deeper dive into Wisewire’s learning platform and solutions?
+            Fill out this form to talk to one of our experts.”
+
+    Thank You:
+        Name.- Thank you
+        Url.- https://www.wisewire.com/thank-you
+        Meta Title.- “Thank You for Contacting Us | Wisewire”
+        Meta Description.- One of our representatives will call you shortly.  In the meantime, feel free to browse our
+            marketplace, read our blog, or interact with our social community.”
+
+11). Add Contact form:
+    Name: Schedule Demo
+    Additional Settings: on_sent_ok: "location.replace('/thank-you');"
+    Mail: Configure the fields.
+
+    <div id="form-schedule-demo" class="form-schedule-demo">
+       <div class="field-form-sd">
+          <label>First Name *</label>
+          [text* sd-first-name id:id-sd-first-name default:user_first_name]
+       </div>
+       <div class="field-form-sd">
+          <label>Last Name *</label>
+          [text* sd-last-name id:id-sd-last-name default:user_last_name]
+       </div>
+       <div class="field-form-sd">
+          <label>Email *</label>
+          [email* sd-email id:id-sd-email default:user_email]
+       </div>
+       <div class="field-form-sd">
+          <label>Phone *</label>
+          [tel* sd-phone id:id-sd-phone]
+       </div>
+       <div class="field-form-sd">
+          <label>Company *</label>
+          [text* sd-company id:id-sd-company]
+       </div>
+       <div class="field-form-sd">
+          <label>Title *</label>
+          [text* sd-title id:id-sd-title]
+       </div>
+       <div class="field-form-sd">
+          <label>Comments/Requests</label>
+          [textarea sd-comments id:id-sd-comments]
+       </div>
+       <div class="field-form-sd button-sd-submit">
+          [submit id:id-sd-submit class:sd-submit-btn "SCHEDULE YOUR DEMO"]
+       </div>
+    </div>
+
+12). Go to Plugins, active the plugin 'Redirection',then go to the page of this plugin.
+    - Add new redirection:
+        source URL: /custom-content
+        Target URL: /partnership-solutions
+        Group: Redirections
+
+13). Go to General > footer and delete the file of Terms and Usage Rights PDF. Then go to Media page
+     and search the file of Wisewire-Terms-of-Use and delete this file, and and the new file to
+     Terms and Usage (https://www.wisewire.com/wp-content/uploads/Wisewire-Terms-of-Use.pdf?x19464).
+     Finally  go to General > footer and add file added on media (of Terms of use), save changes.
