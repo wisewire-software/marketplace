@@ -170,8 +170,8 @@ Don't have an account?<br/>
 
 12). Go to Plugins, active the plugin 'Redirection',then go to the page of this plugin.
     - Add new redirection:
-        source URL: /custom-content
-        Target URL: /partnership-solutions
+        source URL: /custom-content/
+        Target URL: /partnership-solutions/
         Group: Redirections
 
 13). Go to General > footer and delete the file of Terms and Usage Rights PDF. Then go to Media page
