@@ -17,7 +17,7 @@
             <div class="contactus-phone">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/icon_phone.png">
                 <p class="call-schedule">Call Us To Schedule A Demo: </p>
-                <a href="tel:+410-575-4310" class="number-phone-sd">(410) 575-4310</a>
+                <a href="tel:+1-410-575-4310" class="number-phone-sd">(410) 575-4310</a>
             </div>
         </div>
     </div>
@@ -87,11 +87,17 @@
                 you shortly to schedule a demonstration.
             </div>
             <h3 class="trusted-schedule">TRUSTED BY THE TOP NAMES IN EDUCATION</h3>
-            <div class="content-icons-schedule">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON1_kaplan_2.png">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON2_openstax_2.png">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON3_pearson_2.png">
-                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON4_APU_2.png">
+            <div class="content-icons-schedule icons-smaller-sd">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON1_kaplan.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON2_openstax.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON3_pearson.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON4_APU.png">
+            </div>
+            <div class="content-icons-schedule icons-bigger-sd">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON1_kaplan_new.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON2_openstax_new.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON3_pearson_new.png">
+                <img class="icon-schedule img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/ICON4_APU_new.png">
             </div>
         </div>
     </div>

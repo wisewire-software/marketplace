@@ -987,7 +987,7 @@ a.lo-item{display: block}
 .banner-schedule-demo .title-schedule-demo{
 	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #3c3c3c;
-	width: 56%;
+	width: 54%;
 }
 .general-section-schedule{
 	padding-top: 50px;
@@ -1012,11 +1012,15 @@ a.lo-item{display: block}
 }
 .general-section-schedule .content-icons-schedule{
 	margin-top: 20px;
-	margin-bottom: 180px;
+	margin-bottom: 26%;
+}
+.general-section-schedule .content-icons-schedule.icons-bigger-sd{
+	display: none;
 }
 .general-section-schedule .content-icons-schedule .icon-schedule{
 	display: inline-block;
-	margin: 0px 5px;
+	margin: 0px;
+	margin-right: 11px;
 }
 .general-section-schedule .description-form-sd{
 	font-family: "Noto Sans", sans-serif;
@@ -1030,6 +1034,7 @@ a.lo-item{display: block}
 	position: absolute;
 	z-index: 1;
 	top: -115px;
+	margin-bottom: 120px;
 }
 .general-section-schedule .content-form-sd .content-fields-form-sd input,
 .general-section-schedule .content-form-sd .content-fields-form-sd textarea{
@@ -1080,6 +1085,9 @@ a.lo-item{display: block}
 	font-family: "Noto Sans", sans-serif;
 	font-size: 13px;
 }
+.general-section-schedule + footer.footer-b2b.footer-sdemo{
+	position: relative;
+}
 /*style to Thank You page */
 .section-thank-you{
 	background: #f5f5f5;
@@ -1124,6 +1132,26 @@ a.lo-item{display: block}
 	margin-top: 0px;
 }
 /*query media to pages of b2b, schedule demo and thank you*/
+@media (max-width: 991px) {
+	.banner-schedule-demo .title-schedule-demo{
+		font-size: 33px;
+		width: 60%;
+	}
+	.general-section-schedule .content-icons-schedule .icon-schedule{
+		margin-right: 18px;
+	}
+}
+@media (max-width: 767px) {
+	.general-section-schedule .content-icons-schedule .icon-schedule{
+		margin-right: 30px;
+	}
+	.general-section-schedule .content-form-sd{
+		margin-bottom: 0px;
+	}
+	.general-section-schedule + footer.footer-b2b.footer-sdemo{
+		top:auto !important;
+	}
+}
 @media (max-width: 990px) {
 	.section-banner_b2b .buttons-banner {
 		width: auto;
@@ -1160,9 +1188,6 @@ a.lo-item{display: block}
 	.sections_b2b .sections-colors .sub-content{
 		width: 75%;
 	}
-	.banner-schedule-demo .title-schedule-demo{
-		width: auto;
-	}
 	.general-section-schedule{
 		padding-top: 0px;
 	}
@@ -1172,6 +1197,7 @@ a.lo-item{display: block}
 	.general-section-schedule .col-form-sd{
 		padding-left: 0px;
 		padding-right: 0px;
+		z-index: 1;
 	}
 	.general-section-schedule .content-icons-schedule{
 		margin-bottom: 50px;
@@ -1190,6 +1216,44 @@ a.lo-item{display: block}
 	}
 	.section-thank-you .content-links-ty .col-links{
 		display: block;
+	}
+	.general-section-schedule + footer.footer-b2b.footer-sdemo{
+		top: -245px;
+	}
+	body.page-template-template-schedule-demo{
+		margin-bottom: 0px;
+	}
+}
+@media (max-width: 765px) {
+	.banner-schedule-demo .title-schedule-demo{
+		width: 63%;
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 660px){
+	.general-section-schedule .content-icons-schedule .icon-schedule{
+		margin-right: 16px;
+	}
+}
+
+@media (max-width: 607px) {
+	.banner-schedule-demo .title-schedule-demo{
+		width: 73%;
+	}
+	.general-section-schedule .content-icons-schedule.icons-smaller-sd{
+		display: none;
+	}
+	.general-section-schedule .content-icons-schedule.icons-bigger-sd{
+		display: block !important;
+	}
+	.general-section-schedule .content-icons-schedule .icon-schedule:first-child{
+		margin-top: 50px;
+	}
+	.general-section-schedule .content-icons-schedule .icon-schedule{
+		display: block;
+		margin: auto;
+		margin-bottom: 55px;
 	}
 }
 @media (max-width: 600px){
@@ -1295,9 +1359,6 @@ a.lo-item{display: block}
 	.banner-schedule-demo{
 		background-size: cover;
 	}
-	.banner-schedule-demo .title-schedule-demo{
-		font-size: 31px;
-	}
 	.section-thank-you .title-thank-you{
 		font-size: 30px;
 	}
@@ -1315,10 +1376,14 @@ a.lo-item{display: block}
 	.section-thank-you .content-links-ty .col-links a{
 		margin-bottom: 6px;
 	}
-	.general-section-schedule .content-icons-schedule .icon-schedule{
-		width: 63px;
+}
+@media (max-width: 450px){
+	.banner-schedule-demo .title-schedule-demo{
+		width: auto;
 	}
 }
+
+
 @media (max-width: 410px){
 	.banner-schedule-demo{
 		background-position-x: -70px;
@@ -1329,12 +1394,10 @@ a.lo-item{display: block}
 	.call-schedule-demo .call-schedule{
 		font-size: 14px;
 	}
-	.general-section-schedule .content-icons-schedule .icon-schedule{
-		width: 43px;
-	}
 }
-@media (max-width: 380px){
-	.general-section-schedule .content-icons-schedule .icon-schedule{
-		width: 43px;
+
+@media (min-width: 768px){
+	body.page-template-template-schedule-demo{
+		margin-bottom: 0px !important;
 	}
 }
