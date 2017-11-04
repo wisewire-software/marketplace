@@ -276,35 +276,35 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
                             <?php if ($item_object_url) : ?>
                                 <a href="<?php echo $item_object_url; ?>" class="btn-iframe" rel="nofollow" target="_blank" >
-                                    <span class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                    <span class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                 </a>
                             <?php else: ?>
-                                <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                             <?php endif; ?>
 
                         <?php } else if ($item_demo_viewer_template == "PDF") { ?>
 
                             <?php if ($item_preview_pdf) : ?>
                                 <a href="<?php echo $item_preview_pdf; ?>" class="" target="_blank"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                            class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                 </a>
                             <?php else: ?>
-                                <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                             <?php endif; ?>
 
                         <?php } else if ($item_demo_viewer_template == "Carousel") { ?>
 
                             <?php if ($item_carousel_images) : ?>
                                 <a href="#" class="" data-toggle="modal" data-target="#previewModal"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                            class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                 </a>
                             <?php else: ?>
-                                <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                             <?php endif; ?>
 
                         <?php } ?>
                     <?php } else { ?>
-                        <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                        <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                     <?php } ?>
 
 
@@ -795,36 +795,36 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
                                 <?php if ($item_object_url): ?>
                                     <a href="<?php echo $item_object_url; ?>" class="btn-iframe" rel="nofollow" target="_blank"><span
-                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php else: ?>
-                                    <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                    <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                 <?php endif; ?>
 
                             <?php } else if ($item_demo_viewer_template == "PDF") { ?>
 
                                 <?php if ($item_preview_pdf): ?>
                                     <a href="<?php echo $item_preview_pdf; ?>" class="" target="_blank"><span
-                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php else: ?>
-                                    <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                    <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                 <?php endif; ?>
 
                             <?php } else if ($item_demo_viewer_template == "Carousel") { ?>
 
                                 <?php if ($item_carousel_images): ?>
                                     <a href="#" class="" data-toggle="modal" data-target="#previewModal"><span
-                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php else: ?>
-                                    <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                    <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                 <?php endif; ?>
 
                             <?php } ?>
 
                         <?php } else { ?>
-                            <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                            <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                         <?php } ?>
 
                     <?php endif; ?>
@@ -1165,7 +1165,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                     <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                     <?php
                                 else:
-                                    echo $WWItems->get_thumbnail($item_content_type_icon, 'detail');
+                                    echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail');
                                 endif;
                                 ?>
                             </div>
@@ -1360,7 +1360,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                             <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                             <?php
                                         else:
-                                            echo $WWItems->get_thumbnail($post->item_content_type_icon);
+                                            echo $WWItems->get_thumbnail_by_discipline($post->ID, $post->item_content_type_icon);
                                         endif;
                                         ?>
                                     </div>
@@ -1428,7 +1428,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                             <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                             <?php
                                         else:
-                                            echo $WWItems->get_thumbnail($item->item_content_type_icon);
+                                            echo $WWItems->get_thumbnail_by_discipline($item->ID, $item->item_content_type_icon);
                                         endif;
                                         ?>
                                     </div>

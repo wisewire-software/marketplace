@@ -352,6 +352,28 @@ class Controller_WiseWireItems {
 		return '<img src="'.$attachment_image_src.'" class="img-responsive">';
 
 	}
+
+	function get_thumbnail_by_discipline($item_id, $content_type, $size = 'thumb-related') {
+		$discipline = $this->get_discipline($item_id)['slug'];		
+		$uploads =  wp_upload_dir();
+		$width = $this->get_image_size($size)['width'];
+		$height = $this->get_image_size($size)['height'];		
+
+		if( $discipline!= "" ){			
+			
+			$attachment_image_src = $uploads['baseurl']."/disciplines/".$discipline."/".$discipline."-". $width."x".$height.".jpg";
+
+		} else {
+
+			$content_type = strtolower($content_type);
+			$placeholder_id = isset($this->types[$content_type]) 
+				? $this->placeholders[$this->types[$content_type]['color']] 
+				: $this->placeholders[1];
+			$attachment_image_src = wp_get_attachment_image_src( $placeholder_id, $size )[0];
+			
+		}
+		return '<img src="'.$attachment_image_src.'" class="img-responsive">';
+	}
 	
   /**
    * @return array of grades
