@@ -121,7 +121,7 @@ $featured_item = false ?>
                                 <img alt="" src="<?php echo $item_main_image_attributes[0]; ?>" class="img-responsive"/>
                                 <?php
                             else:
-                                echo $WWItems->get_thumbnail($post->content_type_icon, 'featured');
+                                echo $WWItems->get_thumbnail_by_discipline($post->id, $post->content_type_icon, 'featured');
                             endif;
                             ?>
                         </a>
@@ -213,7 +213,7 @@ $featured_item = false ?>
                                                                  src="<?php echo $item_main_image_attributes[0]; ?>"
                                                                  class="img-responsive"/>
                                                         <?php else: ?>
-                                                            <?php echo $WWItems->get_thumbnail($post->content_type_icon, 'thumbnail'); ?>
+                                                            <?php echo $WWItems->get_thumbnail_by_discipline($post->id, $post->content_type_icon, 'thumbnail'); ?>
                                                         <?php endif ?>
                                                         <?php if ($item_preview == 'Y'): ?>
                                                             <div class="ribbon"><span class="icon"></span> Preview</div>
