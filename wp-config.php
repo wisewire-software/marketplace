@@ -90,7 +90,7 @@ define('FORCE_SSL_ADMIN', true); // Force SSL for Dashboard - Security > Setting
 define('FORCE_SSL_CONTENT', true);
 
 define('DISABLE_WP_CRON', true);
-define('WAN_TEST_ENVIRONMENT', true);
+define('WAN_TEST_ENVIRONMENT', false);
 
 define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST']);
 define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST']);
