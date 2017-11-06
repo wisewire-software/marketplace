@@ -285,7 +285,7 @@
               ?>
               <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive" />
               <?php else: ?>
-								<?php echo $WWItems->get_thumbnail($item_content_type_icon) ?>
+								<?php echo $WWItems->get_thumbnail_by_discipline($item->ID, $item_content_type_icon) ?>
 							<?php endif ?>
                             
                           </div>
