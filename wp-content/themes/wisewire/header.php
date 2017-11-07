@@ -47,6 +47,7 @@
     <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/img/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <script>dataLayer = [];</script>
     <?php
 
       global $post;
