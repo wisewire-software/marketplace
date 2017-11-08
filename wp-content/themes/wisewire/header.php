@@ -74,10 +74,10 @@
   </head>
 
 <body <?php body_class(); ?>>
-  <?php if ( $_SESSION['teacher_loggedin_form_event'] ) { 
-    $_SESSION['teacher_loggedin_form_event'] = false; ?>
+  <?php if ( $_SESSION['teacher_loggedin_form_event'] ) { ?>
     <script type="text/javascript">dataLayer.push({'event': 'teacherLogInFormSubmitted'});</script>
-  <?php } ?>
+    <?php $_SESSION['teacher_loggedin_form_event'] = false; ?>  
+  <?php } ?>    
   <?php // Include SVG icons that are made as sprites ?>
   <?php get_template_part('parts/svg', 'icons'); ?>
   
