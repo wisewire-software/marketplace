@@ -61,6 +61,7 @@
             document.getElementById("create-account").style.display = "block";
             document.getElementById("create-account-form").style.display = "none";
             document.getElementById("btn-register").style.display = "none";
+            dataLayer.push({'event': 'teacherRegFormSubmitted'});
           </script>
 
         <?php 
