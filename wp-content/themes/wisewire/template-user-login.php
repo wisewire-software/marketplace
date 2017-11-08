@@ -52,6 +52,7 @@
           update_user_meta($id, 'user_ed_title', $fields['user_ed_title']);          
           wp_set_current_user($id);
           wp_set_auth_cookie($id);
+          $_SESSION['teacher_reg_form_event'] = true;
           
           // And display a message
           echo '<div class="alert alert-success">Registration complete. You can now login.</div>';
@@ -61,7 +62,6 @@
             document.getElementById("create-account").style.display = "block";
             document.getElementById("create-account-form").style.display = "none";
             document.getElementById("btn-register").style.display = "none";
-            dataLayer.push({'event': 'teacherRegFormSubmitted'});
           </script>
 
         <?php 

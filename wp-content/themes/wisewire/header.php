@@ -74,10 +74,18 @@
   </head>
 
 <body <?php body_class(); ?>>
+  <!-- fire teacher log in event to Google Tag Manager -->
   <?php if ( $_SESSION['teacher_loggedin_form_event'] ) { ?>
     <script type="text/javascript">dataLayer.push({'event': 'teacherLogInFormSubmitted'});</script>
     <?php $_SESSION['teacher_loggedin_form_event'] = false; ?>  
+  <?php } ?>
+
+  <!-- fire teacher registration event to Google Tag Manager -->
+  <?php if ( $_SESSION['teacher_reg_form_event'] ) { ?>
+    <script type="text/javascript">dataLayer.push({'event': 'teacherRegFormSubmitted'});</script>
+    <?php $_SESSION['teacher_reg_form_event'] = false; ?>  
   <?php } ?>    
+  
   <?php // Include SVG icons that are made as sprites ?>
   <?php get_template_part('parts/svg', 'icons'); ?>
   
