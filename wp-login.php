@@ -818,7 +818,12 @@ default:
 	 */
 	$redirect_to = apply_filters( 'login_redirect', $redirect_to, $requested_redirect_to, $user );
 
-	if ( !is_wp_error($user) && !$reauth ) {
+	if ( !is_wp_error($user) && !$reauth ) { 
+		$login_source = isset( $_REQUEST['login_source'] ) ? $_REQUEST['login_source'] : '';
+		if ( $login_source) { ?>
+			<script type="text/javascript">dataLayer.push({'event': 'teacherLogInFormSubmitted'});</script>
+		<?php }
+
 		if ( $interim_login ) {
 			$message = '<p class="message">' . __('You have logged in successfully.') . '</p>';
 			$interim_login = 'success';
