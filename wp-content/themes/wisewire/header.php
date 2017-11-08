@@ -74,7 +74,7 @@
   </head>
 
 <body <?php body_class(); ?>>
-  <?php if $_SESSION['teacher_loggedin_form_event'] { 
+  <?php if ( $_SESSION['teacher_loggedin_form_event'] ) { 
     $_SESSION['teacher_loggedin_form_event'] = false; ?>
     <script type="text/javascript">dataLayer.push({'event': 'teacherLogInFormSubmitted'});</script>
   <?php } ?>
