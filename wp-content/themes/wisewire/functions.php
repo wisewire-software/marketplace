@@ -1173,11 +1173,11 @@ function design_canonical($url) {
 	global $post;
 	global $wp_query;
 
-    var_dump($post->post_type);
-    var_dump($post->ID);
-    var_dump($url);
+//    var_dump($post->post_type);
+//    var_dump($post->ID);
+//    var_dump($url);
 
-	if ( get_post_type( $post->ID ) == 'page' && ($post->post_name == 'explore') ){
+	if ( get_post_type( $post->ID ) == 'page' && strpos($post->post_name, '/explore') !== false){
 
 		if ( isset($wp_query->query['page_nr']) ){
 			$_url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
