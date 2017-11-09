@@ -1170,23 +1170,18 @@ function get_user_anonymous(){
 add_action("init", "get_user_anonymous");
 
 function design_canonical($url) {
-	global $post;
-	global $wp_query;
+    global $post;
+    global $wp_query;
 
-	if ( get_post_type( $post->ID ) == 'page' && ($post->post_name == 'explore') ){
-
-		if ( isset($wp_query->query['page_nr']) ){
-			$_url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-
-			return substr($_url, 0, strpos($_url, '/'.$wp_query->query['page_nr'].'/')) . "/";
-		} else{
-			return $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-		}
-
-	} else {
-		return $url;
-	}
+    if ( get_post_type( $post->ID ) == 'page' && strpos($url, '/explore') !== false){
+        $_url =is_ssl()  ? 'https://': 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        $_url = strtok($_url, '?');
+        return $_url;
+    } else {
+        return $url;
+    }
 }
+
 add_filter( 'wpseo_canonical', 'design_canonical' );
 
 /* CUSTOM VENDOR FORM */
