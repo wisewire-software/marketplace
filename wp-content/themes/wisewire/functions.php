@@ -1177,7 +1177,7 @@ function design_canonical($url) {
 //    var_dump($post->ID);
 //    var_dump($url);
 
-	if ( get_post_type( $post->ID ) == 'page' && strpos($post->post_name, '/explore') !== false){
+	if ( get_post_type( $post->ID ) == 'page' && strpos($url, '/explore') !== false){
 
 		if ( isset($wp_query->query['page_nr']) ){
 			$_url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
