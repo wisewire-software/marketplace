@@ -1169,17 +1169,20 @@ function get_user_anonymous(){
 
 add_action("init", "get_user_anonymous");
 
-function design_canonical($url) {
-	global $post;
-	global $wp_query;
+function design_canonical($url)
+{
+    global $post;
+    global $wp_query;
 
-	if ( get_post_type( $post->ID ) == 'page' && strpos($url, '/explore') !== false){
-        $_url =is_ssl()  ? 'https://': 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-        $_url = strtok($_url, '?');
+    //var_dump($_SERVER);
+
+    if (get_post_type($post->ID) == 'page' && strpos($url, '/explore') !== false) {
+        $_url = (is_ssl() ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        //$_url = strtok($_url, '?');
         return $_url;
     } else {
-		return $url;
-	}
+        return $url;
+    }
 }
 add_filter( 'wpseo_canonical', 'design_canonical' );
 
