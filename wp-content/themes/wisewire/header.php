@@ -47,6 +47,7 @@
     <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/img/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <script>dataLayer = [];</script>
     <?php
 
       global $post;
@@ -73,6 +74,17 @@
   </head>
 
 <body <?php body_class(); ?>>
+  <!-- fire teacher log in event to Google Tag Manager -->
+  <?php if ( $_SESSION['teacher_loggedin_form_event'] ) { ?>
+    <script type="text/javascript">dataLayer.push({'event': 'teacherLogInFormSubmitted'});</script>
+    <?php $_SESSION['teacher_loggedin_form_event'] = false; ?>  
+  <?php } ?>
+
+  <!-- fire teacher registration event to Google Tag Manager -->
+  <?php if ( $_SESSION['teacher_reg_form_event'] ) { ?>
+    <script type="text/javascript">dataLayer.push({'event': 'teacherRegFormSubmitted'});</script>
+    <?php $_SESSION['teacher_reg_form_event'] = false; ?>  
+  <?php } ?>    
   
   <?php // Include SVG icons that are made as sprites ?>
   <?php get_template_part('parts/svg', 'icons'); ?>

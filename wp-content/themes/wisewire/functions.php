@@ -23,6 +23,13 @@ remove_menu_page('options-general.php'); // Settings
     }
 }
 
+function ur_theme_start_session()
+{
+    if (!session_id())
+        session_start();
+}
+add_action("init", "ur_theme_start_session", 1);
+
 /**
  * Ajax requests
  */

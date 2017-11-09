@@ -52,6 +52,7 @@
           update_user_meta($id, 'user_ed_title', $fields['user_ed_title']);          
           wp_set_current_user($id);
           wp_set_auth_cookie($id);
+          $_SESSION['teacher_reg_form_event'] = true;
           
           // And display a message
           echo '<div class="alert alert-success">Registration complete. You can now login.</div>';
@@ -425,6 +426,7 @@
                     }
                     ?>
                     <input type="hidden" name="redirect_to" value="<?php if ($redirect_to_item) { echo $redirect_to_item; } else { echo !empty($redirect_to_publish)  ? $redirect_to_publish : home_url(); } ?>">
+                    <input type="hidden" name="login_source" value="template_user_login">
                   </div>
                 </div>
                 <div class="clear"></div>
