@@ -27,7 +27,7 @@ a.navbar-brand, a.navbar-brand:hover{
 	position:relative;
 }
 /* Tamaño iframe === contenedor */
-iframe{
+iframe#publishVideoIframe2{
 	position:relative;
 	height:100%;
 	width:100%;
