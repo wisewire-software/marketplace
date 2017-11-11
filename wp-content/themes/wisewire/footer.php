@@ -24,13 +24,14 @@
                     <!--<li><a href="http://wordsandnumbers.com/blog/" target="_blank">Blog</a></li>-->
                     <li><a href="/schedule-demo">Schedule Demo</a></li>
                     <li><a href="/partnership-solutions">Partner</a></li>
-                    <li><a href="/testimonials">Client Testimonials</a></li>
+                    <li><a href="/testimonials">Testimonials</a></li>
                     <li><a href="/technology-enhanced-assessment-bank">Sample Resources</a></li>
                 </ul>
                 <ul>
                     <li><a href="/explore">Explore</a></li>
                     <li><a href="/create">Create</a></li>
                     <li><a href="/sellwithus">Sell With US</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#contactModal" >Contact us</a></li>
                 </ul>
                 <ul>
                     <li><a target="_blank" href="https://blog.wisewire.com/">Blog</a></li>

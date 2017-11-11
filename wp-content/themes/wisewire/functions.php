@@ -1182,6 +1182,7 @@ function design_canonical($url)
         return $url;
     }
 }
+
 add_filter( 'wpseo_canonical', 'design_canonical' );
 
 /* CUSTOM VENDOR FORM */

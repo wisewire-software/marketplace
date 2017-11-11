@@ -415,21 +415,6 @@ $featured_item = false ?>
 
 <?php endif; ?>
 
-<!-- SEO improvements -->
-<div class="container">
-    <div class="row container-seo">
-        <div class="col-md-9">
-            <h1 class="title-page">
-                <?php echo nl2br($control->title); ?>
-            </h1>
-            <div class="meta-description-page">
-                <?php echo nl2br($control->meta_description) ?>
-            </div>
-        </div>
-        <div class="col-md-3"></div>
-    </div>
-</div>
-
 <div class="back-to-top" id="back-to-top">
     <a href="#header" class="scroll">Back to top</a>
 </div>

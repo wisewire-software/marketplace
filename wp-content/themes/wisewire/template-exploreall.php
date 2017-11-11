@@ -677,20 +677,7 @@ $url_link = $control->get_permalink();
                     </div><!-- /row -->
                 </div><!-- /items -->
             </div><!-- /container -->
-            <!-- SEO improvements -->
-            <?php if ($control->search === false): ?>
-                <div class="row container-seo">
-                    <div class="col-md-9">
-                        <h1 class="title-page">
-                            <?php echo nl2br($control->title); ?>
-                        </h1>
-                        <div class="meta-description-page">
-                            <?php echo nl2br($control->meta_description) ?>
-                        </div>
-                    </div>
-                    <div class="col-md-3"></div>
-                </div>
-            <?php endif ?>
+            
         </div><!-- /hidden-xs -->
 
 
