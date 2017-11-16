@@ -635,7 +635,7 @@ public function get_previous_vendor($prod_id){
 			/* Product Meta */
 			$sid = $this->wpdb->insert_id;
 
-			$sql = $this->wpdb->prepare("INSERT INTO wp_postmeta (post_id, meta_key, meta_value) VALUES (".$sid.", '_sku', '".$product_sku."'),(".$sid.", '_price', '".$price."'),(".$sid.", '_stock_status', 'instock'),(".$sid.", '_visibility', 'visible' ),(".$sid.", '_downloadable', 'yes'),(".$sid.", '_sold_individually', 'yes'),(".$sid.", '_virtual', 'yes'),(".$sid.", '_regular_price', '".$price."' ),(".$sid.", '_manage_stock', 'no' ),(".$sid.", '_backorders', 'no' ),(".$sid.", '_downloadable_files', '".serialize($_file_paths)."'),(".$sid.", 'woo_limit_one_select_dropdown', '1'),(".$sid.", 'woo_limit_one_purchased_text', 'You have already purchased this item.'),(".$sid.", '_wcpv_product_commission', '".$commission."'),(".$sid.", 'userEmail', '".$vendorId."'); ");
+			$sql = $this->wpdb->prepare("INSERT INTO wp_postmeta (post_id, meta_key, meta_value) VALUES (".$sid.", '_sku', '".$product_sku."'),(".$sid.", '_price', '".$price."'),(".$sid.", '_stock_status', 'instock'),(".$sid.", '_visibility', 'visible' ),(".$sid.", '_downloadable', 'yes'),(".$sid.", '_sold_individually', 'yes'),(".$sid.", '_virtual', 'yes'),(".$sid.", '_regular_price', '".$price."' ),(".$sid.", '_manage_stock', 'no' ),(".$sid.", '_backorders', 'no' ),(".$sid.", '_downloadable_files', '".addslashes(serialize($_file_paths))."'),(".$sid.", 'woo_limit_one_select_dropdown', '1'),(".$sid.", 'woo_limit_one_purchased_text', 'You have already purchased this item.'),(".$sid.", '_wcpv_product_commission', '".$commission."'),(".$sid.", 'userEmail', '".$vendorId."'); ");
 
 			$this->wpdb->query($sql);
 			
@@ -688,7 +688,6 @@ public function get_previous_vendor($prod_id){
 		$vendorId = $post['AM'];
 		
 		$lo_post_id = $this->get_lo_item_by_sku($product_sku);
-	
 		
 		// PRODUCT VENDORS
 		if($vendorId){
@@ -741,7 +740,7 @@ public function get_previous_vendor($prod_id){
 				when meta_key  = '_regular_price' then '".$price."'
 				when meta_key  = '_manage_stock' then 'no'
 				when meta_key  = '_backorders' then 'no'
-				when meta_key  = '_downloadable_files' then '".serialize($_file_paths)."'
+				when meta_key  = '_downloadable_files' then '".addslashes(serialize($_file_paths))."'
 				end)
 				WHERE post_id = '".$prod_id."' ");
 
