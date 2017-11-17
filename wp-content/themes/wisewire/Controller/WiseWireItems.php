@@ -4,19 +4,19 @@
  * Implement learning objects placeholders and colors
  */
 class Controller_WiseWireItems {
-	
+
 	private $wpdb;
-	
+
 	private $types = array();
 	private $icons = array();
 	private $placeholders = array();
 	private $map_subdisciplines = array();
 	private $map_openstax_titles = array();
-	
+
 	public static $grade_name = 'middle';
-  
+
   public static $subgrade_id = 0;
-	
+
   private static $grades = array(
 		'elementary' => array(
 			15319 => 'Pre-K',
@@ -93,20 +93,20 @@ class Controller_WiseWireItems {
 			15336 // graduate
 		)
 	);
-	
+
 	public function __construct() {
-		
+
 		global $wpdb;
-		
+
 		$this->wpdb = $wpdb;
-		
+
 		$this->icons = array(
 			1 => 'yellow',
 			2 => 'blue',
 			3 => 'green',
-			4 => 'purple' 
+			4 => 'purple'
 		);
-		
+
 		$this->placeholders = array(
 			1 => 184,
 			2 => 185,
@@ -115,34 +115,34 @@ class Controller_WiseWireItems {
 		);
 
 		$this->map_subdisciplines = array(
-			'algebra', 
-			'calculus', 
-			'geometry', 
-			'language', 
+			'algebra',
+			'calculus',
+			'geometry',
+			'language',
 			'measurement_and_data',
-			'numbers_and_operations', 
-			'pre-calculus', 
+			'numbers_and_operations',
+			'pre-calculus',
 			'ratios_and_proportions',
-			'reading_foundational_skills', 
+			'reading_foundational_skills',
 			'reading_history_social_studies',
-			'reading_informational_text', 
+			'reading_informational_text',
 			'reading_literature',
-			'reading_science_and_technical', 
+			'reading_science_and_technical',
 			'statistics_and_probability',
-			'trigonometry', 
+			'trigonometry',
 			'writing'
 		);
 
 		$this->map_openstax_titles = array(
-			'anatomy_and_physiology', 
-			'biology', 
+			'anatomy_and_physiology',
+			'biology',
 			'college_physics',
-			'concepts_of_biology', 
-			'pre-calculus', 
-			'principles_of_economics', 
-			'sociology' 
+			'concepts_of_biology',
+			'pre-calculus',
+			'principles_of_economics',
+			'sociology'
 		);
-		
+
 		$this->types = array(
 			'assessment' => array(
 				'type' => 'ASSESSMENT MODULE',
@@ -178,13 +178,13 @@ class Controller_WiseWireItems {
 				'type' => 'PERFORMANCE TASK',
 				'color' => 1,
 				'icon' => ''
-			),			
-			
-			
+			),
+
+
 			'coursework' => array(
 				'type' => 'COURSEWARE MODULE',
 				'color' => 2,
-				'icon' => 'coursework' 
+				'icon' => 'coursework'
 			),
 			'courseware' => array(
 				'type' => 'COURSEWARE MODULE',
@@ -203,7 +203,7 @@ class Controller_WiseWireItems {
 			),
 			'student resource' => array(
 				'type' => 'STUDENT RESOURCE',
-				'color' => 2, 
+				'color' => 2,
 				'icon' => 'student'
 			),
 			'teacher guide' => array(
@@ -231,9 +231,9 @@ class Controller_WiseWireItems {
 				'color' => 2,
 				'icon' => ''
 			),
-			
-			
-			
+
+
+
 			'multimedia' => array(
 				'type' => 'MULTIMEDIA MODULE',
 				'color' => 3,
@@ -249,9 +249,9 @@ class Controller_WiseWireItems {
 				'color' => 3,
 				'icon' => 'app'
 			),
-			
-		
-			
+
+
+
 			'video' => array(
 				'type' => 'VIDEO',
 				'color' => 4,
@@ -259,7 +259,7 @@ class Controller_WiseWireItems {
 			)
 		);
 	}
-	
+
 	function get_color($content_type) {
 		$content_type = strtolower($content_type);
 		return isset($this->types[$content_type]) ? 'lo-content-type-'.$this->types[$content_type]['color'] : '';
@@ -269,7 +269,7 @@ class Controller_WiseWireItems {
 		$content_type = strtolower($content_type);
 		return isset($this->types[$content_type]) ? 'icon_'.$this->icons[$this->types[$content_type]['color']].'_'.$this->types[$content_type]['icon'] : '';
 	}
-	
+
 	function get_type($content_type) {
 		$content_type = strtolower($content_type);
 		return isset($this->types[$content_type]) ? $this->types[$content_type]['type'] : '';
@@ -309,16 +309,16 @@ class Controller_WiseWireItems {
 
 	function validate_title($title){
 
-		foreach ($this->map_openstax_titles as $value) {               
-            if ( strpos($title, $value) === 0 ){                 
+		foreach ($this->map_openstax_titles as $value) {
+            if ( strpos($title, $value) === 0 ){
                 return $value;
         	}
         }
         return false;
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param string $content_type
 	 * @param string $size thumn-related, thumb-vertical, home-carousel, home, detail, featured
 	 * @param string $subdiscipline
@@ -332,58 +332,71 @@ class Controller_WiseWireItems {
 		$width = $this->get_image_size($size)['width'];
 		$height = $this->get_image_size($size)['height'];
 
-		if( $title!= "" && $author == "OpenStax College" && $value_title = $this->validate_title($title) ){			
-			
+		if( $title!= "" && $author == "OpenStax College" && $value_title = $this->validate_title($title) ){
+
 			$attachment_image_src = $url."/img/thumbnails/openstax/".$value_title."/".$value_title."-". $width."x".$height.".jpg";
 
-		} else if( $subdiscipline != "" && in_array($subdiscipline,  $this->map_subdisciplines) ) {			
+		} else if( $subdiscipline != "" && in_array($subdiscipline,  $this->map_subdisciplines) ) {
 
 			$attachment_image_src = $url."/img/thumbnails/platform/".$subdiscipline."/".$subdiscipline."-". $width."x".$height.".jpg";
 
 		} else {
 
 			$content_type = strtolower($content_type);
-			$placeholder_id = isset($this->types[$content_type]) 
-				? $this->placeholders[$this->types[$content_type]['color']] 
+			$placeholder_id = isset($this->types[$content_type])
+				? $this->placeholders[$this->types[$content_type]['color']]
 				: $this->placeholders[1];
 			$attachment_image_src = wp_get_attachment_image_src( $placeholder_id, $size )[0];
-			
+
 		}
 		return '<img src="'.$attachment_image_src.'" class="img-responsive">';
 
 	}
 
-	function get_thumbnail_by_discipline($item_id, $content_type, $size = 'thumb-related') {
-		$discipline = $this->get_discipline($item_id)['slug'];		
-		$uploads =  wp_upload_dir();
-		$width = $this->get_image_size($size)['width'];
-		$height = $this->get_image_size($size)['height'];		
+    function get_thumbnail_by_discipline($item_id, $content_type, $size = 'thumb-related', $subdiscipline = '', $author = '', $title = '')
+    {
 
-		if( $discipline!= "" ){			
-			
-			$attachment_image_src = $uploads['baseurl']."/disciplines/".$discipline."/".$discipline."-". $width."x".$height.".jpg";
+        $subdiscipline = strtolower(str_replace(':', '', str_replace(array(" ", "/"), "_", $subdiscipline)));
+        $title = strtolower(str_replace(" ", "_", $title));
+        $url = get_template_directory_uri();
+        $width = $this->get_image_size($size)['width'];
+        $height = $this->get_image_size($size)['height'];
+        $uploads = wp_upload_dir();
 
-		} else {
+        if ($title != "" && $author == "OpenStax College" && $value_title = $this->validate_title($title)) {
 
-			$content_type = strtolower($content_type);
-			$placeholder_id = isset($this->types[$content_type]) 
-				? $this->placeholders[$this->types[$content_type]['color']] 
-				: $this->placeholders[1];
-			$attachment_image_src = wp_get_attachment_image_src( $placeholder_id, $size )[0];
-			
-		}
-		return '<img src="'.$attachment_image_src.'" class="img-responsive">';
-	}
-	
+            $attachment_image_src = $url . "/img/thumbnails/openstax/" . $value_title . "/" . $value_title . "-" . $width . "x" . $height . ".jpg";
+
+        } else if ($subdiscipline != "" && in_array($subdiscipline, $this->map_subdisciplines)) {
+
+            $attachment_image_src = $url . "/img/thumbnails/platform/" . $subdiscipline . "/" . $subdiscipline . "-" . $width . "x" . $height . ".jpg";
+
+        } else {
+            $discipline = isset($this->get_discipline($item_id)['slug']) ? $this->get_discipline($item_id)['slug'] : '';
+
+            if ($discipline) {
+                $attachment_image_src = $uploads['baseurl'] . "/disciplines/" . $discipline . "/" . $discipline . "-" . $width . "x" . $height . ".jpg";
+            } else {
+                $content_type = strtolower($content_type);
+                $placeholder_id = isset($this->types[$content_type])
+                    ? $this->placeholders[$this->types[$content_type]['color']]
+                    : $this->placeholders[1];
+                $attachment_image_src = wp_get_attachment_image_src($placeholder_id, $size)[0];
+            }
+        }
+
+        return '<img src="' . $attachment_image_src . '" class="img-responsive">';
+    }
+
   /**
    * @return array of grades
    */
   public static function GetGrades() {
     return self::$grades;
   }
-  
+
 	/**
-	 * 
+	 *
 	 * @param string $grade eg elementary
 	 * @return array of int ids of subgrades
 	 */
@@ -395,9 +408,9 @@ class Controller_WiseWireItems {
 	public static function GetGradesLabels($grade) {
 		return isset(self::$gradesLabels) ? self::$gradesLabels[$grade] : self::$gradesLabels['middle'];
 	}
-	
+
   /**
-	 * 
+	 *
 	 * @param array of int $grades_ids
 	 * @return string
 	 */
@@ -416,18 +429,18 @@ class Controller_WiseWireItems {
         }
       }
 		}
-    
+
     // default
     return self::$grades_ids['middle'];
   }
-  
+
 	/**
-	 * 
+	 *
 	 * @param array of int $grades_ids
 	 * @return string
 	 */
 	public static function GetGradeName($grades_ids, $set_static_values = false) {
-		
+
 		$first_grade_id = array_pop($grades_ids);
 
 		foreach (self::$grades_ids as $name => $grades) {
@@ -441,12 +454,12 @@ class Controller_WiseWireItems {
 				break;
 			}
 		}
-		
+
 		return self::$grade_name;
 	}
-	
+
   public static function GetGradeByChild($child_id) {
-    
+
     global $wpdb;
 
     $sql = "SELECT t.* FROM `wp_term_taxonomy` tt "
@@ -457,28 +470,28 @@ class Controller_WiseWireItems {
     f_print_r($row);
     return $row;
   }
-  
+
 	public function get_grades($id, $implode = true, $merlot_item = false) {
-		
+
 		$s = array();
-		
+
 		$limit = 99;
 		if ($implode) {
 			$limit = 4;
 		}
 
 		if (preg_match('/[a-zA-Z]+/',$id) || $merlot_item ) {
-			
+
 			$sql = "SELECT t.`name`, t.`term_id` FROM `wp_apicache_categories` tr "
 				. "INNER JOIN `wp_terms` t ON t.`api_type` = 'Student Level' AND t.`term_id` = tr.`categoryId` AND t.`api_branch` = 2 "
 				. "WHERE tr.`itemId` = '".esc_sql($id)."' LIMIT ".$limit;
-			
+
 		} else {
-			
+
 			$sql = "SELECT t.`name`, t.`term_id` FROM `wp_term_relationships` tr "
 				. "INNER JOIN `wp_terms` t ON t.`api_type` = 'Student Level' AND t.`term_id` = tr.`term_taxonomy_id` AND t.`api_branch` = 2 "
 				. "WHERE tr.`object_id` = '".esc_sql($id)."' LIMIT ".$limit;
-			
+
 		}
 
 		$grades = $this->wpdb->get_results($sql, ARRAY_A);
@@ -488,42 +501,42 @@ class Controller_WiseWireItems {
 				$s [$v['term_id']]= $v['name'];
 			}
 		}
-		
+
 		return $implode === true ? implode(', ',$s) : $s;
-		
+
 	}
-	
+
 	public function get_subdiscipline($id) {
-		
+
 		if (preg_match('/[a-zA-Z]+/',$id)) {
-			
+
 			$sql = "SELECT t.`name` FROM `wp_apicache_categories` tr "
 				. "INNER JOIN `wp_terms` t ON t.`api_type` = 'Discipline' AND t.`term_id` = tr.`categoryId` "
 				. "AND t.`api_branch` = 2 "
 				. "WHERE tr.`itemId` = '".esc_sql($id)."' LIMIT 1";
-			
+
 		} else {
-			
+
 			$sql = "SELECT t.`name` FROM `wp_term_relationships` tr "
 				. "INNER JOIN `wp_terms` t ON t.`api_type` = 'Discipline' AND t.`term_id` = tr.`term_taxonomy_id` "
 				. "AND t.`api_branch` = 2 "
 				. "WHERE tr.`object_id` = '".esc_sql($id)."' LIMIT 1";
 			//echo $sql;
 		}
-		
+
 		$subdisciplines = $this->wpdb->get_results($sql, ARRAY_A);
-		
+
 		if ($subdisciplines) {
 			return $subdisciplines[0]['name'];
 		}
-		
+
 		return '&nbsp;';
 	}
-	
+
 	public function get_discipline($id) {
-		
+
 		if (preg_match('/[a-zA-Z]+/',$id)) {
-			
+
 			/*$sql = "SELECT t.* FROM `wp_apicache_categories` tr "
 				. "INNER JOIN `wp_terms` t ON t.`api_type` = 'Discipline' AND t.`term_id` = tr.`categoryId` "
 				. "AND t.`api_branch` = 1 "
@@ -536,61 +549,61 @@ class Controller_WiseWireItems {
 				.	"Inner join wp_terms tt on tt.slug = cdis.level1_term and tt.api_type = 'Discipline' "
 				.	"WHERE i.itemId = '".esc_sql($id)."';";
 
-			
+
 		} else {
-			
+
 			$sql = "SELECT t.* FROM `wp_term_relationships` tr "
 				. "INNER JOIN `wp_terms` t ON t.`api_type` = 'Discipline' AND t.`term_id` = tr.`term_taxonomy_id` "
 				. "AND t.`api_branch` = 1 "
 				. "WHERE tr.`object_id` = '".esc_sql($id)."' LIMIT 1";
 		}
-		
+
 		$disciplines = $this->wpdb->get_results($sql, ARRAY_A);
-		
+
 		if ($disciplines) {
 			return $disciplines[0];
 		}
-		
+
 		return '';
 	}
-	
+
 	public function get_by_object_id($object_id, $limit = 1) {
-		
+
 		$limit = $limit ? (int)$limit : 1;
-		
+
 		if (!is_array($object_id)) {
 			$object_id = array($object_id);
 		}
-		
+
 		$sql = "SELECT p.*, m2.`meta_value` AS `item_content_type_icon` FROM `wp_posts` p "
 			. "INNER JOIN `wp_postmeta` pm ON pm.`post_id` = p.`ID` AND pm.`meta_key` = 'item_object_id' AND pm.`meta_value` IN ('".implode("','",$object_id)."')"
 			. "LEFT JOIN {$this->wpdb->postmeta} m2 ON m2.`post_id` = p.`ID` AND m2.`meta_key` = 'item_content_type_icon' "
 			. "WHERE p.`post_status` = 'publish' ORDER BY RAND() LIMIT $limit;";
 		$results = $this->wpdb->get_results($sql);
-		
+
 		if ($results) {
 			return $results;
 		}
-		
+
 		return false;
 	}
-  
+
   public function fix_publish_date() {
     $sql = "SELECT * FROM `wp_postmeta` WHERE `meta_key` LIKE 'item_publish_date' AND `meta_value` LIKE '%/%';";
     $results = $this->wpdb->get_results($sql);
-    //f_print_r($results); 
+    //f_print_r($results);
     if ($results) {
       foreach ($results as $row) {
         echo $row->meta_value;
         $fixed_date = date('Ymd',strtotime($row->meta_value));
-        
+
         echo ' - '.$fixed_date.'<br />';
         $this->wpdb->update('wp_postmeta',array(
           'meta_value' => $fixed_date
         ),array(
           'meta_id' => $row->meta_id
         ));
-        
+
       }
     }
   }

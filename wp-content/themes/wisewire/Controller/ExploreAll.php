@@ -312,7 +312,6 @@ class Controller_ExploreAll
 
     public function catch_filters()
     {
-
         if ($this->search !== false) {
             if ($_SESSION['exploreall_search'] != $this->search || isset($_REQUEST['clear_filters'])) {
                 $_SESSION['exploreall_filters'] = array();
@@ -324,7 +323,7 @@ class Controller_ExploreAll
 
         $this->list_view = isset($_COOKIE['exploreall_list_view']) ? $_COOKIE['exploreall_list_view'] : 'grid';
 
-        $this->filters = isset($_SESSION['exploreall_filters'][$this->filters_key]) ? $_SESSION['exploreall_filters'][$this->filters_key] : array();
+        $this->filters = (isset($_SESSION['exploreall_filters'][$this->filters_key]) && count($_SESSION['exploreall_filters'][$this->filters_key]) > 0) ? $_SESSION['exploreall_filters'][$this->filters_key] : array();
 
         if (isset($_REQUEST['filter'])) {
 
@@ -359,10 +358,9 @@ class Controller_ExploreAll
                 $data_current_grades_ids = $this->get_current_grades_ids();
                 $this->filters["gradelevel"] = $data_current_grades_ids;
             }
-
         }
 
-        $key_order_by = $this->filters_key . ($this->search == false ? '' : $this->search);
+        $key_order_by = $this->filters_key . (!$this->search ? '' : $this->search);
         if (isset($_REQUEST['order_by'])) {
             $this->order_by = $_SESSION['exploreall_orderby'][$key_order_by] = $_REQUEST['order_by'];
         } elseif (isset($_SESSION['exploreall_orderby'][$key_order_by])) {

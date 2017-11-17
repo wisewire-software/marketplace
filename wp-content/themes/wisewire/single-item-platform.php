@@ -2096,7 +2096,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                                 <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                                 <?php
                                             else:
-                                                echo $WWItems->get_thumbnail_by_discipline($post->ID, $post->item_content_type_icon);
+                                                echo $WWItems->get_thumbnail_by_discipline($post->ID, $post->item_content_type_icon, 'detail');
                                             endif;
                                             ?>
                                         </div>
