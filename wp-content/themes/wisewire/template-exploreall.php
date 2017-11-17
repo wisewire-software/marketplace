@@ -556,7 +556,7 @@ $url_link = $control->get_permalink();
                                                                             </p>
                                                                         <?php endif ?>
                                                                         <div class="grade-level">
-                                                                            <?php echo implode(', ', $item->grade); ?>
+                                                                            <?php echo $item->grade ?  implode(', ', $item->grade) : ''; ?>
                                                                         </div>
                                                                         <p class="grade-level">
                                                                             <?php
@@ -686,7 +686,7 @@ $url_link = $control->get_permalink();
         </div>
 
     </div>
-    <?php add_action('wp_footer', 'add_script_ga_footer'); ?>
+    <?php //add_action('wp_footer', 'add_script_ga_footer'); ?>
     <?php get_footer(); ?>
 
 
