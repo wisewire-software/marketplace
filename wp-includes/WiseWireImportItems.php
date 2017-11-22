@@ -580,6 +580,10 @@ class WiseWireImportItems {
 		//set object types
 		wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['O'])), 'ObjectType' );
 
+
+
+        wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['M'])), 'category' );
+
 		$this->wpdb->query("COMMIT;");
 	}
 	
