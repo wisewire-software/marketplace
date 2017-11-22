@@ -795,8 +795,8 @@ public function get_previous_vendor($prod_id){
 				
 			}
 
-            if($post['M']){
-
+			//Testing register grade
+/*            if($post['M']){
                 $data_grades = explode(',', $post['M']);
 
                 if(count($data_grades)){
@@ -807,7 +807,7 @@ public function get_previous_vendor($prod_id){
                     }
                 }
 
-            }
+            }*/
 
 			
 			$sql = $this->wpdb->prepare("INSERT INTO wp_term_relationships (object_id, term_taxonomy_id, term_order) VALUES (".$prod_id.", '".$catid->term_taxonomy_id."', '0');");
