@@ -11737,7 +11737,7 @@ a.nav-grades .lo-nav .btn.disabled, fieldset[disabled] a.nav-grades .lo-nav .btn
         padding: 0;
         margin: 15px 0 35px 0;
         overflow: hidden;
-        overflow-x: scroll
+        overflow-x: auto;
     }
 
     .detail.detail-platform .iframe-container .iframe-content {
