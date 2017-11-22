@@ -794,6 +794,21 @@ public function get_previous_vendor($prod_id){
 				*/	
 				
 			}
+
+            if($post['M']){
+
+                $data_grades = explode(',', $post['M']);
+
+                if(count($data_grades)){
+                    foreach ($data_grades as $grade){
+                        $obj_grade = get_term_by('name', $grade, 'category');
+                        $sql = $this->wpdb->prepare("INSERT INTO wp_term_relationships (object_id, term_taxonomy_id, term_order) VALUES (".$prod_id.", '".$obj_grade->term_taxonomy_id."', '0');");
+                        $this->wpdb->query($sql);
+                    }
+                }
+
+            }
+
 			
 			$sql = $this->wpdb->prepare("INSERT INTO wp_term_relationships (object_id, term_taxonomy_id, term_order) VALUES (".$prod_id.", '".$catid->term_taxonomy_id."', '0');");
 			
