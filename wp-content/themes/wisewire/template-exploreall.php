@@ -477,7 +477,7 @@ $url_link = $control->get_permalink();
                                                                     <img alt="" src="<?php echo $image[0]; ?>"
                                                                          class="img-responsive"/>
                                                                 <?php else: ?>
-                                                                    <?php echo $WWItems->get_thumbnail($item->content_type_icon, 'thumb-related', $item->subdiscipline, $item->author, $item->title) ?>
+                                                                    <?php echo $WWItems->get_thumbnail_by_discipline($item->id, $item->content_type_icon, 'thumb-related', $item->subdiscipline, $item->author, $item->title) ?>
                                                                 <?php endif ?>
 
                                                                 <?php if (substr($item->preview, 0, 1) === 'Y'): ?>
@@ -556,7 +556,7 @@ $url_link = $control->get_permalink();
                                                                             </p>
                                                                         <?php endif ?>
                                                                         <div class="grade-level">
-                                                                            <?php echo implode(', ', $item->grade); ?>
+                                                                            <?php echo $item->grade ?  implode(', ', $item->grade) : ''; ?>
                                                                         </div>
                                                                         <p class="grade-level">
                                                                             <?php
@@ -677,20 +677,7 @@ $url_link = $control->get_permalink();
                     </div><!-- /row -->
                 </div><!-- /items -->
             </div><!-- /container -->
-            <!-- SEO improvements -->
-            <?php if ($control->search === false): ?>
-                <div class="row container-seo">
-                    <div class="col-md-9">
-                        <h1 class="title-page">
-                            <?php echo nl2br($control->title); ?>
-                        </h1>
-                        <div class="meta-description-page">
-                            <?php echo nl2br($control->meta_description) ?>
-                        </div>
-                    </div>
-                    <div class="col-md-3"></div>
-                </div>
-            <?php endif ?>
+            
         </div><!-- /hidden-xs -->
 
 
@@ -699,7 +686,7 @@ $url_link = $control->get_permalink();
         </div>
 
     </div>
-    <?php add_action('wp_footer', 'add_script_ga_footer'); ?>
+    <?php //add_action('wp_footer', 'add_script_ga_footer'); ?>
     <?php get_footer(); ?>
 
 

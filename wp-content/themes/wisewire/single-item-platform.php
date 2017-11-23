@@ -780,7 +780,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                         <?php $image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'detail')[0]; ?>
                                         <img src="<?php echo $image_url; ?>" alt="" class="img-responsive">
                                     <?php else: ?>
-                                        <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail') ?>
+                                        <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail') ?>
                                     <?php endif ?>
                                 </div>
                                 <div class="content">
@@ -968,7 +968,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                             $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($item->ID), 'thumbnail')[0]; ?>
                                             <img src="<?php echo $image_url; ?>" alt="" class="img-responsive">
                                         <?php else: ?>
-                                            <?php echo $WWItems->get_thumbnail($item->item_content_type_icon) ?>
+                                            <?php echo $WWItems->get_thumbnail_by_discipline($item->ID, $item->item_content_type_icon) ?>
                                         <?php endif ?>
                                     </div>
                                     <div class="content">
@@ -1111,19 +1111,19 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url)) { ?>
                                 <a href="#" class="btn-iframe" data-toggle="modal" data-target="#previewModalMerlot"
                                    data-src="<?php echo $item_object_url; ?>"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                            class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                 </a>
                             <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                                 <a href="<?php echo $item_preview_pdf; ?>" class="" target="_blank"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                            class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                 </a>
                             <?php } else if (($item_demo_viewer_template == "Carousel") && ($item_carousel_images)) { ?>
                                 <a href="#" class="" data-toggle="modal" data-target="#previewModalMerlot"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                            class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                 </a>
                             <?php } ?>
                         <?php } else { ?>
-                            <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                            <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                         <?php } ?>
 
 
@@ -1171,17 +1171,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             </p>
                         <?php } else if (($item_cta_button == 'Visit Website') && ($item->previewURL) && (strpos($item->previewURL, 'wisewire.com') !== false)) { ?>
                             <p class="btn-contact">
-                                <!--<a href="<?php echo $item->previewURL; ?>" target="_blank" class="btn">Visit Website</a>-->
-                                <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" class="btn">Visit Website</a>
-
-                            </p>
-                        <?php } else if (($item_cta_button == 'Visit Website') && ($item->previewURL) && (strpos($item->previewURL, 'wisewire.com') === false)) { ?>
-                            <p class="btn-contact">
-                                <!--<a href="<?php echo $item->previewURL; ?>" target="_blank" class="btn">Visit Website</a>-->
-                                <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" rel="nofollow" class="btn">Visit Website</a>
-
+                                <a <?php if(strpos($item->previewURL, 'wisewire.com') === false): ?> data-rel="nofollow" <?php endif; ?> data-href="<?php echo $item_preview_url; ?>" data-toggle="modal" data-target="#accessExternalConfirm" class="btn">Visit Website</a>
                             </p>
                         <?php }
                             else if ($item_cta_button == 'Contact Us') { ?>
@@ -1576,19 +1566,19 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                 <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url)) { ?>
                                     <a href="#" class="btn-iframe" data-toggle="modal" data-target="#previewModalMerlot"
                                        data-src="<?php echo $item_object_url; ?>"><span
-                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
                                     <a href="<?php echo $item_preview_pdf; ?>" class="" target="_blank"><span
-                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php } else if (($item_demo_viewer_template == "Carousel") && ($item_carousel_images)) { ?>
                                     <a href="#" class="" data-toggle="modal" data-target="#previewModalMerlot"><span
-                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                                     </a>
                                 <?php } ?>
                             <?php } else { ?>
-                                <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail'); ?>
                             <?php } ?>
 
                         <?php endif; ?>
@@ -1702,22 +1692,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             </p>
                         <?php } else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url) && (strpos($item_cta_button_url, 'wisewire.com') !== false)) { ?>
                             <p class="btn-contact">
-                                <!--<a href="<?php echo $item_cta_button_url; ?>" target="_blank" class="btn">Visit Website</a>-->
-                                <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" class="btn">Visit Website</a>
+                                <a <?php if(strpos($item_cta_button_url, 'wisewire.com') === false): ?> data-rel="nofollow" <?php endif; ?> data-href="<?php echo $item_preview_url; ?>" data-toggle="modal" data-target="#accessExternalConfirm" class="btn">Visit Website</a>
                             </p>
-                        <?php }
-
-                        else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url) && (strpos($item_cta_button_url, 'wisewire.com') === false)) { ?>
-                            <p class="btn-contact">
-                                <!--<a href="<?php echo $item_cta_button_url; ?>" target="_blank" class="btn">Visit Website</a>-->
-                                <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" rel="nofollow" class="btn">Visit Website</a>
-                            </p>
-                        <?php }
-
-
-                            else if ($item_cta_button == 'Contact Us') { ?>
+                        <?php } else if ($item_cta_button == 'Contact Us') { ?>
                             <p class="btn-contact">
                                 <a href="#" data-toggle="modal" data-target="#contactModal" class="btn">Contact us</a>
                             </p>
@@ -1919,7 +1896,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                         <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                         <?php
                                     else:
-                                        echo $WWItems->get_thumbnail($item_content_type_icon, 'detail');
+                                        echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail');
                                     endif;
                                     ?>
                                 </div>
@@ -2119,7 +2096,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                                 <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                                 <?php
                                             else:
-                                                echo $WWItems->get_thumbnail($post->item_content_type_icon);
+                                                echo $WWItems->get_thumbnail_by_discipline($post->ID, $post->item_content_type_icon, 'detail');
                                             endif;
                                             ?>
                                         </div>
@@ -2187,7 +2164,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                                 <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                                 <?php
                                             else:
-                                                echo $WWItems->get_thumbnail($item->item_content_type_icon);
+                                                echo $WWItems->get_thumbnail_by_discipline($item->ID, $item->item_content_type_icon);
                                             endif;
                                             ?>
                                         </div>

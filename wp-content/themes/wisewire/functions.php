@@ -23,6 +23,13 @@ remove_menu_page('options-general.php'); // Settings
     }
 }
 
+function ur_theme_start_session()
+{
+    if (!session_id())
+        session_start();
+}
+add_action("init", "ur_theme_start_session", 1);
+
 /**
  * Ajax requests
  */
@@ -1162,24 +1169,20 @@ function get_user_anonymous(){
 
 add_action("init", "get_user_anonymous");
 
-function design_canonical($url) {
-	global $post;
-	global $wp_query;
+function design_canonical($url)
+{
+    global $post;
+    global $wp_query;
 
-	if ( get_post_type( $post->ID ) == 'page' && ($post->post_name == 'explore') ){
-
-		if ( isset($wp_query->query['page_nr']) ){
-			$_url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-
-			return substr($_url, 0, strpos($_url, '/'.$wp_query->query['page_nr'].'/')) . "/";
-		} else{
-			return $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-		}
-
-	} else {
-		return $url;
-	}
+    if (get_post_type($post->ID) == 'page' && strpos($url, '/explore') !== false) {
+        $_url = (is_ssl() ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        //$_url = strtok($_url, '?');
+        return $_url;
+    } else {
+        return $url;
+    }
 }
+
 add_filter( 'wpseo_canonical', 'design_canonical' );
 
 /* CUSTOM VENDOR FORM */
@@ -1397,6 +1400,46 @@ function add_rel_nofollow_to_item($item_id) {
     }else{
         return '';
     }
+}
+
+
+/*** INTERCOM ***/
+function send_intercom($array_v)
+{
+	require_once( ABSPATH . 'wp-config.php' );
+	include_once(ABSPATH . WPINC . '/class.wp_intercom.php');
+	//$contact_form = $this->contact_form;
+
+	$appid = WAN_TEST_ENVIRONMENT ? "vekhwzrt" : "umjqwdw0";
+	$appkey = WAN_TEST_ENVIRONMENT ? "cfed9b1d47102a26f1084fbe36fa0c510b995663" : "0cf09251b0a355fa787a0348463a7c453111331d";
+	$wp_intercom = new WP_Intercom($appid, $appkey);
+
+	$output = implode("\n", array_map(
+		function ($v, $k) {
+			return sprintf("%s: %s", $k, $v);
+		},
+		$array_v,
+		array_keys($array_v)
+	));
+
+	$user_id = null;
+	if (!is_user_logged_in()) {
+		$user_id = $_COOKIE['intercom-user-id'];
+	} else {
+		$user_id = get_current_user_id();
+		$user_info = get_userdata($user_id);
+		$response = $wp_intercom->createUpdateUser($user_info->user_email);
+		$user_id = $response->id;
+	}
+
+	$response = $wp_intercom->createMessage($user_id, $output);
+
+	//var_dump($response);
+	if (!$response) {
+		return false;
+	}
+
+	return true;
 }
 
 ?>

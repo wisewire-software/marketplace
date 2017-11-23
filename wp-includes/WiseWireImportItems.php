@@ -544,6 +544,21 @@ class WiseWireImportItems {
 
 			add_post_meta($post_id, 'is_hide_item', 0);
 		}
+
+        // set keywords
+        wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['T'])), 'post_tag' );
+
+        // set standards
+        wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['Q'])), 'Standards' );
+
+        // set languages
+        wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['Y'])), 'Languages' );
+
+        // set relations
+        wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['AF'])), 'Related' );
+
+        //set object types
+        wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['O'])), 'ObjectType' );
 		
 		
 		/* ----------------------------------------------------------  BEGIN HELLOARI  ------------------ */
@@ -564,21 +579,7 @@ class WiseWireImportItems {
 				
 		/* -----------------------------------------------------------------  END HELLOARI  ------------------ */
 
-
-		// set keywords
-		wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['T'])), 'post_tag' );
-
-		// set standards
-		wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['Q'])), 'Standards' );
-
-		// set languages
-		wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['Y'])), 'Languages' );
-		
-		// set relations
-		wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['AF'])), 'Related' );
-		
-		//set object types
-		wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['O'])), 'ObjectType' );
+        wp_set_post_terms( $post_id, array_map('trim',explode(';',$post['M'])), 'category' );
 
 		$this->wpdb->query("COMMIT;");
 	}

@@ -85,6 +85,8 @@ foreach ($headers as $key => $value) {
 $item_standards = get_the_terms(get_the_ID(), 'Standards');
 
 $item_discipline = $WWItems->get_discipline(get_the_ID());
+$item_subdiscipline = $WWItems->get_subdiscipline(get_the_ID());
+
 $item_related = get_the_terms(get_the_ID(), 'Related');
 
 $item_grades = $WWItems->get_grades(get_the_ID(), false);
@@ -205,13 +207,14 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
         <div class="metadata">
 
-            <h1>
-                <?php echo $item_discipline['name'] ?>
-            </h1>
-            <a href="/explore/<?php echo $grade ?>/<?php echo $item_discipline['slug'] ?>/">
-                VIEW ALL <?php echo $item_discipline['name'] ?>
-            </a>
-
+            <?php if (isset($item_discipline['name'])): ?>
+                <h1>
+                    <?php echo $item_discipline['name'] ?>
+                </h1>
+                <a href="/explore/<?php echo $grade ?>/<?php echo $item_discipline['slug'] ?>/">
+                    VIEW ALL <?php echo $item_discipline['name'] ?>
+                </a>
+            <?php endif; ?>
             <h2>
                 <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><?php echo $title ?></span>
             </h2>
@@ -236,8 +239,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                     <?php if ($item_demo_viewer_template == "Iframe") { ?>
 
                         <?php if ($item_object_url) : ?>
-                            <a href="<?php echo $item_object_url; ?>" class="btn-iframe" target="_blank" rel="nofollow" >
-                                <span class="icon"></span><img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
+                            <a href="<?php echo $item_object_url; ?>" class="btn-iframe" target="_blank" rel="nofollow">
+                                <span class="icon"></span><img alt="" src="<?php echo $image[0]; ?>"
+                                                               class="img-responsive"/>
                             </a>
                         <?php else: ?>
                             <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
@@ -275,36 +279,37 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                         <?php if ($item_demo_viewer_template == "Iframe") { ?>
 
                             <?php if ($item_object_url) : ?>
-                                <a href="<?php echo $item_object_url; ?>" class="btn-iframe" rel="nofollow" target="_blank" >
-                                    <span class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                <a href="<?php echo $item_object_url; ?>" class="btn-iframe" rel="nofollow"
+                                   target="_blank">
+                                    <span class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                                 </a>
                             <?php else: ?>
-                                <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                             <?php endif; ?>
 
                         <?php } else if ($item_demo_viewer_template == "PDF") { ?>
 
                             <?php if ($item_preview_pdf) : ?>
                                 <a href="<?php echo $item_preview_pdf; ?>" class="" target="_blank"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                            class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                                 </a>
                             <?php else: ?>
-                                <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                             <?php endif; ?>
 
                         <?php } else if ($item_demo_viewer_template == "Carousel") { ?>
 
                             <?php if ($item_carousel_images) : ?>
                                 <a href="#" class="" data-toggle="modal" data-target="#previewModal"><span
-                                            class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                            class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                                 </a>
                             <?php else: ?>
-                                <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                             <?php endif; ?>
 
                         <?php } ?>
                     <?php } else { ?>
-                        <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                        <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                     <?php } ?>
 
 
@@ -312,7 +317,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
                 <?php if (substr($item_preview, 0, 1) === 'Y') { ?>
                     <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url) && $inIframeAllowed) { ?>
-                        <a href="<?php echo $item_object_url; ?>" class="ribbon ribbon-xl btn-iframe preview_detail" target="_blank" rel="nofollow">
+                        <a href="<?php echo $item_object_url; ?>" class="ribbon ribbon-xl btn-iframe preview_detail"
+                           target="_blank" rel="nofollow">
                             <span class="icon"></span> Preview
                         </a>
                     <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
@@ -368,22 +374,14 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                             <p class="btn-contact">
                                 <a href="<?php echo $item_cta_button_pdf; ?>" target="_blank" class="btn">Download</a>
                             </p>
-                        <?php } else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url) && (strpos($item_cta_button_url, 'wisewire.com') !== false) ) { ?>
+                        <?php } else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url)) { ?>
                             <p class="btn-contact">
-                                <a href="<?php echo $item_cta_button_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" class="btn">Visit Website</a>
+                                <a <?php if (strpos($item_cta_button_url, 'wisewire.com') == false): ?> data-rel="nofollow" <?php endif; ?>
+                                        data-href="<?php echo $item_cta_button_url; ?>" data-toggle="modal"
+                                        data-target="#accessExternalConfirm" class="btn">Visit Website</a>
                                 <!--<a href="<?php echo $item_cta_button_url; ?>" target="_blank" class="btn">Visit Website</a>-->
                             </p>
-
-                        <?php } else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url) && (strpos($item_cta_button_url, 'wisewire.com') === false)) { ?>
-                            <p class="btn-contact">
-                                <a href="<?php echo $item_cta_button_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" rel="nofollow" class="btn">Visit Website</a>
-                                <!--<a href="<?php echo $item_cta_button_url; ?>" target="_blank" class="btn">Visit Website</a>-->
-                            </p>
-                        <?php }
-
-                        else if ($item_cta_button == 'Contact Us') { ?>
+                        <?php } else if ($item_cta_button == 'Contact Us') { ?>
                             <p class="btn-contact">
                                 <a href="#" data-toggle="modal" data-target="#contactModal" class="btn">Contact us</a>
                                 <!--<a href="javascript:Intercom('show')" class="btn">Contact us</a>-->
@@ -755,8 +753,10 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                         <?php if ($item_demo_viewer_template == "Iframe") { ?>
 
                             <?php if ($item_object_url): ?>
-                                <a href="<?php echo $item_object_url; ?>" class="btn-iframe" target="_blank" rel="nofollow" >
-                                    <span class="icon"></span><img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
+                                <a href="<?php echo $item_object_url; ?>" class="btn-iframe" target="_blank"
+                                   rel="nofollow">
+                                    <span class="icon"></span><img alt="" src="<?php echo $image[0]; ?>"
+                                                                   class="img-responsive"/>
                                 </a>
                             <?php else: ?>
                                 <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
@@ -794,37 +794,38 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                             <?php if ($item_demo_viewer_template == "Iframe") { ?>
 
                                 <?php if ($item_object_url): ?>
-                                    <a href="<?php echo $item_object_url; ?>" class="btn-iframe" rel="nofollow" target="_blank"><span
-                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                    <a href="<?php echo $item_object_url; ?>" class="btn-iframe" rel="nofollow"
+                                       target="_blank"><span
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                                     </a>
                                 <?php else: ?>
-                                    <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                    <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                                 <?php endif; ?>
 
                             <?php } else if ($item_demo_viewer_template == "PDF") { ?>
 
                                 <?php if ($item_preview_pdf): ?>
                                     <a href="<?php echo $item_preview_pdf; ?>" class="" target="_blank"><span
-                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                                     </a>
                                 <?php else: ?>
-                                    <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                    <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                                 <?php endif; ?>
 
                             <?php } else if ($item_demo_viewer_template == "Carousel") { ?>
 
                                 <?php if ($item_carousel_images): ?>
                                     <a href="#" class="" data-toggle="modal" data-target="#previewModal"><span
-                                                class="icon"></span><?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                                class="icon"></span><?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                                     </a>
                                 <?php else: ?>
-                                    <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                                    <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                                 <?php endif; ?>
 
                             <?php } ?>
 
                         <?php } else { ?>
-                            <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'detail'); ?>
+                            <?php echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title); ?>
                         <?php } ?>
 
                     <?php endif; ?>
@@ -832,7 +833,8 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
                     <?php if (substr($item_preview, 0, 1) === 'Y') { ?>
                         <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url) && $inIframeAllowed) { ?>
-                            <a href="<?php echo $item_object_url; ?>" class="ribbon ribbon-xl btn-iframe preview_detail" target="_blank" rel="nofollow" >
+                            <a href="<?php echo $item_object_url; ?>" class="ribbon ribbon-xl btn-iframe preview_detail"
+                               target="_blank" rel="nofollow">
                                 <span class="icon"></span> Preview
                             </a>
                         <?php } else if (($item_demo_viewer_template == "PDF") && ($item_preview_pdf)) { ?>
@@ -951,20 +953,13 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                             <p class="btn-contact">
                                 <a href="<?php echo $item_cta_button_pdf; ?>" target="_blank" class="btn">Download</a>
                             </p>
-                        <?php } else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url) && (strpos($item_cta_button_url, 'wisewire.com') !== false)) { ?>
+                        <?php } else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url)) { ?>
                             <p class="btn-contact">
-                                <a href="<?php echo $item_cta_button_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" class="btn">Visit Website</a>
-                                <!--<a href="<?php echo $item_cta_button_url; ?>" target="_blank" class="btn">Visit Website</a>-->
+                                <a <?php if (strpos($item_cta_button_url, 'wisewire.com') == false): ?> data-rel="nofollow" <?php endif; ?>
+                                        data-href="<?php echo $item_cta_button_url; ?>" data-toggle="modal"
+                                        data-target="#accessExternalConfirm" class="btn">Visit Website</a>
                             </p>
-                        <?php } else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url) && (strpos($item_cta_button_url, 'wisewire.com') === false)) { ?>
-                            <p class="btn-contact">
-                                <a href="<?php echo $item_cta_button_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" rel="nofollow" class="btn">Visit Website</a>
-                                <!--<a href="<?php echo $item_cta_button_url; ?>" target="_blank" class="btn">Visit Website</a>-->
-                            </p>
-                        <?php }
-                        else if ($item_cta_button == 'Contact Us') { ?>
+                        <?php } else if ($item_cta_button == 'Contact Us') { ?>
                             <p class="btn-contact">
                                 <a href="#" data-toggle="modal" data-target="#contactModal" class="btn">Contact us</a>
                                 <!--<a href="javascript:Intercom('show')" class="btn">Contact us</a>-->
@@ -1165,7 +1160,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                     <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                     <?php
                                 else:
-                                    echo $WWItems->get_thumbnail($item_content_type_icon, 'detail');
+                                    echo $WWItems->get_thumbnail_by_discipline($item_id, $item_content_type_icon, 'detail', $item_subdiscipline, $item_contributor, $title);
                                 endif;
                                 ?>
                             </div>
@@ -1360,7 +1355,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                             <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                             <?php
                                         else:
-                                            echo $WWItems->get_thumbnail($post->item_content_type_icon);
+                                            echo $WWItems->get_thumbnail_by_discipline($post->ID, $post->item_content_type_icon, 'thumb-related', $WWItems->get_subdiscipline($post->ID), get_field('item_contributor', $post->ID), get_the_title($post->ID));
                                         endif;
                                         ?>
                                     </div>
@@ -1428,7 +1423,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                                             <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                             <?php
                                         else:
-                                            echo $WWItems->get_thumbnail($item->item_content_type_icon);
+                                            echo $WWItems->get_thumbnail_by_discipline($item->ID, $item->item_content_type_icon, 'thumb-related', $WWItems->get_subdiscipline($item->ID), get_field('item_contributor', $item->ID), get_the_title($item->ID));
                                         endif;
                                         ?>
                                     </div>
@@ -1467,7 +1462,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 <div itemtype="http://schema.org/Review" itemscope>
     <meta itemprop="name" content="<?php echo $title; ?>">
     <div itemtype="http://schema.org/Rating" itemscope itemprop="reviewRating">
-        <meta content="<?php echo $item_ratings ? $item_ratings : 0 ?>" itemprop="ratingValue" />
+        <meta content="<?php echo $item_ratings ? $item_ratings : 0 ?>" itemprop="ratingValue"/>
     </div>
 </div>
 

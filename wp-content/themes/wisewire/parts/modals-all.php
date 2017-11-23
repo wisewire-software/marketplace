@@ -45,7 +45,7 @@
             
             <div class="container-fluid container-form">
               
-              <?php echo do_shortcode('[contact-form-7 id="14415" title="Feedback Form"]'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="14415" title="Feedback Form" html_id="feedback-form"]'); ?>
               
             </div>
 
@@ -92,7 +92,7 @@
             
             <div class="container-fluid container-form">
                             
-              <a href="#" class="btn go-link" rel="nofollow" target="_blank">Yes, take me to this content!</a>
+              <a href="#" class="btn go-link" target="_blank">Yes, take me to this content!</a>
               <a href="#" class="close" data-dismiss="modal" aria-label="Close">No Thanks.</a>
               
             </div>
@@ -156,7 +156,7 @@
             
             <div class="container-fluid container-form">            
 
-              <?php echo do_shortcode('[contact-form-7 id="190" title="Contact"]'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="190" title="Contact" html_id="contact-us-form"]'); ?>
               <?php 
                 if (  is_user_logged_in() ){      
                   $user_id = get_current_user_id();
@@ -285,7 +285,7 @@
               ?>
               <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive" />
               <?php else: ?>
-								<?php echo $WWItems->get_thumbnail($item_content_type_icon) ?>
+								<?php echo $WWItems->get_thumbnail_by_discipline($item->ID, $item_content_type_icon) ?>
 							<?php endif ?>
                             
                           </div>
@@ -455,7 +455,7 @@ Complete the form below to apply to be a seller with us.</p>
             
             <div class="container-fluid container-form">
                             
-              <?php echo do_shortcode('[contact-form-7 id="56762" title="Vendor Registration"]'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="56202" title="Vendor Registration" html_id="vendor-registration-form"]'); ?>
               
             </div>
             

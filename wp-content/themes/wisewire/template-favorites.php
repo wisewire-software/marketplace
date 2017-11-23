@@ -105,7 +105,7 @@ endforeach; endif;
                                                         <img alt="" src="<?php echo $image[0]; ?>"
                                                              class="img-responsive"/>
                                                     <?php else: ?>
-                                                        <?php echo $WWItems->get_thumbnail($item->content_type_icon, 'thumb-related', $item->subdiscipline, $item->author, $item->title) ?>
+                                                        <?php echo $WWItems->get_thumbnail_by_discipline($item->id, $item->content_type_icon, 'thumb-related', $item->subdiscipline, $item->author, $item->title) ?>
                                                     <?php endif ?>
                                                     <?php if ($item->preview === 'Y'): ?>
                                                         <div class="ribbon"><span class="icon"></span> Preview</div>
@@ -270,7 +270,7 @@ endforeach; endif;
                                                 ?>
                                                 <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                             <?php else: ?>
-                                                <?php echo $WWItems->get_thumbnail($item_content_type_icon) ?>
+                                                <?php echo $WWItems->get_thumbnail_by_discipline($item->ID, $item_content_type_icon) ?>
                                             <?php endif ?>
                                             <?php if (substr($item_preview, 0, 1) === 'Y'): ?>
                                                 <div class="ribbon"><span class="icon"></span> Preview</div>

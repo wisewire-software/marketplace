@@ -444,7 +444,7 @@ $url_link = $control->get_permalink();
                                                                     <img alt="" src="<?php echo $image[0]; ?>"
                                                                          class="img-responsive"/>
                                                                 <?php else: ?>
-                                                                    <?php echo $WWItems->get_thumbnail($item->content_type_icon, 'thumb-related', $item->subdiscipline, $item->author, $item->title) ?>
+                                                                    <?php echo $WWItems->get_thumbnail_by_discipline($item->id, $item->content_type_icon, 'thumb-related', $item->subdiscipline, $item->author, $item->title) ?>
                                                                 <?php endif ?>
 
                                                                 <?php if (substr($item->preview, 0, 1) === 'Y'): ?>
