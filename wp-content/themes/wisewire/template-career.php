@@ -45,8 +45,8 @@
 					<div class="modal-body">
 						<h3 id="subjectTitle<?php echo $counter; ?>"><?php echo $jobListData['job_title'];?></h3>
 						<?php echo $jobListData['job_description'];?>
-						<div class="career-form">
-							<?php echo do_shortcode('[contact-form-7 id="68148" title="Careers"]') ?>
+                        <div class="container-fluid container-form">
+                        <?php echo do_shortcode('[contact-form-7 id="68148" title="Careers" html_id="careers-form"]') ?>
 						</div>
 					</div>
 				</div>
@@ -64,7 +64,7 @@
 	$(document).ready(function(){
 		$('[id*="subjectTitle"]').each(function(){
 			var subject = $(this).text();
-			$(this).parent().find('#subject').val(subject).prop('readonly', true);
+			$(this).parent().find('#subject').val(subject);
 		});
 	})
 </script>

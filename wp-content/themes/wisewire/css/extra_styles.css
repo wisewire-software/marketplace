@@ -19,24 +19,23 @@ a.navbar-brand, a.navbar-brand:hover{
 	font-weight: 300
 }
 
-homevideoIframe, teiVideoIframe, publishVideoIframe2{
-	height:1000px;
-	width:100%;
-	max-width:560px; /* ancho máx*/
-	padding-top:56.25%; /* Relación: 16/9 = 56.25% */
-	position:relative;
-}
 /* Tamaño iframe === contenedor */
-iframe{
+#homevideoIframe iframe, #teiVideoIframe iframe, #publishVideoIframe2 iframe{
 	position:relative;
 	height:100%;
 	width:100%;
-	top:0px;
-	left:0px;
+	top:0;
+	left:0;
 }
 /*Responsive videos end*/
 
-.navbar-brand .logo {    
+
+.wrapper_captcha {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.navbar-brand .logo {
     margin-bottom: 6px;
 }
 
@@ -621,7 +620,6 @@ a.lo-item{display: block}
 	text-transform: uppercase;
 }
 
-
 /*Styles for new pages of b2b */
 .header.header_b2b_page{
 	background: transparent;
@@ -777,10 +775,10 @@ a.lo-item{display: block}
 	padding: 3px 14px;
 	font-weight: 600;
 }
-.sections_b2b .circle-number.circle-white{
-	background-color: #ffffff;
-	color: #33C2D2;
-}
+ .sections_b2b .circle-number.circle-white{
+	 background-color: #ffffff;
+	 color: #33C2D2;
+ }
 .sections_b2b .description-lightblue{
 	color: #E5FFFF;
 	font-size: 15px;
@@ -1072,7 +1070,7 @@ a.lo-item{display: block}
 	background: #c90e65;
 }
 .general-section-schedule .content-form-sd .content-fields-form-sd #form-schedule-demo + div.wpcf7-mail-sent-ok,
-.general-section-schedule .content-form-sd .content-fields-form-sd #form-schedule-demo + div.wpcf7-validation-errors{
+ .general-section-schedule .content-form-sd .content-fields-form-sd #form-schedule-demo + div.wpcf7-validation-errors{
 	display: none !important;
 }
 .general-section-schedule .content-form-sd .footer-form-sd{

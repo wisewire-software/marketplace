@@ -845,8 +845,18 @@ $('#accessPlatformConfirm').on('show.bs.modal', function (e) {
 });
 
 $('#accessExternalConfirm').on('show.bs.modal', function (e) {
-    $href = $(e.relatedTarget).attr('href');
-    $(this).find('.modal-body .go-link').prop('href', $href);
+    var $target = $(e.relatedTarget);
+    var dataAttr = {
+        href : $target.data('href')
+    };
+
+    $(this).find('.modal-body .go-link').removeAttr('rel');
+
+    if($target.data('rel')){
+        dataAttr['rel'] = $target.data('rel');
+    }
+
+    $(this).find('.modal-body .go-link').attr(dataAttr);
 });
 
 $("#accessExternalConfirm .go-link, #accessPlatformConfirm .go-link").on('click', function () {

@@ -139,7 +139,7 @@ $item_carousel_images = array();
                                 <img alt="" src="<?php echo $item_main_image_attributes[0]; ?>" class="img-responsive"/>
                                 <?php
                             else:
-                                echo $WWItems->get_thumbnail($post->content_type_icon, 'home');
+                                echo $WWItems->get_thumbnail_by_discipline($post->id, $post->content_type_icon, 'home');
                             endif;
                             ?>
                         </a>
@@ -341,7 +341,7 @@ $item_carousel_images = array();
                                                     ?>
                                                     <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                                 <?php else: ?>
-                                                    <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'thumb-vertical') ?>
+                                                    <?php echo $WWItems->get_thumbnail_by_discipline($item->ID, $item_content_type_icon, 'thumb-vertical') ?>
                                                 <?php endif ?>
                                                 <?php if (substr($item_preview, 0, 1) === 'Y'): ?>
                                                     <div class="ribbon"><span class="icon"></span> Preview</div>
@@ -587,7 +587,7 @@ $item_carousel_images = array();
                                                     ?>
                                                     <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                                 <?php else: ?>
-                                                    <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'thumb-vertical') ?>
+                                                    <?php echo $WWItems->get_thumbnail_by_discipline($item->ID, $item_content_type_icon, 'thumb-vertical') ?>
                                                 <?php endif ?>
                                                 <?php if (substr($item_preview, 0, 1) === 'Y'): ?>
                                                     <div class="ribbon"><span class="icon"></span> Preview</div>
@@ -737,7 +737,7 @@ $item_carousel_images = array();
                                                     ?>
                                                     <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                                 <?php else: ?>
-                                                    <?php echo $WWItems->get_thumbnail($item_content_type_icon, 'thumb-vertical') ?>
+                                                    <?php echo $WWItems->get_thumbnail_by_discipline($item->ID, $item_content_type_icon, 'thumb-vertical') ?>
                                                 <?php endif ?>
                                                 <?php if (substr($item_preview, 0, 1) === 'Y'): ?>
                                                     <div class="ribbon"><span class="icon"></span> Preview</div>

@@ -121,7 +121,7 @@ $featured_item = false ?>
                                 <img alt="" src="<?php echo $item_main_image_attributes[0]; ?>" class="img-responsive"/>
                                 <?php
                             else:
-                                echo $WWItems->get_thumbnail($post->content_type_icon, 'featured');
+                                echo $WWItems->get_thumbnail_by_discipline($post->id, $post->content_type_icon, 'featured', $post->subdiscipline, $post->author, $post->title);
                             endif;
                             ?>
                         </a>
@@ -213,7 +213,7 @@ $featured_item = false ?>
                                                                  src="<?php echo $item_main_image_attributes[0]; ?>"
                                                                  class="img-responsive"/>
                                                         <?php else: ?>
-                                                            <?php echo $WWItems->get_thumbnail($post->content_type_icon, 'thumbnail'); ?>
+                                                            <?php echo $WWItems->get_thumbnail_by_discipline($post->id, $post->content_type_icon, 'thumbnail', $post->subdiscipline, $post->author, $post->title); ?>
                                                         <?php endif ?>
                                                         <?php if ($item_preview == 'Y'): ?>
                                                             <div class="ribbon"><span class="icon"></span> Preview</div>
@@ -414,21 +414,6 @@ $featured_item = false ?>
     </div><!-- /visible-xs-block -->
 
 <?php endif; ?>
-
-<!-- SEO improvements -->
-<div class="container">
-    <div class="row container-seo">
-        <div class="col-md-9">
-            <h1 class="title-page">
-                <?php echo nl2br($control->title); ?>
-            </h1>
-            <div class="meta-description-page">
-                <?php echo nl2br($control->meta_description) ?>
-            </div>
-        </div>
-        <div class="col-md-3"></div>
-    </div>
-</div>
 
 <div class="back-to-top" id="back-to-top">
     <a href="#header" class="scroll">Back to top</a>

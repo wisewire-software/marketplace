@@ -15,9 +15,7 @@
       $register_headline = get_field('register_headline');
       $register_description = get_field('register_description');
     ?>
-    
-    
-    
+        
     <?php
     
     /*
@@ -48,10 +46,16 @@
         if (cr_validate($fields, $errors)) {
           
           // If successful, register user
-          // If successful, register user
+          cr_sanitize($fields);
           $id = wp_insert_user($fields);
+          update_user_meta($id, 'user_ed_role', $fields['user_ed_role']);
+          update_user_meta($id, 'user_ed_title', $fields['user_ed_title']);          
           wp_set_current_user($id);
           wp_set_auth_cookie($id);
+          $_SESSION['teacher_reg_form_event'] = true;
+
+          $fields['subject'] = 'Register New User';
+          send_intercom($fields);
           
           // And display a message
           echo '<div class="alert alert-success">Registration complete. You can now login.</div>';
@@ -85,6 +89,19 @@
       // Generate form
       cr_display_form($fields, $errors);
     }
+
+    function is_valid_recaptcha() {
+      if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+        $secret = '6LfIxjYUAAAAANyJIjRdhnyydgDuQxYKOwCDajI0';
+        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+        $responseData = json_decode($verifyResponse);
+        if($responseData->success) {
+          return true;
+        }
+      }
+
+      return false;
+    }
     
     function cr_sanitize(&$fields) {
       $fields['user_login']   =  isset($fields['user_email'])  ? sanitize_user($fields['user_email']) : '';
@@ -94,6 +111,8 @@
       $fields['user_email_confirm']   =  isset($fields['user_email_confirm'])  ? sanitize_email($fields['user_email_confirm']) : '';
       $fields['first_name']   =  isset($fields['first_name'])  ? sanitize_text_field($fields['first_name']) : '';
       $fields['last_name']    =  isset($fields['last_name'])   ? sanitize_text_field($fields['last_name']) : '';
+      $fields['user_ed_role']    =  isset($fields['user_ed_role'])   ? sanitize_text_field($fields['user_ed_role']) : '';
+      $fields['user_ed_title']    =  isset($fields['user_ed_title'])   ? sanitize_text_field($fields['user_ed_title']) : '';
     }
     
     function cr_display_form($fields = array(), $errors = null) {
@@ -143,7 +162,34 @@
           <div class="form-group">
             <input type="password" class="form-control" placeholder="Confirm Password*" name="user_pass_confirm" required>
           </div>
-        </div>    
+        </div>
+
+        <div class="form-groups">
+          <div class="form-group">
+            <select class="form-control" name="user_ed_role" required>
+              <option value="">Select Your Role*</option>
+              <?php 
+                $roles = array(
+                  "School Leadership (K-12)",
+                  "School Leadership (Higher Ed)",
+                  "District Leadership",
+                  "Educator (K-12)",
+                  "Educator (Higher Ed)",
+                  "Publisher",
+                  "Other"
+                );
+                foreach ($roles as $value) {
+                  $selected_attr = (isset($fields["user_ed_role"]) && $fields["user_ed_role"] == $value) ? 'selected="selected"' : '';
+                  echo '<option value="' . $value . '" ' . $selected_attr . '>' . $value . '</option>';                   
+                } 
+              ?>              
+            </select>
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Title*" name="user_ed_title" maxlength="100" required
+                   value="<?php echo (isset($fields['user_ed_title']) ? $fields['user_ed_title'] : '') ?>" />
+          </div>
+        </div>
         <?php
           $register_terms = get_field('register_terms');
         ?>
@@ -177,6 +223,9 @@
 
         ?>
         <input type="hidden" name="redirect_to" value="<?php if ($redirect_to_item) { echo $redirect_to_item; } else { echo !empty($redirect_to_publish)  ? $redirect_to_publish : home_url(); } ?>">
+        <div class="wrapper_captcha" style="margin-bottom: 10px; overflow: hidden;">
+          <div class="g-recaptcha" data-sitekey="6LfIxjYUAAAAADuR77YyaEq4ZA2C0gYi0kwJZN7p"></div>
+        </div>        
         <button class="btn" type="submit" name="submit">CREATE ACCOUNT</button>
         
       </form>
@@ -193,6 +242,8 @@
         'user_email_confirm'   =>  isset($_POST['user_email_confirm'])   ?  $_POST['user_email_confirm']        :  '',
         'first_name'   =>  isset($_POST['first_name'])   ?  $_POST['first_name']        :  '',
         'last_name'    =>  isset($_POST['last_name'])    ?  $_POST['last_name']        :  '',
+        'user_ed_role'    =>  isset($_POST['user_ed_role'])    ?  $_POST['user_ed_role']        :  '',
+        'user_ed_title'    =>  isset($_POST['user_ed_title'])    ?  $_POST['user_ed_title']        :  '',
         'redirect_to'    =>  isset($_POST['redirect_to'])    ?  $_POST['redirect_to']        :  '',
       );
     }
@@ -248,8 +299,20 @@
       
       if ( ($fields['user_email']) != $fields['user_email_confirm']) {
         $errors->add('email', 'Emails do not match');
-      }     
+      }
+
+      if (empty($fields['user_ed_role'])) {
+        $errors->add('user_ed_role', 'Role is required');
+      }
+
+      if (empty($fields['user_ed_title'])) {
+        $errors->add('user_ed_title', 'Title is required');
+      }      
       
+      // validate re-captcha
+      if (!is_valid_recaptcha()) {
+        $errors->add('re-captcha', 'Re-captcha is invalid.');
+      }
       
       // If errors were produced, fail
       if (count($errors->get_error_messages()) > 0) {
@@ -366,6 +429,7 @@
                     }
                     ?>
                     <input type="hidden" name="redirect_to" value="<?php if ($redirect_to_item) { echo $redirect_to_item; } else { echo !empty($redirect_to_publish)  ? $redirect_to_publish : home_url(); } ?>">
+                    <input type="hidden" name="login_source" value="template_user_login">
                   </div>
                 </div>
                 <div class="clear"></div>

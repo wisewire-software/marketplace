@@ -202,7 +202,7 @@ if ($posts): ?>
                                     <img src="<?php echo $item_main_image_attributes[0]; ?>" alt=""
                                          class="img-responsive">
                                 <?php else: ?>
-                                    <?php echo $WWItems->get_thumbnail($post->content_type_icon, 'home-carousel') ?>
+                                    <?php echo $WWItems->get_thumbnail_by_discipline($post->id, $post->content_type_icon, 'home-carousel') ?>
                                 <?php endif ?>
                             </div>
                             <div class="content">

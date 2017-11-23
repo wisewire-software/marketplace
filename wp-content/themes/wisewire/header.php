@@ -47,6 +47,7 @@
     <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/img/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <script>dataLayer = [];</script>
     <?php
 
       global $post;
@@ -67,10 +68,22 @@
     
     <?php wp_head(); ?>
     <script>var $ = jQuery.noConflict();</script>
+
   </head>
 
 <body <?php body_class(); ?>>
-  
+  <!-- fire teacher log in event to Google Tag Manager -->
+  <?php if ( $_SESSION['teacher_loggedin_form_event'] ) { ?>
+    <script type="text/javascript">dataLayer.push({'event': 'teacherLogInFormSubmitted'});</script>
+    <?php $_SESSION['teacher_loggedin_form_event'] = false; ?>
+  <?php } ?>
+
+  <!-- fire teacher registration event to Google Tag Manager -->
+  <?php if ( $_SESSION['teacher_reg_form_event'] ) { ?>
+    <script type="text/javascript">dataLayer.push({'event': 'teacherRegFormSubmitted'});</script>
+    <?php $_SESSION['teacher_reg_form_event'] = false; ?>
+  <?php } ?>
+
   <?php // Include SVG icons that are made as sprites ?>
   <?php get_template_part('parts/svg', 'icons'); ?>
   
@@ -81,8 +94,8 @@
     <div class="body-overlay"></div>
     
     <header class="header <?php if ( is_page( $page = 'Partner Solutions' ) ) { ?> header_b2b_page <?php } ?> " id="header">
-      
-      <div class="container  <?php if ( is_page( $page = 'Schedule Demo' ) or is_page( $page = 'Thank you' )) { ?> hidden-nav-s-demo <?php } ?>">
+
+      <div class="container <?php if ( is_page( $page = 'Schedule Demo' ) or is_page( $page = 'Thank you' )) { ?> hidden-nav-s-demo <?php } ?>">
         
         <nav class="navbar visible-xs-block">
        
@@ -189,7 +202,7 @@
           
         </nav>
       
-        <nav class="navbar hidden-xs"> 
+        <nav class="navbar hidden-xs">
                 
           <div class="navbar-header">            
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="logo"></span>education marketplace</a>
@@ -200,14 +213,14 @@
               <li class="menu-item-explore">
                 <a href="/explore">Explore</a>
               </li>
-              <li class="menu-item-publish">
+              <li class="menu-item-publish header-links-space">
                 <a href="/create">Create</a>
               </li>
-              <li class="menu-item-custom">
+              <li class="menu-item-custom header-links-space">
                 <a href="/partnership-solutions">Partner</a>
               </li>
               <?php if ( is_user_logged_in() ) { ?>
-              <li class="menu-item-user">
+              <li class="menu-item-user header-links-space">
                 <a href="#" id="logout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="name">Hi, <?php echo $current_user->user_firstname; ?></span> <span class="caret"></span></a>
                 <ul class="dropdown-menu dropdown-logout" aria-labelledby="logout">
                   <li><a href="/my-account/">My Account</a></li>
