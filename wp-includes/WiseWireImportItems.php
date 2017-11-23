@@ -572,7 +572,7 @@ class WiseWireImportItems
 
         $this->update_grades_post($post_id, $post['M']);
 
-        die();
+       // die();
 
         /* -----------------------------------------------------------------  END HELLOARI  ------------------ */
 
@@ -644,7 +644,7 @@ class WiseWireImportItems
                 $sql = $this->wpdb->prepare("DELETE FROM wp_term_relationships WHERE object_id = %d AND term_taxonomy_id IN(".$grade_keys.")",$post_id );
                 $this->wpdb->query($sql);
 
-                echo $this->wpdb->last_query."<br>";
+                //echo $this->wpdb->last_query."<br>";
 
 
                 foreach ($data_grades as $key => $grade){
@@ -652,7 +652,7 @@ class WiseWireImportItems
                     if($key_grade){
                         $sql = $this->wpdb->prepare("INSERT INTO wp_term_relationships (object_id, term_taxonomy_id, term_order) VALUES (%d, %d, %d)", $post_id, $key_grade, $key);
                         $this->wpdb->query($sql);
-                        echo $this->wpdb->last_query."<br>";
+                       // echo $this->wpdb->last_query."<br>";
                     }
                 }
             }
