@@ -394,26 +394,6 @@ class Controller_WiseWireItems {
             }
         }
 
-
-
-/*        else if ($subdiscipline != "" && in_array($subdiscipline, $this->map_subdisciplines)) {
-
-            $attachment_image_src = $url . "/img/thumbnails/platform/" . $subdiscipline . "/" . $subdiscipline . "-" . $width . "x" . $height . ".jpg";
-
-        } else {
-            $discipline = isset($this->get_discipline($item_id)['slug']) ? $this->get_discipline($item_id)['slug'] : '';
-
-            if ($discipline) {
-                $attachment_image_src = $uploads['baseurl'] . "/disciplines/" . $discipline . "/" . $discipline . "-" . $width . "x" . $height . ".jpg";
-            } else {
-                $content_type = strtolower($content_type);
-                $placeholder_id = isset($this->types[$content_type])
-                    ? $this->placeholders[$this->types[$content_type]['color']]
-                    : $this->placeholders[1];
-                $attachment_image_src = wp_get_attachment_image_src($placeholder_id, $size)[0];
-            }
-        }*/
-
         return '<img src="' . $attachment_image_src . '" class="img-responsive">';
     }
 
