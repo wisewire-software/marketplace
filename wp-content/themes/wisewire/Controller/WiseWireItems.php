@@ -363,25 +363,34 @@ class Controller_WiseWireItems {
         $height = $this->get_image_size($size)['height'];
         $uploads = wp_upload_dir();
 
+
         if ($title != "" && $author == "OpenStax College" && $value_title = $this->validate_title($title)) {
 
             $attachment_image_src = $url . "/img/thumbnails/openstax/" . $value_title . "/" . $value_title . "-" . $width . "x" . $height . ".jpg";
 
-        } else if ($subdiscipline != "" && in_array($subdiscipline, $this->map_subdisciplines)) {
+        }else{
+            if(preg_match('/[a-zA-Z]+/',$item_id)){
+                if ($subdiscipline != "" && in_array($subdiscipline, $this->map_subdisciplines)){
+                    $attachment_image_src = $url . "/img/thumbnails/platform/" . $subdiscipline . "/" . $subdiscipline . "-" . $width . "x" . $height . ".jpg";
+                }else{
+                    $content_type = strtolower($content_type);
+                    $placeholder_id = isset($this->types[$content_type])
+                        ? $this->placeholders[$this->types[$content_type]['color']]
+                        : $this->placeholders[1];
+                    $attachment_image_src = wp_get_attachment_image_src($placeholder_id, $size)[0];
+                }
+            }else{
+                $discipline = isset($this->get_discipline($item_id)['slug']) ? $this->get_discipline($item_id)['slug'] : '';
 
-            $attachment_image_src = $url . "/img/thumbnails/platform/" . $subdiscipline . "/" . $subdiscipline . "-" . $width . "x" . $height . ".jpg";
-
-        } else {
-            $discipline = isset($this->get_discipline($item_id)['slug']) ? $this->get_discipline($item_id)['slug'] : '';
-
-            if ($discipline) {
-                $attachment_image_src = $uploads['baseurl'] . "/disciplines/" . $discipline . "/" . $discipline . "-" . $width . "x" . $height . ".jpg";
-            } else {
-                $content_type = strtolower($content_type);
-                $placeholder_id = isset($this->types[$content_type])
-                    ? $this->placeholders[$this->types[$content_type]['color']]
-                    : $this->placeholders[1];
-                $attachment_image_src = wp_get_attachment_image_src($placeholder_id, $size)[0];
+                if ($discipline) {
+                    $attachment_image_src = $uploads['baseurl'] . "/disciplines/" . $discipline . "/" . $discipline . "-" . $width . "x" . $height . ".jpg";
+                } else {
+                    $content_type = strtolower($content_type);
+                    $placeholder_id = isset($this->types[$content_type])
+                        ? $this->placeholders[$this->types[$content_type]['color']]
+                        : $this->placeholders[1];
+                    $attachment_image_src = wp_get_attachment_image_src($placeholder_id, $size)[0];
+                }
             }
         }
 
