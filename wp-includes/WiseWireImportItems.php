@@ -572,8 +572,6 @@ class WiseWireImportItems
 
         $this->update_grades_post($post_id, $post['M']);
 
-       // die();
-
         /* -----------------------------------------------------------------  END HELLOARI  ------------------ */
 
         // set keywords
@@ -590,21 +588,6 @@ class WiseWireImportItems
 
         //set object types
         wp_set_post_terms($post_id, array_map('trim', explode(';', $post['O'])), 'ObjectType');
-
-
-        //Testing register grade
-        /*            if($post['M']){
-                        $data_grades = explode(',', $post['M']);
-
-                        if(count($data_grades)){
-                            foreach ($data_grades as $grade){
-                                $obj_grade = get_term_by('name', $grade, 'category');
-                                $sql = $this->wpdb->prepare("INSERT INTO wp_term_relationships (object_id, term_taxonomy_id, term_order) VALUES (".$prod_id.", '".$obj_grade->term_taxonomy_id."', '0');");
-                                $this->wpdb->query($sql);
-                            }
-                        }
-
-                    }*/
 
         $this->wpdb->query("COMMIT;");
     }
@@ -644,15 +627,11 @@ class WiseWireImportItems
                 $sql = $this->wpdb->prepare("DELETE FROM wp_term_relationships WHERE object_id = %d AND term_taxonomy_id IN(".$grade_keys.")",$post_id );
                 $this->wpdb->query($sql);
 
-                //echo $this->wpdb->last_query."<br>";
-
-
                 foreach ($data_grades as $key => $grade){
                     $key_grade = array_search($grade, $this->gradesLabel());
                     if($key_grade){
                         $sql = $this->wpdb->prepare("INSERT INTO wp_term_relationships (object_id, term_taxonomy_id, term_order) VALUES (%d, %d, %d)", $post_id, $key_grade, $key);
                         $this->wpdb->query($sql);
-                       // echo $this->wpdb->last_query."<br>";
                     }
                 }
             }
