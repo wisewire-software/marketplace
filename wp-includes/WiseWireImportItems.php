@@ -619,7 +619,7 @@ class WiseWireImportItems
     private function update_grades_post($post_id, $grades)
     {
         if ($grades) {
-            $data_grades = explode(',', $grades);
+            $data_grades = explode(';', $grades);
 
             if (count($data_grades)) {
                 $grade_keys = implode(', ', array_keys($this->gradesLabel()) );
@@ -628,15 +628,31 @@ class WiseWireImportItems
                 $this->wpdb->query($sql);
 
                 foreach ($data_grades as $key => $grade){
-                    $key_grade = array_search($grade, $this->gradesLabel());
+                    $grade = trim($grade);
+
+                    $key_grade = array_search(trim($grade), $this->gradesLabel());
                     if($key_grade){
                         $sql = $this->wpdb->prepare("INSERT INTO wp_term_relationships (object_id, term_taxonomy_id, term_order) VALUES (%d, %d, %d)", $post_id, $key_grade, $key);
                         $this->wpdb->query($sql);
                     }
+
+
                 }
             }
         }
 
+    }
+
+    public function sync_post_grades(){
+
+        $query = "SELECT p.post_id, p.meta_value  FROM  wp_postmeta p INNER JOIN summarized_item_metadata s ON p.post_id = s.id AND s.source = 'CMS' and grade IS NULL WHERE p.meta_key='item_grade_level'";
+
+        $data_post = $this->wpdb->get_results($query, ARRAY_A);
+
+        foreach ($data_post as $post){
+            $this->update_grades_post($post['post_id'], $post['meta_value']);
+            echo "Update Post ". $post['post_id']."<br>";
+        }
     }
 
     private function import_image($filepath, $parent_post_id = 0, $type = '')
