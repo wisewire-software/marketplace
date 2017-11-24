@@ -1171,17 +1171,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             </p>
                         <?php } else if (($item_cta_button == 'Visit Website') && ($item->previewURL) && (strpos($item->previewURL, 'wisewire.com') !== false)) { ?>
                             <p class="btn-contact">
-                                <!--<a href="<?php echo $item->previewURL; ?>" target="_blank" class="btn">Visit Website</a>-->
-                                <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" class="btn">Visit Website</a>
-
-                            </p>
-                        <?php } else if (($item_cta_button == 'Visit Website') && ($item->previewURL) && (strpos($item->previewURL, 'wisewire.com') === false)) { ?>
-                            <p class="btn-contact">
-                                <!--<a href="<?php echo $item->previewURL; ?>" target="_blank" class="btn">Visit Website</a>-->
-                                <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" rel="nofollow" class="btn">Visit Website</a>
-
+                                <a <?php if(strpos($item->previewURL, 'wisewire.com') === false): ?> data-rel="nofollow" <?php endif; ?> data-href="<?php echo $item_preview_url; ?>" data-toggle="modal" data-target="#accessExternalConfirm" class="btn">Visit Website</a>
                             </p>
                         <?php }
                             else if ($item_cta_button == 'Contact Us') { ?>
@@ -1702,22 +1692,9 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                             </p>
                         <?php } else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url) && (strpos($item_cta_button_url, 'wisewire.com') !== false)) { ?>
                             <p class="btn-contact">
-                                <!--<a href="<?php echo $item_cta_button_url; ?>" target="_blank" class="btn">Visit Website</a>-->
-                                <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" class="btn">Visit Website</a>
+                                <a <?php if(strpos($item_cta_button_url, 'wisewire.com') === false): ?> data-rel="nofollow" <?php endif; ?> data-href="<?php echo $item_preview_url; ?>" data-toggle="modal" data-target="#accessExternalConfirm" class="btn">Visit Website</a>
                             </p>
-                        <?php }
-
-                        else if (($item_cta_button == 'Visit Website') && ($item_cta_button_url) && (strpos($item_cta_button_url, 'wisewire.com') === false)) { ?>
-                            <p class="btn-contact">
-                                <!--<a href="<?php echo $item_cta_button_url; ?>" target="_blank" class="btn">Visit Website</a>-->
-                                <a href="<?php echo $item_preview_url; ?>" data-toggle="modal"
-                                   data-target="#accessExternalConfirm" rel="nofollow" class="btn">Visit Website</a>
-                            </p>
-                        <?php }
-
-
-                            else if ($item_cta_button == 'Contact Us') { ?>
+                        <?php } else if ($item_cta_button == 'Contact Us') { ?>
                             <p class="btn-contact">
                                 <a href="#" data-toggle="modal" data-target="#contactModal" class="btn">Contact us</a>
                             </p>
@@ -2119,7 +2096,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'pod');
                                                 <img alt="" src="<?php echo $image[0]; ?>" class="img-responsive"/>
                                                 <?php
                                             else:
-                                                echo $WWItems->get_thumbnail_by_discipline($post->ID, $post->item_content_type_icon);
+                                                echo $WWItems->get_thumbnail_by_discipline($post->ID, $post->item_content_type_icon, 'detail');
                                             endif;
                                             ?>
                                         </div>

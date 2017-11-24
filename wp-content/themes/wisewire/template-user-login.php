@@ -53,6 +53,9 @@
           wp_set_current_user($id);
           wp_set_auth_cookie($id);
           $_SESSION['teacher_reg_form_event'] = true;
+
+          $fields['subject'] = 'Register New User';
+          send_intercom($fields);
           
           // And display a message
           echo '<div class="alert alert-success">Registration complete. You can now login.</div>';
@@ -221,7 +224,7 @@
         ?>
         <input type="hidden" name="redirect_to" value="<?php if ($redirect_to_item) { echo $redirect_to_item; } else { echo !empty($redirect_to_publish)  ? $redirect_to_publish : home_url(); } ?>">
         <div class="wrapper_captcha" style="margin-bottom: 10px; overflow: hidden;">
-          <div class="g-recaptcha" data-sitekey="6LfIxjYUAAAAADuR77YyaEq4ZA2C0gYi0kwJZN7p"></div>  
+          <div class="g-recaptcha" data-sitekey="6LfIxjYUAAAAADuR77YyaEq4ZA2C0gYi0kwJZN7p"></div>
         </div>        
         <button class="btn" type="submit" name="submit">CREATE ACCOUNT</button>
         
@@ -308,7 +311,7 @@
       
       // validate re-captcha
       if (!is_valid_recaptcha()) {
-        $errors->add('re-captcha', 'Re-captcha is invalid.');        
+        $errors->add('re-captcha', 'Re-captcha is invalid.');
       }
       
       // If errors were produced, fail
