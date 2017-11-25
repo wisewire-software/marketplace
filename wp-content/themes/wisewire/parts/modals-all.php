@@ -429,7 +429,7 @@
 	<?php endif; ?>
 	
 	<?php
-	if(is_page(53894) || is_page('sellwithus')){
+	if(is_page(56762) || is_page('sellwithus')){
 	?>
     
     <div class="modal fade" id="vendorModal" tabindex="-1" role="dialog" aria-labelledby="customizeModalLabel">
