@@ -1394,3 +1394,6 @@ a.lo-item{display: block}
 		margin-bottom: 0px !important;
 	}
 }
+.link-header-blog{
+	margin-right: -15px;
+}
