@@ -190,6 +190,9 @@
               <li class="menu-item-custom">
                 <a href="/partnership-solutions">Partner</a>
               </li>
+                <li class="menu-item-custom">
+                    <a href="https://www.wisewire.com/blog">Blog</a>
+                </li>
               <li class="menu-item-testimonials">
                 <a href="/testimonials">Testimonials</a>
               </li>
@@ -218,6 +221,9 @@
               </li>
               <li class="menu-item-custom header-links-space">
                 <a href="/partnership-solutions">Partner</a>
+              </li>
+              <li class="menu-item-custom header-links-space link-header-blog">
+                <a href="https://www.wisewire.com/blog">Blog</a>
               </li>
               <?php if ( is_user_logged_in() ) { ?>
               <li class="menu-item-user header-links-space">
