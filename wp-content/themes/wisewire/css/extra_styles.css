@@ -35,7 +35,7 @@ a.navbar-brand, a.navbar-brand:hover{
 	overflow: hidden;
 }
 
-.navbar-brand .logo {    
+.navbar-brand .logo {
     margin-bottom: 6px;
 }
 
@@ -1393,4 +1393,7 @@ a.lo-item{display: block}
 	body.page-template-template-schedule-demo{
 		margin-bottom: 0px !important;
 	}
+}
+.link-header-blog{
+	margin-right: -15px;
 }
