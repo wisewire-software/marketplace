@@ -1397,3 +1397,12 @@ a.lo-item{display: block}
 .link-header-blog{
 	margin-right: -15px;
 }
+
+.line-break-menu{
+	clear: both;
+	margin-top: -12px !important;
+	margin-right: -20px !important;
+}
+.line-break-menu li.cartmenu{
+	margin-top: 3px;
+}
