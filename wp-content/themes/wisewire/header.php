@@ -190,6 +190,9 @@
               <li class="menu-item-custom">
                 <a href="/partnership-solutions">Partner</a>
               </li>
+              <li class="menu-item-custom">
+                <a href="https://www.wisewire.com/blog">Blog</a>
+              </li>
               <li class="menu-item-testimonials">
                 <a href="/testimonials">Testimonials</a>
               </li>
@@ -219,7 +222,14 @@
               <li class="menu-item-custom header-links-space">
                 <a href="/partnership-solutions">Partner</a>
               </li>
+              <li class="menu-item-custom header-links-space link-header-blog">
+                <a href="https://www.wisewire.com/blog">Blog</a>
+              </li>
               <?php if ( is_user_logged_in() ) { ?>
+
+              </ul>
+              <ul class="navbar-nav navbar-right line-break-menu">
+
               <li class="menu-item-user header-links-space">
                 <a href="#" id="logout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="name">Hi, <?php echo $current_user->user_firstname; ?></span> <span class="caret"></span></a>
                 <ul class="dropdown-menu dropdown-logout" aria-labelledby="logout">
