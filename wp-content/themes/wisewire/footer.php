@@ -34,12 +34,12 @@
                     <li><a href="#" data-toggle="modal" data-target="#contactModal" >Contact us</a></li>
                 </ul>
                 <ul>
-                    <li><a target="_blank" href="https://blog.wisewire.com/">Blog</a></li>
+                    <li><a target="_blank" href="https://www.wisewire.com/blog">Blog</a></li>
                     <li><a href="/press">Press</a></li>
                     <li><a href="/careers">Careers</a></li>
                 </ul>
             </div>
-            
+
             <div class="col-sm-4">
               
               <?php
