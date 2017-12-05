@@ -63,24 +63,6 @@ $item_level_of_rigor = get_field('item_level_of_rigor');
 
 $is_hide_item = get_field('is_hide_item');
 
-$inIframeAllowed = true;
-
-
-$curl = curl_init();
-curl_setopt_array($curl, array(
-    CURLOPT_HEADER => true,
-    CURLOPT_NOBODY => true,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_URL => $item_object_url));
-$headers = explode("\n", curl_exec($curl));
-curl_close($curl);
-
-foreach ($headers as $key => $value) {
-    if (trim($value) == "X-Frame-Options: SAMEORIGIN" || trim($value) == "X-Frame-Options: DENY") {
-        $inIframeAllowed = false;
-    }
-}
-
 // $item_tags = get_tags();
 $item_standards = get_the_terms(get_the_ID(), 'Standards');
 
@@ -316,7 +298,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
                 <?php endif; ?>
 
                 <?php if (substr($item_preview, 0, 1) === 'Y') { ?>
-                    <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url) && $inIframeAllowed) { ?>
+                    <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url)) { ?>
                         <a href="<?php echo $item_object_url; ?>" class="ribbon ribbon-xl btn-iframe preview_detail"
                            target="_blank" rel="nofollow">
                             <span class="icon"></span> Preview
@@ -832,7 +814,7 @@ $is_favorite = $fav_controller->is_favorite($item_object_id, 'item');
 
 
                     <?php if (substr($item_preview, 0, 1) === 'Y') { ?>
-                        <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url) && $inIframeAllowed) { ?>
+                        <?php if (($item_demo_viewer_template == "Iframe") && ($item_object_url)) { ?>
                             <a href="<?php echo $item_object_url; ?>" class="ribbon ribbon-xl btn-iframe preview_detail"
                                target="_blank" rel="nofollow">
                                 <span class="icon"></span> Preview
