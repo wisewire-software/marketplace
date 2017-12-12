@@ -65,10 +65,26 @@ class WP_Intercom
         return $this->httpCall($this->apiEndpoint . 'messages', 'POST', json_encode($data));
     }
 
-    public function createUpdateUser($email)
+    public function createUpdateUser($email, $isUser, $firstName, $lastName, $phone, $company, $title, $comments)
     {
         $data = array();
         $data['email'] = $email;
-        return $this->httpCall($this->apiEndpoint . 'users', 'POST', json_encode($data));
+        if (!is_null($phone) && trim($phone) !== '') {
+            $data['phone'] = $phone;
+        }
+        if (!is_null($firstName) && trim($firstName) !== '' && !is_null($lastName) && trim($lastName) !== '') {
+            $data['name'] = $firstName . ' ' . $lastName;
+        }
+        $data['custom_attributes'] = array();
+        if (!is_null($company) && trim($company) !== '') {
+            $data['custom_attributes']['Company'] = $company;
+        }
+        if (!is_null($title) && trim($title) !== '') {
+            $data['custom_attributes']['job_title'] = $title;
+        }
+        if (!is_null($comments) && trim($comments) !== '') {
+            $data['custom_attributes']['Notes'] = $comments;
+        }
+        return $this->httpCall($this->apiEndpoint . ($isUser ? 'users' : 'contacts'), 'POST', json_encode($data));
     }
 }

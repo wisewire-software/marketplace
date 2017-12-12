@@ -55,7 +55,7 @@
           $_SESSION['teacher_reg_form_event'] = true;
 
           $fields['subject'] = 'Register New User';
-          send_intercom($fields);
+          send_intercom($fields, true);
           
           // And display a message
           echo '<div class="alert alert-success">Registration complete. You can now login.</div>';

@@ -239,7 +239,8 @@ class WPCF7_Submission {
 
 		do_action( 'wpcf7_before_send_mail', $contact_form );
 
-		$send_intercom = send_intercom($contact_form->prop('mail')['body_message']);
+		// TODO: This needs to be changed to a hook
+		$send_intercom = send_intercom($contact_form->prop('mail')['body_message'], false);
 
 		if(!$send_intercom){
 			return false;

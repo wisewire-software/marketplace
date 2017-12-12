@@ -1404,7 +1404,7 @@ function add_rel_nofollow_to_item($item_id) {
 
 
 /*** INTERCOM ***/
-function send_intercom($array_v)
+function send_intercom($array_v, $isUser, $firstName, $lastName, $phone, $company, $title, $comments)
 {
 	require_once( ABSPATH . 'wp-config.php' );
 	include_once(ABSPATH . WPINC . '/class.wp_intercom.php');
@@ -1428,7 +1428,7 @@ function send_intercom($array_v)
 	} else {
 		$user_id = get_current_user_id();
 		$user_info = get_userdata($user_id);
-		$response = $wp_intercom->createUpdateUser($user_info->user_email);
+		$response = $wp_intercom->createUpdateUser($user_info->user_email, $isUser, $firstName, $lastName, $phone, $company, $title, $comments);
 		$user_id = $response->id;
 	}
 
