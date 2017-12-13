@@ -1068,7 +1068,8 @@ function wisesire_wpcf7_custom($wpcf7_data)
         $data_body_message = array(
             'first-name' => $current_user->user_firstname,
             'last-name' => $current_user->user_lastname,
-            'email' => $current_user->user_email
+            'email' => $current_user->user_email,
+            'fback_form' => true
         );
 
         $custom_data = array(
@@ -1408,7 +1409,9 @@ function send_intercom($array_v, $isUser)
 {
     $intercom_attrs = array();
     /*Carrers Forms*/
-    if ($array_v["carrers_form"]){
+    /*var_dump($array_v);
+    die("fuck");*/
+    if (isset($array_v["carrers_form"])){
         $intercom_attrs["name"] = $array_v["your-name"]." ".$array_v["your-lastname"];
         $intercom_attrs["email"] = $array_v["your-email"];
         if(trim($array_v["your-phone"])){ $intercom_attrs["phone"] = $array_v["your-phone"];}
@@ -1417,10 +1420,11 @@ function send_intercom($array_v, $isUser)
         if(trim($array_v["your-message"])){ $intercom_attrs["custom_attributes"]["Notes"] = $array_v["your-message"];}
 
         unset($array_v["carrers_form"]);
+        unset($array_v["subject"]);
         unset($array_v["g-recaptcha-response"]);
 
         /*Schedule Demo Form*/
-    }elseif ($array_v["sdemo-form"]){
+    }elseif (isset($array_v["sdemo-form"])){
         $intercom_attrs["name"] = $array_v["sd-first-name"]." ".$array_v["sd-last-name"];
         $intercom_attrs["email"] = $array_v["sd-email"];
         $intercom_attrs["phone"] = $array_v["sd-phone"];
@@ -1433,7 +1437,7 @@ function send_intercom($array_v, $isUser)
         unset($array_v["g-recaptcha-response"]);
 
         /*Vendor Form*/
-    }elseif ($array_v["vendor_form"]){
+    }elseif (isset($array_v["vendor_form"])){
         $intercom_attrs["name"] = $array_v["name-first"]." ".$array_v["name-last"];
         $intercom_attrs["email"] = $array_v["account-email"];
         if(trim($array_v["vendor-phone"])){$intercom_attrs["phone"] = $array_v["vendor-phone"];}
@@ -1449,7 +1453,7 @@ function send_intercom($array_v, $isUser)
         unset($array_v["g-recaptcha-response"]);
 
         /*Contact Us Form*/
-    }elseif ($array_v["contactus_form"]){
+    }elseif (isset($array_v["contactus_form"])){
         $intercom_attrs["name"] = $array_v["first-name"]." ".$array_v["last-name"];
         $intercom_attrs["email"] = $array_v["email"];
         if(trim($array_v["phone"])){$intercom_attrs["phone"] = $array_v["phone"];}
@@ -1457,6 +1461,32 @@ function send_intercom($array_v, $isUser)
         if(trim($array_v["message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["message"];}
 
         unset($array_v["contactus_form"]);
+        unset($array_v["g-recaptcha-response"]);
+
+        /*FeedBack Form*/
+    }elseif (isset($array_v["fback_form"])){
+        $intercom_attrs["name"] = $array_v["first-name"]." ".$array_v["last-name"];
+        $intercom_attrs["email"] = $array_v["email"];
+
+        foreach ($_REQUEST["issues"] as $var){
+          switch ($var) {
+              case "URL/link is not working":
+                  $intercom_attrs["custom_attributes"]["URL-link is not working"] = true;
+                  break;
+              case "Does not match grade level":
+                  $intercom_attrs["custom_attributes"]["Does not match grade level"] = true;
+                  break;
+              case "Inappropiate content":
+                  $intercom_attrs["custom_attributes"]["Inappropriate content"] = true;
+                  break;
+              case "Copyright infringement":
+                  $intercom_attrs["custom_attributes"]["Copyright infringement"] = true;
+                  break;
+          }
+        }
+        if(trim($array_v["message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["message"];}
+
+        unset($array_v["fback_form"]);
         unset($array_v["g-recaptcha-response"]);
 
         /*Register Form*/
@@ -1507,4 +1537,13 @@ function send_intercom($array_v, $isUser)
     return true;
 }
 
+function send_form_leads_intercom($contact_form){
+
+    $send_intercom = send_intercom($contact_form->prop('mail')['body_message'], false);
+
+    if(!$send_intercom){
+        return false;
+    }
+}
+add_action('wpcf7_mail_sent', 'send_form_leads_intercom');
 ?>
