@@ -5,21 +5,21 @@ add_action( 'admin_init', 'my_remove_menu_pages' );
 function my_remove_menu_pages() {
 
     global $user_ID;
- 	$user = get_user_by( 'ID', $user_ID );
+    $user = get_user_by( 'ID', $user_ID );
     if ( in_array('wc_product_vendors_pending_vendor',$user->roles) || in_array('wc_product_vendors_admin_vendor',$user->roles) || in_array('wc_product_vendors_manager_vendor',$user->roles) ) {
-			// remove_menu_page('wcpv-vendor-settings');
-remove_menu_page('edit.php'); // Posts
-remove_menu_page('upload.php'); // Media
-remove_menu_page('link-manager.php'); // Links
-remove_menu_page('edit-comments.php'); // Comments
-remove_menu_page('edit.php?post_type=page'); // Pages
-remove_menu_page('edit.php?post_type=product'); // Pages
-remove_menu_page('plugins.php'); // Plugins
-remove_menu_page('themes.php'); // Appearance
-remove_menu_page('users.php'); // Users
-remove_menu_page('tools.php'); // Tools
-remove_menu_page('options-general.php'); // Settings
-	// remove_menu_page( 'admin.php?page=wcpv-vendor-settings');
+        // remove_menu_page('wcpv-vendor-settings');
+        remove_menu_page('edit.php'); // Posts
+        remove_menu_page('upload.php'); // Media
+        remove_menu_page('link-manager.php'); // Links
+        remove_menu_page('edit-comments.php'); // Comments
+        remove_menu_page('edit.php?post_type=page'); // Pages
+        remove_menu_page('edit.php?post_type=product'); // Pages
+        remove_menu_page('plugins.php'); // Plugins
+        remove_menu_page('themes.php'); // Appearance
+        remove_menu_page('users.php'); // Users
+        remove_menu_page('tools.php'); // Tools
+        remove_menu_page('options-general.php'); // Settings
+        // remove_menu_page( 'admin.php?page=wcpv-vendor-settings');
     }
 }
 
@@ -55,10 +55,10 @@ add_action( 'wp_ajax_nopriv_add_favorite', 'ww_ajax_add_favorite' );
 
 // add item to favorites
 function ww_ajax_add_favorite() {
-  // Handle request then generate response using WP_Ajax_Response
-  // load favorites menu structure
-  require get_template_directory() . "/parts/favorites-menu.php";
-  die();
+    // Handle request then generate response using WP_Ajax_Response
+    // load favorites menu structure
+    require get_template_directory() . "/parts/favorites-menu.php";
+    die();
 }
 
 add_action( 'wp_ajax_remove_favorite', 'ww_ajax_remove_favorite' );
@@ -66,10 +66,10 @@ add_action( 'wp_ajax_nopriv_remove_favorite', 'ww_ajax_remove_favorite' );
 
 // remove item from favorites
 function ww_ajax_remove_favorite() {
-  // Handle request then generate response using WP_Ajax_Response
-  // load favorites menu structure
-  require get_template_directory() . "/parts/favorites-menu.php";
-  die();
+    // Handle request then generate response using WP_Ajax_Response
+    // load favorites menu structure
+    require get_template_directory() . "/parts/favorites-menu.php";
+    die();
 }
 
 add_action( 'wp_ajax_do_rate', 'ww_ajax_do_rate' );
@@ -77,65 +77,65 @@ add_action( 'wp_ajax_nopriv_do_rate', 'ww_ajax_do_rate' );
 
 // rate item
 function ww_ajax_do_rate() {
-  // Handle request then generate response using WP_Ajax_Response
-  echo json_encode(array(
-    'rate' => round($_REQUEST['item_avg_rate'],1),
-    'br_widget' => rating_display_stars($_REQUEST['item_avg_rate'],'',true),
-    'br_widget_medium' => rating_display_stars($_REQUEST['item_avg_rate'],'medium',true)
-  ));
-  die();
+    // Handle request then generate response using WP_Ajax_Response
+    echo json_encode(array(
+        'rate' => round($_REQUEST['item_avg_rate'],1),
+        'br_widget' => rating_display_stars($_REQUEST['item_avg_rate'],'',true),
+        'br_widget_medium' => rating_display_stars($_REQUEST['item_avg_rate'],'medium',true)
+    ));
+    die();
 }
 
 /**
  * Tell WordPress to run website_setup() when the 'after_setup_theme' hook is run.
  */
- 
+
 add_action( 'after_setup_theme', 'website_setup' );
 
 if ( ! function_exists( 'website_setup' ) ):
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which runs
- * before the init hook. The init hook is too late for some features, such as indicating
- * support post thumbnails.
- *
- */
-function website_setup() {
+    /**
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which runs
+     * before the init hook. The init hook is too late for some features, such as indicating
+     * support post thumbnails.
+     *
+     */
+    function website_setup() {
 
-	// Add default posts and comments RSS feed links to <head>.
-	add_theme_support( 'automatic-feed-links' );
+        // Add default posts and comments RSS feed links to <head>.
+        add_theme_support( 'automatic-feed-links' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menu( 'primary', __( 'Primary Menu', 'website' ) );
+        // This theme uses wp_nav_menu() in one location.
+        register_nav_menu( 'primary', __( 'Primary Menu', 'website' ) );
 
-	// Add support for a variety of post formats
-	// add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
+        // Add support for a variety of post formats
+        // add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
 
-	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
-	add_theme_support( 'post-thumbnails' );
+        // This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
+        add_theme_support( 'post-thumbnails' );
 
-	// default thumb size
-	set_post_thumbnail_size(237, 120, true);	
-	
-	// Add custom image sizes
-	add_image_size( 'thumb-related', 237, 155, true );
-	add_image_size( 'thumb-vertical', 235, 290, true );
-	add_image_size( 'home-carousel', 480, 248, true );
-	add_image_size( 'home', 680, 260, true );
-	add_image_size( 'detail', 700, 280, true );
-	add_image_size( 'featured', 940, 340, true );
-	add_image_size( 'partner-logos', 280, 280);
+        // default thumb size
+        set_post_thumbnail_size(237, 120, true);
 
-}
+        // Add custom image sizes
+        add_image_size( 'thumb-related', 237, 155, true );
+        add_image_size( 'thumb-vertical', 235, 290, true );
+        add_image_size( 'home-carousel', 480, 248, true );
+        add_image_size( 'home', 680, 260, true );
+        add_image_size( 'detail', 700, 280, true );
+        add_image_size( 'featured', 940, 340, true );
+        add_image_size( 'partner-logos', 280, 280);
+
+    }
 endif; // website_setup
 
 // Remove Image Sizes in WordPress
 
 function remove_image_sizes( $sizes) {
-  unset( $sizes['medium']);
-  unset( $sizes['large']);
-  return $sizes;
+    unset( $sizes['medium']);
+    unset( $sizes['large']);
+    return $sizes;
 }
 add_filter('intermediate_image_sizes_advanced', 'remove_image_sizes');
 
@@ -147,7 +147,7 @@ add_filter('intermediate_image_sizes_advanced', 'remove_image_sizes');
 //Updated to proper 'enqueue' method
 //http://codex.wordpress.org/Plugin_API/Action_Reference/login_enqueue_scripts
 function website_login_css() {
-	wp_enqueue_style( 'website_login_css', get_template_directory_uri() . '/css/login.css', false );
+    wp_enqueue_style( 'website_login_css', get_template_directory_uri() . '/css/login.css', false );
 }
 
 // changing the logo link from wordpress.org to your site
@@ -173,7 +173,7 @@ you like.
 
 // Custom Backend Footer
 function website_custom_admin_footer() {
-	_e('<span id="footer-thankyou">Developed by Words & Numbers</span>', 'website');
+    _e('<span id="footer-thankyou">Developed by Words & Numbers</span>', 'website');
 }
 
 // Add it to the admin area
@@ -182,30 +182,30 @@ add_filter('admin_footer_text', 'website_custom_admin_footer');
 /** Theme admin settings page (for WiseWire import and others) */
 
 function theme_front_page_settings() {
-  
-  global $wpdb;
-  
-  // Check that the user is allowed to update options
-  if (!current_user_can('edit_others_pages')) {
-    wp_die('You do not have sufficient permissions to access this page.');
-  }
-  
-  // no time limits
-  set_time_limit(0);
 
-  // more memory 
-  ini_set('memory_limit','512M');
-  
-  include get_template_directory().'/settings-page.php';
+    global $wpdb;
+
+    // Check that the user is allowed to update options
+    if (!current_user_can('edit_others_pages')) {
+        wp_die('You do not have sufficient permissions to access this page.');
+    }
+
+    // no time limits
+    set_time_limit(0);
+
+    // more memory
+    ini_set('memory_limit','512M');
+
+    include get_template_directory().'/settings-page.php';
 
 }
 
 function setup_theme_admin_menus() {
-  add_submenu_page('edit.php?post_type=item', 
-    'Wisewire Control Panel', 'Wisewire Control Panel', 'edit_others_pages', 
-    'wisewire-control-panel', 'theme_front_page_settings'); 
+    add_submenu_page('edit.php?post_type=item',
+        'Wisewire Control Panel', 'Wisewire Control Panel', 'edit_others_pages',
+        'wisewire-control-panel', 'theme_front_page_settings');
 }
- 
+
 // This tells WordPress to call the function named "setup_theme_admin_menus"
 // when it's time to create the menu pages.
 add_action("admin_menu", "setup_theme_admin_menus");
@@ -215,151 +215,151 @@ add_action("admin_menu", "setup_theme_admin_menus");
 
 function custom_post_type() {
 
-	$labels = array(
-		'name'                => _x( 'LO Items', 'Post Type General Name', 'website' ),
-		'singular_name'       => _x( 'Item', 'Post Type Singular Name', 'website' ),
-		'menu_name'           => __( 'LO Items', 'website' ),
-		'name_admin_bar'      => __( 'Book', 'website' ),
-		'parent_item_colon'   => __( 'Parent Item:', 'website' ),
-		'all_items'           => __( 'All Items', 'website' ),
-		'add_new_item'        => __( 'Add New Item', 'website' ),
-		'add_new'             => __( 'Add New', 'website' ),
-		'new_item'            => __( 'New Item', 'website' ),
-		'edit_item'           => __( 'Edit Item', 'website' ),
-		'update_item'         => __( 'Update Item', 'website' ),
-		'view_item'           => __( 'View Item', 'website' ),
-		'search_items'        => __( 'Search Item', 'website' ),
-		'not_found'           => __( 'Not found', 'website' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'website' ),
-	);
-	$args = array(
-		'label'               => __( 'Item', 'website' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'type', 'page-attributes' ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'menu_position'       => 20,
-		'show_in_admin_bar'   => true,
-		'show_in_nav_menus'   => true,
-		'can_export'          => true,
-		'has_archive'         => true,		
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'page'
-	);
-	register_post_type( 'item', $args );
+    $labels = array(
+        'name'                => _x( 'LO Items', 'Post Type General Name', 'website' ),
+        'singular_name'       => _x( 'Item', 'Post Type Singular Name', 'website' ),
+        'menu_name'           => __( 'LO Items', 'website' ),
+        'name_admin_bar'      => __( 'Book', 'website' ),
+        'parent_item_colon'   => __( 'Parent Item:', 'website' ),
+        'all_items'           => __( 'All Items', 'website' ),
+        'add_new_item'        => __( 'Add New Item', 'website' ),
+        'add_new'             => __( 'Add New', 'website' ),
+        'new_item'            => __( 'New Item', 'website' ),
+        'edit_item'           => __( 'Edit Item', 'website' ),
+        'update_item'         => __( 'Update Item', 'website' ),
+        'view_item'           => __( 'View Item', 'website' ),
+        'search_items'        => __( 'Search Item', 'website' ),
+        'not_found'           => __( 'Not found', 'website' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'website' ),
+    );
+    $args = array(
+        'label'               => __( 'Item', 'website' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'type', 'page-attributes' ),
+        'taxonomies'          => array( 'category', 'post_tag' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'menu_position'       => 20,
+        'show_in_admin_bar'   => true,
+        'show_in_nav_menus'   => true,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page'
+    );
+    register_post_type( 'item', $args );
 
-	$labels = array(
-		'name'                => _x( 'Testimonials', 'Post Type General Name', 'website' ),
-		'singular_name'       => _x( 'Testimonial', 'Post Type Singular Name', 'website' ),
-		'menu_name'           => __( 'Testimonials', 'website' ),
-		'name_admin_bar'      => __( 'Testimonial', 'website' ),
-		'parent_item_colon'   => __( 'Parent Testimonial:', 'website' ),
-		'all_items'           => __( 'All Testimonials', 'website' ),
-		'add_new_item'        => __( 'Add New Testimonial', 'website' ),
-		'add_new'             => __( 'Add New', 'website' ),
-		'new_item'            => __( 'New Testimonial', 'website' ),
-		'edit_item'           => __( 'Edit Testimonial', 'website' ),
-		'update_item'         => __( 'Update Testimonial', 'website' ),
-		'view_item'           => __( 'View Testimonial', 'website' ),
-		'search_items'        => __( 'Search Testimonial', 'website' ),
-		'not_found'           => __( 'Not found', 'website' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'website' ),
-	);
-	$args = array(
-		'label'               => __( 'Testimonial', 'website' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'type' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'menu_position'       => 20,
-		'show_in_admin_bar'   => true,
-		'show_in_nav_menus'   => true,
-		'can_export'          => true,
-		'has_archive'         => false,		
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'page'
-	);
-	register_post_type( 'testimonial', $args );
-	
-	$labels = array(
-		'name'                => _x( 'Partners', 'Post Type General Name', 'website' ),
-		'singular_name'       => _x( 'Partner', 'Post Type Singular Name', 'website' ),
-		'menu_name'           => __( 'Partners', 'website' ),
-		'name_admin_bar'      => __( 'Partner', 'website' ),
-		'parent_item_colon'   => __( 'Parent Partner:', 'website' ),
-		'all_items'           => __( 'All Partners', 'website' ),
-		'add_new_item'        => __( 'Add New Partner', 'website' ),
-		'add_new'             => __( 'Add New', 'website' ),
-		'new_item'            => __( 'New Partner', 'website' ),
-		'edit_item'           => __( 'Edit Partner', 'website' ),
-		'update_item'         => __( 'Update Partner', 'website' ),
-		'view_item'           => __( 'View Partner', 'website' ),
-		'search_items'        => __( 'Search Partner', 'website' ),
-		'not_found'           => __( 'Not found', 'website' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'website' ),
-	);
-	$args = array(
-		'label'               => __( 'Partner', 'website' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'type' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'menu_position'       => 20,
-		'show_in_admin_bar'   => true,
-		'show_in_nav_menus'   => true,
-		'can_export'          => true,
-		'has_archive'         => false,		
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'page'
-	);
-	register_post_type( 'partner', $args );	
-	
-	$labels = array(
-		'name'                => _x( 'Contributors', 'Post Type General Name', 'website' ),
-		'singular_name'       => _x( 'Contributor', 'Post Type Singular Name', 'website' ),
-		'menu_name'           => __( 'Contributors', 'website' ),
-		'name_admin_bar'      => __( 'Contributor', 'website' ),
-		'parent_item_colon'   => __( 'Parent Contributor:', 'website' ),
-		'all_items'           => __( 'All Contributors', 'website' ),
-		'add_new_item'        => __( 'Add New Contributor', 'website' ),
-		'add_new'             => __( 'Add New', 'website' ),
-		'new_item'            => __( 'New Contributor', 'website' ),
-		'edit_item'           => __( 'Edit Contributor', 'website' ),
-		'update_item'         => __( 'Update Contributor', 'website' ),
-		'view_item'           => __( 'View Contributor', 'website' ),
-		'search_items'        => __( 'Search Contributor', 'website' ),
-		'not_found'           => __( 'Not found', 'website' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'website' ),
-	);
-	$args = array(
-		'label'               => __( 'Contributor', 'website' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'type' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'menu_position'       => 20,
-		'show_in_admin_bar'   => true,
-		'show_in_nav_menus'   => true,
-		'can_export'          => true,
-		'has_archive'         => false,		
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'page'
-	);
-	register_post_type( 'contributor', $args );		
-	
+    $labels = array(
+        'name'                => _x( 'Testimonials', 'Post Type General Name', 'website' ),
+        'singular_name'       => _x( 'Testimonial', 'Post Type Singular Name', 'website' ),
+        'menu_name'           => __( 'Testimonials', 'website' ),
+        'name_admin_bar'      => __( 'Testimonial', 'website' ),
+        'parent_item_colon'   => __( 'Parent Testimonial:', 'website' ),
+        'all_items'           => __( 'All Testimonials', 'website' ),
+        'add_new_item'        => __( 'Add New Testimonial', 'website' ),
+        'add_new'             => __( 'Add New', 'website' ),
+        'new_item'            => __( 'New Testimonial', 'website' ),
+        'edit_item'           => __( 'Edit Testimonial', 'website' ),
+        'update_item'         => __( 'Update Testimonial', 'website' ),
+        'view_item'           => __( 'View Testimonial', 'website' ),
+        'search_items'        => __( 'Search Testimonial', 'website' ),
+        'not_found'           => __( 'Not found', 'website' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'website' ),
+    );
+    $args = array(
+        'label'               => __( 'Testimonial', 'website' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'type' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'menu_position'       => 20,
+        'show_in_admin_bar'   => true,
+        'show_in_nav_menus'   => true,
+        'can_export'          => true,
+        'has_archive'         => false,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page'
+    );
+    register_post_type( 'testimonial', $args );
+
+    $labels = array(
+        'name'                => _x( 'Partners', 'Post Type General Name', 'website' ),
+        'singular_name'       => _x( 'Partner', 'Post Type Singular Name', 'website' ),
+        'menu_name'           => __( 'Partners', 'website' ),
+        'name_admin_bar'      => __( 'Partner', 'website' ),
+        'parent_item_colon'   => __( 'Parent Partner:', 'website' ),
+        'all_items'           => __( 'All Partners', 'website' ),
+        'add_new_item'        => __( 'Add New Partner', 'website' ),
+        'add_new'             => __( 'Add New', 'website' ),
+        'new_item'            => __( 'New Partner', 'website' ),
+        'edit_item'           => __( 'Edit Partner', 'website' ),
+        'update_item'         => __( 'Update Partner', 'website' ),
+        'view_item'           => __( 'View Partner', 'website' ),
+        'search_items'        => __( 'Search Partner', 'website' ),
+        'not_found'           => __( 'Not found', 'website' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'website' ),
+    );
+    $args = array(
+        'label'               => __( 'Partner', 'website' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'type' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'menu_position'       => 20,
+        'show_in_admin_bar'   => true,
+        'show_in_nav_menus'   => true,
+        'can_export'          => true,
+        'has_archive'         => false,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page'
+    );
+    register_post_type( 'partner', $args );
+
+    $labels = array(
+        'name'                => _x( 'Contributors', 'Post Type General Name', 'website' ),
+        'singular_name'       => _x( 'Contributor', 'Post Type Singular Name', 'website' ),
+        'menu_name'           => __( 'Contributors', 'website' ),
+        'name_admin_bar'      => __( 'Contributor', 'website' ),
+        'parent_item_colon'   => __( 'Parent Contributor:', 'website' ),
+        'all_items'           => __( 'All Contributors', 'website' ),
+        'add_new_item'        => __( 'Add New Contributor', 'website' ),
+        'add_new'             => __( 'Add New', 'website' ),
+        'new_item'            => __( 'New Contributor', 'website' ),
+        'edit_item'           => __( 'Edit Contributor', 'website' ),
+        'update_item'         => __( 'Update Contributor', 'website' ),
+        'view_item'           => __( 'View Contributor', 'website' ),
+        'search_items'        => __( 'Search Contributor', 'website' ),
+        'not_found'           => __( 'Not found', 'website' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'website' ),
+    );
+    $args = array(
+        'label'               => __( 'Contributor', 'website' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'type' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'menu_position'       => 20,
+        'show_in_admin_bar'   => true,
+        'show_in_nav_menus'   => true,
+        'can_export'          => true,
+        'has_archive'         => false,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page'
+    );
+    register_post_type( 'contributor', $args );
+
 }
 
 add_action( 'init', 'custom_post_type', 0 );
@@ -373,136 +373,136 @@ add_action( 'init', 'custom_post_type', 0 );
 */
 
 function item_taxonomy() {
-  
-  // Standards
-  
-	$labels = array(
-		'name'                       => _x( 'Standards', 'Taxonomy General Name', 'website' ),
-		'singular_name'              => _x( 'Standard', 'Taxonomy Singular Name', 'website' ),
-		'menu_name'                  => __( 'Standards', 'website' ),
-		'all_items'                  => __( 'All Items', 'website' ),
-		'parent_item'                => __( 'Parent Item', 'website' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'website' ),
-		'new_item_name'              => __( 'New Item Name', 'website' ),
-		'add_new_item'               => __( 'Add New Item', 'website' ),
-		'edit_item'                  => __( 'Edit Item', 'website' ),
-		'update_item'                => __( 'Update Item', 'website' ),
-		'view_item'                  => __( 'View Item', 'website' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'website' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'website' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'website' ),
-		'popular_items'              => __( 'Popular Items', 'website' ),
-		'search_items'               => __( 'Search Items', 'website' ),
-		'not_found'                  => __( 'Not Found', 'website' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => false,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'Standards', array( 'item' ), $args );
 
-  
-  // Languages
-  
-	$labels = array(
-		'name'                       => _x( 'Languages', 'Taxonomy General Name', 'website' ),
-		'singular_name'              => _x( 'Language', 'Taxonomy Singular Name', 'website' ),
-		'menu_name'                  => __( 'Languages', 'website' ),
-		'all_items'                  => __( 'All Items', 'website' ),
-		'parent_item'                => __( 'Parent Item', 'website' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'website' ),
-		'new_item_name'              => __( 'New Item Name', 'website' ),
-		'add_new_item'               => __( 'Add New Item', 'website' ),
-		'edit_item'                  => __( 'Edit Item', 'website' ),
-		'update_item'                => __( 'Update Item', 'website' ),
-		'view_item'                  => __( 'View Item', 'website' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'website' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'website' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'website' ),
-		'popular_items'              => __( 'Popular Items', 'website' ),
-		'search_items'               => __( 'Search Items', 'website' ),
-		'not_found'                  => __( 'Not Found', 'website' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => false,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'Languages', array( 'item' ), $args );
+    // Standards
 
-  // Related
-  
-	$labels = array(
-		'name'                       => _x( 'Related Items From Batch Uploads', 'Taxonomy General Name', 'website' ),
-		'singular_name'              => _x( 'Related Item', 'Taxonomy Singular Name', 'website' ),
-		'menu_name'                  => __( 'Related', 'website' ),
-		'all_items'                  => __( 'All Items', 'website' ),
-		'parent_item'                => __( 'Parent Item', 'website' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'website' ),
-		'new_item_name'              => __( 'New Item Name', 'website' ),
-		'add_new_item'               => __( 'Add New Item', 'website' ),
-		'edit_item'                  => __( 'Edit Item', 'website' ),
-		'update_item'                => __( 'Update Item', 'website' ),
-		'view_item'                  => __( 'View Item', 'website' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'website' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'website' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'website' ),
-		'popular_items'              => __( 'Popular Items', 'website' ),
-		'search_items'               => __( 'Search Items', 'website' ),
-		'not_found'                  => __( 'Not Found', 'website' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => false,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'Related', array( 'item' ), $args );
+    $labels = array(
+        'name'                       => _x( 'Standards', 'Taxonomy General Name', 'website' ),
+        'singular_name'              => _x( 'Standard', 'Taxonomy Singular Name', 'website' ),
+        'menu_name'                  => __( 'Standards', 'website' ),
+        'all_items'                  => __( 'All Items', 'website' ),
+        'parent_item'                => __( 'Parent Item', 'website' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'website' ),
+        'new_item_name'              => __( 'New Item Name', 'website' ),
+        'add_new_item'               => __( 'Add New Item', 'website' ),
+        'edit_item'                  => __( 'Edit Item', 'website' ),
+        'update_item'                => __( 'Update Item', 'website' ),
+        'view_item'                  => __( 'View Item', 'website' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'website' ),
+        'add_or_remove_items'        => __( 'Add or remove items', 'website' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'website' ),
+        'popular_items'              => __( 'Popular Items', 'website' ),
+        'search_items'               => __( 'Search Items', 'website' ),
+        'not_found'                  => __( 'Not Found', 'website' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+    );
+    register_taxonomy( 'Standards', array( 'item' ), $args );
 
-	// Object Type
-  
-	$labels = array(
-		'name'                       => _x( 'Object Types', 'Taxonomy General Name', 'website' ),
-		'singular_name'              => _x( 'Object Type', 'Taxonomy Singular Name', 'website' ),
-		'menu_name'                  => __( 'Object Type', 'website' ),
-		'all_items'                  => __( 'All Items', 'website' ),
-		'parent_item'                => __( 'Parent Item', 'website' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'website' ),
-		'new_item_name'              => __( 'New Item Name', 'website' ),
-		'add_new_item'               => __( 'Add New Item', 'website' ),
-		'edit_item'                  => __( 'Edit Item', 'website' ),
-		'update_item'                => __( 'Update Item', 'website' ),
-		'view_item'                  => __( 'View Item', 'website' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'website' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'website' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'website' ),
-		'popular_items'              => __( 'Popular Items', 'website' ),
-		'search_items'               => __( 'Search Items', 'website' ),
-		'not_found'                  => __( 'Not Found', 'website' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => false,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'ObjectType', array( 'item' ), $args );
-	
+
+    // Languages
+
+    $labels = array(
+        'name'                       => _x( 'Languages', 'Taxonomy General Name', 'website' ),
+        'singular_name'              => _x( 'Language', 'Taxonomy Singular Name', 'website' ),
+        'menu_name'                  => __( 'Languages', 'website' ),
+        'all_items'                  => __( 'All Items', 'website' ),
+        'parent_item'                => __( 'Parent Item', 'website' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'website' ),
+        'new_item_name'              => __( 'New Item Name', 'website' ),
+        'add_new_item'               => __( 'Add New Item', 'website' ),
+        'edit_item'                  => __( 'Edit Item', 'website' ),
+        'update_item'                => __( 'Update Item', 'website' ),
+        'view_item'                  => __( 'View Item', 'website' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'website' ),
+        'add_or_remove_items'        => __( 'Add or remove items', 'website' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'website' ),
+        'popular_items'              => __( 'Popular Items', 'website' ),
+        'search_items'               => __( 'Search Items', 'website' ),
+        'not_found'                  => __( 'Not Found', 'website' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+    );
+    register_taxonomy( 'Languages', array( 'item' ), $args );
+
+    // Related
+
+    $labels = array(
+        'name'                       => _x( 'Related Items From Batch Uploads', 'Taxonomy General Name', 'website' ),
+        'singular_name'              => _x( 'Related Item', 'Taxonomy Singular Name', 'website' ),
+        'menu_name'                  => __( 'Related', 'website' ),
+        'all_items'                  => __( 'All Items', 'website' ),
+        'parent_item'                => __( 'Parent Item', 'website' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'website' ),
+        'new_item_name'              => __( 'New Item Name', 'website' ),
+        'add_new_item'               => __( 'Add New Item', 'website' ),
+        'edit_item'                  => __( 'Edit Item', 'website' ),
+        'update_item'                => __( 'Update Item', 'website' ),
+        'view_item'                  => __( 'View Item', 'website' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'website' ),
+        'add_or_remove_items'        => __( 'Add or remove items', 'website' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'website' ),
+        'popular_items'              => __( 'Popular Items', 'website' ),
+        'search_items'               => __( 'Search Items', 'website' ),
+        'not_found'                  => __( 'Not Found', 'website' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+    );
+    register_taxonomy( 'Related', array( 'item' ), $args );
+
+    // Object Type
+
+    $labels = array(
+        'name'                       => _x( 'Object Types', 'Taxonomy General Name', 'website' ),
+        'singular_name'              => _x( 'Object Type', 'Taxonomy Singular Name', 'website' ),
+        'menu_name'                  => __( 'Object Type', 'website' ),
+        'all_items'                  => __( 'All Items', 'website' ),
+        'parent_item'                => __( 'Parent Item', 'website' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'website' ),
+        'new_item_name'              => __( 'New Item Name', 'website' ),
+        'add_new_item'               => __( 'Add New Item', 'website' ),
+        'edit_item'                  => __( 'Edit Item', 'website' ),
+        'update_item'                => __( 'Update Item', 'website' ),
+        'view_item'                  => __( 'View Item', 'website' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'website' ),
+        'add_or_remove_items'        => __( 'Add or remove items', 'website' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'website' ),
+        'popular_items'              => __( 'Popular Items', 'website' ),
+        'search_items'               => __( 'Search Items', 'website' ),
+        'not_found'                  => __( 'Not Found', 'website' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+    );
+    register_taxonomy( 'ObjectType', array( 'item' ), $args );
+
 }
 add_action( 'init', 'item_taxonomy', 0 );
 
@@ -514,13 +514,13 @@ add_action( 'init', 'item_taxonomy', 0 );
 
 add_filter( 'body_class','my_body_classes' );
 function my_body_classes( $classes ) {
-  if ( (is_front_page()) && (!(is_user_logged_in()) ) ) {
-      $classes[] = 'home-notlogged';
-  } else {
-    $classes[] = '';
-  }
-  
-  return $classes;
+    if ( (is_front_page()) && (!(is_user_logged_in()) ) ) {
+        $classes[] = 'home-notlogged';
+    } else {
+        $classes[] = '';
+    }
+
+    return $classes;
 }
 
 // Remove unwanted dashboard widgets
@@ -572,9 +572,9 @@ add_action( 'admin_menu', 'remove_menus' );
 add_action('after_setup_theme', 'remove_admin_bar');
 
 function remove_admin_bar() {
-  if (!current_user_can('administrator') && !is_admin()) {
-    show_admin_bar(false);
-  }
+    if (!current_user_can('administrator') && !is_admin()) {
+        show_admin_bar(false);
+    }
 }
 
 /*
@@ -595,8 +595,8 @@ remove_action('wp_head', 'wp_generator');
 */
 
 function cc_mime_types($mimes) {
-  $mimes['svg'] = 'image/svg+xml';
-  return $mimes;
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
@@ -606,26 +606,26 @@ add_filter('upload_mimes', 'cc_mime_types');
 */
 
 if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page(array(
-		'page_title' 	=> 'WW Settings',
-		'menu_title'	=> 'General',
-		'menu_slug' 	=> 'wisewire-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
 
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Footer Settings',
-		'menu_title'	=> 'Footer',
-		'parent_slug'	=> 'wisewire-settings',
-	));
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Forms and Modals',
-		'menu_title'	=> 'Forms and Modals',
-		'parent_slug'	=> 'wisewire-settings',
-	));	
+    acf_add_options_page(array(
+        'page_title' 	=> 'WW Settings',
+        'menu_title'	=> 'General',
+        'menu_slug' 	=> 'wisewire-settings',
+        'capability'	=> 'edit_posts',
+        'redirect'		=> false
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Footer Settings',
+        'menu_title'	=> 'Footer',
+        'parent_slug'	=> 'wisewire-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Forms and Modals',
+        'menu_title'	=> 'Forms and Modals',
+        'parent_slug'	=> 'wisewire-settings',
+    ));
 }
 
 /**
@@ -634,69 +634,69 @@ if( function_exists('acf_add_options_page') ) {
 
 // add variables available from rewrite url in wp_query
 add_filter('query_vars', function( $query_vars ){
-  $query_vars[] = 'discipline';
-  $query_vars[] = 'grade';
-  $query_vars[] = 'page_nr';
-  
-  return $query_vars;
+    $query_vars[] = 'discipline';
+    $query_vars[] = 'grade';
+    $query_vars[] = 'page_nr';
+
+    return $query_vars;
 });
 
 // do the rewrite (remember to use flush_rules!!)
 add_action( 'init', function(){
-  
-  global $wp_rewrite;
-  
-  add_rewrite_rule(
-    'explore/search/(.*)/([0-9]+)/?',
-    'index.php?pagename=explore-all&search=$matches[1]&page_nr=$matches[2]',
-    'top'
-  );
- 
-  add_rewrite_rule(
-    'explore/search/(.+)/?',
-    'index.php?pagename=explore-all&search=$matches[1]',
-    'top'
-  );
-	
-	add_rewrite_rule(
-    'explore/search/?',
-    'index.php?pagename=explore-all&search=',
-    'top'
-  );
-	
-  add_rewrite_rule(
-    'explore/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)/?',
-    'index.php?pagename=explore-all&grade=$matches[1]&discipline=$matches[2]&page_nr=$matches[3]',
-    'top'
-  );
-	
-  add_rewrite_rule(
-    'explore/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?',
-    'index.php?pagename=explore-all&grade=$matches[1]&discipline=$matches[2]',
-    'top'
-  );
 
-  add_rewrite_rule(
-    'explore/([a-zA-Z0-9_-]+)/?',
-    'index.php?pagename=explore&grade=$matches[1]',
-    'top'
-  );
+    global $wp_rewrite;
 
-  add_rewrite_rule(
-    'most-viewed/([0-9]+)/?',
-    'index.php?pagename=most-viewed&page_nr=$matches[1]',
-    'top'
-  );     
+    add_rewrite_rule(
+        'explore/search/(.*)/([0-9]+)/?',
+        'index.php?pagename=explore-all&search=$matches[1]&page_nr=$matches[2]',
+        'top'
+    );
 
-  add_rewrite_rule(
-    'filtered/([0-9]+)/?',
-    'index.php?pagename=filtered&page_nr=$matches[1]',
-    'top'
-  );     
+    add_rewrite_rule(
+        'explore/search/(.+)/?',
+        'index.php?pagename=explore-all&search=$matches[1]',
+        'top'
+    );
 
-  $wp_rewrite->flush_rules(false);  
+    add_rewrite_rule(
+        'explore/search/?',
+        'index.php?pagename=explore-all&search=',
+        'top'
+    );
 
-	//echo var_export( $wp_rewrite->wp_rewrite_rules(), true );
+    add_rewrite_rule(
+        'explore/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)/?',
+        'index.php?pagename=explore-all&grade=$matches[1]&discipline=$matches[2]&page_nr=$matches[3]',
+        'top'
+    );
+
+    add_rewrite_rule(
+        'explore/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?',
+        'index.php?pagename=explore-all&grade=$matches[1]&discipline=$matches[2]',
+        'top'
+    );
+
+    add_rewrite_rule(
+        'explore/([a-zA-Z0-9_-]+)/?',
+        'index.php?pagename=explore&grade=$matches[1]',
+        'top'
+    );
+
+    add_rewrite_rule(
+        'most-viewed/([0-9]+)/?',
+        'index.php?pagename=most-viewed&page_nr=$matches[1]',
+        'top'
+    );
+
+    add_rewrite_rule(
+        'filtered/([0-9]+)/?',
+        'index.php?pagename=filtered&page_nr=$matches[1]',
+        'top'
+    );
+
+    $wp_rewrite->flush_rules(false);
+
+    //echo var_export( $wp_rewrite->wp_rewrite_rules(), true );
 } );
 
 /**
@@ -704,38 +704,38 @@ add_action( 'init', function(){
  * @param float $points eg. 3.5
  */
 function rating_display_stars($points, $size = '', $return = false) {
-	 
-	$s = '<div class="br-widget br-widget-'.$size.'">';	
-	
-	for ($i = 1; $i<=5; $i++) {
-		$s .= '<div class="'
-			.( $points > 0 && $i/$points <= 1 ? 'br-selected' : '' ).' '
-			.( $points > 0 && ($i-1)/(int)$points == 1 && ($points*10)%10 >= 5 ? 'br-selected selected-half' : '' )
-		.'"></div>';
-	}
-	
-	$s .= '</div>';
-  
-  if ($return) {
-    return $s;
-  }
-  
-  echo $s;
-  
-  return true;
+
+    $s = '<div class="br-widget br-widget-'.$size.'">';
+
+    for ($i = 1; $i<=5; $i++) {
+        $s .= '<div class="'
+            .( $points > 0 && $i/$points <= 1 ? 'br-selected' : '' ).' '
+            .( $points > 0 && ($i-1)/(int)$points == 1 && ($points*10)%10 >= 5 ? 'br-selected selected-half' : '' )
+            .'"></div>';
+    }
+
+    $s .= '</div>';
+
+    if ($return) {
+        return $s;
+    }
+
+    echo $s;
+
+    return true;
 }
 
-/** 
+/**
  * Tools
  */
 function f_print_r($variable) {
-	echo '<pre>';
-	print_r($variable);
-	echo '</pre>';
+    echo '<pre>';
+    print_r($variable);
+    echo '</pre>';
 }
 
 function f_paginate($data, $limit = null, $current = null, $adjacents = null) {
-	
+
     $result = array();
 
     if (isset($data, $limit) === true)
@@ -750,16 +750,16 @@ function f_paginate($data, $limit = null, $current = null, $adjacents = null) {
             }
         }
     }
-	
-	if ($current > $adjacents) {
-		array_unshift($result, '...');
-		array_unshift($result, '1');
-	}
-	
-	if ($current < ceil($data/$limit) - $adjacents) {
-		array_push($result, '...');
-		array_push($result, ceil($data/$limit));
-	}
+
+    if ($current > $adjacents) {
+        array_unshift($result, '...');
+        array_unshift($result, '1');
+    }
+
+    if ($current < ceil($data/$limit) - $adjacents) {
+        array_push($result, '...');
+        array_push($result, ceil($data/$limit));
+    }
 
     return $result;
 }
@@ -789,32 +789,32 @@ function f_sort_by_sub_value($array, $value, $asc = true, $preserveKeys = false)
 }
 
 /**
-*	Action to call Solr syncronization when an item from the CMS is deleted
-*	First, it verifies if the post_type is item an then performs the
-*	syncronization.
-*/
+ *	Action to call Solr syncronization when an item from the CMS is deleted
+ *	First, it verifies if the post_type is item an then performs the
+ *	syncronization.
+ */
 add_action( 'admin_init', 'solr_sync_on_delete_init' );
 function solr_sync_on_delete_init() {
     add_action( 'wp_trash_post', 'solr_sync_on_delete', 10 );
 }
 
-function solr_sync_on_delete( $pid ) {	
+function solr_sync_on_delete( $pid ) {
     global $wpdb;
 
     $post_info = get_post( $pid );
-	$post_type = $post_info->post_type;
+    $post_type = $post_info->post_type;
 
-	if( $post_type == "item" ){    	
-    	//Call Solr Syncronization
-    		$URL = "http://localhost:8983/solr/summarizeditemmetadata/update?stream.body=<delete><query>(id:".$pid.")AND(type:item)AND(source:CMS)</query></delete>&commit=true";
-			//$data = file_get_contents($URL);
-			$curl = curl_init();
-		  	curl_setopt_array( $curl, array(
-		  	CURLOPT_RETURNTRANSFER => true,
-		  	CURLOPT_URL => $URL ) );
-		  	curl_exec($curl);
-		  	curl_close($curl);    	
-	}    
+    if( $post_type == "item" ){
+        //Call Solr Syncronization
+        $URL = "http://localhost:8983/solr/summarizeditemmetadata/update?stream.body=<delete><query>(id:".$pid.")AND(type:item)AND(source:CMS)</query></delete>&commit=true";
+        //$data = file_get_contents($URL);
+        $curl = curl_init();
+        curl_setopt_array( $curl, array(
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_URL => $URL ) );
+        curl_exec($curl);
+        curl_close($curl);
+    }
 }
 
 
@@ -848,15 +848,15 @@ $WWItems = new Controller_WiseWireItems();
 */
 
 function item_platform_redirection( $wp ) {
-  global $wp_query;
-  if (!is_admin() && is_404() && preg_match( '/^item/', $wp->request ) ) {
-    //wp_redirect( home_url( user_trailingslashit( 'item' ) ) );
-    $wp_query->is_404 = false;
-    load_template( dirname( __FILE__ ) . '/single-item-platform.php' );
-    
-    header("HTTP/1.1 200 OK");
-    exit;
-  }
+    global $wp_query;
+    if (!is_admin() && is_404() && preg_match( '/^item/', $wp->request ) ) {
+        //wp_redirect( home_url( user_trailingslashit( 'item' ) ) );
+        $wp_query->is_404 = false;
+        load_template( dirname( __FILE__ ) . '/single-item-platform.php' );
+
+        header("HTTP/1.1 200 OK");
+        exit;
+    }
 }
 
 add_action( 'wp', 'item_platform_redirection' );
@@ -871,9 +871,9 @@ add_action( 'wp', 'item_platform_redirection' );
 add_filter('acf/fields/taxonomy/wp_list_categories', 'my_taxonomy_args', 10, 2);
 
 function my_taxonomy_args( $args, $field ) {
-  // do stuff to $args
-  $args['depth'] = 1;
-  return $args;
+    // do stuff to $args
+    $args['depth'] = 1;
+    return $args;
 }
 
 /**
@@ -891,11 +891,11 @@ add_filter('upload_dir', 'rrwd_upload_dir');
 $upload = wp_upload_dir();
 // remove_filter('upload_dir', 'rrwd_upload_dir');
 function rrwd_upload_dir( $upload ) {
-  $id = isset($_REQUEST['post_id']) ? $_REQUEST['post_id'] : null;
-  $parent = get_post( $id )->post_parent;
-  // Check the post-type of the current post
-  if( "item" == get_post_type( $id ) || "item" == get_post_type( $parent ) )
-    $upload['subdir'] = '/items/' . $id . $upload['subdir'];
+    $id = isset($_REQUEST['post_id']) ? $_REQUEST['post_id'] : null;
+    $parent = get_post( $id )->post_parent;
+    // Check the post-type of the current post
+    if( "item" == get_post_type( $id ) || "item" == get_post_type( $parent ) )
+        $upload['subdir'] = '/items/' . $id . $upload['subdir'];
     $upload['path'] = $upload['basedir'] . $upload['subdir'];
     $upload['url']  = $upload['baseurl'] . $upload['subdir'];
     return $upload;
@@ -907,10 +907,10 @@ function rrwd_upload_dir( $upload ) {
 */
 
 function delete_associated_media($id) {
-    
+
     if ('item' !== get_post_type($id)) return;
     $upload_dir = wp_upload_dir();
-    
+
     $media = get_children(array(
         'post_parent' => $id,
         'post_type' => 'attachment'
@@ -922,7 +922,7 @@ function delete_associated_media($id) {
         wp_delete_attachment($file->ID);
         unlink(get_attached_file($file->ID));
     }
-  
+
     // TODO delete folder
     system("rm -rf ".escapeshellarg('/var/www/html/wp-content/uploads/items/'.(int)$id.''));
 }
@@ -934,31 +934,31 @@ add_action('before_delete_post', 'delete_associated_media');
 */
 
 function set_keywords() {
-  global $post;
-  
-  if ('item' == get_post_type($post->ID)) {
-  
-    $keywords = get_the_tags();
-    $keyword_tags = '';
-    foreach((array) $keywords as $tag) {
-      $keyword_tags .= $tag->name . ',';
+    global $post;
+
+    if ('item' == get_post_type($post->ID)) {
+
+        $keywords = get_the_tags();
+        $keyword_tags = '';
+        foreach((array) $keywords as $tag) {
+            $keyword_tags .= $tag->name . ',';
+        }
+
+        $metatag= "";
+
+        if (empty($keywords)){
+            $keywords = '';
+        }
+
+        $metatag="\t";
+        $metatag.= "<meta name=\"keywords\" content=\"";
+        $metatag.= $keyword_tags;
+        $metatag.= "\" />";
+        $metatag.= "\n\n";
+
+        echo $metatag;
+
     }
-  	  
-    $metatag= "";
-  
-    if (empty($keywords)){
-      $keywords = '';
-    }
-  
-    $metatag="\t";
-    $metatag.= "<meta name=\"keywords\" content=\"";
-    $metatag.= $keyword_tags;
-    $metatag.= "\" />";
-    $metatag.= "\n\n";
-    
-    echo $metatag;
-  
-  }
 }
 add_action('wp_head', 'set_keywords');
 
@@ -968,12 +968,12 @@ function wisewire_add_dashboard_widgets() {
 }
 
 function wisewire_add_welcome_widget(){ ?>
- 
+
     <h4>Wisewise Control Panel</h4>
     <p>
-      <a href="edit.php?post_type=item&page=wisewire-control-panel" class="button button-primary button-hero">Go to Batch Uploads</a>
+        <a href="edit.php?post_type=item&page=wisewire-control-panel" class="button button-primary button-hero">Go to Batch Uploads</a>
     </p>
-         
+
 <?php }
 add_action( 'wp_dashboard_setup', 'wisewire_add_dashboard_widgets' );
 
@@ -992,34 +992,34 @@ add_filter( 'password_hint', function( $text ){
 /* API REST */
 
 function add_new_featured( $request ) {
-  
+
     global $wpdb;
-    
- 	$data_back = json_decode(file_get_contents('php://input'));
-	$title = $data_back->{"title"};
+
+    $data_back = json_decode(file_get_contents('php://input'));
+    $title = $data_back->{"title"};
     $externalPreviewURL = $data_back->{"externalPreviewURL"};
     $profilePicUrl = $data_back->{"profilePicUrl"};
     $author = $data_back->{"author"};
     $shortBio = $data_back->{"shortBio"};
-    $itemType = $data_back->{"itemType"};	
+    $itemType = $data_back->{"itemType"};
 
-	$sql = $wpdb->prepare("INSERT INTO `wp_cache_featured` SET "
-					. "`title` = %s, `externalPreviewURL` = %s, `profilePicUrl` = %s, `author` = %s, `shortBio` = %s, `itemType` = %s, `date_creation` = now() ",
-					$title,
-					$externalPreviewURL,
-					$profilePicUrl,
-					$author,
-					$shortBio,
-					$itemType														
-				);				
-	$wpdb->query($sql);
+    $sql = $wpdb->prepare("INSERT INTO `wp_cache_featured` SET "
+        . "`title` = %s, `externalPreviewURL` = %s, `profilePicUrl` = %s, `author` = %s, `shortBio` = %s, `itemType` = %s, `date_creation` = now() ",
+        $title,
+        $externalPreviewURL,
+        $profilePicUrl,
+        $author,
+        $shortBio,
+        $itemType
+    );
+    $wpdb->query($sql);
 
-	$response["data"] = array(
-					'success'  => true,
-					'status' => 200,
-				);
+    $response["data"] = array(
+        'success'  => true,
+        'status' => 200,
+    );
 
-	return new WP_REST_Response( $response, 200 );
+    return new WP_REST_Response( $response, 200 );
 }
 
 add_action( 'rest_api_init', function () {
@@ -1036,16 +1036,16 @@ add_action( 'wp_ajax_nopriv_list_featured', 'list_featured' );
 add_action( 'wp_ajax_list_featured', 'list_featured' );
 
 function list_featured() {
-	
-	global $wpdb;
-	// load all featured 
 
-	$sql = "SELECT t.* FROM wp_cache_featured t ";
-	$featured_authors = $wpdb->get_results( $sql, ARRAY_A );
+    global $wpdb;
+    // load all featured
 
-	echo json_encode($featured_authors);
+    $sql = "SELECT t.* FROM wp_cache_featured t ";
+    $featured_authors = $wpdb->get_results( $sql, ARRAY_A );
 
-	wp_die();
+    echo json_encode($featured_authors);
+
+    wp_die();
 }
 
 
@@ -1054,117 +1054,117 @@ function list_featured() {
 function wisesire_wpcf7_custom($wpcf7_data)
 {
 
-	$form_name = $wpcf7_data->name();
-	$mail = $wpcf7_data->prop('mail');
+    $form_name = $wpcf7_data->name();
+    $mail = $wpcf7_data->prop('mail');
 
-	// remove white spaces to prevent <br> from mandrill
-	$new_body = preg_replace("/(>\s+<)/", "><", $mail['body']);
+    // remove white spaces to prevent <br> from mandrill
+    $new_body = preg_replace("/(>\s+<)/", "><", $mail['body']);
 
-	if ($form_name == 'feedback-form') {
+    if ($form_name == 'feedback-form') {
 
-		global $current_user;
-		get_currentuserinfo();
+        global $current_user;
+        get_currentuserinfo();
 
-		$data_body_message = array(
-			'first-name' => $current_user->user_firstname,
-			'last-name' => $current_user->user_lastname,
-			'email' => $current_user->user_email
-		);
+        $data_body_message = array(
+            'first-name' => $current_user->user_firstname,
+            'last-name' => $current_user->user_lastname,
+            'email' => $current_user->user_email
+        );
 
-		$custom_data = array(
-			'[_user_first_name]' => $data_body_message['first-name'],
-			'[_user_last_name]'  => $data_body_message['last-name'],
-			'[_user_email]'   => $data_body_message['email'],
-		);
+        $custom_data = array(
+            '[_user_first_name]' => $data_body_message['first-name'],
+            '[_user_last_name]'  => $data_body_message['last-name'],
+            '[_user_email]'   => $data_body_message['email'],
+        );
 
-		//Get page title for subject
+        //Get page title for subject
 
-		$slug = $_SERVER['REQUEST_URI'];
-		$slug = substr($slug, 1);
-		$items = explode('/', $slug);
+        $slug = $_SERVER['REQUEST_URI'];
+        $slug = substr($slug, 1);
+        $items = explode('/', $slug);
 
-		$page = get_page_by_path($items[1], OBJECT, $items[0]);
+        $page = get_page_by_path($items[1], OBJECT, $items[0]);
 
-		if (!empty ($page->ID)) {
-			$custom_data['[_url]'] = $data_body_message['reference_url'] = home_url() . "/wp-admin/post.php?post=" . $page->ID . "&action=edit";// get_edit_post_link($page->ID);
-		}
+        if (!empty ($page->ID)) {
+            $custom_data['[_url]'] = $data_body_message['reference_url'] = home_url() . "/wp-admin/post.php?post=" . $page->ID . "&action=edit";// get_edit_post_link($page->ID);
+        }
 
-		$page_title = !empty($page->ID) ? get_the_title($page->ID) : null;
+        $page_title = !empty($page->ID) ? get_the_title($page->ID) : null;
 
-		if (empty($page_title)) {
-			global $wpdb;
-			$item_object_id = $items[1];
+        if (empty($page_title)) {
+            global $wpdb;
+            $item_object_id = $items[1];
 
-			// Load item
-			$page = $wpdb->get_row("SELECT p.*, m4.`meta_value` AS `item_ratings` "
-				. "FROM `wp_apicache_items` p "
-				. "LEFT JOIN `wp_apicache_meta` m4 ON m4.`itemId` = p.`itemId` AND m4.`meta_key` = 'item_ratings'"
-				. "WHERE p.`itemId` = '" . esc_sql($item_object_id) . "';");
+            // Load item
+            $page = $wpdb->get_row("SELECT p.*, m4.`meta_value` AS `item_ratings` "
+                . "FROM `wp_apicache_items` p "
+                . "LEFT JOIN `wp_apicache_meta` m4 ON m4.`itemId` = p.`itemId` AND m4.`meta_key` = 'item_ratings'"
+                . "WHERE p.`itemId` = '" . esc_sql($item_object_id) . "';");
 
-			$page_title = !empty($page->title) ? $page->title : null;
+            $page_title = !empty($page->title) ? $page->title : null;
 
-			if ($page->source == "platform") {
-				$custom_data['[_url]'] = $data_body_message['reference_url'] = "https://test-platform.wisewire.com/editor/" . $item_object_id;
-			}
-		}
+            if ($page->source == "platform") {
+                $custom_data['[_url]'] = $data_body_message['reference_url'] = "https://test-platform.wisewire.com/editor/" . $item_object_id;
+            }
+        }
 
-		$submission = WPCF7_Submission::get_instance();
-		$posted_data = $submission->get_posted_data();
-		$data_body_message['message'] = $posted_data['message'];
-		$issues = implode("\n", $posted_data['issues']);
+        $submission = WPCF7_Submission::get_instance();
+        $posted_data = $submission->get_posted_data();
+        $data_body_message['message'] = $posted_data['message'];
+        $issues = implode("\n", $posted_data['issues']);
 
-		if (empty($issues)) {
-			$new_body = preg_replace('#<tr id="issues_data">(.*?)</tr><tr id="message_data">#','', $new_body);
-			$data_body_message['issues'] = '';
-		} else {
-			$data_body_message['issues'] = !empty($issues) ? $issues : '-';
-		}
+        if (empty($issues)) {
+            $new_body = preg_replace('#<tr id="issues_data">(.*?)</tr><tr id="message_data">#','', $new_body);
+            $data_body_message['issues'] = '';
+        } else {
+            $data_body_message['issues'] = !empty($issues) ? $issues : '-';
+        }
 
-		$page_title .= " - " . get_bloginfo();
-		$page_title = html_entity_decode($page_title, ENT_QUOTES, 'UTF-8');
-		$custom_data['[_page]'] = $data_body_message['reference_page'] = $page_title;
+        $page_title .= " - " . get_bloginfo();
+        $page_title = html_entity_decode($page_title, ENT_QUOTES, 'UTF-8');
+        $custom_data['[_page]'] = $data_body_message['reference_page'] = $page_title;
 
-		//custom subject
-		foreach ($custom_data as $key => $value) {
-			$new_body = str_replace($key, $value, $new_body);
-		}
+        //custom subject
+        foreach ($custom_data as $key => $value) {
+            $new_body = str_replace($key, $value, $new_body);
+        }
 
-		$mail['subject'] = $data_body_message['subject'] = "Feedback | $page_title";
+        $mail['subject'] = $data_body_message['subject'] = "Feedback | $page_title";
 
-	}else{
-		$data = $_POST;
-		foreach($data as $key => $value){
-			$pos = strpos($key, '_wp');
-			if ($pos === false) {
-				$data_body_message[$key] = $value;
-			}
-		}
+    }else{
+        $data = $_POST;
+        foreach($data as $key => $value){
+            $pos = strpos($key, '_wp');
+            if ($pos === false) {
+                $data_body_message[$key] = $value;
+            }
+        }
 
-		$data_body_message['subject'] = $mail['subject'];
-	}
+        $data_body_message['subject'] = $mail['subject'];
+    }
 
-	$mail['body'] = $new_body;
-	$mail['form_name'] = $form_name;
-	$mail['body_message'] = $data_body_message;
-	$wpcf7_data->set_properties(array('mail' => $mail));
+    $mail['body'] = $new_body;
+    $mail['form_name'] = $form_name;
+    $mail['body_message'] = $data_body_message;
+    $wpcf7_data->set_properties(array('mail' => $mail));
 
 }
 add_action("wpcf7_before_send_mail", "wisesire_wpcf7_custom");
 
 
 function get_user_anonymous(){
-	require_once( ABSPATH . 'wp-config.php' );
-	include_once( ABSPATH . WPINC . '/class.wp_intercom.php' );
+    require_once( ABSPATH . 'wp-config.php' );
+    include_once( ABSPATH . WPINC . '/class.wp_intercom.php' );
 
-	if(!is_user_logged_in()){
-		if(!isset($_COOKIE['intercom-user-id'])){
-			$appid = WAN_TEST_ENVIRONMENT ? "vekhwzrt" : "umjqwdw0";
-			$wp_intercom = new WP_Intercom($appid);
-			$response = $wp_intercom->getUserAnonymous();
-			setcookie( 'intercom-id', $response->user->anonymous_id, strtotime( '+20 years' ), COOKIEPATH,  COOKIE_DOMAIN, false);
-			setcookie( 'intercom-user-id', $response->user->id, strtotime( '+20 years' ), COOKIEPATH, COOKIE_DOMAIN, false);
-		}
-	}
+    if(!is_user_logged_in()){
+        if(!isset($_COOKIE['intercom-user-id'])){
+            $appid = WAN_TEST_ENVIRONMENT ? "vekhwzrt" : "umjqwdw0";
+            $wp_intercom = new WP_Intercom($appid);
+            $response = $wp_intercom->getUserAnonymous();
+            setcookie( 'intercom-id', $response->user->anonymous_id, strtotime( '+20 years' ), COOKIEPATH,  COOKIE_DOMAIN, false);
+            setcookie( 'intercom-user-id', $response->user->id, strtotime( '+20 years' ), COOKIEPATH, COOKIE_DOMAIN, false);
+        }
+    }
 }
 
 add_action("init", "get_user_anonymous");
@@ -1188,110 +1188,110 @@ add_filter( 'wpseo_canonical', 'design_canonical' );
 /* CUSTOM VENDOR FORM */
 
 function gf_add_vendor(){
-		$form_items = array();
-		$current_user = wp_get_current_user();
-		$vendor_name = $form_items['vendor_name'];
-		$vendor_desc = $form_items['vendor_description'];
+    $form_items = array();
+    $current_user = wp_get_current_user();
+    $vendor_name = $form_items['vendor_name'];
+    $vendor_desc = $form_items['vendor_description'];
 
-		$term_args = apply_filters( 'wcpv_registration_term_args', array(
-			'description' => $vendor_desc,
-		) );
+    $term_args = apply_filters( 'wcpv_registration_term_args', array(
+        'description' => $vendor_desc,
+    ) );
 
-		// add vendor name to taxonomy
-		$term = wp_insert_term( $vendor_name, WC_PRODUCT_VENDORS_TAXONOMY, $term_args );
+    // add vendor name to taxonomy
+    $term = wp_insert_term( $vendor_name, WC_PRODUCT_VENDORS_TAXONOMY, $term_args );
 
-		// no errors, term added, continue
-		if ( ! is_wp_error( $term ) && ! empty( $current_user ) ) {
-			// add user to term meta
-			$vendor_data = array();
+    // no errors, term added, continue
+    if ( ! is_wp_error( $term ) && ! empty( $current_user ) ) {
+        // add user to term meta
+        $vendor_data = array();
 
-			$vendor_data['admins'] = $current_user->ID;
+        $vendor_data['admins'] = $current_user->ID;
 
-			update_term_meta( $term['term_id'], 'vendor_data', $vendor_data );
+        update_term_meta( $term['term_id'], 'vendor_data', $vendor_data );
 
-			$args['user_id']     = $current_user->ID;
-			$args['user_email']  = $current_user->user_email;
-			$args['first_name']  = $current_user->user_firstname;
-			$args['last_name']   = $current_user->user_lastname;
-			$args['user_login']  = __( 'Same as your account login', 'woocommerce-product-vendors' );
-			$args['user_pass']   = __( 'Same as your account password', 'woocommerce-product-vendors' );
-			$args['vendor_name'] = $vendor_name;
-			$args['vendor_desc'] = $vendor_desc;
+        $args['user_id']     = $current_user->ID;
+        $args['user_email']  = $current_user->user_email;
+        $args['first_name']  = $current_user->user_firstname;
+        $args['last_name']   = $current_user->user_lastname;
+        $args['user_login']  = __( 'Same as your account login', 'woocommerce-product-vendors' );
+        $args['user_pass']   = __( 'Same as your account password', 'woocommerce-product-vendors' );
+        $args['vendor_name'] = $vendor_name;
+        $args['vendor_desc'] = $vendor_desc;
 
-			// change this user's role to pending vendor
-			wp_update_user( array( 'ID' => $current_user->ID, 'role' => 'wc_product_vendors_pending_vendor' ) );
-		}
+        // change this user's role to pending vendor
+        wp_update_user( array( 'ID' => $current_user->ID, 'role' => 'wc_product_vendors_pending_vendor' ) );
+    }
 }
 
 
 add_action("wpcf7_before_send_mail", "wpcf7_do_something_else_with_the_data");
 function wpcf7_do_something_else_with_the_data($contact_form){
-	
-	
-	if ( $contact_form->id == 56762 ){
-	$first = $_POST['name-first'];
-	$last = $_POST['name-last'];
-	$email = $_POST['account-email'];
-	$vendor = $_POST['vendor-name'];
-	$paypal = $_POST['vendor-paypal'];
-	$country = $_POST['vendor-country'];
-	$city = $_POST['vendor-city'];
-	$stat = $_POST['vendor-state'];
-	$postal = $_POST['vendor-postal'];
-	$phone = $_POST['vendor-phone'];
-	$message = $_POST['vendor-message'];
-
-	$current_user = get_user_by('email',$email);
-	$vendor_name = $vendor;
-	$vendor_desc = $_POST['vendor-desc'];
-
-	$term_args = apply_filters( 'wcpv_registration_term_args', array(
-		'description' => $vendor_desc,
-	) );
-
-	// add vendor name to taxonomy
-	$term = wp_insert_term( $vendor_name, WC_PRODUCT_VENDORS_TAXONOMY, $term_args );
-
-	// no errors, term added, continue
-		if ( ! is_wp_error( $term ) && ! empty( $current_user ) ) {
-			// add user to term meta
-			$vendor_data = array();
-
-			$vendor_data['admins'] = $current_user->ID;
-			$vendor_data['email'] = $email;
-			$vendor_data['paypal'] = $paypal;
-			$vendor_data['commission'] = get_option( 'wcpv_vendor_settings_default_commission', '0' );
-			$vendor_data['notes'] = $message;
-			update_term_meta( $term['term_id'], 'vendor_data', $vendor_data );
-
-			$args['user_id']     = $current_user->ID;
-			$args['user_email']  = $current_user->user_email;
-			$args['first_name']  = $current_user->user_firstname;
-			$args['last_name']   = $current_user->user_lastname;
-			$args['user_login']  = __( 'Same as your account login', 'woocommerce-product-vendors' );
-			$args['user_pass']   = __( 'Same as your account password', 'woocommerce-product-vendors' );
-			$args['vendor_name'] = $vendor_name;
-			$args['vendor_desc'] = $vendor_desc;
-
-			// change this user's role to pending vendor
-
-			if ( current_user_can( 'manage_options' ) ) {
-				/* A user with admin privileges */
-			} else {
-				/* A user without admin privileges */
-				wp_update_user( array( 'ID' => $current_user->ID, 'role' => 'wc_product_vendors_pending_vendor' ) );
-			}
-
-		}
 
 
-    // Everything you should need is in this variable
-    // var_dump($wpcf7_data);
+    if ( $contact_form->id == 56762 ){
+        $first = $_POST['name-first'];
+        $last = $_POST['name-last'];
+        $email = $_POST['account-email'];
+        $vendor = $_POST['vendor-name'];
+        $paypal = $_POST['vendor-paypal'];
+        $country = $_POST['vendor-country'];
+        $city = $_POST['vendor-city'];
+        $stat = $_POST['vendor-state'];
+        $postal = $_POST['vendor-postal'];
+        $phone = $_POST['vendor-phone'];
+        $message = $_POST['vendor-message'];
 
-    // I can skip sending the mail if I want to...
-    // $contact_form->skip_mail = false;
-	}
-	return $contact_form;
+        $current_user = get_user_by('email',$email);
+        $vendor_name = $vendor;
+        $vendor_desc = $_POST['vendor-desc'];
+
+        $term_args = apply_filters( 'wcpv_registration_term_args', array(
+            'description' => $vendor_desc,
+        ) );
+
+        // add vendor name to taxonomy
+        $term = wp_insert_term( $vendor_name, WC_PRODUCT_VENDORS_TAXONOMY, $term_args );
+
+        // no errors, term added, continue
+        if ( ! is_wp_error( $term ) && ! empty( $current_user ) ) {
+            // add user to term meta
+            $vendor_data = array();
+
+            $vendor_data['admins'] = $current_user->ID;
+            $vendor_data['email'] = $email;
+            $vendor_data['paypal'] = $paypal;
+            $vendor_data['commission'] = get_option( 'wcpv_vendor_settings_default_commission', '0' );
+            $vendor_data['notes'] = $message;
+            update_term_meta( $term['term_id'], 'vendor_data', $vendor_data );
+
+            $args['user_id']     = $current_user->ID;
+            $args['user_email']  = $current_user->user_email;
+            $args['first_name']  = $current_user->user_firstname;
+            $args['last_name']   = $current_user->user_lastname;
+            $args['user_login']  = __( 'Same as your account login', 'woocommerce-product-vendors' );
+            $args['user_pass']   = __( 'Same as your account password', 'woocommerce-product-vendors' );
+            $args['vendor_name'] = $vendor_name;
+            $args['vendor_desc'] = $vendor_desc;
+
+            // change this user's role to pending vendor
+
+            if ( current_user_can( 'manage_options' ) ) {
+                /* A user with admin privileges */
+            } else {
+                /* A user without admin privileges */
+                wp_update_user( array( 'ID' => $current_user->ID, 'role' => 'wc_product_vendors_pending_vendor' ) );
+            }
+
+        }
+
+
+        // Everything you should need is in this variable
+        // var_dump($wpcf7_data);
+
+        // I can skip sending the mail if I want to...
+        // $contact_form->skip_mail = false;
+    }
+    return $contact_form;
 
 }
 
@@ -1300,14 +1300,14 @@ add_filter( 'wpcf7_validate_email*', 'custom_email_confirmation_validation_filte
 
 function custom_email_confirmation_validation_filter( $result, $tag ) {
     $tag = new WPCF7_Shortcode( $tag );
-	$email = $_POST['account-email'];
+    $email = $_POST['account-email'];
 
     if ( 'account-email' == $tag->name ) {
         if( email_exists( $email )) {
-      		/* stuff to do when email address exists */
-   		} else{
-			$result->invalidate( $tag, "Must be a current Wisewire account email." );
-		}
+            /* stuff to do when email address exists */
+        } else{
+            $result->invalidate( $tag, "Must be a current Wisewire account email." );
+        }
     }
 
     return $result;
@@ -1322,25 +1322,25 @@ function change_custom_title_page($data){
 
     if ( get_post_type( $post->ID ) == 'page' && !isset($wp_query->query['search']) && ($post->post_name == 'explore' || $post->post_name == 'explore-all') ){
 
-    	$_url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        $_url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
         $table_name = $wpdb->prefix . "wan_custom_seo";
         $custom_seo = $wpdb->get_row("SELECT title from $table_name WHERE url='https://$_url';");
-		$title = !empty($custom_seo->title) ? $custom_seo->title : null;
+        $title = !empty($custom_seo->title) ? $custom_seo->title : null;
 
-		if ($title == null){
-	    	$grade_name = isset($wp_query->query['grade']) ? $wp_query->query['grade'] : 'middle';
-	    	$discipline = isset($wp_query->query['discipline']) ? ' | '.$wp_query->query['discipline'] : '';
+        if ($title == null){
+            $grade_name = isset($wp_query->query['grade']) ? $wp_query->query['grade'] : 'middle';
+            $discipline = isset($wp_query->query['discipline']) ? ' | '.$wp_query->query['discipline'] : '';
 
-	    	return 'Explore School Resources for Teachers | '. ucwords( str_replace('-', ' ', $grade_name) ) . " School" . ucwords( str_replace('-', ' ', $discipline) ) . " | Wisewire";
-    	} else {
-    		return preg_replace('#[\r\n]#', ' ', $title) . " | Wisewire";
-    	}
+            return 'Explore School Resources for Teachers | '. ucwords( str_replace('-', ' ', $grade_name) ) . " School" . ucwords( str_replace('-', ' ', $discipline) ) . " | Wisewire";
+        } else {
+            return preg_replace('#[\r\n]#', ' ', $title) . " | Wisewire";
+        }
 
 
 
-	} else {
-		return $data;
-	}
+    } else {
+        return $data;
+    }
 }
 
 add_filter('wpseo_metadesc','change_custom_meta_description_page', 100);
@@ -1351,37 +1351,37 @@ function change_custom_meta_description_page($data){
 
     if ( get_post_type( $post->ID ) == 'page' && !isset($wp_query->query['search']) && ($post->post_name == 'explore' || $post->post_name == 'explore-all') ){
 
-    	$_url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    	if ( isset($wp_query->query['page_nr']) ){
+        $_url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        if ( isset($wp_query->query['page_nr']) ){
             $_url = substr($_url, 0, strpos($_url, '/'.$wp_query->query['page_nr'].'/')) . "/";
         }
 
         $table_name = $wpdb->prefix . "wan_custom_seo";
         $custom_seo = $wpdb->get_row("SELECT meta_description from $table_name WHERE url='https://$_url';");
-		$meta_description = !empty($custom_seo->meta_description) ? $custom_seo->meta_description : null;
+        $meta_description = !empty($custom_seo->meta_description) ? $custom_seo->meta_description : null;
 
-    	if ($meta_description == null){
-	    	$grade_name = isset($wp_query->query['grade']) ? $wp_query->query['grade'] : 'middle';
-	    	$discipline = isset($wp_query->query['discipline']) ? $wp_query->query['discipline'] : '';
+        if ($meta_description == null){
+            $grade_name = isset($wp_query->query['grade']) ? $wp_query->query['grade'] : 'middle';
+            $discipline = isset($wp_query->query['discipline']) ? $wp_query->query['discipline'] : '';
 
-	    	return 'Explore School Resources for Teachers. '. ucwords( str_replace('-', ' ', $grade_name) ) . " Grade. " . ucwords( str_replace('-', ' ', $discipline) );
-    	} else {
-    		return preg_replace('#[\r\n]#', ' ', $meta_description);
-    	}
+            return 'Explore School Resources for Teachers. '. ucwords( str_replace('-', ' ', $grade_name) ) . " Grade. " . ucwords( str_replace('-', ' ', $discipline) );
+        } else {
+            return preg_replace('#[\r\n]#', ' ', $meta_description);
+        }
 
-	} else {
-		return $data;
-	}
+    } else {
+        return $data;
+    }
 }
 
 function hide_dialog_favorite($username)
 {
-	if ($username) {
-		if (isset($_COOKIE['is_hide_dialog_favorite'])  && $_COOKIE['is_hide_dialog_favorite'] == 1) {
-			unset($_COOKIE['is_hide_dialog_favorite']);
-			setcookie('is_hide_dialog_favorite', "");
-		}
-	}
+    if ($username) {
+        if (isset($_COOKIE['is_hide_dialog_favorite'])  && $_COOKIE['is_hide_dialog_favorite'] == 1) {
+            unset($_COOKIE['is_hide_dialog_favorite']);
+            setcookie('is_hide_dialog_favorite', "");
+        }
+    }
 }
 add_action('wp_login', 'hide_dialog_favorite');
 
@@ -1404,42 +1404,107 @@ function add_rel_nofollow_to_item($item_id) {
 
 
 /*** INTERCOM ***/
-function send_intercom($array_v, $isUser, $firstName, $lastName, $phone, $company, $title, $comments)
+function send_intercom($array_v, $isUser)
 {
-	require_once( ABSPATH . 'wp-config.php' );
-	include_once(ABSPATH . WPINC . '/class.wp_intercom.php');
-	//$contact_form = $this->contact_form;
+    $intercom_attrs = array();
+    /*Carrers Forms*/
+    if ($array_v["carrers_form"]){
+        $intercom_attrs["name"] = $array_v["your-name"]." ".$array_v["your-lastname"];
+        $intercom_attrs["email"] = $array_v["your-email"];
+        if(trim($array_v["your-phone"])){ $intercom_attrs["phone"] = $array_v["your-phone"];}
+        if(trim($array_v["your-resume"])){ $intercom_attrs["custom_attributes"]["File Upload"] = $array_v["your-resume"];}
+        if(trim($array_v["resume-url"])){ $intercom_attrs["custom_attributes"]["Linkedin Profile URL"] = $array_v["resume-url"];}
+        if(trim($array_v["your-message"])){ $intercom_attrs["custom_attributes"]["Notes"] = $array_v["your-message"];}
 
-	$appid = WAN_TEST_ENVIRONMENT ? "vekhwzrt" : "umjqwdw0";
-	$appkey = WAN_TEST_ENVIRONMENT ? "cfed9b1d47102a26f1084fbe36fa0c510b995663" : "0cf09251b0a355fa787a0348463a7c453111331d";
-	$wp_intercom = new WP_Intercom($appid, $appkey);
+        unset($array_v["carrers_form"]);
+        unset($array_v["g-recaptcha-response"]);
 
-	$output = implode("\n", array_map(
-		function ($v, $k) {
-			return sprintf("%s: %s", $k, $v);
-		},
-		$array_v,
-		array_keys($array_v)
-	));
+        /*Schedule Demo Form*/
+    }elseif ($array_v["sdemo-form"]){
+        $intercom_attrs["name"] = $array_v["sd-first-name"]." ".$array_v["sd-last-name"];
+        $intercom_attrs["email"] = $array_v["sd-email"];
+        $intercom_attrs["phone"] = $array_v["sd-phone"];
+        $intercom_attrs["custom_attributes"] = array(
+            "Company" => $array_v["sd-company"],
+            "job_title" => $array_v["sd-title"]);
+        if(trim($array_v["sd-comments"])){ $intercom_attrs["custom_attributes"]["Notes"] = $array_v["sd-comments"];}
 
-	$user_id = null;
-	if (!is_user_logged_in()) {
-		$user_id = $_COOKIE['intercom-user-id'];
-	} else {
-		$user_id = get_current_user_id();
-		$user_info = get_userdata($user_id);
-		$response = $wp_intercom->createUpdateUser($user_info->user_email, $isUser, $firstName, $lastName, $phone, $company, $title, $comments);
-		$user_id = $response->id;
-	}
+        unset($array_v["sdemo-form"]);
+        unset($array_v["g-recaptcha-response"]);
 
-	$response = $wp_intercom->createMessage($user_id, $output);
+        /*Vendor Form*/
+    }elseif ($array_v["vendor_form"]){
+        $intercom_attrs["name"] = $array_v["name-first"]." ".$array_v["name-last"];
+        $intercom_attrs["email"] = $array_v["account-email"];
+        if(trim($array_v["vendor-phone"])){$intercom_attrs["phone"] = $array_v["vendor-phone"];}
+        if(trim($array_v["vendor-country"])){$intercom_attrs["country_name"] = $array_v["vendor-country"];}
+        if(trim($array_v["vendor-city"])){$intercom_attrs["city_name"] = $array_v["vendor-city"];}
+        if(trim($array_v["vendor-state"])){$intercom_attrs["region_name"] = $array_v["vendor-state"];}
+        if(trim($array_v["vendor-postal"])){$intercom_attrs["postal_code"] = $array_v["vendor-postal"];}
+        if(trim($array_v["vendor-name"])){$intercom_attrs["custom_attributes"]["Company"] = $array_v["vendor-name"];}
+        if(trim($array_v["vendor-paypal"])){$intercom_attrs["custom_attributes"]["Paypal Email"] = $array_v["vendor-paypal"];}
+        if(trim($array_v["vendor-message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["vendor-message"];}
 
-	//var_dump($response);
-	if (!$response) {
-		return false;
-	}
+        unset($array_v["vendor_form"]);
+        unset($array_v["g-recaptcha-response"]);
 
-	return true;
+        /*Contact Us Form*/
+    }elseif ($array_v["contactus_form"]){
+        $intercom_attrs["name"] = $array_v["first-name"]." ".$array_v["last-name"];
+        $intercom_attrs["email"] = $array_v["email"];
+        if(trim($array_v["phone"])){$intercom_attrs["phone"] = $array_v["phone"];}
+        if(trim($array_v["school-affiliation"])){$intercom_attrs["custom_attributes"]["Company"] = $array_v["school-affiliation"];}
+        if(trim($array_v["message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["message"];}
+
+        unset($array_v["contactus_form"]);
+        unset($array_v["g-recaptcha-response"]);
+
+        /*Register Form*/
+    }elseif ($isUser){
+        $intercom_attrs["name"] = $array_v["first-name"]." ".$array_v["last-name"];
+        $intercom_attrs["email"] = $array_v["user_email"];
+        $intercom_attrs["phone"] = $array_v["user_phone"];
+        $intercom_attrs["custom_attributes"] = array(
+            "Company" => $array_v["si_company"],
+            "Role" => $array_v["user_ed_role"],
+            "job_title" => $array_v["user_ed_title"]);
+
+        unset($array_v["user_pass"]);
+        unset($array_v["user_pass_confirm"]);
+        unset($array_v["g-recaptcha-response"]);
+    }
+
+    //var_dump($array_v);
+    require_once( ABSPATH . 'wp-config.php' );
+    include_once(ABSPATH . WPINC . '/class.wp_intercom.php');
+    //$contact_form = $this->contact_form;
+
+    $appid = WAN_TEST_ENVIRONMENT ? "vekhwzrt" : "umjqwdw0";
+    $appkey = WAN_TEST_ENVIRONMENT ? "cfed9b1d47102a26f1084fbe36fa0c510b995663" : "0cf09251b0a355fa787a0348463a7c453111331d";
+    $wp_intercom = new WP_Intercom($appid, $appkey);
+
+
+    $output = implode("\n", array_map(
+        function ($v, $k) {
+            return sprintf("%s: %s", $k, $v);
+        },
+        $array_v,
+        array_keys($array_v)
+    ));
+
+    $user_id = null;
+    $response = $wp_intercom->createUpdateUser($intercom_attrs, $isUser);
+    $user_id = $response->id;
+
+
+    $response = $wp_intercom->createMessage($user_id, $output);
+
+    //var_dump($response);
+    if (!$response) {
+        return false;
+    }
+
+    return true;
 }
 
 ?>
