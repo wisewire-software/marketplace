@@ -1447,7 +1447,7 @@ function send_intercom($array_v, $isUser)
         if(isset($array_v["vendor-paypal"]) && trim($array_v["vendor-paypal"])){$intercom_attrs["custom_attributes"]["Paypal Email"] = $array_v["vendor-paypal"];}
         if(isset($array_v["vendor-message"]) && trim($array_v["vendor-message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["vendor-message"];}
 
-        unset($array_v["vendor_form"], $array_v["g-recaptcha-response"]);
+        unset($array_v["vendor_form"], $array_v["g-recaptcha-response"], $array_v["location_data"]["type"] );
 
         /*Contact Us Form*/
     }elseif (isset($array_v["contactus_form"])){
