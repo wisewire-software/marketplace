@@ -1438,6 +1438,7 @@ function send_intercom($array_v, $isUser)
         $intercom_attrs["name"] = $array_v["name-first"]." ".$array_v["name-last"];
         $intercom_attrs["email"] = $array_v["account-email"];
         if(isset($array_v["vendor-phone"]) && trim($array_v["vendor-phone"])){$intercom_attrs["phone"] = $array_v["vendor-phone"];}
+        $intercom_attrs["location_data"]["type"] = "location_data";
         if(isset($array_v["vendor-country"]) && trim($array_v["vendor-country"])){$intercom_attrs["location_data"]["country_name"] = $array_v["vendor-country"];}
         if(isset($array_v["vendor-city"]) && trim($array_v["vendor-city"])){$intercom_attrs["location_data"]["city_name"] = $array_v["vendor-city"];}
         if(isset($array_v["vendor-state"]) && trim($array_v["vendor-state"])){$intercom_attrs["location_data"]["region_name"] = $array_v["vendor-state"];}
