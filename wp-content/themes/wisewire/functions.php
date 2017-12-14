@@ -1438,6 +1438,7 @@ function send_intercom($array_v, $isUser)
         $intercom_attrs["name"] = $array_v["name-first"]." ".$array_v["name-last"];
         $intercom_attrs["email"] = $array_v["account-email"];
         if(isset($array_v["vendor-phone"]) && trim($array_v["vendor-phone"])){$intercom_attrs["phone"] = $array_v["vendor-phone"];}
+        $intercom_attrs["location_data"]["type"] = "location_data";
         if(isset($array_v["vendor-country"]) && trim($array_v["vendor-country"])){$intercom_attrs["location_data"]["country_name"] = $array_v["vendor-country"];}
         if(isset($array_v["vendor-city"]) && trim($array_v["vendor-city"])){$intercom_attrs["location_data"]["city_name"] = $array_v["vendor-city"];}
         if(isset($array_v["vendor-state"]) && trim($array_v["vendor-state"])){$intercom_attrs["location_data"]["region_name"] = $array_v["vendor-state"];}
@@ -1446,7 +1447,7 @@ function send_intercom($array_v, $isUser)
         if(isset($array_v["vendor-paypal"]) && trim($array_v["vendor-paypal"])){$intercom_attrs["custom_attributes"]["Paypal Email"] = $array_v["vendor-paypal"];}
         if(isset($array_v["vendor-message"]) && trim($array_v["vendor-message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["vendor-message"];}
 
-        unset($array_v["vendor_form"], $array_v["g-recaptcha-response"]);
+        unset($array_v["vendor_form"], $array_v["g-recaptcha-response"], $array_v["location_data"]["type"] );
 
         /*Contact Us Form*/
     }elseif (isset($array_v["contactus_form"])){
