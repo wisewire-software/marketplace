@@ -108,8 +108,8 @@
       $fields['user_pass']    =  isset($fields['user_pass'])   ? esc_attr($fields['user_pass']) : '';
       $fields['user_pass_confirm']    =  isset($fields['user_pass_confirm'])   ? esc_attr($fields['user_pass_confirm']) : '';
       $fields['user_email']   =  isset($fields['user_email'])  ? sanitize_email($fields['user_email']) : '';
-      $fields['user_phone']   =  isset($fields['user_phone'])  ? sanitize_email($fields['user_phone']) : '';
-      $fields['si_company']   =  isset($fields['si_company'])  ? sanitize_email($fields['si_company']) : '';
+      $fields['user_phone']   =  isset($fields['user_phone'])  ? sanitize_text_field($fields['user_phone']) : '';
+      $fields['si_company']   =  isset($fields['si_company'])  ? sanitize_text_field($fields['si_company']) : '';
       $fields['first_name']   =  isset($fields['first_name'])  ? sanitize_text_field($fields['first_name']) : '';
       $fields['last_name']    =  isset($fields['last_name'])   ? sanitize_text_field($fields['last_name']) : '';
       $fields['user_ed_role']    =  isset($fields['user_ed_role'])   ? sanitize_text_field($fields['user_ed_role']) : '';
