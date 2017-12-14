@@ -1414,10 +1414,10 @@ function send_intercom($array_v, $isUser)
     if (isset($array_v["carrers_form"])){
         $intercom_attrs["name"] = $array_v["your-name"]." ".$array_v["your-lastname"];
         $intercom_attrs["email"] = $array_v["your-email"];
-        if(trim($array_v["your-phone"])){ $intercom_attrs["phone"] = $array_v["your-phone"];}
-        if(trim($array_v["your-resume"])){ $intercom_attrs["custom_attributes"]["File Upload"] = $array_v["your-resume"];}
-        if(trim($array_v["resume-url"])){ $intercom_attrs["custom_attributes"]["Linkedin Profile URL"] = $array_v["resume-url"];}
-        if(trim($array_v["your-message"])){ $intercom_attrs["custom_attributes"]["Notes"] = $array_v["your-message"];}
+        if(isset($array_v["your-phone"]) && trim($array_v["your-phone"])){ $intercom_attrs["phone"] = $array_v["your-phone"];}
+        if(isset($array_v["your-resume"]) && trim($array_v["your-resume"])){ $intercom_attrs["custom_attributes"]["File Upload"] = $array_v["your-resume"];}
+        if(isset($array_v["resume-url"]) && trim($array_v["resume-url"])){ $intercom_attrs["custom_attributes"]["Linkedin Profile URL"] = $array_v["resume-url"];}
+        if(isset($array_v["your-message"]) && trim($array_v["your-message"])){ $intercom_attrs["custom_attributes"]["Notes"] = $array_v["your-message"];}
 
         unset($array_v["carrers_form"]);
         unset($array_v["subject"]);
@@ -1431,7 +1431,7 @@ function send_intercom($array_v, $isUser)
         $intercom_attrs["custom_attributes"] = array(
             "Company" => $array_v["sd-company"],
             "job_title" => $array_v["sd-title"]);
-        if(trim($array_v["sd-comments"])){ $intercom_attrs["custom_attributes"]["Notes"] = $array_v["sd-comments"];}
+        if(isset($array_v["sd-comments"]) && trim($array_v["sd-comments"])){ $intercom_attrs["custom_attributes"]["Notes"] = $array_v["sd-comments"];}
 
         unset($array_v["sdemo-form"]);
         unset($array_v["g-recaptcha-response"]);
@@ -1440,14 +1440,14 @@ function send_intercom($array_v, $isUser)
     }elseif (isset($array_v["vendor_form"])){
         $intercom_attrs["name"] = $array_v["name-first"]." ".$array_v["name-last"];
         $intercom_attrs["email"] = $array_v["account-email"];
-        if(trim($array_v["vendor-phone"])){$intercom_attrs["phone"] = $array_v["vendor-phone"];}
-        if(trim($array_v["vendor-country"])){$intercom_attrs["country_name"] = $array_v["vendor-country"];}
-        if(trim($array_v["vendor-city"])){$intercom_attrs["city_name"] = $array_v["vendor-city"];}
-        if(trim($array_v["vendor-state"])){$intercom_attrs["region_name"] = $array_v["vendor-state"];}
-        if(trim($array_v["vendor-postal"])){$intercom_attrs["postal_code"] = $array_v["vendor-postal"];}
-        if(trim($array_v["vendor-name"])){$intercom_attrs["custom_attributes"]["Company"] = $array_v["vendor-name"];}
-        if(trim($array_v["vendor-paypal"])){$intercom_attrs["custom_attributes"]["Paypal Email"] = $array_v["vendor-paypal"];}
-        if(trim($array_v["vendor-message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["vendor-message"];}
+        if(isset($array_v["vendor-phone"]) && trim($array_v["vendor-phone"])){$intercom_attrs["phone"] = $array_v["vendor-phone"];}
+        if(isset($array_v["vendor-country"]) && trim($array_v["vendor-country"])){$intercom_attrs["country_name"] = $array_v["vendor-country"];}
+        if(isset($array_v["vendor-city"]) && trim($array_v["vendor-city"])){$intercom_attrs["city_name"] = $array_v["vendor-city"];}
+        if(isset($array_v["vendor-state"]) && trim($array_v["vendor-state"])){$intercom_attrs["region_name"] = $array_v["vendor-state"];}
+        if(isset($array_v["vendor-postal"]) && trim($array_v["vendor-postal"])){$intercom_attrs["postal_code"] = $array_v["vendor-postal"];}
+        if(isset($array_v["vendor-name"]) && trim($array_v["vendor-name"])){$intercom_attrs["custom_attributes"]["Company"] = $array_v["vendor-name"];}
+        if(isset($array_v["vendor-paypal"]) && trim($array_v["vendor-paypal"])){$intercom_attrs["custom_attributes"]["Paypal Email"] = $array_v["vendor-paypal"];}
+        if(isset($array_v["vendor-message"]) && trim($array_v["vendor-message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["vendor-message"];}
 
         unset($array_v["vendor_form"]);
         unset($array_v["g-recaptcha-response"]);
@@ -1456,9 +1456,9 @@ function send_intercom($array_v, $isUser)
     }elseif (isset($array_v["contactus_form"])){
         $intercom_attrs["name"] = $array_v["first-name"]." ".$array_v["last-name"];
         $intercom_attrs["email"] = $array_v["email"];
-        if(trim($array_v["phone"])){$intercom_attrs["phone"] = $array_v["phone"];}
-        if(trim($array_v["school-affiliation"])){$intercom_attrs["custom_attributes"]["Company"] = $array_v["school-affiliation"];}
-        if(trim($array_v["message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["message"];}
+        if(isset($array_v["phone"]) && trim($array_v["phone"])){$intercom_attrs["phone"] = $array_v["phone"];}
+        if(isset($array_v["school-affiliation"]) && trim($array_v["school-affiliation"])){$intercom_attrs["custom_attributes"]["Company"] = $array_v["school-affiliation"];}
+        if(isset($array_v["message"]) && trim($array_v["message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["message"];}
 
         unset($array_v["contactus_form"]);
         unset($array_v["g-recaptcha-response"]);
@@ -1484,7 +1484,7 @@ function send_intercom($array_v, $isUser)
                   break;
           }
         }
-        if(trim($array_v["message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["message"];}
+        if(isset($array_v["message"]) && trim($array_v["message"])){$intercom_attrs["custom_attributes"]["Notes"] = $array_v["message"];}
 
         unset($array_v["fback_form"]);
         unset($array_v["g-recaptcha-response"]);
