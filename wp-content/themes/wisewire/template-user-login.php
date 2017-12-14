@@ -55,7 +55,7 @@
           $_SESSION['teacher_reg_form_event'] = true;
 
           $fields['subject'] = 'Register New User';
-          send_intercom($fields);
+          send_intercom($fields, true);
           
           // And display a message
           echo '<div class="alert alert-success">Registration complete. You can now login.</div>';
@@ -108,7 +108,8 @@
       $fields['user_pass']    =  isset($fields['user_pass'])   ? esc_attr($fields['user_pass']) : '';
       $fields['user_pass_confirm']    =  isset($fields['user_pass_confirm'])   ? esc_attr($fields['user_pass_confirm']) : '';
       $fields['user_email']   =  isset($fields['user_email'])  ? sanitize_email($fields['user_email']) : '';
-      $fields['user_email_confirm']   =  isset($fields['user_email_confirm'])  ? sanitize_email($fields['user_email_confirm']) : '';
+      $fields['user_phone']   =  isset($fields['user_phone'])  ? sanitize_email($fields['user_phone']) : '';
+      $fields['si_company']   =  isset($fields['si_company'])  ? sanitize_email($fields['si_company']) : '';
       $fields['first_name']   =  isset($fields['first_name'])  ? sanitize_text_field($fields['first_name']) : '';
       $fields['last_name']    =  isset($fields['last_name'])   ? sanitize_text_field($fields['last_name']) : '';
       $fields['user_ed_role']    =  isset($fields['user_ed_role'])   ? sanitize_text_field($fields['user_ed_role']) : '';
@@ -136,7 +137,7 @@
       
                
       <form action="<?php $_SERVER['REQUEST_URI'] ?>" method="post" id="create-account-form">
-        
+
         <div class="form-groups">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="First Name*" name="first_name" value="<?php echo (isset($fields['first_name']) ? $fields['first_name'] : '') ?>" required>
@@ -144,30 +145,26 @@
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Last Name*" name="last_name" value="<?php echo (isset($fields['last_name']) ? $fields['last_name'] : '') ?>" required>
           </div>
-        </div>
+
         
-        <div class="form-groups">
+
           <div class="form-group">
             <input type="email" class="form-control" id="" placeholder="Email*" name="user_email" value="<?php echo (isset($fields['user_email']) ? $fields['user_email'] : '') ?>" required>
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" id="" placeholder="Confirm Email*" name="user_email_confirm" value="<?php echo (isset($fields['user_email_confirm']) ? $fields['user_email_confirm'] : '') ?>" required>
-          </div>
-        </div>
-        
-        <div class="form-groups">
-          <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password*" name="user_pass" required>
+            <input type="text" class="form-control"  placeholder="Phone*" name="user_phone" value="<?php echo (isset($fields['user_phone']) ? $fields['user_phone'] : '') ?>" required>
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" placeholder="Confirm Password*" name="user_pass_confirm" required>
+            <input type="text" class="form-control"  placeholder="School/Institution/Company*" name="si_company" value="<?php echo (isset($fields['si_company']) ? $fields['si_company'] : '') ?>" required>
           </div>
-        </div>
 
-        <div class="form-groups">
+
+
+
+
           <div class="form-group">
             <select class="form-control" name="user_ed_role" required>
-              <option value="">Select Your Role*</option>
+              <option value="">Role*</option>
               <?php 
                 $roles = array(
                   "School Leadership (K-12)",
@@ -189,7 +186,16 @@
             <input class="form-control" type="text" placeholder="Title*" name="user_ed_title" maxlength="100" required
                    value="<?php echo (isset($fields['user_ed_title']) ? $fields['user_ed_title'] : '') ?>" />
           </div>
-        </div>
+
+
+
+              <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password*" name="user_pass" required>
+              </div>
+              <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Confirm Password*" name="user_pass_confirm" required>
+              </div>
+          </div>
         <?php
           $register_terms = get_field('register_terms');
         ?>
@@ -239,7 +245,8 @@
         'user_pass'    =>  isset($_POST['user_pass'])    ?  $_POST['user_pass']    :  '',
         'user_pass_confirm'    =>  isset($_POST['user_pass_confirm'])    ?  $_POST['user_pass_confirm']    :  '',
         'user_email'   =>  isset($_POST['user_email'])   ?  $_POST['user_email']        :  '',
-        'user_email_confirm'   =>  isset($_POST['user_email_confirm'])   ?  $_POST['user_email_confirm']        :  '',
+        'user_phone'   =>  isset($_POST['user_phone'])   ?  $_POST['user_phone']        :  '',
+        'si_company'   =>  isset($_POST['si_company'])   ?  $_POST['si_company']        :  '',
         'first_name'   =>  isset($_POST['first_name'])   ?  $_POST['first_name']        :  '',
         'last_name'    =>  isset($_POST['last_name'])    ?  $_POST['last_name']        :  '',
         'user_ed_role'    =>  isset($_POST['user_ed_role'])    ?  $_POST['user_ed_role']        :  '',
@@ -275,6 +282,12 @@
       if (empty($fields['last_name']) || empty($fields['last_name']) ) {
         $errors->add('last_name', 'Last name is required');
       }
+      if (empty($fields['user_phone'])) {
+        $errors->add('user_phone', 'Phone is required');
+      }
+      if (empty($fields['si_company'])) {
+        $errors->add('si_company', 'School/Institution/Company is required');
+      }
             
       if (username_exists($fields['user_email']))
         $errors->add('email', 'Email already in use');   
@@ -295,10 +308,6 @@
       
       if ( ($fields['user_pass']) != $fields['user_pass_confirm']) {
         $errors->add('user_pass', 'Passwords do not match');
-      }
-      
-      if ( ($fields['user_email']) != $fields['user_email_confirm']) {
-        $errors->add('email', 'Emails do not match');
       }
 
       if (empty($fields['user_ed_role'])) {

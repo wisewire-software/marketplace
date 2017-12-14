@@ -239,12 +239,6 @@ class WPCF7_Submission {
 
 		do_action( 'wpcf7_before_send_mail', $contact_form );
 
-		$send_intercom = send_intercom($contact_form->prop('mail')['body_message']);
-
-		if(!$send_intercom){
-			return false;
-		}
-
 		$skip_mail = $this->skip_mail || ! empty( $contact_form->skip_mail );
 		$skip_mail = apply_filters( 'wpcf7_skip_mail', $skip_mail, $contact_form );
 
