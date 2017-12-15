@@ -1417,7 +1417,7 @@ function send_intercom($array_v, $isUser)
         if(isset($array_v["resume-url"]) && trim($array_v["resume-url"])){ $intercom_attrs["custom_attributes"]["Linkedin Profile URL"] = $array_v["resume-url"];}
         if(isset($array_v["your-message"]) && trim($array_v["your-message"])){ $intercom_attrs["custom_attributes"]["Notes"] = $array_v["your-message"];}
 
-        unset($array_v["carrers_form"],$array_v["subject"],$array_v["g-recaptcha-response"]);
+        unset($array_v["carrers_form"],$array_v["subject"],$array_v["g-recaptcha-response"],$array_v["your-resume"]);
 
         /*Schedule Demo Form*/
     }elseif (isset($array_v["sdemo-form"])){
