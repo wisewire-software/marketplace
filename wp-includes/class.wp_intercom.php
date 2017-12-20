@@ -65,10 +65,8 @@ class WP_Intercom
         return $this->httpCall($this->apiEndpoint . 'messages', 'POST', json_encode($data));
     }
 
-    public function createUpdateUser($email)
+    public function createUpdateUser($data, $isUser)
     {
-        $data = array();
-        $data['email'] = $email;
-        return $this->httpCall($this->apiEndpoint . 'users', 'POST', json_encode($data));
+        return $this->httpCall($this->apiEndpoint . ($isUser ? 'users' : 'contacts'), 'POST', json_encode($data));
     }
 }
