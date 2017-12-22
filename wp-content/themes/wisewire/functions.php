@@ -1469,7 +1469,7 @@ function send_intercom($array_v, $isUser)
               case "Does not match grade level":
                   $intercom_attrs["custom_attributes"]["Does not match grade level"] = true;
                   break;
-              case "Inappropiate content":
+              case "Inappropriate content":
                   $intercom_attrs["custom_attributes"]["Inappropriate content"] = true;
                   break;
               case "Copyright infringement":
