@@ -15,7 +15,7 @@
   $options_footer_social_pinterest_url = get_field('options_footer_social_pinterest_url', 'option');
 ?>
   
- 
+ <!--
   <ul class="social">
     <?php if ($options_footer_social_twitter_url) { ?>
     	<li><a target="_blank" href="<?php echo $options_footer_social_twitter_url; ?>" class="twitter"></a></li>
@@ -30,4 +30,4 @@
 		<li><a target="_blank" href="<?php echo $options_footer_social_pinterest_url; ?>" class="pinterest"></a></li> 
 	<?php } ?>
   </ul>
-  
+    -->
