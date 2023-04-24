@@ -34,7 +34,7 @@
                     
                 </ul>
                 <ul>
-                    <li><a target="_blank" href="https://www.wisewire.com/blog">Blog</a></li>
+                   <!-- <li><a target="_blank" href="https://www.wisewire.com/blog">Blog</a></li> -->
                     <li><a href="/press">Press</a></li>
                     <li><a href="/careers">Careers</a></li>
                 </ul>
