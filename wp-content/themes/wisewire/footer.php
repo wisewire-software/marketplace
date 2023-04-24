@@ -21,7 +21,9 @@
             
             <div class="col-sm-12 nav-footer">
                 <ul>
-                    <!--<li><a href="http://wordsandnumbers.com/blog/" target="_blank">Blog</a></li>-->
+                    <!-- 
+                      <li><a href="http://wordsandnumbers.com/blog/" target="_blank">Blog</a></li>
+                    -->
                     <li><a href="/schedule-demo">Schedule Demo</a></li>
                     <li><a href="/partnership-solutions">Partner</a></li>
                     <li><a href="/testimonials">Testimonials</a></li>
@@ -38,10 +40,10 @@
                     <li><a href="/press">Press</a></li>
                     <li><a href="/careers">Careers</a></li>
                 </ul>
-                    <li><a href="/sellwithus">Sell With US</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#contactModal" >Contact us</a></li>
                 <ul>
-  </ul>
+                      <li><a href="/sellwithus">Sell With US</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#contactModal" >Contact us</a></li>
+                </ul>
             </div>
 
 
@@ -72,8 +74,7 @@
                 <?php get_template_part('parts/social', 'buttons'); ?>
               </div>
               
-            </div>
-            -->
+            </div>-->
           </div><!-- /row -->
           
          </div><!-- /hidden-xs -->
