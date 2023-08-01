@@ -17,7 +17,7 @@ class Controller_Home {
 		$this->wpdb = $wpdb;
 		$this->wp_query = $wp_query;
 		
-		$this->pio = new PredictionIOController(); 
+		// $this->pio = new PredictionIOController(); 
 		
 		$this->load_data();
 
@@ -28,11 +28,11 @@ class Controller_Home {
 	
 	public function load_data() {
 		
-		$this->load_recommendations();
+		//$this->load_recommendations();
 		
-		$this->load_recently_viewed();
+		//$this->load_recently_viewed();
 		
-		$this->load_other_viewed();
+		//$this->load_other_viewed();
 		
 	}
 	
@@ -40,7 +40,7 @@ class Controller_Home {
 		
 		$user_id = $this->pio->get_user_id();
 		
-		$sql = "SELECT `object_id` FROM `wp_object_views` WHERE `user_id` != '".esc_sql($user_id)."' GROUP BY `object_id` ORDER BY `datetime` DESC LIMIT 4";
+		$sql = "SELECT distinct `object_id` FROM `wp_object_views` WHERE `user_id` != '".esc_sql($user_id)."' ORDER BY `datetime` DESC LIMIT 4";
 		$recently_viewed = $this->wpdb->get_results($sql, ARRAY_N);
 		
 		if ($recently_viewed) {

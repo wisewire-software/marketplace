@@ -19,28 +19,29 @@
           
           <div class="row">
             
-            <div class="col-sm-8 nav-footer">
+            <div class="col-sm-12 nav-footer">
                 <ul>
-                    <!--<li><a href="http://wordsandnumbers.com/blog/" target="_blank">Blog</a></li>-->
                     <li><a href="/schedule-demo">Schedule Demo</a></li>
                     <li><a href="/partnership-solutions">Partner</a></li>
                     <li><a href="/testimonials">Testimonials</a></li>
-                    <li><a href="/technology-enhanced-assessment-bank">Sample Resources</a></li>
                 </ul>
                 <ul>
+		    <li><a href="/technology-enhanced-assessment-bank">Sample Resources</a></li>
+		     <li><a href="/press">Press</a></li>
                     <li><a href="/explore">Explore</a></li>
-                    <li><a href="/create">Create</a></li>
-                    <li><a href="/sellwithus">Sell With US</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#contactModal" >Contact us</a></li>
+                                      
                 </ul>
                 <ul>
-                    <li><a target="_blank" href="https://www.wisewire.com/blog">Blog</a></li>
+                    <li><a href="/careers">Careers</a></li>		    
                     <li><a href="/press">Press</a></li>
-                    <li><a href="/careers">Careers</a></li>
-                </ul>
-            </div>
+            </ul>
+		<ul>
+	 <li><a href="/sellwithus">Sell With US</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#contactModal" >Contact us</a></li>
 
-            <div class="col-sm-4">
+		 </ul>
+            </div>  <!-- End of col-sm-12 -->
+	<!--   <div class="col-sm-4">
               
               <?php
                 /*
@@ -84,88 +85,84 @@
       </div>
       
     </footer><!-- /footer -->
-             
+    
+<script type="text/javascript">
+    document.addEventListener('wpcf7mailsent', function(event) {
+        // alert("document: " + event.detail.contactFormId);
+        if ('190' == event.detail.contactFormId) { // if you want to identify the form
+            // do something
+            setTimeout(function() {
+                $('#contactModal').modal('hide');
+            }, 3000);
+
+        }
+
+        if ('68065' == event.detail.contactFormId) { // if you want to identify the form
+            // do something
+            setTimeout(function() {
+                $('#myModal1').modal('hide');
+            }, 3000);
+
+        }
+
+    }, true);
+</script>
+         
     
     <?php // Include Modals ?>
     <?php get_template_part('parts/modals', 'all'); ?>       
 
+<!--[if gt IE 8]><!-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+<!--<![endif]-->
     
     <!-- JS -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/bootstrap.min.js"></script>
-    
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
     <!-- 3rd Party Plugins -->
     <!-- 
       Slick - Content Carousel
       https://github.com/kenwheeler/slick/
     -->
-    <link href="<?php echo get_template_directory_uri(); ?>/js/vendor/slick/slick.css" rel="stylesheet">
-    <link href="<?php echo get_template_directory_uri(); ?>/js/vendor/slick/slick-theme.css" rel="stylesheet">
-    <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/slick/slick.min.js"></script>
-    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script> 
     <!--
       matchHeight
       a responsive equal heights plugin for jQuery
     -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery.matchHeight-min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js" integrity="sha256-+oeQRyZyY2StGafEsvKyDuEGNzJWAbWqiO2L/ctxF6c=" crossorigin="anonymous"></script>
     <!--
       Bootstrap select
       https://github.com/silviomoreto/bootstrap-select
     -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/select/bootstrap-select.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/select/defaults-en_US.min.js"></script>
-    <link href="<?php echo get_template_directory_uri(); ?>/js/vendor/select/bootstrap-select.min.css" rel="stylesheet">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
     
     <!--
       Ratings
       https://github.com/antennaio/jquery-bar-rating
     -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery.barrating.min.js"></script>
-    
-    <script type="text/javascript" src="<?php echo is_ssl()? 'https': 'http' ?>://storage.uplynk.com/js/swfobject.js"></script>
-    <script type="text/javascript" src="<?php echo is_ssl()? 'https': 'http' ?>://storage.uplynk.com/js/uplynk.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js" integrity="sha256-4G5fW5q6We2bsDSgLCwkfKMFvGx/SbRsZkiNZbhXCvM=" crossorigin="anonymous"></script> 
 
-    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/main2.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/explore.js"></script>
-   
 
-    
+<?php if ($_SESSION['show_linkedin_modal']) {?>
+<script>
+    $(document).ready( function() {
+    setTimeout(function() {
+        $('#linkedinModal').modal();
+        }, 13000);
+    });
+</script>
+<?php
+}?>
 
-      <?php 
-        $app_id = WAN_TEST_ENVIRONMENT? "vekhwzrt":"umjqwdw0";
 
-        if (  is_user_logged_in() ){   
+	<?php wp_footer(); ?>
 
-          $user_id = get_current_user_id();
-          $user_info = get_userdata($user_id);
-          $email = $user_info->user_email;
-
-          ?>
-
-          <script>
-            window.intercomSettings = {
-              app_id: "<?php echo $app_id; ?>",
-              name: "<?php echo $user_info->first_name." ".$user_info->last_name ?>", // Full name
-              email: "<?php echo $email ?>", // Email address
-              created_at: "<?php echo $user_info->user_registered ?>"  // Signup date as a Unix timestamp
-            };
-          </script>  
-
-      <?php 
-        } else { 
-      ?> 
-
-          <script>
-            window.intercomSettings = {
-              app_id: "<?php echo $app_id; ?>"
-            };
-          </script>  
-      <?php } ?>
-
-        <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/<?php echo $app_id; ?>';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>    
-    
-        
-		<?php wp_footer(); ?>
 
 	</body>
 </html>

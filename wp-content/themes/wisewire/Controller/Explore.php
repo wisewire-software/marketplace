@@ -34,11 +34,16 @@ class Controller_Explore {
     	$this->grade_name = Controller_WiseWireItems::GetGradeName($this->grades_ids, true);
     
 		// load all main categories / Disciplines
-		$sql = "SELECT t.`name`, t.`term_id`, t.`slug` FROM {$this->wpdb->terms} t "
-			. "LEFT JOIN {$this->wpdb->term_taxonomy} tt ON tt.`term_id` = t.`term_id` "
-			. "WHERE t.`api_type` = 'Discipline' AND tt.`parent` = 0 "
-			. "ORDER BY t.`name` ASC;";
-		$this->disciplines = $this->wpdb->get_results( $sql, ARRAY_A );
+		$cached_categories = wp_cache_get('ww_all_disciplines');
+		if ($cached_categories === false) {
+			$sql = "SELECT t.`name`, t.`term_id`, t.`slug` FROM {$this->wpdb->terms} t "
+				. "LEFT JOIN {$this->wpdb->term_taxonomy} tt ON tt.`term_id` = t.`term_id` "
+				. "WHERE t.`api_type` = 'Discipline' AND tt.`parent` = 0 "
+				. "ORDER BY t.`name` ASC;";
+			$cached_categories = $this->wpdb->get_results( $sql, ARRAY_A );
+			wp_cache_set ('ww_all_disciplines', $cached_categories);
+			}
+			$this->disciplines = $cached_categories; //$this->wpdb->get_results( $sql, ARRAY_A );
 
 		$_url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];            
         $table_name = $wpdb->prefix . "wan_custom_seo";        

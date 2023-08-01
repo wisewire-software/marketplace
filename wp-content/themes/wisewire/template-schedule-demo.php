@@ -6,18 +6,19 @@
 ?>
 
 <?php get_header(); ?>
+
 <section class="call-schedule-demo">
     <div class="container text-right">
         <div>
             <div class="logo-sdemo-thankyou">
-                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="logo"></span>education marketplace</a>
+               <!-- <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="logo"></span><br> </a> -->
             </div>
         </div>
         <div class="col-header">
             <div class="contactus-phone">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/b2b_pages/icon_phone.png">
                 <p class="call-schedule">Call Us To Schedule A Demo: </p>
-                <a href="tel:+1-410-575-4310" class="number-phone-sd">(410) 575-4310</a>
+                <a href="tel:+1-410-800-4708" class="number-phone-sd">(410) 800-4708</a>
             </div>
         </div>
     </div>

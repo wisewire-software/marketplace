@@ -182,24 +182,24 @@ get_header(); ?>
                     <ul>
                       <li>
                         <p>Fill in the Blank</p>
-                        <span><a href="https://test-platform.wisewire.com/question/math-4-oa-a-2-fib-q02/6567aabb-2e19-4e13-a84f-b0659fa0a210" target="_blank">Grade 4 Operations & Algebraic Thinking </a></span>
+                        <span><a href="https://platform.wisewire.com/question/math-4-oa-a-2-fib-q02/6567aabb-2e19-4e13-a84f-b0659fa0a210" target="_blank">Grade 4 Operations & Algebraic Thinking </a></span>
                       </li>
                       <li>
                         <p>Object Create</p>
-                        <span><a href="https://test-platform.wisewire.com/question/math-6-g-a-3-gra-q01/14ce9df8-7c3a-4fff-86e8-348a5b3a2c23" target="_blank">Grade 6 Geometry</a></span>
+                        <span><a href="https://platform.wisewire.com/question/math-6-g-a-3-gra-q01/14ce9df8-7c3a-4fff-86e8-348a5b3a2c23" target="_blank">Grade 6 Geometry</a></span>
                       </li>
 
                       <li>
                         <p>Hotspot</p>
-                        <span><a href="https://test-platform.wisewire.com/question/math-6-ns-c-7-c-gra-q04/71e6c15d-3691-4b46-82a0-179e22404b53" target="_blank">Grade 6 The Number System</a></span>
+                        <span><a href="https://platform.wisewire.com/question/math-6-ns-c-7-c-gra-q04/71e6c15d-3691-4b46-82a0-179e22404b53" target="_blank">Grade 6 The Number System</a></span>
                       </li> 
                       <li>
                           <p>Drag and Drop</p>
-                          <span><a href="https://test-platform.wisewire.com/question/math-8-g-a-2-ddp-q03/c933d3f7-6c7f-41b0-9cad-9c4f87b6ec4b" target="_blank">Grade 8 Geometry</a></span>
+                          <span><a href="https://platform.wisewire.com/question/math-8-g-a-2-ddp-q03/c933d3f7-6c7f-41b0-9cad-9c4f87b6ec4b" target="_blank">Grade 8 Geometry</a></span>
                       </li>
                       <li>
                           <p>Graph Inequality</p>
-                          <span><a href="https://test-platform.wisewire.com/question/graph-inequality-demo/ec00c41c-4898-4221-9eb0-60cd44440d26#" target="_blank">High School Algebra Reasoning with Equations & Inequalities</a></span>
+                          <span><a href="https://platform.wisewire.com/question/graph-inequality-demo/ec00c41c-4898-4221-9eb0-60cd44440d26#" target="_blank">High School Algebra Reasoning with Equations & Inequalities</a></span>
                       </li>                                          
                     </ul>
     
@@ -244,23 +244,23 @@ get_header(); ?>
                      <ul>
                       <li>
                         <p>Radio Button</p>
-                        <span><a href="https://test-platform.wisewire.com/question/ccss-ela-literacy-l-3-1-b/9ae0e3b7-d030-4e57-b196-b8ae83cc846d#" target="_blank">Grade 3 Language </a></span>
+                        <span><a href="https://platform.wisewire.com/question/ccss-ela-literacy-l-3-1-b/9ae0e3b7-d030-4e57-b196-b8ae83cc846d#" target="_blank">Grade 3 Language </a></span>
                       </li>
                       <li>
                         <p>Fill in the Blank</p>
-                        <span><a href="https://test-platform.wisewire.com/question/ela-ri-6-9-drd-q161-sample/a842b455-e68c-4bc6-a21b-dd222a7d7537" target="_blank">Grade 6 Reading: Informational Text</a></span>
+                        <span><a href="https://platform.wisewire.com/question/ela-ri-6-9-drd-q161-sample/a842b455-e68c-4bc6-a21b-dd222a7d7537" target="_blank">Grade 6 Reading: Informational Text</a></span>
                       </li>
                       <li>
                         <p>Radio Button</p>
-                        <span><a href="https://test-platform.wisewire.com/question/ela-rl-6-7-mcq-q12/4e6c7b2d-ffe9-41ce-8ecc-c11236cee6e4#" target="_blank">Grade 6 Reading: Literature</a></span>
+                        <span><a href="https://platform.wisewire.com/question/ela-rl-6-7-mcq-q12/4e6c7b2d-ffe9-41ce-8ecc-c11236cee6e4#" target="_blank">Grade 6 Reading: Literature</a></span>
                       </li> 
                       <li>
                           <p>Hotspot</p>
-                          <span><a href="https://test-platform.wisewire.com/question/ela-rl-9-10-7-mcq-q988/249df6f4-5509-4043-b22b-cfecdf73aa5c#" target="_blank">Grade 9–10 Reading: Literature</a></span>
+                          <span><a href="https://platform.wisewire.com/question/ela-rl-9-10-7-mcq-q988/249df6f4-5509-4043-b22b-cfecdf73aa5c#" target="_blank">Grade 9–10 Reading: Literature</a></span>
                       </li>
                       <li>
                           <p>Drag and Drop</p>
-                          <span><a href="https://test-platform.wisewire.com/question/ela-ri-11-12-9-ddp-q824/6fc2cb88-528a-4bbf-ad8a-786a128296b7#" target="_blank">Grade 11–12 Reading: Informational Text</a></span>
+                          <span><a href="https://platform.wisewire.com/question/ela-ri-11-12-9-ddp-q824/6fc2cb88-528a-4bbf-ad8a-786a128296b7#" target="_blank">Grade 11–12 Reading: Informational Text</a></span>
                       </li>                                          
                     </ul>
                     
@@ -286,12 +286,12 @@ get_header(); ?>
                       </li> 
                       <li>
                         <p>Hotspot with Passage</p>
-                        <span><a href="#" class="btn-iframe-tei-demo" data-toggle="modal" data-target="#previewModal" data-src="https://test-platform.wisewire.com/external/question/preview/249df6f4-5509-4043-b22b-cfecdf73aa5c">RL.9-10.7</a></span>
+                        <span><a href="#" class="btn-iframe-tei-demo" data-toggle="modal" data-target="#previewModal" data-src="https://platform.wisewire.com/external/question/preview/249df6f4-5509-4043-b22b-cfecdf73aa5c">RL.9-10.7</a></span>
                       </li>
                       <li>
                         <p>Short Answer with Passage</p>
                         <span><a href="#" class="btn-iframe-tei-demo" data-toggle="modal" data-target="#previewModal" data-src="/wp-content/uploads/tei/w-n-templates/preview.html?template=textentry&fn=ELA_RI.4.5_FIB_Q99">RI.4.5</a></span>
-                        <span><a href="#" class="btn-iframe-tei-demo" data-toggle="modal" data-target="#previewModal" data-src="https://test-platform.wisewire.com/external/question/preview/a842b455-e68c-4bc6-a21b-dd222a7d7537">RI.6.9</a></span>
+                        <span><a href="#" class="btn-iframe-tei-demo" data-toggle="modal" data-target="#previewModal" data-src="https://platform.wisewire.com/external/question/preview/a842b455-e68c-4bc6-a21b-dd222a7d7537">RI.6.9</a></span>
                       </li>                                     
                     </ul>
                     -->
@@ -348,24 +348,24 @@ get_header(); ?>
                   <ul>
                     <li>
                       <p>Fill in the Blank</p>
-                      <span><a href="https://test-platform.wisewire.com/question/math-4-oa-a-2-fib-q02/6567aabb-2e19-4e13-a84f-b0659fa0a210" target="_blank">Grade 4 Operations & Algebraic Thinking </a></span>
+                      <span><a href="https://platform.wisewire.com/question/math-4-oa-a-2-fib-q02/6567aabb-2e19-4e13-a84f-b0659fa0a210" target="_blank">Grade 4 Operations & Algebraic Thinking </a></span>
                     </li>
                     <li>
                       <p>Object Create</p>
-                      <span><a href="https://test-platform.wisewire.com/question/math-6-g-a-3-gra-q01/14ce9df8-7c3a-4fff-86e8-348a5b3a2c23" target="_blank">Grade 6 Geometry</a></span>
+                      <span><a href="https://platform.wisewire.com/question/math-6-g-a-3-gra-q01/14ce9df8-7c3a-4fff-86e8-348a5b3a2c23" target="_blank">Grade 6 Geometry</a></span>
                     </li>
 
                     <li>
                       <p>Hotspot</p>
-                      <span><a href="https://test-platform.wisewire.com/question/math-6-ns-c-7-c-gra-q04/71e6c15d-3691-4b46-82a0-179e22404b53" target="_blank">Grade 6 The Number System</a></span>
+                      <span><a href="https://platform.wisewire.com/question/math-6-ns-c-7-c-gra-q04/71e6c15d-3691-4b46-82a0-179e22404b53" target="_blank">Grade 6 The Number System</a></span>
                     </li> 
                     <li>
                         <p>Drag and Drop</p>
-                        <span><a href="https://test-platform.wisewire.com/question/math-8-g-a-2-ddp-q03/c933d3f7-6c7f-41b0-9cad-9c4f87b6ec4b" target="_blank">Grade 8 Geometry</a></span>
+                        <span><a href="https://platform.wisewire.com/question/math-8-g-a-2-ddp-q03/c933d3f7-6c7f-41b0-9cad-9c4f87b6ec4b" target="_blank">Grade 8 Geometry</a></span>
                     </li>
                     <li>
                         <p>Graph Inequality</p>
-                        <span><a href="https://test-platform.wisewire.com/question/graph-inequality-demo/ec00c41c-4898-4221-9eb0-60cd44440d26#" target="_blank">High School Algebra Reasoning with Equations & Inequalities</a></span>
+                        <span><a href="https://platform.wisewire.com/question/graph-inequality-demo/ec00c41c-4898-4221-9eb0-60cd44440d26#" target="_blank">High School Algebra Reasoning with Equations & Inequalities</a></span>
                     </li>                                          
                   </ul>
 
@@ -400,23 +400,23 @@ get_header(); ?>
                   <ul>
                     <li>
                       <p>Radio Button</p>
-                      <span><a href="https://test-platform.wisewire.com/question/ccss-ela-literacy-l-3-1-b/9ae0e3b7-d030-4e57-b196-b8ae83cc846d#" target="_blank">Grade 3 Language</a></span>
+                      <span><a href="https://platform.wisewire.com/question/ccss-ela-literacy-l-3-1-b/9ae0e3b7-d030-4e57-b196-b8ae83cc846d#" target="_blank">Grade 3 Language</a></span>
                     </li>
                     <li>
                       <p>Fill in the Blank</p>
-                      <span><a href="https://test-platform.wisewire.com/question/ela-ri-6-9-drd-q161-sample/a842b455-e68c-4bc6-a21b-dd222a7d7537" target="_blank">Grade 6 Reading: Informational Text</a></span>
+                      <span><a href="https://platform.wisewire.com/question/ela-ri-6-9-drd-q161-sample/a842b455-e68c-4bc6-a21b-dd222a7d7537" target="_blank">Grade 6 Reading: Informational Text</a></span>
                     </li>
                     <li>
                       <p>Radio Button</p>
-                      <span><a href="https://test-platform.wisewire.com/question/ela-rl-6-7-mcq-q12/4e6c7b2d-ffe9-41ce-8ecc-c11236cee6e4#" target="_blank">Grade 6 Reading: Literature</a></span>
+                      <span><a href="https://platform.wisewire.com/question/ela-rl-6-7-mcq-q12/4e6c7b2d-ffe9-41ce-8ecc-c11236cee6e4#" target="_blank">Grade 6 Reading: Literature</a></span>
                     </li> 
                     <li>
                         <p>Hotspot</p>
-                        <span><a href="https://test-platform.wisewire.com/question/ela-rl-9-10-7-mcq-q988/249df6f4-5509-4043-b22b-cfecdf73aa5c#" target="_blank">Grade 9–10 Reading: Literature</a></span>
+                        <span><a href="https://platform.wisewire.com/question/ela-rl-9-10-7-mcq-q988/249df6f4-5509-4043-b22b-cfecdf73aa5c#" target="_blank">Grade 9–10 Reading: Literature</a></span>
                     </li>
                     <li>
                         <p>Drag and Drop</p>
-                        <span><a href="https://test-platform.wisewire.com/question/ela-ri-11-12-9-ddp-q824/6fc2cb88-528a-4bbf-ad8a-786a128296b7#" target="_blank">Grade 11–12 Reading: Informational Text</a></span>
+                        <span><a href="https://platform.wisewire.com/question/ela-ri-11-12-9-ddp-q824/6fc2cb88-528a-4bbf-ad8a-786a128296b7#" target="_blank">Grade 11–12 Reading: Informational Text</a></span>
                     </li>                                          
                   </ul>
                 </div>

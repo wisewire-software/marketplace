@@ -134,13 +134,13 @@ $url_link = $control->get_permalink();
                                 <?php if ($control->filter_grades)://&& $control->search !== false): ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="filters-heading-0">
-                                            <3 class="panel-title">
+                                            <div class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion-filters"
                                                    href="#filterPanel0" aria-expanded="true"
                                                    aria-controls="filterPanel0" class="collapsed">
                                                     Grade Level
                                                 </a>
-                                            </3>
+                                            </div>
                                         </div>
                                         <div id="filterPanel0"
                                              class="panel-collapse collapse <?php echo $control->filter_requested('gradelevel') ? 'in' : '' ?>"

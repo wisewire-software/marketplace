@@ -9,7 +9,7 @@ require get_template_directory() . "/Controller/Explore.php";
 $control = new Controller_Explore();
 
 // Get the grade level from the URL
-$grade = isset($wp_query->query['grade']) ? $wp_query->query['grade'] : 'middle';
+$grade = isset($wp_query->query['grade']) ? strtolower($wp_query->query['grade']) : 'middle';
 
 // Redirect to homepage in case grade level doesn't match
 if (sizeof($control->grades_ids) > 0) {

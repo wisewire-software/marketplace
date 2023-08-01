@@ -19,7 +19,7 @@ class Controller_Favorites
         $this->wpdb = $wpdb;
         $this->wp_query = $wp_query;
 
-        $this->pio = new PredictionIOController();
+        //$this->pio = new PredictionIOController();
 
         //$this->load_data();
     }
@@ -27,7 +27,7 @@ class Controller_Favorites
     public function load_data()
     {
 
-        $this->load_recommendations();
+        // $this->load_recommendations();
     }
 
     private function load_recommendations()
@@ -74,7 +74,8 @@ class Controller_Favorites
         }
 
         $user_id = get_current_user_id();
-
+	$user_favorites = wp_cache_get('ww_favorites_user_'.$user_id);
+	if ($user_favorites === false) {
         $sql1 = "SELECT p.`id`, "
             . "p.`author`, "
             . "p.`date`, "
@@ -144,7 +145,10 @@ class Controller_Favorites
 
 
         $this->favorites_loaded = true;
-        $this->favorites = $this->wpdb->get_results($sql);
+        $user_favorites = $this->wpdb->get_results($sql);
+	wp_cache_set('ww_favorites_user_'.$user_id, $user_favorites);
+	}
+	$this->favorites = $user_favorites;
 
         return $this->favorites;
     }
@@ -163,7 +167,10 @@ class Controller_Favorites
         $item_type = isset($_REQUEST['item_type']) ? $_REQUEST['item_type'] : '';
         $item_source = isset($_REQUEST['item_source']) ? $_REQUEST['item_source'] : '';
 
-        if (is_numeric($item_id) && $item_source != 'merlot') {
+      // clear favorites cache
+      wp_cache_delete('ww_favorites_user_'.$user_id);  
+
+      if (is_numeric($item_id) && $item_source != 'merlot') {
             $item_type = 'wp';
         }
 
@@ -197,6 +204,8 @@ class Controller_Favorites
         if (is_numeric($item_id) && $item_type != "question") {
             $item_type = 'wp';
         }
+      // clear cache  
+      wp_cache_delete('ww_favorites_user_'.$user_id);
 
         $a = array(
             'user_id' => $user_id,

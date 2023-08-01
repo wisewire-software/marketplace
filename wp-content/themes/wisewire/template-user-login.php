@@ -7,7 +7,8 @@
 
 <?php get_header(); ?>  
 
-    
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>    
+
     <?php
       // Fields
       $log_in_headline = get_field('log_in_headline');
