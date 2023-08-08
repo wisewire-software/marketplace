@@ -249,8 +249,8 @@ $ww_home_url = esc_url(home_url('/'));
                     <ul class="navbar-nav navbar-right">
 
                         <li class="menu-item-explore">
-                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Marketplace
-                                <span class="caret"></span></a>
+                            <!--<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Marketplace
+                                <span class="caret"></span></a>-->
                             <ul class="dropdown-menu dropdown-logout">
                                 <li>
                                     <a href="/explore/">Explore</a>
@@ -372,8 +372,8 @@ $ww_home_url = esc_url(home_url('/'));
                 </ul>
                 <ul class="navbar-nav navbar-right" style="margin-right: -130px; margin-top: 40px;">
                     <li class="dropdown">
-                        <a href="#" id="marketplace" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="true">Marketplace</a>
+                        <!--<a href="#" id="marketplace" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">Marketplace</a>-->
                         <ul class="dropdown-menu dropdown-marketplace" aria-labelledby="marketplace">
                             <li>
                                 <a href="/explore/">Explore</a>
