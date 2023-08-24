@@ -127,7 +127,7 @@
                             <span class="icon-wrapper">
                                 <i class="fas fa-money-bill" style="font-size:45px"></i>
                             </span>
-                            Sell With Us
+                            Sell With US
                         </a>
                     </h4>
                 </div>
