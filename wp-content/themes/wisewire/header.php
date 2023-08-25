@@ -261,6 +261,15 @@ $ww_home_url = esc_url(home_url('/'));
                             </ul>
                         </li>
                         <li>
+                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-mobile-higher">
+                            <li>
+                                    <a href="/for-explore-ai/">Explore AI</a>
+                                </li>
+                            </ul>
+                        </li>    
+                        <li>
                             <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K&ndash;12<span
                                     class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-mobile-k12">
@@ -273,9 +282,9 @@ $ww_home_url = esc_url(home_url('/'));
                                 <li>
                                     <a href="/for-curriculum-providers/">Curriculum<br /> Developers</a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="/sellwithus/">Sell With Us</a>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
                         <li class="menu-item-custom">
@@ -385,6 +394,15 @@ $ww_home_url = esc_url(home_url('/'));
                         </ul>
                     </li>
                     <li class="dropdown">
+                    <a href="#" id="career-training" class="dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">Explore AI</a>
+                        <ul class="dropdown-menu dropdown-career" aria-labelledby="career-training">
+                        <li>
+                                <a href="/for-explore-ai/">Explore AI</a>
+                        </li> 
+                        </ul>
+                    </li>    
+                    <li class="dropdown">
                         <a href="#" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true">K-12</a>
                         <ul class="dropdown-menu dropdown-k12" aria-labelledby="k12">
@@ -397,9 +415,9 @@ $ww_home_url = esc_url(home_url('/'));
                             <li>
                                 <a href="/for-curriculum-providers/">Curriculum Developers</a>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a href="/sellwithus/">Sell With Us</a>
-                            </li>
+                            </li>-->
                         </ul>
                     </li>
                     <li class="dropdown">

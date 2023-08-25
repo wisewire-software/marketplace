@@ -16,8 +16,8 @@
                     Organization</h1>
                 <h5>Wisewire creates professional
                     development courses designed to train today&rsquo;s managers into tomorrow&rsquo;s leaders.</h5>
-                <a class="btn btn-primary btn-pink" href="/user-login/" role="button">Course
-                    Catalog</a>
+                <!-- <a class="btn btn-primary btn-pink" href="/user-login/" role="button">Course
+                    Catalog</a> -->
             </div>
         </div>
     </div>

@@ -13,11 +13,11 @@
             <div class="headline">
                 <h1>Wisewire Empowers Teachers with Learning Materials that Raise Student
                     Achievement and Deliver Better Results</h1>
-                <a class="btn btn-primary buttons-banner btn-pink" href="/user-login/" role="button">Start Free
-                    Trial</a>
-                <a class="btn btn-primary buttons-banner btn-pink" style="width:auto;" href="/explore/middle/"
+                <!-- <a class="btn btn-primary buttons-banner btn-pink" href="/user-login/" role="button">Start Free
+                    Trial</a> -->
+                <!-- <a class="btn btn-primary buttons-banner btn-pink" style="width:auto;" href="/explore/middle/"
                     role="button">Explore
-                    Marketplace</a>
+                    Marketplace</a> -->
             </div>
         </div>
     </div>
@@ -127,7 +127,7 @@
                             <span class="icon-wrapper">
                                 <i class="fas fa-money-bill" style="font-size:45px"></i>
                             </span>
-                            Sell With US
+                            Sell With Us
                         </a>
                     </h4>
                 </div>
@@ -209,14 +209,14 @@
                             Create Your Own Learning Materials
                         </a>
                     </li>
-                    <li role="presentation" class="col-sm-2">
+                    <!--<li role="presentation" class="col-sm-2">
                         <a href="#accordion-1-tab-4" aria-controls="tab-4" role="tab" data-toggle="tab">
                             <span class="icon-wrapper">
                                 <i class="fas fa-money-bill" style="font-size:65px"></i>
                             </span>
                             Sell With Us
                         </a>
-                    </li>
+                    </li>-->
                     <li role="presentation" class="col-sm-2">
                         <a href="#accordion-1-tab-5" aria-controls="tab-5" role="tab" data-toggle="tab">
                             <span class="icon-wrapper">
@@ -266,7 +266,7 @@
                         learning science team for consideration.
                     </p>
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="accordion-1-tab-5">
+                <!-- <div role="tabpanel" class="tab-pane fade" id="accordion-1-tab-5">
                     <p class="text-white">
                         Would you like to see more of Wisewire’s educational resources at your school or district?
                         Simply refer Wisewire to your administrator and we will handle the rest. If your school
@@ -275,7 +275,7 @@
                         platform as well as all resources in the Marketplace (even new ones).
 
                     </p>
-                </div>
+                </div> -->
 
 
             </div><!-- /tab-content -->

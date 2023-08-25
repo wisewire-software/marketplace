@@ -27,10 +27,10 @@ get_header();?>
                 <h5>Wisewire develops and designs smart and easy-to-use standards-aligned
                     projects, enhanced assessments, and knowledge units that are organized and optimized for schools and
                     districts.</h5>
-                <a class="btn btn-primary btn-pink" href="/user-login/" role="button">Start Free
-                    Trial</a>
-                <a class="btn btn-primary btn-pink" style="width:auto;" href="/explore/middle/" role="button">Explore
-                    Marketplace</a>
+                <!-- <a class="btn btn-primary btn-pink" href="/user-login/" role="button">Start Free
+                    Trial</a> -->
+                <!-- <a class="btn btn-primary btn-pink" style="width:auto;" href="/explore/middle/" role="button">Explore
+                    Marketplace</a> -->
             </div>
         </div>
     </div>
