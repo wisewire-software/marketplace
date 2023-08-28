@@ -575,6 +575,10 @@ h2 {
     background-image: url("/wp-content/themes/wisewire/img/b2b_pages/for-admins/shutterstock_778983088-for-admins-banner-lg.jpg");
 }
 
+.for-explore-ai-banner {
+    background-image: url("/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/shutterstock_1751379041_ai_banner_lg.jpg");
+}
+
 @media(min-width: 768px) {
 
     .navbar .navbar-small li,

@@ -7,17 +7,14 @@
 
 <?php get_header();?>
 
-<section class="ww_b2b_banner new-banner cl-banner">
+<section class="ww_b2b_banner new-banner ai-banner">
     <div class="mask"></div>
     <div class="container">
         <div class="jumbotron">
             <div class="headline">
-                <h1>Cultivate Your Skills and Become a Leader in Your
-                    Organization</h1>
-                <h5>Wisewire creates professional
-                    development courses designed to train today&rsquo;s managers into tomorrow&rsquo;s leaders.</h5>
-                <a class="btn btn-primary btn-pink" href="/user-login/" role="button">Course
-                    Catalog</a>
+                <h1>Harness AI for Dynamic, Ethical, and Future-Ready Education</h1>
+                <h5>Wisewire helps organizations enhance their educational strategies to achieve optimal learning outcomes through Generative AI</h5>
+                <a class="btn btn-primary btn-pink" href="/schedule-demo/" role="button">Explore AI</a>
             </div>
         </div>
     </div>
@@ -31,16 +28,16 @@
 
 <section class="ww_b2b bg-white">
     <div class="container">
-        <h2 class="title-orange text-center">Hone Your Leadership Skills with Our Course Offerings</h2>
-        <h5>Unlike many <a href="/digital-skills-courses/">hard skills</a>, soft skills are in short supply, but high
-            demand. Today’s employers are looking for more than just
-            experience in their leaders,
-            they are looking for soft skills such as emotional intelligence, interpersonal communication,
-            self-awareness, empathy, and collaboration.</h5>
-        <h5>These are the soft skills you need to become a leader in your organization. Luckily, anyone can learn them,
-            and Wisewire is the best at teaching them.</h5>
-        <h5>Our professional development courses cover these skills in great depth and will train you to become a great
-            leader.</h5>
+        <h2 class="title-orange text-center">Wisewire’s Innovative AI Approach</h2>
+        <h5>At Wisewire, we embrace the future of digital learning. Central to our adaptive and holistic approach 
+            of our technological strategy is the groundbreaking use of Artificial Intelligence (AI). 
+            AI is an additional layer in our comprehensive tech stack as we employ a diverse range of technologies,
+             each chosen to make learning more dynamic, engaging, and effective for learners everywhere. 
+             Our commitment has always been to innovation, and as the educational landscape evolves, so too does our approach.</h5>
+        <h5>Beyond the tech, we firmly believe in the human element and its paramount importance for individuals to succeed in their lives. 
+            True learning with AI happens with the ability to ask the right questions.
+             At Wisewire, we not only practice this principle but also aim to instill it in learners for efficient and profound learning.</h5>
+        
     </div>
 </section>
 <section class="ww_b2b bg-white">
@@ -147,22 +144,28 @@
     </div>
 </section>
 
-<section class="ww_b2b_banner new-banner cl-banner cl-footer">
+<section class="ww_b2b_banner new-banner ai-footer">
     <div class="mask"></div>
     <div class="container">
         <div class="jumbotron">
             <div class="headline">
-                <h2>Ready to Become Tomorrow’s Leader?</h2>
-                <a class="btn btn-primary btn-pink" href="#" role="button">Explore
-                    Our Corporate Learning Courses</a>
+                <h2>Ready to Embrace the Future of Digital Learning?</h2>
+                <h5>Wisewire empowers institutions to revolutionize education, driving unparalleled results with  AI and the latest technologies</h5>
+                <a class="btn btn-primary btn-pink" href="#" role="button">CONNECT WITH US </a>
             </div>
         </div>
     </div>
 </section>
 
 <style>
+ .ai-banner {
+    background-image: url("/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/shutterstock_1751379041_ai_banner_lg.jpg");
+ } 
+ .ai-footer {
+    background-image: url("/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/shutterstock_1789820144.jpeg");
+ }  
 .cl-footer {
-    background-image: url("/wp-content/themes/wisewire/img/b2b_pages/corp-learning/shutterstock_230286172-cl-footer.jpg");
+    background-image: url("/wp-content/themes/wisewire/img/b2b_pages/corp-learning/shutterstock_1789820144_banner.jpg");
     background-color: darkgray;
 }
 </style>
