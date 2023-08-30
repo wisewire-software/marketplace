@@ -103,11 +103,15 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <h3 class="title-lightblue">Our Courses Focus On What Matters</h3>
-                <p>Our professional development courses focus on developing skills not routinely taught by any
-                    university.
-                    These soft skills are a critical asset to have on your journey to becoming a leader.
-                    They will equip you with the knowledge you need to move up the corporate ladder.</p>
+                <h3 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h3>
+                <p>Your trust matters. We are committed to the responsible use of AI in creating exceptional
+                learning experiences. Our AI policy ensures the highest quality and originality
+                in every project we undertake.
+                   We believe that at the heart of technology lies a simple truth: its ultimate purpose is to
+                   facilitate human life and nurture social and human connections. With this guiding principle,
+                   we take risks seriously. Guided by the NIST Risk Management Framework, we've integrated
+                   risk management across all stages of our work to ensure that while we harness the power of technology,
+                   we always prioritize the human element and our ethical commitment.</p>
             </div>
             <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                 <img src="/wp-content/themes/wisewire/img/b2b_pages/digitalskills/shutterstock_618974327-ds-3-1.jpg"
@@ -116,31 +120,53 @@
         </div>
 
         <div class="row">
+        <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
+                        <img src="/wp-content/themes/wisewire/img/b2b_pages/digitalskills/shutterstock_686332135-ds-3-2-work"
+                            class="img-responsive center-block" alt="..." style="max-width:300px;">
+                    </div>
             <div class="col-xs-12 col-sm-6">
-                <h3 class="title-lightblue">Work Life Academia Balance</h3>
-                <p>Our online course modules can be consumed
-                    anywhere, on any device, at any time, and at your own pace. This gives you the freedom and time to
-                    focus on what matters to you the most.</p>
+                <h3 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h3>
+                <p>In an era where technological advancements surge at an unprecedented rate, our goal is to ensure that
+                learning materials remain evergreen, swiftly adapting to the evolving demands of the future.
+                 Recognizing this, Wisewire stands at the forefront of a promise – a commitment to closing this gap.
+                  We aim to expedite the delivery of educational materials to the market, making them not just timely but cost-effective.</p>
+                  <p> How does this rapid evolution reshape what individuals need to grasp to remain relevant?
+                  Wisewire envisions a future where AI serves as an intelligent tutor, guiding learners through
+                   optimal zone of learning and keeping them on the cusp of active engagement. As we stand today,
+                   Wisewire collaborates with innovators, exploring avant-garde models to harness this potential.</p>
+
             </div>
-            <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
-                <img src="/wp-content/themes/wisewire/img/b2b_pages/digitalskills/shutterstock_686332135-ds-3-2-work"
-                    class="img-responsive center-block" alt="..." style="max-width:300px;">
-            </div>
+
         </div>
 
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <h3 class="title-lightblue">Research-Driven Course Design</h3>
-                <p>At Wisewire we spend countless hours researching and understanding the latest innovations in
-                    learner-centric course design.
-                    We do this to ensure that you have the best cutting edge experience and materials to help you stay
-                    ahead of the competition.</p>
+                <h3 class="title-lightblue">Exploration and Testing</h3>
+                <p>At the heart of innovation, "Exploration and Testing" serve as the twin pillars guiding our
+                relentless pursuit of educational advancement. Through continuous exploration, we unearth novel
+                methodologies, which we then rigorously test to ensure their efficacy and adaptability in the
+                learning landscape. Every exploration leads to a discovery, and every test ensures that our discoveries
+                translate into impactful, learner-centric solutions.</p>
             </div>
             <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                 <img src="/wp-content/themes/wisewire/img/b2b_pages/digitalskills/shutterstock_593389664-ds-3-3.jpg"
                     class="img-responsive center-block" alt="..." style="max-width:300px;">
             </div>
         </div>
+
+        <div class="row">
+        <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
+                                <img src="/wp-content/themes/wisewire/img/b2b_pages/digitalskills/shutterstock_593389664-ds-3-3.jpg"
+                                    class="img-responsive center-block" alt="..." style="max-width:300px;">
+                            </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <h3 class="title-lightblue">The Future of AI at Wisewire</h3>
+                        <p>Our exploration doesn't stop at what we can achieve today. We are constantly investigating
+                        future potential applications of AI in digital learning and making learning more accessible to all.
+                        Every stride we take is a step closer to redefining the contours of AI-driven education.</p>
+                    </div>
+
+                </div>
     </div>
 </section>
 
