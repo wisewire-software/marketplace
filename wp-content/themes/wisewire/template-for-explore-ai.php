@@ -40,10 +40,11 @@
         
     </div>
 </section>
+
 <section class="ww_b2b bg-white">
     <div class="container">
         <div class="row">
-            <h3> Bridging the Educational Futurescape: The Promise of AI</h3>
+           <h3 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h3>
             <p>
             In an era where technological advancements surge at an unprecedented rate, our goal is to ensure that
             learning materials remain evergreen, swiftly adapting to the evolving demands of the future.
@@ -58,6 +59,19 @@
                  <p> Image here</p>
            </div>
     </div>
+</section>
+
+<section class="ww_b2b bg-white">
+    <div id="accordion-1-collapse-1" class="panel-content collapse" role="tabpanel"
+                        aria-labelledby="accordion-1-heading-1">
+                        <div class="panel-body">
+                        <h3>Learning Science Prompt Engineering</h3>
+                            <p class="text-white">
+                                Defined by Wisewire, it is an innovative approach including the art, science
+                                and process of using proven cognitive and learning science insights to design effective
+                                instructional or assessment prompts for Generative AI. </p>
+                        </div>
+                    </div>
 </section>
 
 <section class="ww_b2b ww_b2b_txt_img bg_lightgray">
