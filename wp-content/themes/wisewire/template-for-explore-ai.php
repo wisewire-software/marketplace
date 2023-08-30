@@ -43,59 +43,20 @@
 <section class="ww_b2b bg-white">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <h3 class="title-lightblue">
-                    Interpersonal
-                    Communication Skills</h3>
-                <p> Interpersonal communication skills are the building blocks of any
-                    successful employee, let alone a corporate leader.
-                    These courses teach you how to communicate clearly with colleagues, how to manage down, manage up,
-                    and collaborate efficiently.</p>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-            </div>
-
-            <div class="col-xs-12 col-sm-6">
-                <h3 class="title-lightblue">
-                    Emotional
-                    Intelligence</h3>
-                <p>Many agree that this is the single most important skill leaders need to
-                    have. Our emotional intelligence courses identify your emotional quotient (or EQ) and then focus on
-                    the areas that need improvement (such as empathy, perceptiveness, self-awareness, conducive
-                    expression, etc).</p>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-            </div>
-        </div>
+            <h3> Bridging the Educational Futurescape: The Promise of AI</h3>
+            <p>
+            In an era where technological advancements surge at an unprecedented rate, our goal is to ensure that
+            learning materials remain evergreen, swiftly adapting to the evolving demands of the future.
+             Recognizing this, Wisewire stands at the forefront of a promise – a commitment to closing this gap.
+             We aim to expedite the delivery of educational materials to the market, making them not just timely but cost-effective. </p>
+              <p> How does this rapid evolution reshape what individuals need to grasp to remain relevant?
+            Wisewire envisions a future where AI serves as an intelligent tutor, guiding learners through the optimal zone of learning
+             and keeping them on the cusp of active engagement. As we stand today, Wisewire collaborates with innovators,
+             exploring avant-garde models to harness this potential.    </p>
+         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <h3 class="title-lightblue">
-                    Public
-                    Speaking</h3>
-                <p>All leaders have to speak in front of large audiences (whether it’s in a
-                    team meeting, a seminar, or board room).
-                    This is something that cannot be avoided. Unfortunately, most young professionals find it
-                    difficult to speak in front of groups of their peers.
-                    Our public speaking courses will convert you into a confident speaker that captivates your audience
-                    by focusing on core principles like overcoming fear,
-                    staying focused, and captivating your audience.</p>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <h3 class="title-lightblue">
-                    Decision
-                    Making Skills</h3>
-                <p>Making crucial decisions quickly and effectively is the hallmark of a good
-                    leader.
-                    All leaders have very little time on their hands, and thus cannot be hung up on making decisions.
-                    Our courses will teach you the things you need to know when making important decisions (i.e. how to
-                    manage decision fatigue,
-                    how to make choices quickly, how to make decisions with limited information, etc). </p>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-            </div>
-        </div>
+                 <p> Image here</p>
+           </div>
     </div>
 </section>
 
