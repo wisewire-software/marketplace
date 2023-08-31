@@ -44,7 +44,7 @@
 <section class="ww_b2b bg-white">
     <div class="container">
         <div class="row">
-           <h3 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h3>
+           <h4 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h4>
             <p>
             In an era where technological advancements surge at an unprecedented rate, our goal is to ensure that
             learning materials remain evergreen, swiftly adapting to the evolving demands of the future.
@@ -56,29 +56,29 @@
              exploring avant-garde models to harness this potential.    </p>
          </div>
         <div class="row">
-                 <p> Image here</p>
+               <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-max-fischer-5212653.jpg"
+                                   class="img-responsive center-block" alt="..." style="max-width:1170px;">
            </div>
     </div>
 </section>
 
 <section class="ww_b2b bg-white">
-    <div id="accordion-1-collapse-1" class="panel-content collapse" role="tabpanel"
-                        aria-labelledby="accordion-1-heading-1">
-                        <div class="panel-body">
-                        <h3>Learning Science Prompt Engineering</h3>
-                            <p class="text-white">
+    <div class="container explore-ai-tab">
+         <div class="panel-body">
+              <h5>Learning Science Prompt Engineering</h5>
+              <p class="text-white">
                                 Defined by Wisewire, it is an innovative approach including the art, science
                                 and process of using proven cognitive and learning science insights to design effective
                                 instructional or assessment prompts for Generative AI. </p>
-                        </div>
-                    </div>
+          </div>
+    </div>
 </section>
 
 <section class="ww_b2b ww_b2b_txt_img bg_lightgray">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <h3 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h3>
+            <div class="col-xs-12 col-sm-9">
+                <h4 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h4>
                 <p>Your trust matters. We are committed to the responsible use of AI in creating exceptional
                 learning experiences. Our AI policy ensures the highest quality and originality
                 in every project we undertake.
@@ -88,60 +88,44 @@
                    risk management across all stages of our work to ensure that while we harness the power of technology,
                    we always prioritize the human element and our ethical commitment.</p>
             </div>
-            <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
-                <img src="/wp-content/themes/wisewire/img/b2b_pages/digitalskills/shutterstock_618974327-ds-3-1.jpg"
-                    class="img-responsive center-block" alt="..." style="max-width:300px;">
+            <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
+                <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/Image-Woman-Workforce.jpg"
+                    class="img-responsive center-block" alt="..." style="max-width:200px;">
             </div>
         </div>
 
-        <div class="row">
-        <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
-                        <img src="/wp-content/themes/wisewire/img/b2b_pages/digitalskills/shutterstock_686332135-ds-3-2-work"
-                            class="img-responsive center-block" alt="..." style="max-width:300px;">
-                    </div>
-            <div class="col-xs-12 col-sm-6">
-                <h3 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h3>
-                <p>In an era where technological advancements surge at an unprecedented rate, our goal is to ensure that
-                learning materials remain evergreen, swiftly adapting to the evolving demands of the future.
-                 Recognizing this, Wisewire stands at the forefront of a promise – a commitment to closing this gap.
-                  We aim to expedite the delivery of educational materials to the market, making them not just timely but cost-effective.</p>
-                  <p> How does this rapid evolution reshape what individuals need to grasp to remain relevant?
-                  Wisewire envisions a future where AI serves as an intelligent tutor, guiding learners through
-                   optimal zone of learning and keeping them on the cusp of active engagement. As we stand today,
-                   Wisewire collaborates with innovators, exploring avant-garde models to harness this potential.</p>
 
+
+        <div class="row">
+
+             <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
+                  <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-thisisengineering-3862627.jpg"
+                               class="img-responsive center-block" alt="..." style="max-width:200px;">
             </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <h3 class="title-lightblue">Exploration and Testing</h3>
+            <div class="col-xs-12 col-sm-9">
+                <h4 class="title-lightblue">Exploration and Testing</h4>
                 <p>At the heart of innovation, "Exploration and Testing" serve as the twin pillars guiding our
                 relentless pursuit of educational advancement. Through continuous exploration, we unearth novel
                 methodologies, which we then rigorously test to ensure their efficacy and adaptability in the
                 learning landscape. Every exploration leads to a discovery, and every test ensures that our discoveries
                 translate into impactful, learner-centric solutions.</p>
             </div>
-            <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
-                <img src="/wp-content/themes/wisewire/img/b2b_pages/digitalskills/shutterstock_593389664-ds-3-3.jpg"
-                    class="img-responsive center-block" alt="..." style="max-width:300px;">
-            </div>
+
         </div>
 
         <div class="row">
-        <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
-                                <img src="/wp-content/themes/wisewire/img/b2b_pages/digitalskills/shutterstock_593389664-ds-3-3.jpg"
-                                    class="img-responsive center-block" alt="..." style="max-width:300px;">
-                            </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <h3 class="title-lightblue">The Future of AI at Wisewire</h3>
+
+             <div class="col-xs-12 col-sm-9">
+                        <h4 class="title-lightblue">The Future of AI at Wisewire</h4>
                         <p>Our exploration doesn't stop at what we can achieve today. We are constantly investigating
                         future potential applications of AI in digital learning and making learning more accessible to all.
                         Every stride we take is a step closer to redefining the contours of AI-driven education.</p>
-                    </div>
-
-                </div>
+              </div>
+               <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
+                                              <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-rfstudio-3825539.jpg"
+                                                  class="img-responsive center-block" alt="..." style="max-width:200px;">
+               </div>
+         </div>
     </div>
 </section>
 
@@ -161,7 +145,16 @@
 <style>
  .ai-banner {
     background-image: url("/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/shutterstock_1751379041_ai_banner_lg.jpg");
- } 
+ }
+ .explore-ai-tab{
+ background-color: #3fb89a;
+ }
+ .explore-ai-tab h5{
+ text-align:center;
+ }
+ .explore-ai-tab h5,p{
+ color:#ffffff;
+ }
  .ai-footer {
     background-image: url("/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/shutterstock_1789820144.jpeg");
  }  
@@ -169,6 +162,7 @@
     background-image: url("/wp-content/themes/wisewire/img/b2b_pages/corp-learning/shutterstock_1789820144_banner.jpg");
     background-color: darkgray;
 }
+
 </style>
 
 
