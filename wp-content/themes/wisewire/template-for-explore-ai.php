@@ -43,10 +43,9 @@
 
 <section class="ww_b2b bg-white">
     <div class="container">
-
     <div class="row">
                    <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-max-fischer-5212653.jpg"
-                                       class="img-responsive center-block" alt="..." >
+                                       class="img-responsive center-block" alt="..." style="max-height:600px;" >
                </div>
         <div class="row">
            <h4 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h4>
@@ -63,18 +62,7 @@
 
     </div>
 </section>
-<!--
-<section class="ww_b2b bg-white">
-    <div class="container explore-ai-tab">
-         <div class="panel-body">
-              <h5>Learning Science Prompt Engineering</h5>
-              <p class="text-white">
-                                Defined by Wisewire, it is an innovative approach including the art, science
-                                and process of using proven cognitive and learning science insights to design effective
-                                instructional or assessment prompts for Generative AI. </p>
-          </div>
-    </div>
-</section> -->
+
 
 <section class="content-accordion accordion-theme-2">
     <!-- Visible on <768px -->
@@ -82,15 +70,7 @@
         <div class="panels" id="accordion-1" role="tablist" aria-multiselectable="true">
             <div class="panel">
                 <div class="panel-heading" role="tab" id="accordion-1-heading-1">
-                    <h4>
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-1"
-                            href="#accordion-1-collapse-1" aria-expanded="false" aria-controls="accordion-1-collapse-1">
-                            <span class="icon-wrapper">
-                                <i class="fas fa-laptop" style="font-size:45px"></i>
-                            </span>
-                            Learning Science Prompt Engineering
-                        </a>
-                    </h4>
+                   <h2>Learning Science Prompt Engineering</h2>
                 </div>
                 <div id="accordion-1-collapse-1" class="panel-content collapse" role="tabpanel"
                     aria-labelledby="accordion-1-heading-1">
@@ -117,27 +97,8 @@
     <div class="ww_b2b ww_b2b_nopad hidden-xs">
         <div class="tabs-list" id="tabs-list-1">
             <div class="container">
-                <ul class="row" role="tablist">
-                    <li role="presentation" class="col-sm-2 col-sm-offset-1 active">
-                        <a href="#accordion-1-tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
-                            <span class="icon-wrapper">
-                                <i class="fas fa-laptop" style="font-size:65px"></i>
-                            </span>
-                            Learning Science Prompt Engineering
-                        </a>
-                    </li>
 
-
-                    <!--<li role="presentation" class="col-sm-2">
-                        <a href="#accordion-1-tab-4" aria-controls="tab-4" role="tab" data-toggle="tab">
-                            <span class="icon-wrapper">
-                                <i class="fas fa-money-bill" style="font-size:65px"></i>
-                            </span>
-                            Sell With Us
-                        </a>
-                    </li>-->
-
-                </ul>
+                <h2>Learning Science Prompt Engineering</h2>
             </div>
         </div><!-- /tabs-list -->
         <div class="tabs-panes">
@@ -165,6 +126,7 @@
 
 <section class="ww_b2b ww_b2b_txt_img bg_lightgray">
     <div class="container">
+    <br>
         <div class="row">
             <div class="col-xs-12 col-sm-9">
                 <h4 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h4>
@@ -178,18 +140,18 @@
                    we always prioritize the human element and our ethical commitment.</p>
             </div>
             <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
-                <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/Image-Woman-Workforce.jpg"
-                    class="img-responsive center-block" alt="..." style="max-width:200px;">
+                <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/Woman_Workforce.png"
+                    class="img-responsive center-block" alt="..." >
             </div>
         </div>
 
-
+  <br>
 
         <div class="row">
 
              <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
                   <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-thisisengineering-3862627.jpg"
-                               class="img-responsive center-block" alt="..." style="max-width:200px;">
+                               class="img-responsive center-block" alt="..." >
             </div>
             <div class="col-xs-12 col-sm-9">
                 <h4 class="title-lightblue">Exploration and Testing</h4>
@@ -201,7 +163,7 @@
             </div>
 
         </div>
-
+<br>
         <div class="row">
 
              <div class="col-xs-12 col-sm-9">
@@ -212,7 +174,7 @@
               </div>
                <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
                                               <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-rfstudio-3825539.jpg"
-                                                  class="img-responsive center-block" alt="..." style="max-width:200px;">
+                                                  class="img-responsive center-block" alt="..." >
                </div>
          </div>
     </div>
