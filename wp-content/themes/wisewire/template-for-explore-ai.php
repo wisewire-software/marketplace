@@ -43,6 +43,11 @@
 
 <section class="ww_b2b bg-white">
     <div class="container">
+
+    <div class="row">
+                   <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-max-fischer-5212653.jpg"
+                                       class="img-responsive center-block" alt="..." >
+               </div>
         <div class="row">
            <h4 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h4>
             <p>
@@ -55,13 +60,10 @@
              and keeping them on the cusp of active engagement. As we stand today, Wisewire collaborates with innovators,
              exploring avant-garde models to harness this potential.    </p>
          </div>
-        <div class="row">
-               <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-max-fischer-5212653.jpg"
-                                   class="img-responsive center-block" alt="..." style="max-width:1170px;">
-           </div>
+
     </div>
 </section>
-
+<!--
 <section class="ww_b2b bg-white">
     <div class="container explore-ai-tab">
          <div class="panel-body">
@@ -72,7 +74,150 @@
                                 instructional or assessment prompts for Generative AI. </p>
           </div>
     </div>
-</section>
+</section> -->
+
+<section class="content-accordion accordion-theme-2">
+    <!-- Visible on <768px -->
+    <div class="ww_b2b ww_b2b_nopad visible-xs-block">
+        <div class="panels" id="accordion-1" role="tablist" aria-multiselectable="true">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="accordion-1-heading-1">
+                    <h4>
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-1"
+                            href="#accordion-1-collapse-1" aria-expanded="false" aria-controls="accordion-1-collapse-1">
+                            <span class="icon-wrapper">
+                                <i class="fas fa-laptop" style="font-size:45px"></i>
+                            </span>
+                            Learning Science Prompt Engineering
+                        </a>
+                    </h4>
+                </div>
+                <div id="accordion-1-collapse-1" class="panel-content collapse" role="tabpanel"
+                    aria-labelledby="accordion-1-heading-1">
+                    <div class="panel-body">
+                        <p class="text-white">
+                            Defined by Wisewire, it is an innovative approach including the art, science
+                                 and process of using proven cognitive and learning science insights to design effective
+                                 instructional or assessment prompts for Generative AI.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div><!-- /panels -->
+    </div><!-- /visible-xs-block -->
+    <!-- Hidden on <768px -->
+    <div class="ww_b2b ww_b2b_nopad hidden-xs">
+        <div class="tabs-list" id="tabs-list-1">
+            <div class="container">
+                <ul class="row" role="tablist">
+                    <li role="presentation" class="col-sm-2 col-sm-offset-1 active">
+                        <a href="#accordion-1-tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
+                            <span class="icon-wrapper">
+                                <i class="fas fa-laptop" style="font-size:65px"></i>
+                            </span>
+                            Over 30,000 Quality Learning Objects
+                        </a>
+                    </li>
+                    <li role="presentation" class="col-sm-2">
+                        <a href="#accordion-1-tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                            <span class="icon-wrapper">
+                                <i class="fas fa-chalkboard-teacher" style="font-size:65px"></i>
+                            </span>
+                            Learning Platform
+                        </a>
+                    </li>
+                    <li role="presentation" class="col-sm-2">
+                        <a href="#accordion-1-tab-3" aria-controls="tab-3" role="tab" data-toggle="tab">
+                            <span class="icon-wrapper">
+                                <i class="fas fa-pencil-alt" style="font-size:65px"></i>
+                            </span>
+                            Create Your Own Learning Materials
+                        </a>
+                    </li>
+                    <!--<li role="presentation" class="col-sm-2">
+                        <a href="#accordion-1-tab-4" aria-controls="tab-4" role="tab" data-toggle="tab">
+                            <span class="icon-wrapper">
+                                <i class="fas fa-money-bill" style="font-size:65px"></i>
+                            </span>
+                            Sell With Us
+                        </a>
+                    </li>-->
+                    <li role="presentation" class="col-sm-2">
+                        <a href="#accordion-1-tab-5" aria-controls="tab-5" role="tab" data-toggle="tab">
+                            <span class="icon-wrapper">
+                                <i class="fas fa-school" style="font-size:65px"></i>
+                            </span>
+                            Bring Wisewire to Your School or District
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- /tabs-list -->
+        <div class="tabs-panes">
+            <div class="tab-content container">
+                <div role="tabpanel" class="tab-pane fade in active" id="accordion-1-tab-1">
+                    <p class="text-white">
+                        Browse Wisewire’s marketplace and you will find tens of thousands of high&ndash;quality
+                        interactive
+                        learning materials; everything from quizzes, lesson plans, playlists, and more (for grades
+                        K&ndash;12). All of our materials are common core aligned and built to provide students with new,
+                        cutting edge learning experiences.
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="accordion-1-tab-2">
+                    <p class="text-white">
+                        Wisewire’s robust learning platform will take your classroom to the next level. Use the
+                        platform to distribute interactive lesson plans, get immediate student feedback,
+                        autonomously
+                        grade work, and more. Our technology enhanced items (or TEIs) provide an immersive, dynamic
+                        experience that is as rich as it is engaging.
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="accordion-1-tab-3">
+                    <p class="text-white">
+                        Use Wisewire’s platform to create your own learning materials. Start by using our out of the
+                        box templates or build from scratch. Combine content snippets or questions to create lessons
+                        and assessments, or combine lessons to create lesson plans and playlists. Store TEIs in your
+                        personal library and assign to your students via the dashboard. The possibilities are
+                        endless.
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="accordion-1-tab-4">
+                    <p class="text-white">
+                        We know that teachers can make the best authors because they bring their own experiences to
+                        the
+                        table. Wisewire is always looking for high quality content. If you are interested in selling
+                        your learning resources in the Wisewire Marketplace then please submit your products to our
+                        learning science team for consideration.
+                    </p>
+                </div>
+                <!-- <div role="tabpanel" class="tab-pane fade" id="accordion-1-tab-5">
+                    <p class="text-white">
+                        Would you like to see more of Wisewire’s educational resources at your school or district?
+                        Simply refer Wisewire to your administrator and we will handle the rest. If your school
+                        partners
+                        up with Wisewire you and your colleagues will receive automatic free access to the learning
+                        platform as well as all resources in the Marketplace (even new ones).
+
+                    </p>
+                </div> -->
+
+
+            </div><!-- /tab-content -->
+        </div><!-- /tabs-panes -->
+    </div>
+</section><!-- /content-accordion -->
+
+
+
 
 <section class="ww_b2b ww_b2b_txt_img bg_lightgray">
     <div class="container">
