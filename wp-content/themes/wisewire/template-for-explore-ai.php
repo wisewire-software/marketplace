@@ -45,7 +45,7 @@
     <div class="container">
     <div class="row">
                    <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-max-fischer-5212653.jpg"
-                                       class="img-responsive center-block" alt="..." style="max-height:600px;" >
+                                       class="img-responsive center-block" alt="..." >
                </div>
         <div class="row">
            <h4 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h4>
@@ -59,10 +59,8 @@
              and keeping them on the cusp of active engagement. As we stand today, Wisewire collaborates with innovators,
              exploring avant-garde models to harness this potential.    </p>
          </div>
-
     </div>
 </section>
-
 
 <section class="content-accordion accordion-theme-2">
     <!-- Visible on <768px -->
@@ -70,10 +68,9 @@
         <div class="panels" id="accordion-1" role="tablist" aria-multiselectable="true">
             <div class="panel">
                 <div class="panel-heading" role="tab" id="accordion-1-heading-1">
-                   <h2>Learning Science Prompt Engineering</h2>
+                   <h2 style="text-align:center;">Learning Science Prompt Engineering</h2>
                 </div>
-                <div id="accordion-1-collapse-1" class="panel-content collapse" role="tabpanel"
-                    aria-labelledby="accordion-1-heading-1">
+
                     <div class="panel-body">
                         <p class="text-white">
                             Defined by Wisewire, it is an innovative approach including the art, science
@@ -82,15 +79,8 @@
 
                         </p>
                     </div>
-                </div>
+
             </div>
-
-
-
-
-
-
-
         </div><!-- /panels -->
     </div><!-- /visible-xs-block -->
     <!-- Hidden on <768px -->
@@ -98,24 +88,16 @@
         <div class="tabs-list" id="tabs-list-1">
             <div class="container">
 
-                <h2>Learning Science Prompt Engineering</h2>
+                <h2 style="text-align:center;">Learning Science Prompt Engineering</h2>
             </div>
         </div><!-- /tabs-list -->
         <div class="tabs-panes">
             <div class="tab-content container">
-                <div role="tabpanel" class="tab-pane fade in active" id="accordion-1-tab-1">
                     <p class="text-white">
                         Defined by Wisewire, it is an innovative approach including the art, science
                                                         and process of using proven cognitive and learning science insights to design effective
                                                         instructional or assessment prompts for Generative AI.
                     </p>
-                </div>
-
-
-
-
-
-
             </div><!-- /tab-content -->
         </div><!-- /tabs-panes -->
     </div>
@@ -126,6 +108,7 @@
 
 <section class="ww_b2b ww_b2b_txt_img bg_lightgray">
     <div class="container">
+    <br>
     <br>
         <div class="row">
             <div class="col-xs-12 col-sm-9">
@@ -146,7 +129,7 @@
         </div>
 
   <br>
-
+<br>
         <div class="row">
 
              <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
@@ -163,6 +146,7 @@
             </div>
 
         </div>
+<br>
 <br>
         <div class="row">
 
