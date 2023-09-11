@@ -260,7 +260,7 @@ $ww_home_url = esc_url(home_url('/'));
                                 </li>
                             </ul>
                         </li>
-                       <!-- <li>
+                        <li>
                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI<span
                                     class="caret"></span></a> 
                             <ul class="dropdown-menu dropdown-mobile-higher">
@@ -268,7 +268,7 @@ $ww_home_url = esc_url(home_url('/'));
                                     <a href="/for-explore-ai/">Explore AI</a>
                                 </li>
                             </ul>
-                        </li>  -->  
+                        </li>
                         <li>
                             <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K&ndash;12<span
                                     class="caret"></span></a>
@@ -393,7 +393,7 @@ $ww_home_url = esc_url(home_url('/'));
                             </li>
                         </ul>
                     </li>
-                   <!-- <li class="dropdown">
+                    <li class="dropdown">
                     <a href="#" id="career-training" class="dropdown-toggle" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="true">Explore AI</a>
                         <ul class="dropdown-menu dropdown-career" aria-labelledby="career-training">
@@ -401,7 +401,7 @@ $ww_home_url = esc_url(home_url('/'));
                                 <a href="/for-explore-ai/">Explore AI</a>
                         </li> 
                         </ul>
-                    </li>    -->
+                    </li>
                     <li class="dropdown">
                         <a href="#" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true">K-12</a>

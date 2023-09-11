@@ -109,8 +109,8 @@
 <section class="ww_b2b ww_b2b_txt_img bg_lightgray">
 <!-- Visible on xs block  <768px -->
     <div class="container visible-xs-block">
-    <br>
-    <br>
+
+
         <div class="row">
             <div class="col-xs-12 col-sm-9">
                 <h4 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h4>
@@ -129,8 +129,8 @@
             </div>
         </div>
 
-  <br>
-<br>
+
+
         <div class="row">
 
 
@@ -147,8 +147,8 @@
                                            class="img-responsive center-block" alt="..." >
              </div>
         </div>
-<br>
-<br>
+
+
         <div class="row">
 
              <div class="col-xs-12 col-sm-9">
@@ -165,8 +165,8 @@
     </div>
 
     <div class="container hidden-xs">
-        <br>
-        <br>
+
+
             <div class="row">
                 <div class="col-xs-12 col-sm-9">
                     <h4 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h4>
@@ -186,7 +186,7 @@
             </div>
 
       <br>
-    <br>
+
             <div class="row">
 
                  <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
@@ -204,7 +204,7 @@
 
             </div>
     <br>
-    <br>
+
             <div class="row">
 
                  <div class="col-xs-12 col-sm-9">
