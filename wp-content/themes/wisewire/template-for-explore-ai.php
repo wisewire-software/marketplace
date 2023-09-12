@@ -48,7 +48,7 @@
                                        class="img-responsive center-block" alt="..." >
                </div>
         <div class="row">
-           <h4 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h4>
+           <h3 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h3>
             <p>
             In an era where technological advancements surge at an unprecedented rate, our goal is to ensure that
             learning materials remain evergreen, swiftly adapting to the evolving demands of the future.
@@ -106,14 +106,14 @@
 
 
 
-<section class="ww_b2b ww_b2b_txt_img bg_lightgray">
+<section class="ww_b2b ww_b2b_txt_img bg_lightgray visible-xs-block">
 <!-- Visible on xs block  <768px -->
-    <div class="container visible-xs-block">
+    <div class="container">
 
 
         <div class="row">
-            <div class="col-xs-12 col-sm-9">
-                <h4 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h4>
+            <div class="col-xs-12 col-sm-6">
+                <h3 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h3>
                 <p>Your trust matters. We are committed to the responsible use of AI in creating exceptional
                 learning experiences. Our AI policy ensures the highest quality and originality
                 in every project we undertake.
@@ -123,26 +123,22 @@
                    risk management across all stages of our work to ensure that while we harness the power of technology,
                    we always prioritize the human element and our ethical commitment.</p>
             </div>
-            <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
+            <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                 <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/Woman_Workforce.png"
                     class="img-responsive center-block" alt="..." >
             </div>
         </div>
 
-
-
         <div class="row">
-
-
-            <div class="col-xs-12 col-sm-9">
-                <h4 class="title-lightblue">Exploration and Testing</h4>
+            <div class="col-xs-12 col-sm-6">
+                <h3 class="title-lightblue">Exploration and Testing</h3>
                 <p>At the heart of innovation, "Exploration and Testing" serve as the twin pillars guiding our
                 relentless pursuit of educational advancement. Through continuous exploration, we unearth novel
                 methodologies, which we then rigorously test to ensure their efficacy and adaptability in the
                 learning landscape. Every exploration leads to a discovery, and every test ensures that our discoveries
                 translate into impactful, learner-centric solutions.</p>
             </div>
-            <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
+            <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                               <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-thisisengineering-3862627.jpg"
                                            class="img-responsive center-block" alt="..." >
              </div>
@@ -150,26 +146,25 @@
 
 
         <div class="row">
-
-             <div class="col-xs-12 col-sm-9">
-                        <h4 class="title-lightblue">The Future of AI at Wisewire</h4>
+             <div class="col-xs-12 col-sm-6">
+                        <h3 class="title-lightblue">The Future of AI at Wisewire</h3>
                         <p>Our exploration doesn't stop at what we can achieve today. We are constantly investigating
                         future potential applications of AI in digital learning and making learning more accessible to all.
                         Every stride we take is a step closer to redefining the contours of AI-driven education.</p>
               </div>
-               <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
+               <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                                               <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-rfstudio-3825539.jpg"
                                                   class="img-responsive center-block" alt="..." >
                </div>
          </div>
     </div>
-
-    <div class="container hidden-xs">
-
+ </section>
+ <section class="ww_b2b ww_b2b_txt_img bg_lightgray hidden-xs">
+    <div class="container">
 
             <div class="row">
-                <div class="col-xs-12 col-sm-9">
-                    <h4 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h4>
+                <div class="col-xs-12 col-sm-6">
+                    <h3 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h3>
                     <p>Your trust matters. We are committed to the responsible use of AI in creating exceptional
                     learning experiences. Our AI policy ensures the highest quality and originality
                     in every project we undertake.
@@ -179,41 +174,37 @@
                        risk management across all stages of our work to ensure that while we harness the power of technology,
                        we always prioritize the human element and our ethical commitment.</p>
                 </div>
-                <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
+                <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                     <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/Woman_Workforce.png"
                         class="img-responsive center-block" alt="..." >
                 </div>
             </div>
 
-      <br>
-
             <div class="row">
 
-                 <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
+                 <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                       <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-thisisengineering-3862627.jpg"
                                    class="img-responsive center-block" alt="..." >
                 </div>
-                <div class="col-xs-12 col-sm-9">
-                    <h4 class="title-lightblue">Exploration and Testing</h4>
+                <div class="col-xs-12 col-sm-6">
+                    <h3 class="title-lightblue">Exploration and Testing</h3>
                     <p>At the heart of innovation, "Exploration and Testing" serve as the twin pillars guiding our
                     relentless pursuit of educational advancement. Through continuous exploration, we unearth novel
                     methodologies, which we then rigorously test to ensure their efficacy and adaptability in the
                     learning landscape. Every exploration leads to a discovery, and every test ensures that our discoveries
                     translate into impactful, learner-centric solutions.</p>
                 </div>
-
             </div>
-    <br>
+
 
             <div class="row">
-
-                 <div class="col-xs-12 col-sm-9">
-                            <h4 class="title-lightblue">The Future of AI at Wisewire</h4>
+                 <div class="col-xs-12 col-sm-6">
+                            <h3 class="title-lightblue">The Future of AI at Wisewire</h3>
                             <p>Our exploration doesn't stop at what we can achieve today. We are constantly investigating
                             future potential applications of AI in digital learning and making learning more accessible to all.
                             Every stride we take is a step closer to redefining the contours of AI-driven education.</p>
                   </div>
-                   <div class="col-xs-12 col-sm-3 ww_b2b_txt_img">
+                   <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                                                   <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-rfstudio-3825539.jpg"
                                                       class="img-responsive center-block" alt="..." >
                    </div>
