@@ -45,7 +45,7 @@
     <div class="container">
     <div class="row">
                    <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-max-fischer-5212653.jpg"
-                                       class="img-responsive center-block" alt="..." >
+                                       class="img-responsive center-block" alt="..." style="margin-bottom:10px;">
                </div>
         <div class="row">
            <h3 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h3>
@@ -73,15 +73,15 @@
          <div class="tabs-list" id="tabs-list-1">
                     <div class="container">
 
-                        <h2 style="text-align:center;">Learning Science Prompt Engineering</h2>
+                        <h4><em>"Learning Science Prompt Engineering"</em></h4>
                     </div>
                 </div><!-- /tabs-list -->
                 <div class="tabs-panes">
                     <div class="tab-content container" id="tabs-panes-1">
                             <p class="text-white">
-                                Defined by Wisewire, it is an innovative approach including the art, science
+                                <em>Defined by Wisewire, it is an innovative approach including the art, science
                                                                 and process of using proven cognitive and learning science insights to design effective
-                                                                instructional or assessment prompts for Generative AI.
+                                                                instructional or assessment prompts for Generative AI.</em>
                             </p>
                     </div><!-- /tab-content -->
                 </div><!-- /tabs-panes -->
@@ -95,15 +95,15 @@
         <div class="tabs-list" id="tabs-list-1">
             <div class="container">
 
-                <h2 style="text-align:center;">Learning Science Prompt Engineering</h2>
+                <h4><em> "Learning Science Prompt Engineering" </em></h4>
             </div>
         </div><!-- /tabs-list -->
         <div class="tabs-panes">
             <div class="tab-content container" id="tabs-panes-1">
                     <p class="text-white">
-                        Defined by Wisewire, it is an innovative approach including the art, science
+                        <em>Defined by Wisewire, it is an innovative approach including the art, science
                                                         and process of using proven cognitive and learning science insights to design effective
-                                                        instructional or assessment prompts for Generative AI.
+                                                        instructional or assessment prompts for Generative AI.</em>
                     </p>
             </div><!-- /tab-content -->
         </div><!-- /tabs-panes -->
@@ -117,7 +117,7 @@
 <!-- Visible on xs block  <768px -->
     <div class="container">
 
-
+<br>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <h3 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h3>
@@ -135,7 +135,7 @@
                     class="img-responsive center-block" alt="..."style="max-width:300px;" >
             </div>
         </div>
-
+<br>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <h3 class="title-lightblue">Exploration and Testing</h3>
@@ -151,7 +151,7 @@
              </div>
         </div>
 
-
+<br>
         <div class="row">
              <div class="col-xs-12 col-sm-6">
                         <h3 class="title-lightblue">The Future of AI at Wisewire</h3>
@@ -168,7 +168,7 @@
  </section>
  <section class="ww_b2b ww_b2b_txt_img bg_lightgray hidden-xs">
     <div class="container">
-
+<br>
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
                     <h3 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h3>
@@ -183,15 +183,15 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                     <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/Woman_Workforce_resized.png"
-                        class="img-responsive center-block" alt="..." style="max-width:300px;">
+                        class="img-responsive center-block" alt="..." style="max-width:300px;float:right;">
                 </div>
             </div>
-
+<br>
             <div class="row">
 
                  <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                       <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-thisisengineering-3862627.jpg"
-                                   class="img-responsive center-block" alt="..."style="max-width:300px;" >
+                                   class="img-responsive center-block" alt="..."style="max-width:300px;float:left;" >
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <h3 class="title-lightblue">Exploration and Testing</h3>
@@ -203,7 +203,7 @@
                 </div>
             </div>
 
-
+<br>
             <div class="row">
                  <div class="col-xs-12 col-sm-6">
                             <h3 class="title-lightblue">The Future of AI at Wisewire</h3>
@@ -213,7 +213,7 @@
                   </div>
                    <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
                                                   <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-rfstudio-3825539.jpg"
-                                                      class="img-responsive center-block" alt="..." style="max-width:300px;">
+                                                      class="img-responsive center-block" alt="..." style="max-width:300px;float:right;">
                    </div>
              </div>
         </div>
@@ -238,11 +238,20 @@
  }
 
 
- #tabs-list-1 h2{
+ #tabs-list-1 h4{
  margin:10px 0px 10px 0px;
+  color:#fff;
+  text-align:center;
  }
  #tabs-panes-1 p{
+ text-align:center;
+
+ margin:20px 0px 20px 30px;
+ }
+ h3{
  margin:10px 0px 10px 0px;
+
+
  }
  .ai-footer {
     background-image: url("/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/shutterstock_1789820144.jpeg");
