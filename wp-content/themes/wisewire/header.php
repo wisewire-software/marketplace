@@ -398,7 +398,7 @@ $ww_home_url = esc_url(home_url('/'));
                             aria-haspopup="true" aria-expanded="true">Explore AI</a>
                         <ul class="dropdown-menu dropdown-career" aria-labelledby="career-training">
                        <li>
-                                <a href="/for-explore-ai/">Explore AI</a>
+                                <a href="/exploreai/">Explore AI</a>
                         </li>
                         </ul>
                     </li>
