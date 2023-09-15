@@ -269,24 +269,18 @@ $ww_home_url = esc_url(home_url('/'));
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K&ndash;12<span
-                                    class="caret"></span></a>
-                            <ul class="dropdown-menu dropdown-mobile-k12">
-                                <li>
-                                    <a href="/for-administrators/">Administrators</a>
-                                </li>
-                                <li>
-                                    <a href="/for-teachers/">Teachers</a>
-                                </li>
-                                <li>
-                                    <a href="/for-curriculum-providers/">Curriculum<br /> Developers</a>
-                                </li>
-                                <!-- <li>
-                                    <a href="/sellwithus/">Sell With Us</a>
-                                </li> -->
-                            </ul>
-                        </li>
+
+                          <li class="menu-item-testimonials">
+                               <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career Training<span class="caret"></span></a>
+                                 <ul class="dropdown-menu dropdown-mobile-higher">
+                                  <li>
+                                      <a href="/digital-skills-courses/">Bootcamps</a>
+                                  </li>
+                                  <li>
+                                     <a href="/corporate-learning/">Corporate Programs</a>
+                                  </li>
+                                </ul>
+                           </li>
                         <li class="menu-item-custom">
                             <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Higher ED<span
                                     class="caret"></span></a>
@@ -297,18 +291,24 @@ $ww_home_url = esc_url(home_url('/'));
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item-testimonials">
-                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career
-                                Training<span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdown-mobile-higher">
-                                <li>
-                                    <a href="/digital-skills-courses/">Bootcamps</a>
-                                </li>
-                                <li>
-                                    <a href="/corporate-learning/">Corporate Programs</a>
-                                </li>
-                            </ul>
+                        <li>
+                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K&ndash;12<span class="caret"></span></a>
+                           <ul class="dropdown-menu dropdown-mobile-k12">
+                               <li>
+                                   <a href="/for-administrators/">Administrators</a>
+                               </li>
+                               <li>
+                                  <a href="/for-teachers/">Teachers</a>
+                               </li>
+                               <li>
+                                    <a href="/for-curriculum-providers/">Curriculum<br /> Developers</a>
+                               </li>
+                                   <!-- <li>
+                                     <a href="/sellwithus/">Sell With Us</a>
+                                    </li> -->
+                                                    </ul>
                         </li>
+
                     </ul>
 
                     <!-- Reuse from footer -->
@@ -397,38 +397,9 @@ $ww_home_url = esc_url(home_url('/'));
                     <a href="#" id="career-training" class="dropdown-toggle" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="true">Explore AI</a>
                         <ul class="dropdown-menu dropdown-career" aria-labelledby="career-training">
-                        <li>
+                       <li>
                                 <a href="/for-explore-ai/">Explore AI</a>
-                        </li> 
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="true">K-12</a>
-                        <ul class="dropdown-menu dropdown-k12" aria-labelledby="k12">
-                            <li>
-                                <a href="/for-administrators/">Administrators</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="/for-teachers/">Teachers</a>
-                            </li>
-                            <li>
-                                <a href="/for-curriculum-providers/">Curriculum Developers</a>
-                            </li>
-                            <!--<li>
-                                <a href="/sellwithus/">Sell With Us</a>
-                            </li>-->
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" id="higher-ed" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="true">Higher
-                            Ed</a>
-                        <ul class="dropdown-menu dropdown-higher" aria-labelledby="higher-ed">
-                            <li>
-                                <a href="/online-program-management-for-higher-ed/">Online Program
-                                    Management</a>
-                            </li>
+                        </li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -444,6 +415,36 @@ $ww_home_url = esc_url(home_url('/'));
                             </li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" id="higher-ed" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">Higher
+                            Ed</a>
+                        <ul class="dropdown-menu dropdown-higher" aria-labelledby="higher-ed">
+                            <li>
+                                <a href="/online-program-management-for-higher-ed/">Online Program
+                                    Management</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                     <li class="dropdown">
+                        <a href="#" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K-12</a>
+                        <ul class="dropdown-menu dropdown-k12" aria-labelledby="k12">
+                           <li>
+                                <a href="/for-administrators/">Administrators</a>
+                           </li>
+                           <li class="menu-item">
+                                <a href="/for-teachers/">Teachers</a>
+                           </li>
+                           <li>
+                                <a href="/for-curriculum-providers/">Curriculum Developers</a>
+                           </li>
+                                                <!--<li>
+                                                    <a href="/sellwithus/">Sell With Us</a>
+                                                </li>-->
+                          </ul>
+                     </li>
                 </ul>
 
             </nav><!-- /navbar -->

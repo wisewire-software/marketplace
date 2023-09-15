@@ -29,14 +29,13 @@
 <section class="ww_b2b bg-white">
     <div class="container">
         <h2 class="title-orange text-center">Wisewire’s Innovative AI Approach</h2>
-        <h5>At Wisewire, we embrace the future of digital learning. Central to our adaptive and holistic approach 
-            of our technological strategy is the groundbreaking use of Artificial Intelligence (AI). 
-            AI is an additional layer in our comprehensive tech stack as we employ a diverse range of technologies,
-             each chosen to make learning more dynamic, engaging, and effective for learners everywhere. 
-             Our commitment has always been to innovation, and as the educational landscape evolves, so too does our approach.</h5>
-        <h5>Beyond the tech, we firmly believe in the human element and its paramount importance for individuals to succeed in their lives. 
-            True learning with AI happens with the ability to ask the right questions.
-             At Wisewire, we not only practice this principle but also aim to instill it in learners for efficient and profound learning.</h5>
+        <h5>At Wisewire, we embrace the future of digital learning. Central to our adaptive and holistic approach of
+            our technological strategy is the groundbreaking use of Artificial Intelligence (AI). AI is an additional layer
+            in our comprehensive tech stack as we employ a range of technologies to make learning more engaging
+            and effective.</h5>
+        <h5>Beyond the tech, we believe that true learning with AI happens with the innate human curiosity and ability
+            to ask the right questions. Our commitment has always been to innovation, and as the educational
+            landscape evolves, so too does our approach.</h5>
         
     </div>
 </section>
@@ -47,20 +46,20 @@
                    <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/pexels-max-fischer-5212653.jpg"
                                        class="img-responsive center-block" alt="..." style="margin-bottom:10px;">
                </div>
+               <br>
+               <br>
         <div class="row">
            <h3 class="title-lightblue">Bridging the Educational Futurescape: The Promise of AI</h3>
            <div class="col-xs-12 col-sm-6">
             <p>
-            In an era where technological advancements surge at an unprecedented rate, our goal is to ensure that
-            learning materials remain evergreen, swiftly adapting to the evolving demands of the future.
-             Recognizing this, Wisewire stands at the forefront of a promise – a commitment to closing this gap.
-             We aim to expedite the delivery of educational materials to the market, making them not just timely but cost-effective. </p>
+            In a rapidly advancing technological era, Wisewire ensures learning materials continuously adapt to future
+            demands. We stand committed to bridging the educational gap. Our goal is swift, cost-effective delivery of
+            timely educational resources. </p>
              </div>
              <div class="col-xs-12 col-sm-6">
-              <p> How does this rapid evolution reshape what individuals need to grasp to remain relevant?
-            Wisewire envisions a future where AI serves as an intelligent tutor, guiding learners through the optimal zone of learning
-             and keeping them on the cusp of active engagement. As we stand today, Wisewire collaborates with innovators,
-             exploring avant-garde models to harness this potential.    </p>
+              <p> Wisewire foresees AI as a guiding tutor, ensuring active learner engagement. Currently, we work with
+                  innovators to harness this cutting-edge potential. Central to this transformative journey is the cultivation of
+                  a pivotal skill: <strong>“Learning Science Prompt Engineering.”</strong>    </p>
              </div>
          </div>
     </div>
@@ -80,8 +79,8 @@
                     <div class="tab-content container" id="tabs-panes-1">
                             <p class="text-white">
                                 <em>Defined by Wisewire, it is an innovative approach including the art, science
-                                                                and process of using proven cognitive and learning science insights to design effective
-                                                                instructional or assessment prompts for Generative AI.</em>
+                                and process of using proven cognitive and learning science insights to design effective
+                                instructional or assessment prompts for Generative AI.</em>
                             </p>
                     </div><!-- /tab-content -->
                 </div><!-- /tabs-panes -->
@@ -121,17 +120,12 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <h3 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h3>
-                <p>Your trust matters. We are committed to the responsible use of AI in creating exceptional
-                learning experiences. Our AI policy ensures the highest quality and originality
-                in every project we undertake.
-                   We believe that at the heart of technology lies a simple truth: its ultimate purpose is to
-                   facilitate human life and nurture social and human connections. With this guiding principle,
-                   we take risks seriously. Guided by the NIST Risk Management Framework, we've integrated
-                   risk management across all stages of our work to ensure that while we harness the power of technology,
-                   we always prioritize the human element and our ethical commitment.</p>
+                 <p>We ensure responsible AI use, upholding quality and originality, while believing technology should
+                    enhance human connections. Utilizing the NIST Risk Management Framework, we embed risk
+                    management, balancing tech's capabilities with our ethical, human-focused commitment.</p>
             </div>
             <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
-                <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/Woman_Workforce_resized.png"
+                <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/Woman_Workforce.png"
                     class="img-responsive center-block" alt="..."style="max-width:300px;" >
             </div>
         </div>
@@ -168,24 +162,21 @@
  </section>
  <section class="ww_b2b ww_b2b_txt_img bg_lightgray hidden-xs">
     <div class="container">
+
 <br>
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
                     <h3 class="title-lightblue">Ethical Commitment and AI Responsibility at Wisewire</h3>
-                    <p>Your trust matters. We are committed to the responsible use of AI in creating exceptional
-                    learning experiences. Our AI policy ensures the highest quality and originality
-                    in every project we undertake.
-                       We believe that at the heart of technology lies a simple truth: its ultimate purpose is to
-                       facilitate human life and nurture social and human connections. With this guiding principle,
-                       we take risks seriously. Guided by the NIST Risk Management Framework, we've integrated
-                       risk management across all stages of our work to ensure that while we harness the power of technology,
-                       we always prioritize the human element and our ethical commitment.</p>
+                    <p>We ensure responsible AI use, upholding quality and originality, while believing technology should
+                       enhance human connections. Utilizing the NIST Risk Management Framework, we embed risk
+                       management, balancing tech's capabilities with our ethical, human-focused commitment.</p>
                 </div>
                 <div class="col-xs-12 col-sm-6 ww_b2b_txt_img">
-                    <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/Woman_Workforce_resized.png"
+                    <img src="/wp-content/themes/wisewire/img/b2b_pages/for-explore-ai/Woman_Workforce.png"
                         class="img-responsive center-block" alt="..." style="max-width:300px;float:right;">
                 </div>
             </div>
+
 <br>
             <div class="row">
 
