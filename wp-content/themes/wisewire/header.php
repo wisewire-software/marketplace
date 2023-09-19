@@ -265,7 +265,7 @@ $ww_home_url = esc_url(home_url('/'));
                                     class="caret"></span></a> 
                             <ul class="dropdown-menu dropdown-mobile-higher">
                             <li>
-                                    <a href="/for-explore-ai/">Explore AI</a>
+                                    <a href="/exploreai/">Explore AI</a>
                                 </li>
                             </ul>
                         </li>
@@ -379,7 +379,7 @@ $ww_home_url = esc_url(home_url('/'));
                     </li>
 
                 </ul>
-                <ul class="navbar-nav navbar-right" style="margin-right: -130px; margin-top: 40px;">
+                <ul class="navbar-nav navbar-right" style="margin-right: -50px; margin-top: 40px;">
                     <li class="dropdown">
                         <!--<a href="#" id="marketplace" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true">Marketplace</a>-->
