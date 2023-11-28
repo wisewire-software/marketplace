@@ -20,7 +20,7 @@
         font-style: normal;
         font-weight: 400;
         font-display: fallback;
-        src: url('wwlp-assets/fonts/zeyada/zeyada-400-normal0.woff2') format('woff2');
+        src: url('/wp-content/themes/wisewire/wwlp-assets/fonts/zeyada/zeyada-400-normal0.woff2') format('woff2');
     }
 
     @font-face {
@@ -28,7 +28,7 @@
         font-style: normal;
         font-weight: 400;
         font-display: fallback;
-        src: url('wwlp-assets/fonts/titillium-web/titillium-web-400-normal.woff2') format('woff2');
+        src: url('/wp-content/themes/wisewire/wwlp-assets/fonts/titillium-web/titillium-web-400-normal.woff2') format('woff2');
     }
 
     @font-face {
@@ -36,7 +36,7 @@
         font-style: normal;
         font-weight: 700;
         font-display: fallback;
-        src: url('wwlp-assets/fonts/titillium-web//titillium-web-700-normal.woff2') format('woff2');
+        src: url('/wp-content/themes/wisewire/wwlp-assets/fonts/titillium-web//titillium-web-700-normal.woff2') format('woff2');
     }
 
     </style>
@@ -51,18 +51,18 @@
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="Landing Page - Wisewire"/>
     <meta name="twitter:image" content="/wp-content/uploads/ask-icon.png"/>
-    <link rel='prefetch' href='wwlp-assets/js/flatsome.js?ver=039f9485eef603e7c53a'/>
-    <link rel='prefetch' href='wwlp-assets/js/chunk.slider.js?ver=3.18.0'/>
+    <link rel='prefetch' href='/wp-content/themes/wisewire/wwlp-assets/js/flatsome.js?ver=039f9485eef603e7c53a'/>
+    <link rel='prefetch' href='/wp-content/themes/wisewire/wwlp-assets/js/chunk.slider.js?ver=3.18.0'/>
     <link rel="alternate" type="application/rss+xml" title="Wisewire &raquo; Feed" href="/feed/"/>
     <link rel="alternate" type="application/rss+xml" title="Wisewire &raquo; Comments Feed" href="/comments/feed/"/>
-    <link rel='stylesheet' id='flatsome-main-css' href='wwlp-assets/css/flatsome.css' type='text/css' media='all'/>
+    <link rel='stylesheet' id='flatsome-main-css' href='/wp-content/themes/wisewire/wwlp-assets/css/flatsome.css' type='text/css' media='all'/>
    <style id='flatsome-main-inline-css' type='text/css'>
     @font-face {
         font-family: "fl-icons";
         font-display: block;
-        src: url(wwlp-assets/csss/icons/fl-icons.eot?v=3.18.0);
+        src: url(/wp-content/themes/wisewire/wwlp-assets/csss/icons/fl-icons.eot?v=3.18.0);
         src:
-        url(wwlp-assets/css/icons/fl-icons.eot#iefix?v=3.18.0) format("embedded-opentype"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.woff2?v=3.18.0) format("woff2"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.ttf?v=3.18.0) format("truetype"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.woff?v=3.18.0) format("woff"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.svg?v=3.18.0#fl-icons) format("svg");
+        url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.eot#iefix?v=3.18.0) format("embedded-opentype"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.woff2?v=3.18.0) format("woff2"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.ttf?v=3.18.0) format("truetype"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.woff?v=3.18.0) format("woff"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.svg?v=3.18.0#fl-icons) format("svg");
     }
     </style>
     <script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
@@ -334,6 +334,44 @@
         margin-right: 0.3em !important;
     }
 
+
+	.wwlp-nav { color: rgb(59,59,59); }
+	
+	.dropdown {
+		position: relative; 
+		display: inline-block; 
+		font-weight: 700; 
+		text-align: center;
+		}
+	
+	.wwlp-nav li {
+		list-style-type: none;
+	}
+	.dropdown-menu { 
+		display: none;
+		position: absolute;
+		width: 160px;
+		z-index: 1;
+		margin: 0;
+		padding: .5em;
+		background-color: rgb(235, 232, 229);
+	}
+	.dropdown-menu li {
+		display: block;
+		font-weight: 400;
+		font-size: .8em;
+		text-align: center;
+		margin-left: 0 !important;
+	}
+	
+	.dropdown:hover .dropdown-menu { display: block; }
+	
+	.dropdown-ai { left: -30px;}
+	.dropdown-career { left: 0px;}
+	.dropdown-higher { left: -30px;}
+	.dropdown-k12 { left: -50px;}
+	
+	
     </style>
 </head>
 
@@ -418,28 +456,54 @@
 		
 	<div id="text-204801993" class="text">
 		
-<p><a href="#"><strong>Explore AI</strong></a><br />
-			</div>
-	
-	<div id="text-1399660063" class="text">
-		
-<p><a href="#"><strong>Career Training</strong></a><br />
-			</div>
-	
-	<div id="text-2410797119" class="text">
-		
-<p><a href="#"><strong>Higher Ed</strong></a><br />
-			</div>
-	
-	<div id="text-3867293474" class="text">
-		
-<p style="margin-bottom: 0 !important;" data-wp-editing="1"><a href="#"><strong>K-12</strong></a></p>
-		
-<style>
-#text-3867293474 {
-  text-align: left;
-}
-</style>
+<ul class="wwlp-nav">
+                    <li class="dropdown">
+                    <a href="#" id="exploreai" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI</a>
+                        <ul class="dropdown-menu dropdown-ai">
+                       <li>
+                                <a href="https://www.wisewire.com/exploreai/">Explore AI</a>
+                        </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" id="career-training" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career
+                            Training</a>
+                        <ul class="dropdown-menu dropdown-career">
+                            <li>
+                                <a href="https://www.wisewire.com/digital-skills-courses/">Bootcamps</a>
+                            </li>
+                            <li>
+                                <a href="https://www.wisewire.com/corporate-learning/">Corporate Programs</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" id="higher-ed" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Higher
+                            Ed</a>
+                        <ul class="dropdown-menu dropdown-higher" aria-labelledby="higher-ed">
+                            <li>
+                                <a href="https://www.wisewire.com/online-program-management-for-higher-ed/">Online Program
+                                    Management</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                     <li class="dropdown">
+                        <a href="#" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K-12</a>
+                        <ul class="dropdown-menu dropdown-k12" aria-labelledby="k12">
+                           <li>
+                                <a href="https://www.wisewire.com/for-administrators/">Administrators</a>
+                           </li>
+                           <li class="menu-item">
+                                <a href="https://www.wisewire.com/for-teachers/">Teachers</a>
+                           </li>
+                           <li>
+                                <a href="https://www.wisewire.com/for-curriculum-providers/">Curriculum Developers</a>
+                           </li>
+                          </ul>
+                     </li>
+</ul>
 	</div>
 	
 		
@@ -736,7 +800,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img fetchpriority="high" decoding="async" width="558" height="208" src="wwlp-assets/wwlp-img/logo-ageoflearning.png" class="attachment-medium size-medium" alt="Age of Learning" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img fetchpriority="high" decoding="async" width="558" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-ageoflearning.png" class="attachment-medium size-medium" alt="Age of Learning" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -746,7 +810,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img decoding="async" width="338" height="208" src="wwlp-assets/wwlp-img/logo-aws.png" class="attachment-medium size-medium" alt="AWS" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img decoding="async" width="338" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-aws.png" class="attachment-medium size-medium" alt="AWS" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -756,7 +820,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img decoding="async" width="298" height="208" src="wwlp-assets/wwlp-img/logo-brainpop.png" class="attachment-medium size-medium" alt="Brain Pop" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img decoding="async" width="298" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-brainpop.png" class="attachment-medium size-medium" alt="Brain Pop" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -766,7 +830,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="298" height="208" src="wwlp-assets/wwlp-img/logo-chegg.png" class="attachment-medium size-medium" alt="Chegg" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="298" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-chegg.png" class="attachment-medium size-medium" alt="Chegg" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -776,7 +840,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="338" height="208" src="wwlp-assets/wwlp-img/logo-cicso.png" class="attachment-medium size-medium" alt="Cisco" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="338" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-cicso.png" class="attachment-medium size-medium" alt="Cisco" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -786,7 +850,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="466" height="208" src="wwlp-assets/wwlp-img/logo-discovery.png" class="attachment-medium size-medium" alt="Discovery Education" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="466" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-discovery.png" class="attachment-medium size-medium" alt="Discovery Education" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -796,7 +860,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="478" height="208" src="wwlp-assets/wwlp-img/logo-harvardms.png" class="attachment-medium size-medium" alt="Harvard Medical School" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="478" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-harvardms.png" class="attachment-medium size-medium" alt="Harvard Medical School" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -806,7 +870,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="356" height="208" src="wwlp-assets/wwlp-img/logo-imagine.png" class="attachment-medium size-medium" alt="Imagine Learning" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="356" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-imagine.png" class="attachment-medium size-medium" alt="Imagine Learning" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -816,7 +880,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="356" height="208" src="wwlp-assets/wwlp-img/logo-k12.png" class="attachment-medium size-medium" alt="K12" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="356" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-k12.png" class="attachment-medium size-medium" alt="K12" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -826,7 +890,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="386" height="208" src="wwlp-assets/wwlp-img/logo-kaplan.png" class="attachment-medium size-medium" alt="Kaplan" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="386" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-kaplan.png" class="attachment-medium size-medium" alt="Kaplan" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -836,7 +900,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="466" height="208" src="wwlp-assets/wwlp-img/logo-natgeo.png" class="attachment-medium size-medium" alt="National Geographic" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="466" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-natgeo.png" class="attachment-medium size-medium" alt="National Geographic" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -846,7 +910,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="466" height="208" src="wwlp-assets/wwlp-img/logo-openstax.png" class="attachment-medium size-medium" alt="" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="466" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-openstax.png" class="attachment-medium size-medium" alt="" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -856,7 +920,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="386" height="208" src="wwlp-assets/wwlp-img/logo-pearson.png" class="attachment-medium size-medium" alt="Pearson" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="386" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-pearson.png" class="attachment-medium size-medium" alt="Pearson" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -866,7 +930,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="408" height="208" src="wwlp-assets/wwlp-img/logo-uphoenix.png" class="attachment-medium size-medium" alt="University of Phoenix" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="408" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-uphoenix.png" class="attachment-medium size-medium" alt="University of Phoenix" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -876,7 +940,7 @@
           <div class="col-inner">
                         <div class="box has-hover gallery-box box-none">
               <div class="box-image" >
-                <img loading="lazy" decoding="async" width="358" height="208" src="wwlp-assets/wwlp-img/logo-wiley.png" class="attachment-medium size-medium" alt="Wiley" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
+                <img loading="lazy" decoding="async" width="358" height="208" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-wiley.png" class="attachment-medium size-medium" alt="Wiley" ids="15378,15379,15380,15381,15382,15383,15384,15385,15386,15387,15388,15638,15389,15390,15391" style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" auto_slide="7000" />                                                              </div>
               <div class="box-text text-left" >
                  <p></p>
               </div>
@@ -968,7 +1032,7 @@
 			
 	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_179052074">
 								<div class="img-inner dark" >
-			<img loading="lazy" decoding="async" width="1142" height="915" src="wwlp-assets/wwlp-img/FPO-astronaut.png" class="attachment-original size-original" alt="" />						
+			<img loading="lazy" decoding="async" width="1142" height="915" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/FPO-astronaut.png" class="attachment-original size-original" alt="" />						
 					</div>
 								
 <style>
@@ -1124,7 +1188,7 @@
 					<div class="icon-box-img" style="width: 39px">
 				<div class="icon">
 					<div class="icon-inner" >
-						<img loading="lazy" decoding="async" width="152" height="108" src="wwlp-assets/wwlp-img/quote-blue.png" class="attachment-medium size-medium" alt="" />					</div>
+						<img loading="lazy" decoding="async" width="152" height="108" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/quote-blue.png" class="attachment-medium size-medium" alt="" />					</div>
 				</div>
 			</div>
 				<div class="icon-box-text last-reset">
@@ -1808,7 +1872,7 @@
     };
     /* ]]> */
     </script>
-    <script type="text/javascript" src="wwlp-assets/js/flatsome.js?ver=039f9485eef603e7c53a" id="flatsome-js-js"></script> 
+    <script type="text/javascript" src="/wp-content/themes/wisewire/wwlp-assets/js/flatsome.js?ver=039f9485eef603e7c53a" id="flatsome-js-js"></script> 
     <script type="text/javascript" src="/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
     <script type="text/javascript" src="/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js"></script>
     <script type="text/javascript" src="/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
