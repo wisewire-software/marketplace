@@ -65,7 +65,7 @@
         url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.eot#iefix?v=3.18.0) format("embedded-opentype"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.woff2?v=3.18.0) format("woff2"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.ttf?v=3.18.0) format("truetype"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.woff?v=3.18.0) format("woff"), url(/wp-content/themes/wisewire/wwlp-assets/css/icons/fl-icons.svg?v=3.18.0#fl-icons) format("svg");
     }
     </style>
-    <script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+    <script type="text/javascript" src="/wp-includes/js/jquery/jquery.js?ver=3.7.1" id="jquery-core-js"></script>
     <script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
     <style>
     #header { 
@@ -371,6 +371,19 @@
 	.dropdown-higher { left: -30px;}
 	.dropdown-k12 { left: -50px;}
 	
+	.wwlp-mobile-nav {
+	position: relative;
+	list-style-type: none;
+	margin: 0 !important;
+	}
+	
+	.wwlp-mobile-nav-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+	}
+	
 	
     </style>
 </head>
@@ -421,13 +434,13 @@
 			
 <div class="row align-bottom"  id="row-1006930318">
 
-	<div id="col-489377119" class="col medium-4 small-12 large-4"  >
+	<div id="col-489377119" class="col medium-4 small-10 large-4"  >
 				<div class="col-inner"  >
 			
 			
 	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_229683942">
 								<div class="img-inner dark" >
-			<img decoding="async" src="/wp-content/uploads/WW_CMYK_Blue-logo.svg" class="attachment-large size-large" alt="" />						
+			<img decoding="async" src="/wp-content/themes/wisewire/img/WW_CMYK_Blue-logo.svg" class="attachment-large size-large" alt="" />						
 					</div>
 								
 <style>
@@ -519,64 +532,33 @@
 
 	
 
-	<div id="col-1298876780" class="col show-for-small small-12 large-12"  >
+	<div id="col-1298876780" class="col show-for-small small-2 large-2"  >
 				<div class="col-inner text-left"  >
-			
-			
-<p><span style="color: #d83131;">Not sure yet how we&#8217;ll handle mobile nav.</span></p>
-<div class="accordion">
-	<div id="accordion-2666362944" class="accordion-item">
-		<a id="accordion-2666362944-label" class="accordion-title plain" href="#accordion-item-menu" aria-expanded="false" aria-controls="accordion-2666362944-content" >
-			<button class="toggle" aria-label="Toggle"><i class="icon-angle-down"></i></button>
-			<span>Menu</span>
-		</a>
-		<div id="accordion-2666362944-content" class="accordion-inner" aria-labelledby="accordion-2666362944-label" >
-			
-	<div id="stack-2642507180" class="stack wwlp-nav show-for-small stack-row justify-end items-end sm:stack-col sm:justify-start sm:items-start">
-		
-	<div id="text-3457479306" class="text">
-		
-<p><a href="#"><strong>Explore AI</strong></a><br />
-			</div>
-	
-	<div id="text-2317970733" class="text">
-		
-<p><a href="#"><strong>Career Training</strong></a><br />
-			</div>
-	
-	<div id="text-1700389619" class="text">
-		
-<p><a href="#"><strong>Higher Ed</strong></a><br />
-			</div>
-	
-	<div id="text-3769420400" class="text">
-		
-<p style="margin-bottom: 0 !important;"><a href="#"><strong>K-12</strong></a></p>
-		
-<style>
-#text-3769420400 {
-  text-align: left;
-}
-</style>
-	</div>
-	
-		
-<style>
-#stack-2642507180 > * {
-  --stack-gap: 0.5rem;
-}
-@media (min-width:550px) {
-  #stack-2642507180 > * {
-    --stack-gap: 2.25rem;
-  }
-}
-</style>
-	</div>
-	
-		</div>
-	</div>
-	
-</div>
+	<ul class="wwlp-mobile-nav">		
+	<li class="nav-icon has-icon">
+  		<a href="#" data-open="#main-menu" data-pos="right" data-bg="main-menu-overlay" data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+
+		  <i class="icon-menu"></i>
+		  		</a>
+		  		
+		  <ul class="wwlp-mobile-nav-overlay" id="main-menu">
+		  <li>Explore AI</li>
+		  <li>Career training
+		  	<ul>
+		  	<li>Bootcamps</li>
+		  	<li>Corporate Programs</li>
+		  	</ul></li>
+		  	<li>Higher Ed</li>
+		  	<li>K-12
+		  	<ul>
+		  	<li>Administrators</li>
+		  	<li>Teachers</li>
+		  	<li>Curriculum Developers</li>
+		  	</ul>
+		  	</li>		  	
+		  </ul>
+	</li>
+	</ul>
 		</div>
 					</div>
 
@@ -1873,18 +1855,6 @@
     /* ]]> */
     </script>
     <script type="text/javascript" src="/wp-content/themes/wisewire/wwlp-assets/js/flatsome.js?ver=039f9485eef603e7c53a" id="flatsome-js-js"></script> 
-    <script type="text/javascript" src="/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
-    <script type="text/javascript" src="/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js"></script>
-    <script type="text/javascript" src="/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
-    <script type="text/javascript" src="/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" id="wp-hooks-js"></script>
-    <script type="text/javascript" src="/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
-    <script type="text/javascript" id="wp-i18n-js-after">
-    /* <![CDATA[ */
-    wp.i18n.setLocaleData({
-        'text direction\u0004ltr': ['ltr']
-    });
-    /* ]]> */
-    </script>
 
 </body>
 </html>
