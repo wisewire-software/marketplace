@@ -13,7 +13,7 @@
         html.className = html.className.replace(/\bno-js\b/, 'js')
     })(document.documentElement);
     </script>
-    <title>Landing Page - Wisewire</title>
+    <title>Teacher Resources &amp; Education Marketplace | Wisewire</title>
     <style type="text/css" id="cst_font_data">
     @font-face {
         font-family: 'Zeyada';
@@ -386,6 +386,24 @@
 	
 	
     </style>
+    
+    <!-- This site is optimized with the Yoast SEO plugin v7.8 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description" content="Explore and create teacher resources. Search our library of educational resources, create technology-enhanced items, or contact us to learn more."/>
+    <link rel="canonical" href="https://www.wisewire.com/"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Teacher Resources &amp; Education Marketplace | Wisewire"/>
+    <meta property="og:description" content="Explore and create teacher resources. Search our library of educational resources, create technology-enhanced items, or contact us to learn more."/>
+    <meta property="og:url" content="https://www.wisewire.com/"/>
+    <meta property="og:site_name" content="Wisewire"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:description" content="Explore and create teacher resources. Search our library of educational resources, create technology-enhanced items, or contact us to learn more."/>
+    <meta name="twitter:title" content="Teacher Resources &amp; Education Marketplace | Wisewire"/>
+    <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.wisewire.com\/","name":"Wisewire","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.wisewire.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/www.wisewire.com\/","sameAs":[],"@id":"https:\/\/www.wisewire.com\/#organization","name":"Wisewire","logo":""}</script>
+    <meta name="google-site-verification" content="KRcD0FwYBekw_sRl3VRiPoCtjpIXLWtI_GS0_fqT-ew"/>
+    <!-- / Yoast SEO plugin. -->
+
 </head>
 
 <body class="page-template page-template-page-blank-landingpage page-template-page-blank-landingpage-php page page-id-15633 locale-en-us lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border mobile-submenu-toggle">
@@ -1126,15 +1144,71 @@
 				<div class="col-inner"  >
 			
 			
-<div class="row"  id="row-1343978205">
+<div class="row align-middle"  id="row-1343978205">
 
-	<div id="col-521695147" class="col medium-6 small-12 large-6"  >
-				<div class="col-inner"  >
+<div id="col-2122688158" class="col medium-6 small-12 large-6">
+				<div class="col-inner">
 			
 			
-<p>photos or video here</p>
+
+  <div class="banner has-hover has-video" id="banner-539729269">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill">
+            <div class="bg fill bg-fill "></div>
+            	<div class="video-overlay no-click fill visible"></div>
+	<video class="video-bg fill visible" preload="" playsinline="" autoplay="" muted="" loop="">
+		<source src="/wp-content/themes/wisewire/wwlp-assets/technicians-and-robotic-arm.mp4" type="video/mp4">	</video>
+                        
+                    </div>
+		
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>               <div id="text-box-241531195" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                     <div data-animate="fadeIn" data-animate-transform="true" data-animate-transition="true" data-animated="true">           <div class="text-box-content text dark">
+              
+              <div class="text-inner text-center">
+                  
+              </div>
+           </div>
+       </div>                     
+<style>
+#text-box-241531195 {
+  width: 60%;
+}
+#text-box-241531195 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-241531195 {
+    width: 60%;
+  }
+}
+</style>
+    </div>
+         </div>
+      </div>
+
+            
+<style>
+#banner-539729269 {
+  padding-top: 56.25%;
+}
+</style>
+  </div>
+
+
 		</div>
-					</div>
+				
+<style>
+#col-2122688158 > .col-inner {
+  padding: 0px 0px 0px 0px;
+}
+@media (min-width:550px) {
+  #col-2122688158 > .col-inner {
+    padding: 40px 60px 0px 0px;
+  }
+}
+</style>
+	</div>
 
 	
 
@@ -1547,29 +1621,38 @@
 			
 <div class="row"  id="row-1682535460">
 
-	<div id="col-1617130345" class="col small-12 large-12"  >
-				<div class="col-inner"  >
+<div id="col-712880039" class="col small-12 large-12">
+				<div class="col-inner">
 			
 			
-<p><strong><a href="https://www.wisewire.com/exploreai/">Explore AI</a></strong><br />
-<strong><a href="#">About Us</a></strong><br />
-<strong><a href="#">Contact</a></strong></p>
-<div class="social-icons follow-icons" ><a href="http://url" target="_blank" data-label="Facebook" class="icon button circle is-outline facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook" rel="noopener nofollow" ><i class="icon-facebook" ></i></a><a href="http://url" target="_blank" data-label="Instagram" class="icon button circle is-outline instagram tooltip" title="Follow on Instagram" aria-label="Follow on Instagram" rel="noopener nofollow" ><i class="icon-instagram" ></i></a><a href="http://url" data-label="Twitter" target="_blank" class="icon button circle is-outline twitter tooltip" title="Follow on Twitter" aria-label="Follow on Twitter" rel="noopener nofollow" ><i class="icon-twitter" ></i></a><a href="mailto:your@email" data-label="E-mail" target="_blank" class="icon button circle is-outline email tooltip" title="Send us an email" aria-label="Send us an email" rel="nofollow noopener" ><i class="icon-envelop" ></i></a></div>
-<p><span style="color: #ffff00;">Are these supposed to be sharing or follow icons?</span></p>
+<p><strong><a href="https://www.wisewire.com/exploreai/">Explore AI</a></strong><br>
+<strong><a href="#">About Us</a></strong><br>
+<strong><a href="mailto:mailto:contact@wisewire.com">Contact</a></strong></p>
+<div class="social-icons follow-icons"><a href="https://www.facebook.com/WisewireEd/" target="_blank" data-label="Facebook" class="icon button circle is-outline facebook" aria-label="Follow on Facebook" rel="noopener nofollow"><i class="icon-facebook"></i></a><a href="https://x.com/WisewireEd" data-label="X" target="_blank" class="icon button circle is-outline x" aria-label="Follow on X" rel="noopener nofollow"><i class="icon-x"></i></a><a href="https://www.linkedin.com/company/wisewire-education-marketplace/" data-label="LinkedIn" target="_blank" class="icon button circle is-outline linkedin" aria-label="Follow on LinkedIn" rel="noopener nofollow"><i class="icon-linkedin"></i></a></div>
 		</div>
 				
 <style>
-#col-1617130345 > .col-inner {
+#col-712880039 > .col-inner {
   padding: 10px 40px 10px 20px;
 }
 @media (min-width:550px) {
-  #col-1617130345 > .col-inner {
+  #col-712880039 > .col-inner {
     padding: 10px 40px 10px 40px;
   }
 }
 </style>
 	</div>
-
+<style>
+#col-712880039 > .col-inner {
+  padding: 10px 40px 10px 20px;
+}
+@media (min-width:550px) {
+  #col-712880039 > .col-inner {
+    padding: 10px 40px 10px 40px;
+  }
+}
+</style>
+	</div>
 	
 </div>
 		</div>
