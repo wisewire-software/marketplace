@@ -530,37 +530,23 @@
 		</div>
 					</div>
 
-	
+
 
 	<div id="col-1298876780" class="col show-for-small small-2 large-2"  >
-				<div class="col-inner text-left"  >
-	<ul class="wwlp-mobile-nav">		
-	<li class="nav-icon has-icon">
+		<div class="col-inner text-left"  >
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+              <li class="nav-icon has-icon">
   		<a href="#" data-open="#main-menu" data-pos="right" data-bg="main-menu-overlay" data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
 
 		  <i class="icon-menu"></i>
 		  		</a>
-		  		
-		  <ul class="wwlp-mobile-nav-overlay" id="main-menu">
-		  <li>Explore AI</li>
-		  <li>Career training
-		  	<ul>
-		  	<li>Bootcamps</li>
-		  	<li>Corporate Programs</li>
-		  	</ul></li>
-		  	<li>Higher Ed</li>
-		  	<li>K-12
-		  	<ul>
-		  	<li>Administrators</li>
-		  	<li>Teachers</li>
-		  	<li>Curriculum Developers</li>
-		  	</ul>
-		  	</li>		  	
-		  </ul>
 	</li>
-	</ul>
+            </ul>
+          </div>				
 		</div>
-					</div>
+		</div>
+		</div>
 
 	
 </div>
@@ -1186,7 +1172,7 @@
 	
 <p><span style="font-size: 110%;" data-animate="fadeIn"><strong>What a feat of amazing talent and dedication with a little splash of insanity! I cannot believe you have pulled this off in such a short time. Wisewire helped differentiate our learning programs, and more importantly, keep our scholars engaged and using their imaginations”</strong></span></p>
 <p data-animate-delay="200"><strong><span style="font-size: 85%;">Brita Nordin</span></strong><br />
-<span style="font-size: 85%;" data-animate="fadeIn"><em>VP Product Management, BellXcel </em></span></p>
+<span style="font-size: 85%;" data-animate="fadeIn"><em>VP Product Management, BellXcel &nbsp;</em></span></p>
 		</div>
 	</div>
 	
@@ -1605,6 +1591,57 @@
 
 </div>
 
+    <div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+
+        <div class="sidebar-menu no-scrollbar ">
+
+            <ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15601">
+                    <a href="#">Explore AI</a>
+                    <ul class="sub-menu nav-sidebar-ul children">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15602">
+                            <a href="https://www.wisewire.com/exploreai/">Explore AI</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15603">
+                    <a href="#">Career Training</a>
+                    <ul class="sub-menu nav-sidebar-ul children">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15604">
+                            <a href="https://www.wisewire.com/digital-skills-courses/">Bootcamps</a>
+                        </li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15605">
+                            <a href="https://www.wisewire.com/corporate-learning/">Corporate Programs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15606">
+                    <a href="#">Higher Ed</a>
+                    <ul class="sub-menu nav-sidebar-ul children">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15607">
+                            <a href="https://www.wisewire.com/online-program-management-for-higher-ed/">Online Program Management</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15608">
+                    <a href="#">K-12</a>
+                    <ul class="sub-menu nav-sidebar-ul children">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15609">
+                            <a href="https://www.wisewire.com/for-administrators/">Administrators</a>
+                        </li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15610">
+                            <a href="https://www.wisewire.com/for-teachers/">Teachers</a>
+                        </li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15611">
+                            <a href="https://www.wisewire.com/for-curriculum-providers/">Curriculum Developers</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
 
     <style id='global-styles-inline-css' type='text/css'>
     body {
