@@ -488,16 +488,17 @@
 	<div id="text-204801993" class="text">
 		
 <ul class="wwlp-nav">
-                    <li class="dropdown">
-                    <a href="#" id="exploreai" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI</a>
-                        <ul class="dropdown-menu dropdown-ai">
+                   <li class="dropdown">
+                    <a href="https://www.wisewire.com/exploreai/" id="exploreai" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI</a>
+                       <!-- <ul class="dropdown-menu dropdown-ai">
                        <li>
                                 <a href="https://www.wisewire.com/exploreai/">Explore AI</a>
                         </li>
-                        </ul>
-                    </li>
+                        </ul> -->
+                    </li> 
+                   
                     <li class="dropdown">
-                        <a href="#" id="career-training" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career
+                        <a href="https://www.wisewire.com/digital-skills-courses/" id="career-training" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career
                             Training</a>
                         <ul class="dropdown-menu dropdown-career">
                             <li>
@@ -508,20 +509,21 @@
                             </li>
                         </ul>
                     </li>
+                   
                     <li class="dropdown">
-                        <a href="#" id="higher-ed" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Higher
+                        <a href="https://www.wisewire.com/online-program-management-for-higher-ed/" id="higher-ed" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Higher
                             Ed</a>
-                        <ul class="dropdown-menu dropdown-higher" aria-labelledby="higher-ed">
+                       <!-- <ul class="dropdown-menu dropdown-higher" aria-labelledby="higher-ed">
                             <li>
                                 <a href="https://www.wisewire.com/online-program-management-for-higher-ed/">Online Program
                                     Management</a>
                             </li>
-                        </ul>
-                    </li>
+                        </ul>-->
+                    </li> 
 
 
                      <li class="dropdown">
-                        <a href="#" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K-12</a>
+                        <a href="https://www.wisewire.com/for-administrators/" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K-12</a>
                         <ul class="dropdown-menu dropdown-k12" aria-labelledby="k12">
                            <li>
                                 <a href="https://www.wisewire.com/for-administrators/">Administrators</a>
@@ -1641,16 +1643,18 @@
         <div class="sidebar-menu no-scrollbar ">
 
             <ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
+                
+                
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15601">
-                    <a href="#">Explore AI</a>
-                    <ul class="sub-menu nav-sidebar-ul children">
+                    <a href="https://www.wisewire.com/exploreai/">Explore AI</a>
+                   <!-- <ul class="sub-menu nav-sidebar-ul children">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15602">
                             <a href="https://www.wisewire.com/exploreai/">Explore AI</a>
                         </li>
-                    </ul>
-                </li>
+                    </ul> -->
+                </li> 
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15603">
-                    <a href="#">Career Training</a>
+                    <a href="https://www.wisewire.com/digital-skills-courses/">Career Training</a>
                     <ul class="sub-menu nav-sidebar-ul children">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15604">
                             <a href="https://www.wisewire.com/digital-skills-courses/">Bootcamps</a>
@@ -1660,16 +1664,17 @@
                         </li>
                     </ul>
                 </li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15606">
-                    <a href="#">Higher Ed</a>
-                    <ul class="sub-menu nav-sidebar-ul children">
+               
+               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15606">
+                    <a href="https://www.wisewire.com/online-program-management-for-higher-ed/">Higher Ed</a>
+                   <!-- <ul class="sub-menu nav-sidebar-ul children">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15607">
                             <a href="https://www.wisewire.com/online-program-management-for-higher-ed/">Online Program Management</a>
                         </li>
-                    </ul>
+                    </ul>  -->
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15608">
-                    <a href="#">K-12</a>
+                    <a href="https://www.wisewire.com/for-administrators/">K-12</a>
                     <ul class="sub-menu nav-sidebar-ul children">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15609">
                             <a href="https://www.wisewire.com/for-administrators/">Administrators</a>
