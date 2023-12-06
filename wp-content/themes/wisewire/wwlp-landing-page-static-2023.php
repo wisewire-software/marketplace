@@ -1017,7 +1017,7 @@
 <div class="row align-equal row-box-shadow-1"  id="row-1921913879">
 
 	<div id="col-1032259665" class="col medium-6 small-12 large-3"  data-animate="bounceInUp">
-				<div class="col-inner box-shadow-2-hover" style="background-color:rgb(251, 207, 89);" >
+				<div class="col-inner " style="background-color:rgb(251, 207, 89);" >
 			
 			
 <h4>Engaging Content</h4>
@@ -1028,7 +1028,7 @@
 	
 
 	<div id="col-4625910" class="col medium-6 small-12 large-3 col-hover-focus"  data-animate="bounceInUp">
-				<div class="col-inner box-shadow-2-hover" style="background-color:rgb(255, 255, 255);" >
+				<div class="col-inner " style="background-color:rgb(255, 255, 255);" >
 			
 			
 <h4>Course Pathways</h4>
@@ -1039,7 +1039,7 @@
 	
 
 	<div id="col-1711138811" class="col medium-6 small-12 large-3 col-hover-focus"  data-animate="bounceInUp">
-				<div class="col-inner box-shadow-2-hover" style="background-color:rgb(216, 212, 207);" >
+				<div class="col-inner " style="background-color:rgb(216, 212, 207);" >
 			
 			
 <h4>Skills Mapping</h4>
@@ -1050,7 +1050,7 @@
 	
 
 	<div id="col-1905874807" class="col medium-6 small-12 large-3 col-hover-focus"  data-animate="bounceInUp">
-				<div class="col-inner box-shadow-2-hover dark" style="background-color:#374159;" >
+				<div class="col-inner  dark" style="background-color:#374159;" >
 			
 			
 <h4>Learning Journeys</h4>
