@@ -1343,7 +1343,7 @@
 				<div class="col-inner text-center"  >
 			
 			
-<h2 data-animate="fadeInRight">Improved Learner Satisfaction Score</h2>
+<h2 data-animate="fadeInRight">Excellent Learner NPS</h2>
 		</div>
 					</div>
 
