@@ -489,8 +489,8 @@
 	<div id="text-204801993" class="text">
 		
 <ul class="wwlp-nav">
-                    <li>
-                    <a href="https://www.wisewire.com/exploreai/" id="exploreai" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI</a>
+                    <li class="dropdown">
+                        <a href="https://www.wisewire.com/exploreai/" id="exploreai" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI</a>
                     </li>
 
                     <li class="dropdown">
@@ -506,7 +506,7 @@
                         </ul>
                     </li>
                    
-                    <li>
+                    <li class="dropdown">
 
                         <a href="https://www.wisewire.com/online-program-management-for-higher-ed" id="higher-ed" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Higher Ed</a>
                     </li>
