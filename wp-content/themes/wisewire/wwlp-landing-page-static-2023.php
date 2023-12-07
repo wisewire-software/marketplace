@@ -279,8 +279,8 @@
             /* change for width & height of text */
             padding-top: 0;
             /* height: 10em; */
-            background-image: url('/wp-content/themes/wisewire/wwlp-assets/wwlp-img/gray-line.png');
-            background-position: 50% 340px;
+            background-image: url('/wp-content/themes/wisewire/wwlp-assets/wwlp-img/gray-line-period.png');
+            background-position: right 320px;
         }
     }
     
@@ -305,9 +305,10 @@
         .wwlp-hl-slider {
             /* change for width & height of text */
             padding-top: 0;
+            padding-right: 30px;
             /* height: 10em; */
-            background-image: url('/wp-content/themes/wisewire/wwlp-assets/wwlp-img/gray-line.png');
-            background-position: 50% 320px;
+            background-image: url('/wp-content/themes/wisewire/wwlp-assets/wwlp-img/gray-line-period.png');
+            background-position: right 300px;
         }
     }
     </style>
@@ -488,15 +489,10 @@
 	<div id="text-204801993" class="text">
 		
 <ul class="wwlp-nav">
-                   <li class="dropdown">
+                    <li class="dropdown">
                     <a href="https://www.wisewire.com/exploreai/" id="exploreai" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI</a>
-                       <!-- <ul class="dropdown-menu dropdown-ai">
-                       <li>
-                                <a href="https://www.wisewire.com/exploreai/">Explore AI</a>
-                        </li>
-                        </ul> -->
-                    </li> 
-                   
+                    </li>
+
                     <li class="dropdown">
                         <a href="https://www.wisewire.com/digital-skills-courses/" id="career-training" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career
                             Training</a>
@@ -511,15 +507,10 @@
                     </li>
                    
                     <li class="dropdown">
-                        <a href="https://www.wisewire.com/online-program-management-for-higher-ed/" id="higher-ed" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Higher
-                            Ed</a>
-                       <!-- <ul class="dropdown-menu dropdown-higher" aria-labelledby="higher-ed">
-                            <li>
-                                <a href="https://www.wisewire.com/online-program-management-for-higher-ed/">Online Program
-                                    Management</a>
-                            </li>
-                        </ul>-->
-                    </li> 
+
+                        <a href="https://www.wisewire.com/online-program-management-for-higher-ed" id="higher-ed" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Higher Ed</a>
+                    </li>
+
 
 
                      <li class="dropdown">
@@ -1017,7 +1008,9 @@
 <div class="row align-equal row-box-shadow-1"  id="row-1921913879">
 
 	<div id="col-1032259665" class="col medium-6 small-12 large-3"  data-animate="bounceInUp">
-				<div class="col-inner " style="background-color:rgb(251, 207, 89);" >
+
+				<div class="col-inner" style="background-color:rgb(251, 207, 89);" >
+
 			
 			
 <h4>Engaging Content</h4>
@@ -1028,7 +1021,9 @@
 	
 
 	<div id="col-4625910" class="col medium-6 small-12 large-3 col-hover-focus"  data-animate="bounceInUp">
-				<div class="col-inner " style="background-color:rgb(255, 255, 255);" >
+
+				<div class="col-inner" style="background-color:rgb(255, 255, 255);" >
+
 			
 			
 <h4>Course Pathways</h4>
@@ -1039,7 +1034,9 @@
 	
 
 	<div id="col-1711138811" class="col medium-6 small-12 large-3 col-hover-focus"  data-animate="bounceInUp">
-				<div class="col-inner " style="background-color:rgb(216, 212, 207);" >
+
+				<div class="col-inner" style="background-color:rgb(216, 212, 207);" >
+
 			
 			
 <h4>Skills Mapping</h4>
@@ -1050,7 +1047,9 @@
 	
 
 	<div id="col-1905874807" class="col medium-6 small-12 large-3 col-hover-focus"  data-animate="bounceInUp">
-				<div class="col-inner  dark" style="background-color:#374159;" >
+
+				<div class="col-inner dark" style="background-color:#374159;" >
+
 			
 			
 <h4>Learning Journeys</h4>
@@ -1647,12 +1646,9 @@
                 
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15601">
                     <a href="https://www.wisewire.com/exploreai/">Explore AI</a>
-                   <!-- <ul class="sub-menu nav-sidebar-ul children">
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15602">
-                            <a href="https://www.wisewire.com/exploreai/">Explore AI</a>
-                        </li>
-                    </ul> -->
-                </li> 
+
+                </li>
+
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15603">
                     <a href="https://www.wisewire.com/digital-skills-courses/">Career Training</a>
                     <ul class="sub-menu nav-sidebar-ul children">
@@ -1664,14 +1660,10 @@
                         </li>
                     </ul>
                 </li>
-               
-               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15606">
+
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15606">
                     <a href="https://www.wisewire.com/online-program-management-for-higher-ed/">Higher Ed</a>
-                   <!-- <ul class="sub-menu nav-sidebar-ul children">
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15607">
-                            <a href="https://www.wisewire.com/online-program-management-for-higher-ed/">Online Program Management</a>
-                        </li>
-                    </ul>  -->
+
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15608">
                     <a href="https://www.wisewire.com/for-administrators/">K-12</a>
