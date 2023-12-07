@@ -494,7 +494,7 @@
                     </li>
 
                     <li class="dropdown">
-                        <a href="https://www.wisewire.com/digital-skills-courses/" id="career-training" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career
+                        <a href="https://www.wisewire.com/corporate-learning/" id="career-training" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career
                             Training</a>
                         <ul class="dropdown-menu dropdown-career">
                             <li>
@@ -514,7 +514,7 @@
 
 
                      <li class="dropdown">
-                        <a href="https://www.wisewire.com/for-administrators/" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K-12</a>
+                        <a href="https://www.wisewire.com/for-curriculum-providers/" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K-12</a>
                         <ul class="dropdown-menu dropdown-k12" aria-labelledby="k12">
                            <li>
                                 <a href="https://www.wisewire.com/for-administrators/">Administrators</a>
@@ -1650,7 +1650,7 @@
                 </li>
 
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15603">
-                    <a href="https://www.wisewire.com/digital-skills-courses/">Career Training</a>
+                    <a href="https://www.wisewire.com/corporate-learning/">Career Training</a>
                     <ul class="sub-menu nav-sidebar-ul children">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15604">
                             <a href="https://www.wisewire.com/digital-skills-courses/">Bootcamps</a>
@@ -1666,7 +1666,7 @@
 
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15608">
-                    <a href="https://www.wisewire.com/for-administrators/">K-12</a>
+                    <a href="https://www.wisewire.com/for-curriculum-providers/">K-12</a>
                     <ul class="sub-menu nav-sidebar-ul children">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15609">
                             <a href="https://www.wisewire.com/for-administrators/">Administrators</a>
