@@ -766,178 +766,240 @@
 
 		<div class="section-content relative">
 			
-<?php echo do_shortcode('[lgxlogoslider id="15765"]'); ?>
+<div id="lgx_logo_slider_app_15765" class="lgx_logo_slider_app">
+
+    <div id="lgx_lsw_preloader_15765"" class="lgx_lsw_preloader"> <img src="/wp-content/plugins/logo-slider-wp/public/assets/img/loader.gif" /></div>
+    <div class="lgx_logo_slider lgx_logo_slider_free">
+        <div class="lgx_app_inner lgx_app_layout_carousel">
+            <div class="lgx_app_container-fluid">
+
+                
+                <div id="lgx_app_content_wrap_15765957" class="lgx_app_content_wrapper  swiper lgx_logo_carousel"   data-effect="slide"  data-infinite="true"  data-speed="1800"  data-autoplay="true"  data-delay="2000"  data-pause="false"  data-space="1"  data-nav="true"  data-pagination="true"  data-height="false"  data-move="true"  data-wheel="false"  data-simulate="true"  data-grab="false"  data-dynamic="false"  data-bullets_no="1"  data-item_mobile="2"  data-item_tablet="3"  data-item_desk="4"  data-item_large="5"  data-lazy="false"    >
+
+                    <div class="lgx_lsw_nav_wrap lgx_lsw_nav_top_right  "><div class="lgx_lsw_nav_button lgx_lsw_nav_button_prev"><i class="fa fa-angle-left"  aria-hidden="true"></i></div><div class="lgx_lsw_nav_button lgx_lsw_nav_button_next "><i class="fa fa-angle-right"  aria-hidden="true"></i></div></div>
+                    <div class="lgx_app_item_row   swiper-wrapper "  >
+                        <div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-act.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-apu.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-aws.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-cdc.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-college-board.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-imagine.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-johns-hopkins.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-kaplan.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-kipp.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-natgeo.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-nyu.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-pbs.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-pearson.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-summit.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div><div class="lgx_app_item  swiper-slide lgx_app_hover_effect_none">
+    <div class="lgx_app_item_inner " >
+    
+                    <div class="lgx_app_item_figure lgx_img_hover_anim__default">
+                <a class="lgx_app_item_link"    href="javascript:void(0);"  target="_self" >
+                    <img class="lgx_app_item_img" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-wiley.png"  alt="" />
+                </a>
+            </div> <!--//.FIGURE -->
+        
+        <div class="lgx_app_item_info">
+                                </div>
+
+        
+    </div>
+</div>                    </div> <!--//.APP CONTENT INNER END-->
+
+                    <div class="swiper-pagination lgx_lsw_pagination"></div>
+                    
+                </div> <!-- //.CONTENT WRAP END-->
+
+            </div><!--//.APP CONTAINER END-->
+        </div> <!--//.INNER END-->
+    </div> <!-- APP CONTAINER END -->
+
+</div> <!--//.APP END-->  
   
-    <div class="row large-columns-8 medium-columns-3 small-columns-3 row-full-width slider row-slider slider-nav-reveal"  data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}' >
-
-  <div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img fetchpriority="high" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-act.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3"  />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-apu.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3"  />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-aws.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-cdc.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-college-board.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3"  />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-imagine.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3"  />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-johns-hopkins.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-kaplan.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3"  />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-kipp.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-natgeo.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-nyu.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-pbs.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-pearson.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-summit.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" />
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div><div class="gallery-col col" >
-          <div class="col-inner">
-                        <div class="box has-hover gallery-box box-none">
-              <div class="box-image" >
-                <img loading="lazy" decoding="async" width="558" height="558" src="/wp-content/themes/wisewire/wwlp-assets/wwlp-img/logo-wiley.png" class="attachment-medium size-medium" alt=""  style="none" lightbox="false" type="slider" width="full-width" columns="8" columns__sm="3" />                                                              
-                </div>
-              <div class="box-text text-left" >
-                 <p></p>
-              </div>
-            </div>
-                      </div>
-         </div></div>
-		</div>
-
 		
 <style>
 #section_884865847 {
@@ -1675,10 +1737,12 @@
         </div>
 
     </div>
-    <link rel='stylesheet' id='logo-slider-wp-font-css' href="/wp-content/plugins/logo-slider-wp/public/assets/css/font-awesome.min.css?ver=1.0.0' type='text/css' media='all'/>
-    <link rel='stylesheet' id='logo-slider-wp-swiper-css-css' href='/wp-content/plugins/logo-slider-wp/public/assets/libs/swiper/swiper-bundle.min.css?ver=1.0.0' type='text/css' media='all'/>
-    <link rel='stylesheet' id='lgx-logo-slider-style-css' href='/wp-content/plugins/logo-slider-wp/public/assets/css/logo-slider-wp-public.min.css?ver=1.0.0' type='text/css' media='all'/>
-    <style id='lgx-logo-slider-style-inline-css' type='text/css'>
+    <link rel="stylesheet" id="logo-slider-wp-font-css" href="/wp-content/plugins/logo-slider-wp/public/assets/css/font-awesome.min.css?ver=1.0.0" type="text/css" media="all"/>
+    <link rel="stylesheet" id="logo-slider-wp-swiper-css-css" href="/wp-content/plugins/logo-slider-wp/public/assets/libs/swiper/swiper-bundle.min.css?ver=1.0.0" type="text/css" media="all"/>
+    <link rel="stylesheet" id="lgx-logo-slider-style-css" href="/wp-content/plugins/logo-slider-wp/public/assets/css/logo-slider-wp-public.min.css?ver=1.0.0" type="text/css" media="all"/>
+      <style id='lgx-logo-slider-style-inline-css' type='text/css'>
+      
+    .lgx_lsw_nav_wrap, .lgx_lsw_pagination {display: none;}
     #lgx_logo_slider_app_15765 .lgx_logo_slider {
         background-attachment: initial;
         background-size: cover;
@@ -1766,7 +1830,7 @@
     }
 
     #lgx_logo_slider_app_15765 .lgx_app_item .lgx_app_item_img {
-        max-width: 200px;
+        max-width: 150px;
         max-height: 100%;
         object-fit: scale-down;
     }
