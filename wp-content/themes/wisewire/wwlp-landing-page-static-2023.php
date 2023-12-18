@@ -500,11 +500,11 @@
 		
 <ul class="wwlp-nav">
                     <li class="dropdown">
-                    <a href="https://www.wisewire.com/exploreai/" id="exploreai" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI</a>
+                        <a href="https://www.wisewire.com/exploreai/" id="exploreai" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" id="career-training" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career
-                            Training</a>
+                      
+                        <a href="#" id="career-training" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career Training</a>
                         <ul class="dropdown-menu dropdown-career">
                             <li>
                                 <a href="https://www.wisewire.com/digital-skills-courses/">Bootcamps</a>
@@ -520,7 +520,9 @@
 
 
                      <li class="dropdown">
+
                         <a href="#" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K-12</a>
+
                         <ul class="dropdown-menu dropdown-k12" aria-labelledby="k12">
                            <li>
                                 <a href="https://www.wisewire.com/for-administrators/">Administrators</a>
