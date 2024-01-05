@@ -1,0 +1,36 @@
+2023-12-14T18:07:35+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/Controller/BecomeAuthor.php:2
+Stack trace:
+#0 /var/www/html/wordpress/wp-content/themes/wisewire/template-platform-publish.php(6): require()
+#1 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#2 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#3 /var/www/html/wordpress/index.php(17): require('...')
+#4 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/Controller/BecomeAuthor.php on line 2
+
+2023-12-14T18:10:26+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/Controller/BecomeAuthor.php:2
+Stack trace:
+#0 /var/www/html/wordpress/wp-content/themes/wisewire/template-platform-publish.php(6): require()
+#1 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#2 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#3 /var/www/html/wordpress/index.php(17): require('...')
+#4 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/Controller/BecomeAuthor.php on line 2
+
+2023-12-14T18:12:19+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/Controller/BecomeAuthor.php:2
+Stack trace:
+#0 /var/www/html/wordpress/wp-content/themes/wisewire/template-platform-publish.php(6): require()
+#1 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#2 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#3 /var/www/html/wordpress/index.php(17): require('...')
+#4 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/Controller/BecomeAuthor.php on line 2
+
+2023-12-14T18:13:27+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/Controller/BecomeAuthor.php:2
+Stack trace:
+#0 /var/www/html/wordpress/wp-content/themes/wisewire/template-platform-publish.php(6): require()
+#1 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#2 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#3 /var/www/html/wordpress/index.php(17): require('...')
+#4 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/Controller/BecomeAuthor.php on line 2
+

@@ -1,0 +1,8 @@
+2023-12-21T08:49:42+00:00 CRITICAL Uncaught Error: Unknown named parameter $uniqid in /var/www/html/wordpress/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#1 /var/www/html/wordpress/wp-includes/plugin.php(565): WP_Hook->do_action()
+#2 /var/www/html/wordpress/wp-cron.php(191): do_action_ref_array()
+#3 {main}
+  thrown in /var/www/html/wordpress/wp-includes/class-wp-hook.php on line 324
+

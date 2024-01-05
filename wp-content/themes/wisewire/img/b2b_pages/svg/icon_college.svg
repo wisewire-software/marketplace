@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353.02 352.99">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #edc256;
+            }
+
+            .cls-2 {
+                fill: #336172;
+            }
+
+            .cls-3 {
+                fill: #003a4f;
+            }
+
+            .cls-4 {
+                fill: #e05838;
+            }
+
+            .cls-5 {
+                fill: #ff724e;
+            }
+
+            .cls-6 {
+                fill: #d8a739;
+            }
+        </style>
+    </defs>
+    <title>college-Asset 1</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <path class="cls-1" d="M353,176.49C353,274,274,353,176.5,353a176.5,176.5,0,1,1,0-353C274,0,353,79,353,176.49Z" />
+            <rect class="cls-2" x="99.16" y="224.82" width="154.68" height="18.57" />
+            <polygon class="cls-3" points="253.84 151.58 99.16 151.58 87.57 133.01 265.47 133.01 253.84 151.58" />
+            <polygon class="cls-2" points="176.5 67.05 265.47 133.01 87.57 133.01 176.5 67.05" />
+            <rect class="cls-3" x="90.65" y="243.39" width="171.71" height="18.56" />
+            <rect class="cls-4" x="117.93" y="151.58" width="22.01" height="73.25" />
+            <rect class="cls-5" x="124.85" y="151.58" width="15.09" height="73.25" />
+            <rect class="cls-4" x="165.53" y="151.58" width="21.99" height="73.25" />
+            <rect class="cls-4" x="213.11" y="151.58" width="21.98" height="73.25" />
+            <rect class="cls-5" x="220.01" y="151.58" width="15.08" height="73.25" />
+            <rect class="cls-5" x="172.43" y="151.58" width="15.09" height="73.25" />
+            <rect class="cls-4" x="117.93" y="151.58" width="22.01" height="9.34" />
+            <rect class="cls-4" x="165.53" y="151.58" width="21.99" height="9.34" />
+            <rect class="cls-4" x="213.11" y="151.58" width="21.98" height="9.34" />
+            <path class="cls-6" d="M353,176.49c0-2.25-.08-4.5-.16-6.73L177.92,68.1,265.47,133l-11.63,18.57H235.09v73.24h18.75v18.57h8.52V262h-171l141.08,82A176.58,176.58,0,0,0,353,176.49Z" />
+        </g>
+    </g>
+</svg>

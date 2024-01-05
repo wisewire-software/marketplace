@@ -1,0 +1,235 @@
+2023-12-12T10:58:33+00:00 CRITICAL Uncaught Error: Call to undefined function add_rel_nofollow_to_item() in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:136
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T10:58:35+00:00 CRITICAL Uncaught Error: Call to undefined function add_rel_nofollow_to_item() in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:136
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T10:59:01+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/home-notloggedin.php(275): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template.php(792): require('...')
+#5 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#7 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(12): get_template_part()
+#8 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#9 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#10 /var/www/html/wordpress/index.php(17): require('...')
+#11 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-12T10:59:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-user-login.php(508): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-12T10:59:18+00:00 CRITICAL Uncaught Error: Call to undefined function add_rel_nofollow_to_item() in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:136
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T11:01:04+00:00 CRITICAL Uncaught Error: Call to undefined function add_rel_nofollow_to_item() in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:136
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T11:01:07+00:00 CRITICAL Uncaught Error: Call to undefined function add_rel_nofollow_to_item() in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:136
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T11:01:11+00:00 CRITICAL Uncaught Error: Call to undefined function add_rel_nofollow_to_item() in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:136
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T11:01:32+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/home-notloggedin.php(275): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template.php(792): require('...')
+#5 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#7 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(12): get_template_part()
+#8 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#9 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#10 /var/www/html/wordpress/index.php(17): require('...')
+#11 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-12T11:01:35+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-user-login.php(508): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-12T11:01:43+00:00 CRITICAL Uncaught Error: Call to undefined function add_rel_nofollow_to_item() in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:136
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T11:02:10+00:00 CRITICAL syntax error, unexpected token ";" in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T11:02:10+00:00 CRITICAL syntax error, unexpected token ";" in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T11:02:11+00:00 CRITICAL syntax error, unexpected token ";" in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T11:02:45+00:00 CRITICAL syntax error, unexpected token ";" in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 136
+
+2023-12-12T11:04:07+00:00 CRITICAL Uncaught Error: Call to a member function get_thumbnail_by_discipline() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:142
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 142
+
+2023-12-12T11:26:34+00:00 CRITICAL Uncaught Error: Failed opening required '/var/www/html/wordpress/vendor/autoload.php' (include_path='.:/usr/share/php') in /var/www/html/wordpress/wp-content/themes/wisewire/functions.php:55
+Stack trace:
+#0 /var/www/html/wordpress/wp-settings.php(611): include()
+#1 /var/www/html/wordpress/wp-config.php(100): require_once('...')
+#2 /var/www/html/wordpress/wp-load.php(50): require_once('...')
+#3 /var/www/html/wordpress/wp-blog-header.php(13): require_once('...')
+#4 /var/www/html/wordpress/index.php(17): require('...')
+#5 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/functions.php on line 55
+
+2023-12-12T11:26:34+00:00 CRITICAL Uncaught Error: Failed opening required '/var/www/html/wordpress/vendor/autoload.php' (include_path='.:/usr/share/php') in /var/www/html/wordpress/wp-content/themes/wisewire/functions.php:55
+Stack trace:
+#0 /var/www/html/wordpress/wp-settings.php(611): include()
+#1 /var/www/html/wordpress/wp-config.php(100): require_once('...')
+#2 /var/www/html/wordpress/wp-load.php(50): require_once('...')
+#3 /var/www/html/wordpress/wp-blog-header.php(13): require_once('...')
+#4 /var/www/html/wordpress/index.php(17): require('...')
+#5 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/functions.php on line 55
+
+2023-12-12T11:28:17+00:00 CRITICAL Uncaught Error: Class "Monolog\Logger" not found in /var/www/html/wordpress/wp-content/themes/wisewire/functions.php:70
+Stack trace:
+#0 /var/www/html/wordpress/wp-settings.php(611): include()
+#1 /var/www/html/wordpress/wp-config.php(100): require_once('...')
+#2 /var/www/html/wordpress/wp-load.php(50): require_once('...')
+#3 /var/www/html/wordpress/wp-login.php(12): require('...')
+#4 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/functions.php on line 70
+
+2023-12-12T11:28:18+00:00 CRITICAL Uncaught Error: Class "Monolog\Logger" not found in /var/www/html/wordpress/wp-content/themes/wisewire/functions.php:70
+Stack trace:
+#0 /var/www/html/wordpress/wp-settings.php(611): include()
+#1 /var/www/html/wordpress/wp-config.php(100): require_once('...')
+#2 /var/www/html/wordpress/wp-load.php(50): require_once('...')
+#3 /var/www/html/wordpress/wp-blog-header.php(13): require_once('...')
+#4 /var/www/html/wordpress/index.php(17): require('...')
+#5 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/functions.php on line 70
+
+2023-12-12T14:59:38+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+
+2023-12-12T20:50:27+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+
+2023-12-12T20:50:29+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+

@@ -1,0 +1,1756 @@
+2023-12-11T13:30:34+00:00 CRITICAL Uncaught Error: Call to undefined function have_rows() in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:16
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 16
+
+2023-12-11T13:30:36+00:00 CRITICAL Uncaught Error: Call to undefined function have_rows() in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:16
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 16
+
+2023-12-11T13:31:04+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(15): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T13:31:09+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(15): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T13:31:16+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-custom.php(226): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T13:31:44+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-custom.php(226): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T13:32:02+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-custom.php(226): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T13:32:21+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(15): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T13:32:21+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(15): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T13:32:25+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-custom.php(226): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T13:32:28+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(15): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T16:54:43+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(15): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:05+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:06+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:06+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:06+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:06+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:06+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:06+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:06+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:06+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:07+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:07+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:07+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:07+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:07+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:11:07+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:13+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:14+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:14+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:14+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:14+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:14+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:14+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:14+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:15+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:15+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:15+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:15+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:15+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:15+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:34+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:34+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:34+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:34+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:34+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:34+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:35+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:36+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:36+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:36+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:36+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:37+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:37+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:37+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:37+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:38+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:38+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:38+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:38+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:38+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:38+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:38+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:38+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:27:38+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:01+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:01+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:01+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:01+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:01+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:01+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:02+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:02+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:02+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:02+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:02+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:02+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:03+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:03+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:03+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:03+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:03+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:03+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:04+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:04+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:04+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:04+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:04+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T17:29:04+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:20:29+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(15): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:20:47+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-custom.php(226): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:21:02+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(15): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:38:14+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+
+2023-12-11T18:40:33+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+
+2023-12-11T18:40:36+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+
+2023-12-11T18:40:56+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+
+2023-12-11T18:42:18+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+
+2023-12-11T18:42:33+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-for-explore-ai.php(172): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:42:33+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:42:52+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:43:10+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-for-explore-ai.php(172): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:43:10+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:55:23+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:55:27+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:55:31+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:55:32+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:56:26+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:56:28+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:56:30+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:56:31+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:56:53+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-for-explore-ai.php(172): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:56:54+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:56:56+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:58:04+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:58:06+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-for-explore-ai.php(172): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:58:06+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:58:09+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:58:10+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:58:13+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+
+2023-12-11T18:58:16+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-for-explore-ai.php(172): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:58:16+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:58:18+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+
+2023-12-11T18:59:22+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/home-notloggedin.php(275): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template.php(792): require('...')
+#5 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#7 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(12): get_template_part()
+#8 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#9 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#10 /var/www/html/wordpress/index.php(17): require('...')
+#11 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:59:31+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-for-explore-ai.php(172): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:59:31+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/404.php(17): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T18:59:50+00:00 CRITICAL Uncaught Error: Undefined constant "WAN_TEST_ENVIRONMENT" in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php:8
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(92): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-user-login.php(508): get_footer()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/footer.php on line 8
+
+2023-12-11T19:00:16+00:00 CRITICAL Uncaught Error: Call to a member function get_color() on null in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php:134
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/template.php(792): require()
+#1 /var/www/html/wordpress/wp-includes/template.php(725): load_template()
+#2 /var/www/html/wordpress/wp-includes/general-template.php(206): locate_template()
+#3 /var/www/html/wordpress/wp-content/themes/wisewire/template-home.php(10): get_template_part()
+#4 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#5 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#6 /var/www/html/wordpress/index.php(17): require('...')
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/themes/wisewire/home-loggedin.php on line 134
+
