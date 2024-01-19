@@ -151,9 +151,11 @@ if (get_post_type($post->ID) == 'page' && ($post->post_name == 'explore-all' || 
     <?php get_template_part('parts/svg', 'icons');?>
 
     <?php
-global $current_user, $WWItems;
-get_currentuserinfo();
-
+global $WWItems;
+//global $current_user, $WWItems;
+//get_currentuserinfo();
+//wp_get_current_user()
+ $current_user = wp_get_current_user();
 $ww_is_search = isset($wp_query->query['search']);
 $ww_isactive = 'class="active"';
 $ww_home_url = esc_url(home_url('/'));
@@ -190,35 +192,35 @@ $ww_home_url = esc_url(home_url('/'));
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand" href="<?=$ww_home_url?>"><span class="logo"></span></a>
+                     <a class="navbar-brand" href="<?=$ww_home_url?>"><span class="logo"></span></a> 
 
-                    <ul class="pull-right">
-                        <li class="menu-item-search">
-                            <a role="button" data-toggle="collapse" href="#header-search-mobile" aria-expanded="false"
-                                aria-controls="header-search-mobile" class="search collapsed"></a>
-                        </li>
+                     <ul class="pull-right">
+                       <!-- <li class="menu-item-search">
+                           <a role="button" data-toggle="collapse" href="#header-search-mobile" aria-expanded="false"
+                                aria-controls="header-search-mobile" class="search collapsed"></a> 
+                        </li>-->
                     
 			    <li class="menu-item-login">
 
-                            <a href="#" class="user" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="true"></a>
+                            <!--<a href="#" class="user" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="true"></a>-->
                        <?php if (is_user_logged_in()) {?>
-                            <ul class="dropdown-menu dropdown-logout dropdown-login" aria-labelledby="logout">
+                            <!-- <ul class="dropdown-menu dropdown-logout dropdown-login" aria-labelledby="logout">
                                 <li><a href="/my-account/">My Account</a></li>
                                 <li><a target="_blank" href="/platform-publish/">My Dashboard</a></li>
                                 <li><a href="<?php echo wp_logout_url(home_url()); ?>">Logout</a></li>
-                            </ul>
+                            </ul>-->
                         </li>
                         <?php } else {?>
-                        <ul class="dropdown-menu dropdown-logout dropdown-login" aria-labelledby="login">
+                        <!--  <ul class="dropdown-menu dropdown-logout dropdown-login" aria-labelledby="login">
                             <li><a href="/user-login">NON-STUDENT</a></li>
                             <li><a href="https://platform.wisewire.com/login">Student</a></li>
-                        </ul>
+                        </ul> -->
                         <?php }?>                       
 
                         <!-- Start helloAri -->
-                        <li class="cartmenu">
-                            <?php echo do_shortcode('[wpmenucart]'); ?>
+                         <li class="cartmenu">
+                           <!--  <?php echo do_shortcode('[wpmenucart]'); ?> -->
                         </li>
                         <!-- End helloAri -->
 
@@ -227,7 +229,7 @@ $ww_home_url = esc_url(home_url('/'));
                                 aria-expanded="false" aria-controls="navbar">
                             </button>
                         </li>
-                    </ul>
+                    </ul> 
 
                 </div>
 
@@ -261,16 +263,39 @@ $ww_home_url = esc_url(home_url('/'));
                             </ul>
                         </li>
                         <li>
-                            <a href="/for-explore-ai/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI<span
+                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI<span
                                     class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-mobile-higher">
-                            <li>
-                                    <a href="/for-explore-ai/">Explore AI</a>
+                            <li class="dropdown">
+                                    <a href="/exploreai/">Explore AI</a>
                                 </li>
                             </ul>
                         </li>    
-                        <li>
-                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K&ndash;12<span
+				 <li class="menu-item-testimonials">
+                            <a href="/corporate-learning/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career
+                                Training<span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-mobile-higher">
+                                <li>
+                                    <a href="/digital-skills-courses/">Bootcamps</a>
+                                </li>
+                                <li>
+                                    <a href="/corporate-learning/">Corporate Programs</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+			 <li class="menu-item-custom">
+                            <a href="/online-program-management-for-higher-ed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Higher ED<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-mobile-higher">
+                                <li>
+                                    <a href="/online-program-management-for-higher-ed/">Online Program<br />
+                                        Management123</a>
+                                </li>
+                            </ul>
+                        </li>	
+			<li>
+                            <a href="/for-curriculum-providers/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K&ndash;12<span
                                     class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-mobile-k12">
                                 <li>
@@ -287,29 +312,9 @@ $ww_home_url = esc_url(home_url('/'));
                                 </li> -->
                             </ul>
                         </li>
-                        <li class="menu-item-custom">
-                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Higher ED<span
-                                    class="caret"></span></a>
-                            <ul class="dropdown-menu dropdown-mobile-higher">
-                                <li>
-                                    <a href="/online-program-management-for-higher-ed/">Online Program<br />
-                                        Management</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-testimonials">
-                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Career
-                                Training<span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdown-mobile-higher">
-                                <li>
-                                    <a href="/digital-skills-courses/">Bootcamps</a>
-                                </li>
-                                <li>
-                                    <a href="/corporate-learning/">Corporate Programs</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                        
+                        
+                    </ul
 
                     <!-- Reuse from footer -->
                     <ul class="social">
@@ -347,7 +352,7 @@ $ww_home_url = esc_url(home_url('/'));
                     </li>
                     <?php } else {?>
 
-                    <li><a href="/user-login/" id="login">Login</a></li>
+		<!--  <li><a href="/user-login/" id="login">Login</a></li> -->
                     <?php }?>
 
 
@@ -355,12 +360,12 @@ $ww_home_url = esc_url(home_url('/'));
 
                     <!-- Start helloAri -->
                     <li class="cartmenu">
-                        <?php echo do_shortcode('[wpmenucart]'); ?>
+                     <!--   <?php echo do_shortcode('[wpmenucart]'); ?> -->
                     </li>
                     <!-- End helloAri -->
 
                     <li class="menu-item-search">
-                        <a href="#" class="btn-header-search" data-toggle="popover"
+	            <!-- <a href="#" class="btn-header-search" data-toggle="popover"
                             data-content='
                   <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url(home_url('/')); ?>">
                                 <div class="input-group header-search-field"><input type="text" name="s" class="form-control"
@@ -369,7 +374,7 @@ $ww_home_url = esc_url(home_url('/'));
                                 </form>
                                 '>
                             <i class="fas fa-search"></i>
-                        </a>
+                        </a> -->
                         <div class="popover" role="tooltip">
                             <div class="arrow"></div>
                             <div class="popover-content">
@@ -379,7 +384,7 @@ $ww_home_url = esc_url(home_url('/'));
                     </li>
 
                 </ul>
-                <ul class="navbar-nav navbar-right" style="margin-right: -130px; margin-top: 40px;">
+                <ul class="navbar-nav navbar-right" style="margin-right: 50px; margin-top: 40px;">
                     <li class="dropdown">
                         <!--<a href="#" id="marketplace" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true">Marketplace</a>-->
@@ -394,17 +399,29 @@ $ww_home_url = esc_url(home_url('/'));
                         </ul>
                     </li>
                     <li class="dropdown">
-                    <a href="/exploreai/" id="career-training" class="dropdown-toggle" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="true">Explore AI</a>
-                        <ul class="dropdown-menu dropdown-career" aria-labelledby="career-training">
-                        <li>
-                                <a href="/for-explore-ai/">Explore AI</a>
-                        </li> 
-                        </ul>
-                    </li>    
+                         <a href="/exploreai/">Explore AI</a>
+                        </li>                     
                     <li class="dropdown">
-                        <a href="#" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="true">K-12</a>
+                        <a href="/corporate-learning/" id="career-training" class="dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">Career
+                            Training</a>
+                        <ul class="dropdown-menu dropdown-career" aria-labelledby="career-training">
+                            <li>
+                                <a href="/digital-skills-courses/">Bootcamps</a>
+                            </li>
+                            <li>
+                                <a href="/corporate-learning/">Corporate Programs</a>
+                            </li>
+                        </ul>
+                    </li>
+
+ 		   <li class="dropdown">
+                                <a href="/online-program-management-for-higher-ed/">Higher Ed</a>
+                            </li>                   
+		  <li class="dropdown">
+			<a href="/for-administrators/" id="k12" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" 
+				aria-expanded="true">K&ndash;12</a>                    
+    
                         <ul class="dropdown-menu dropdown-k12" aria-labelledby="k12">
                             <li>
                                 <a href="/for-administrators/">Administrators</a>
@@ -418,30 +435,6 @@ $ww_home_url = esc_url(home_url('/'));
                             <!--<li>
                                 <a href="/sellwithus/">Sell With Us</a>
                             </li>-->
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" id="higher-ed" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="true">Higher
-                            Ed</a>
-                        <ul class="dropdown-menu dropdown-higher" aria-labelledby="higher-ed">
-                            <li>
-                                <a href="/online-program-management-for-higher-ed/">Online Program
-                                    Management</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" id="career-training" class="dropdown-toggle" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="true">Career
-                            Training</a>
-                        <ul class="dropdown-menu dropdown-career" aria-labelledby="career-training">
-                            <li>
-                                <a href="/digital-skills-courses/">Bootcamps</a>
-                            </li>
-                            <li>
-                                <a href="/corporate-learning/">Corporate Programs</a>
-                            </li>
                         </ul>
                     </li>
                 </ul>

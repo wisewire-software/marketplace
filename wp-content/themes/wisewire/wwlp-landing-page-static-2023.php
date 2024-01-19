@@ -492,7 +492,7 @@
                     <a href="#" id="exploreai" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore AI</a>
                         <ul class="dropdown-menu dropdown-ai">
                        <li>
-                                <a href="https://www.wisewire.com/exploreai/">Explore AI</a>
+                                <a href="/exploreai/">Explore AI</a>
                         </li>
                         </ul>
                     </li>
@@ -501,10 +501,10 @@
                             Training</a>
                         <ul class="dropdown-menu dropdown-career">
                             <li>
-                                <a href="https://www.wisewire.com/digital-skills-courses/">Bootcamps</a>
+                                <a href="/digital-skills-courses/">Bootcamps</a>
                             </li>
                             <li>
-                                <a href="https://www.wisewire.com/corporate-learning/">Corporate Programs</a>
+                                <a href="/corporate-learning/">Corporate Programs</a>
                             </li>
                         </ul>
                     </li>
@@ -513,7 +513,7 @@
                             Ed</a>
                         <ul class="dropdown-menu dropdown-higher" aria-labelledby="higher-ed">
                             <li>
-                                <a href="https://www.wisewire.com/online-program-management-for-higher-ed/">Online Program
+                                <a href="/online-program-management-for-higher-ed/">Online Program
                                     Management</a>
                             </li>
                         </ul>
@@ -524,13 +524,13 @@
                         <a href="#" id="k12" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">K-12</a>
                         <ul class="dropdown-menu dropdown-k12" aria-labelledby="k12">
                            <li>
-                                <a href="https://www.wisewire.com/for-administrators/">Administrators</a>
+                                <a href="/for-administrators/">Administrators</a>
                            </li>
                            <li class="menu-item">
-                                <a href="https://www.wisewire.com/for-teachers/">Teachers</a>
+                                <a href="/for-teachers/">Teachers</a>
                            </li>
                            <li>
-                                <a href="https://www.wisewire.com/for-curriculum-providers/">Curriculum Developers</a>
+                                <a href="/for-curriculum-providers/">Curriculum Developers</a>
                            </li>
                           </ul>
                      </li>
@@ -1413,7 +1413,7 @@
 				<div class="col-inner text-center"  >
 			
 			
-<a data-animate="fadeInUp" href="https://www.wisewire.com/exploreai/" class="button primary is-small lowercase"  style="border-radius:99px;padding:5px 50px 5px 50px;">
+<a data-animate="fadeInUp" href="/exploreai/" class="button primary is-small lowercase"  style="border-radius:99px;padding:5px 50px 5px 50px;">
     <span>Explore Ai</span>
   </a>
 
@@ -1683,18 +1683,17 @@
                     <a href="#">Explore AI</a>
                     <ul class="sub-menu nav-sidebar-ul children">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15602">
-                            <a href="https://www.wisewire.com/exploreai/">Explore AI</a>
+                            <a href="/exploreai/">Explore AI</a>
                         </li>
-                    </ul>
-                </li>
+                    </ul>                </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15603">
                     <a href="#">Career Training</a>
                     <ul class="sub-menu nav-sidebar-ul children">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15604">
-                            <a href="https://www.wisewire.com/digital-skills-courses/">Bootcamps</a>
+                            <a href="/digital-skills-courses/">Bootcamps</a>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15605">
-                            <a href="https://www.wisewire.com/corporate-learning/">Corporate Programs</a>
+                            <a href="/corporate-learning/">Corporate Programs</a>
                         </li>
                     </ul>
                 </li>
@@ -1702,7 +1701,7 @@
                     <a href="#">Higher Ed</a>
                     <ul class="sub-menu nav-sidebar-ul children">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15607">
-                            <a href="https://www.wisewire.com/online-program-management-for-higher-ed/">Online Program Management</a>
+                            <a href="/online-program-management-for-higher-ed/">Online Program Management</a>
                         </li>
                     </ul>
                 </li>
@@ -1710,13 +1709,13 @@
                     <a href="#">K-12</a>
                     <ul class="sub-menu nav-sidebar-ul children">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15609">
-                            <a href="https://www.wisewire.com/for-administrators/">Administrators</a>
+                            <a href="/for-administrators/">Administrators</a>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15610">
-                            <a href="https://www.wisewire.com/for-teachers/">Teachers</a>
+                            <a href="/for-teachers/">Teachers</a>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15611">
-                            <a href="https://www.wisewire.com/for-curriculum-providers/">Curriculum Developers</a>
+                            <a href="/for-curriculum-providers/">Curriculum Developers</a>
                         </li>
                     </ul>
                 </li>
